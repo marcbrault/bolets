@@ -1,7 +1,7 @@
 import { descarregaMeteo, preparaMeteo, meteoDemo, DIES_PASSATS } from './weather.js';
 import { derivaEstatiques, calculaAigua, index, mapaDia } from './scoring.js';
 import { Heatmap, RAMPES, color, css, gradientCSS } from './heatmap.js';
-import { preparaConeixement } from './coneixement.js';
+import { preparaConeixement, aplicaCapes } from './coneixement.js';
 
 const $ = s => document.querySelector(s);
 // Vista prèvia (artifact de Claude): sense tessel·les externes ni Open-Meteo, que el navegador hi bloqueja.
@@ -107,7 +107,12 @@ async function carregaGraella(km, forca = false) {
   const M = preparaMeteo(raw);
   M.aigua = calculaAigua(M);
   estat.km = km; estat.grid = grid; estat.M = M;
-  estat.S = { ...derivaEstatiques(grid, M.elev), ...preparaConeixement(grid, estat.sols, estat.atles, estat.municipis) };
+  const capes = await getJSON(`data/capes-${km}km.json`).catch(() => null);
+  if (capes && capes.elev?.length !== grid.cells.length) console.warn('capes: mida diferent de la graella');
+  const relleuOM = derivaEstatiques(grid, M.elev); // aproximació a partir de l'altitud d'Open-Meteo
+  estat.S = { ...relleuOM, ...preparaConeixement(grid, estat.sols, estat.atles, estat.municipis) };
+  aplicaCapes(estat.S, capes, M.elev);
+  estat.capes = capes;
   estat.heat = new Heatmap(grid, estat.contorn);
   estat.cacheDia.clear();
   // índex del dia d'avui dins les dates
@@ -116,7 +121,7 @@ async function carregaGraella(km, forca = false) {
   estat.avui = k >= 0 ? k : Math.min(DIES_PASSATS, M.nd - 1);
   estat.dia = estat.avui;
   estat.sel = -1;
-  $('#estat-dades').textContent = `Font: ${font} · ${grid.cells.length} zones de ${km} km · actualitzat ${new Date(M.generat).toLocaleString('ca-ES', { dateStyle: 'short', timeStyle: 'short' })}`;
+  $('#estat-dades').textContent = `Font: ${font} · ${grid.cells.length} zones de ${km} km · actualitzat ${new Date(M.generat).toLocaleString('ca-ES', { dateStyle: 'short', timeStyle: 'short' })}${estat.capes ? ' · bosc CREAF, geologia i relleu ICGC' : ''}`;
   carregant('');
 }
 

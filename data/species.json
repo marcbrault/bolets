@@ -39,7 +39,12 @@
    0.9,
    0.4
   ],
-  "notes": "Només en sòls calcaris. Surt 8–15 dies després d'una pluja forta (≥ 30 mm) amb temperatures suaus; la seva carn només envermelleix als marges."
+  "notes": "Només en sòls calcaris. Surt 8–15 dies després d'una pluja forta (≥ 30 mm) amb temperatures suaus; la seva carn només envermelleix als marges.",
+  "arbres": [
+   "pinassa",
+   "pi_blanc",
+   "pi_roig"
+  ]
  },
  {
   "id": "pinetell",
@@ -81,7 +86,15 @@
    0.85,
    0.35
   ],
-  "notes": "Poc exigent de sòl, però prefereix substrats silicis permeables i sorrencs. Comença a l'agost a les zones altes i obagues i acaba cap a Nadal als indrets arrecerats de la costa. Les pinedes joves, esclarissades i pasturades en fan més."
+  "notes": "Poc exigent de sòl, però prefereix substrats silicis permeables i sorrencs. Comença a l'agost a les zones altes i obagues i acaba cap a Nadal als indrets arrecerats de la costa. Les pinedes joves, esclarissades i pasturades en fan més.",
+  "arbres": [
+   "pi_roig",
+   "pi_negre",
+   "pinassa",
+   "pi_blanc",
+   "pinyer",
+   "pinastre"
+  ]
  },
  {
   "id": "rovello-avet",
@@ -123,7 +136,12 @@
    0.3,
    0
   ],
-  "notes": "Bolet de muntanya (oròfil, per sobre dels 1.100–1.200 m). Les avetoses són més primerenques que les pinedes."
+  "notes": "Bolet de muntanya (oròfil, per sobre dels 1.100–1.200 m). Les avetoses són més primerenques que les pinedes.",
+  "arbres": [
+   "avet",
+   "pi_roig",
+   "pi_negre"
+  ]
  },
  {
   "id": "rovello-vinader",
@@ -165,7 +183,11 @@
    1,
    0.85
   ],
-  "notes": "Termòfil, per sota dels 1.100 m i sobre sòls silicis (saulons). Es distingeix del rovelló perquè tota la carn es torna morada en tallar-la. Prop de la costa la temporada s'allarga fins ben entrat el gener."
+  "notes": "Termòfil, per sota dels 1.100 m i sobre sòls silicis (saulons). Es distingeix del rovelló perquè tota la carn es torna morada en tallar-la. Prop de la costa la temporada s'allarga fins ben entrat el gener.",
+  "arbres": [
+   "pinyer",
+   "pinastre"
+  ]
  },
  {
   "id": "cep",
@@ -207,7 +229,17 @@
    0.35,
    0.05
   ],
-  "notes": "Acidòfil: no en trobareu en sòls calcaris (si hi ha bulbocodis, no hi busqueu ceps). Al Pirineu el moment just sol ser la 1a–3a setmana de setembre, i les bolades són millors si la primavera ha estat plujosa o amb neu. Al Montseny, B. aestivalis surt al juny a les fagedes; a les suredes i alzinars silicis (B. aereus), una primavera plujosa pot donar una florada a final de primavera."
+  "notes": "Acidòfil: no en trobareu en sòls calcaris (si hi ha bulbocodis, no hi busqueu ceps). Al Pirineu el moment just sol ser la 1a–3a setmana de setembre, i les bolades són millors si la primavera ha estat plujosa o amb neu. Al Montseny, B. aestivalis surt al juny a les fagedes; a les suredes i alzinars silicis (B. aereus), una primavera plujosa pot donar una florada a final de primavera.",
+  "arbres": [
+   "pi_negre",
+   "pi_roig",
+   "avet",
+   "faig",
+   "roure",
+   "castanyer",
+   "alzina",
+   "surera"
+  ]
  },
  {
   "id": "rossinyol",
@@ -249,7 +281,16 @@
    0.5,
    0.05
   ],
-  "notes": "Només en sòls àcids. Temporada llarga, de juny a octubre, sempre després de pluges."
+  "notes": "Només en sòls àcids. Temporada llarga, de juny a octubre, sempre després de pluges.",
+  "arbres": [
+   "pi_negre",
+   "pi_roig",
+   "faig",
+   "roure",
+   "castanyer",
+   "alzina",
+   "surera"
+  ]
  },
  {
   "id": "oudereig",
@@ -291,7 +332,13 @@
    0.05,
    0
   ],
-  "notes": "Termòfil (per sota dels 1.100–1.200 m), tot i que n'apareix algun de despistat més amunt. Vigileu la confusió amb Amanita muscaria i la mortal A. phalloides."
+  "notes": "Termòfil (per sota dels 1.100–1.200 m), tot i que n'apareix algun de despistat més amunt. Vigileu la confusió amb Amanita muscaria i la mortal A. phalloides.",
+  "arbres": [
+   "alzina",
+   "surera",
+   "roure",
+   "castanyer"
+  ]
  },
  {
   "id": "trompeta",
@@ -333,7 +380,13 @@
    0.85,
    0.3
   ],
-  "notes": "Prefereix sòls silicis o calcaris descalcificats, però s'adapta. Sol repetir als mateixos rodals cada any."
+  "notes": "Prefereix sòls silicis o calcaris descalcificats, però s'adapta. Sol repetir als mateixos rodals cada any.",
+  "arbres": [
+   "alzina",
+   "roure",
+   "faig",
+   "castanyer"
+  ]
  },
  {
   "id": "carlet",
@@ -375,7 +428,12 @@
    1,
    0.7
   ],
-  "notes": "Fa grups nombrosos amagats a la fullaraca. Primerenc a la mitja muntanya i força tardà prop del litoral. Indiferent al sòl: tant saulons silicis com sòls calcaris."
+  "notes": "Fa grups nombrosos amagats a la fullaraca. Primerenc a la mitja muntanya i força tardà prop del litoral. Indiferent al sòl: tant saulons silicis com sòls calcaris.",
+  "arbres": [
+   "roure",
+   "alzina",
+   "surera"
+  ]
  },
  {
   "id": "camagroc",
@@ -417,7 +475,13 @@
    1,
    1
   ],
-  "notes": "Bolet tardà. Necessita humitat persistent més que no pas una pluja puntual. Aguanta fred moderat."
+  "notes": "Bolet tardà. Necessita humitat persistent més que no pas una pluja puntual. Aguanta fred moderat.",
+  "arbres": [
+   "pi_roig",
+   "pi_negre",
+   "avet",
+   "faig"
+  ]
  },
  {
   "id": "fredolic",
@@ -459,7 +523,17 @@
    1,
    0.9
   ],
-  "notes": "Indiferent al substrat (calcari o silici). Temporada d'excel·lència d'octubre a gener. Hi ha fredolics tòxics (Tricholoma pardinum): en cas de dubte, deixeu-lo al bosc."
+  "notes": "Indiferent al substrat (calcari o silici). Temporada d'excel·lència d'octubre a gener. Hi ha fredolics tòxics (Tricholoma pardinum): en cas de dubte, deixeu-lo al bosc.",
+  "arbres": [
+   "pi_roig",
+   "pi_negre",
+   "pinassa",
+   "pi_blanc",
+   "pinyer",
+   "pinastre",
+   "avet",
+   "alzina"
+  ]
  },
  {
   "id": "fredolic-gros",
@@ -501,7 +575,12 @@
    1,
    0.5
   ],
-  "notes": "Típic de terrenys àcids i de muntanya (per sobre dels 1.100 m). Surt ben entrada la tardor i aguanta els primers freds."
+  "notes": "Típic de terrenys àcids i de muntanya (per sobre dels 1.100 m). Surt ben entrada la tardor i aguanta els primers freds.",
+  "arbres": [
+   "pi_roig",
+   "avet",
+   "pi_negre"
+  ]
  },
  {
   "id": "llenega",
@@ -543,7 +622,14 @@
    1,
    0.9
   ],
-  "notes": "Tardana, sobre sòls calcaris; sovint coincideix amb el fredolic i el camagroc."
+  "notes": "Tardana, sobre sòls calcaris; sovint coincideix amb el fredolic i el camagroc.",
+  "arbres": [
+   "pinassa",
+   "pi_blanc",
+   "pi_roig",
+   "roure",
+   "alzina"
+  ]
  },
  {
   "id": "carrereta",
@@ -586,7 +672,10 @@
    0.55,
    0.05
   ],
-  "notes": "Sapròfit de prat: surt poc després de les pluges, a la primavera i a la tardor. Prefereix zones obertes, no pas bosc tancat."
+  "notes": "Sapròfit de prat: surt poc després de les pluges, a la primavera i a la tardor. Prefereix zones obertes, no pas bosc tancat.",
+  "arbres": [
+   "prat"
+  ]
  },
  {
   "id": "moixerno",
@@ -629,7 +718,11 @@
    0.03,
    0
   ],
-  "notes": "Només en sòls calcaris. Fa erols (corros) als prats, però també a les rouredes ben esclarissades."
+  "notes": "Només en sòls calcaris. Fa erols (corros) als prats, però també a les rouredes ben esclarissades.",
+  "arbres": [
+   "prat",
+   "roure"
+  ]
  },
  {
   "id": "marcot",
@@ -671,7 +764,13 @@
    0,
    0
   ],
-  "notes": "El 'bolet de neu': surt de febrer a juny (fins ben entrat juny als boscos subalpins de 1.600–1.900 m). Prefereix gresos i pelites, humus gruixut i vessants obacs; sovint gairebé enterrat."
+  "notes": "El 'bolet de neu': surt de febrer a juny (fins ben entrat juny als boscos subalpins de 1.600–1.900 m). Prefereix gresos i pelites, humus gruixut i vessants obacs; sovint gairebé enterrat.",
+  "arbres": [
+   "pi_roig",
+   "pi_negre",
+   "avet",
+   "faig"
+  ]
  },
  {
   "id": "murgola",
@@ -714,7 +813,10 @@
    0,
    0
   ],
-  "notes": "De la segona setmana de març a finals d'abril (fins al juny a l'alta muntanya). Busqueu-la a les riberes dels rius i en sòls llimosos o sorrencs."
+  "notes": "De la segona setmana de març a finals d'abril (fins al juny a l'alta muntanya). Busqueu-la a les riberes dels rius i en sòls llimosos o sorrencs.",
+  "arbres": [
+   "ribera"
+  ]
  },
  {
   "id": "llenegall",
@@ -756,7 +858,11 @@
    1,
    0.75
   ],
-  "notes": "També anomenat llenega d'alzina o de suro. A diferència de la llenega negra (calcària), surt en sòls silicis o calcaris descalcificats."
+  "notes": "També anomenat llenega d'alzina o de suro. A diferència de la llenega negra (calcària), surt en sòls silicis o calcaris descalcificats.",
+  "arbres": [
+   "alzina",
+   "surera"
+  ]
  },
  {
   "id": "esteperol",
@@ -798,6 +904,12 @@
    1,
    0.8
   ],
-  "notes": "Termòfil (per sota dels 1.100–1.200 m) i indiferent al substrat. Sembla un cep però té la cama aspra i groguenca i la carn s'enfosqueix en tallar-la."
+  "notes": "Termòfil (per sota dels 1.100–1.200 m) i indiferent al substrat. Sembla un cep però té la cama aspra i groguenca i la carn s'enfosqueix en tallar-la.",
+  "arbres": [
+   "alzina",
+   "surera",
+   "roure",
+   "castanyer"
+  ]
  }
 ]

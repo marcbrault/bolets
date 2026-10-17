@@ -2,7 +2,7 @@
 // Cada factor retorna un valor 0–1; l'índex final (0–100) és un producte ponderat,
 // de manera que si un factor clau és dolent (fora de temporada, sense pluja…) l'índex cau.
 
-import { factorSol, SOL_NOM } from './coneixement.js';
+import { factorSol, SOL_NOM, ARBRES_NOM } from './coneixement.js';
 
 const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
 const BONUS_ATLES = 0.35; // fins a +35 % on l'Atles del Boletaire cita l'espècie
@@ -103,7 +103,22 @@ export function index(sp, M, S, i, d, detall = false) {
 
   // 7) Bosc (aproximació). Pes negatiu = espècie de prat, prefereix zones obertes.
   const pesBosc = sp.boscPes ?? 1;
-  const fBosc = pesBosc >= 0 ? Math.pow(S.bosc[i], pesBosc) : 1 - Math.abs(pesBosc) * 0.8 * S.bosc[i];
+  let fBosc, hostes = null;
+  if (S.arbres && sp.arbres) {
+    // Hàbitat real (CREAF): fracció de la cel·la coberta pels arbres o prats on surt l'espècie
+    hostes = sp.arbres.map(k => [k, S.arbres[k]?.[i] ?? 0]).filter(h => h[1] > 0).sort((a, b) => b[1] - a[1]);
+    const quota = hostes.reduce((a, h) => a + h[1], 0) / 100;
+    fBosc = 0.12 + 0.88 * Math.pow(Math.min(1, quota / 0.3), 0.6);
+  } else {
+    fBosc = pesBosc >= 0 ? Math.pow(S.bosc[i], pesBosc) : 1 - Math.abs(pesBosc) * 0.8 * S.bosc[i];
+  }
+
+  // 7b) Orientació (MET ICGC): amb calor surten a les obagues; amb fred, als solells
+  let fOri = 1;
+  if (S.obaga && S.obaga[i] != null) {
+    const w = clamp((t7 - 12) / 6, -1, 1);
+    fOri = clamp(1 + 0.4 * w * (S.obaga[i] - S.solell[i]) / 100, 0.85, 1.15);
+  }
 
   // 8) Substrat (silici / calcari)
   const fSol = factorSol(sp.sol, S.sol ? S.sol[i] : NaN);
@@ -113,7 +128,7 @@ export function index(sp, M, S, i, d, detall = false) {
   const prox = A ? A.prox[i] : 0;
   const fAtles = 1 + BONUS_ATLES * prox;
 
-  const valor = Math.min(100, 100 * fTemp * fPluja * Math.pow(fT, 0.8) * fAlt * fBosc * fGel * fSol * fAtles);
+  const valor = Math.min(100, 100 * fTemp * fPluja * Math.pow(fT, 0.8) * fAlt * fBosc * fOri * fGel * fSol * fAtles);
   if (!detall) return valor;
   const zona = A && A.zona[i] >= 0 && prox > 0 ? S.zones[A.zona[i]] : null;
 
@@ -131,9 +146,12 @@ export function index(sp, M, S, i, d, detall = false) {
       { nom: 'Humitat del sòl', v: fHum, txt: `reserva ≈ ${Math.round(aigua)} mm` },
       { nom: 'Temperatura', v: fT, txt: `${t7.toFixed(1)} °C de mitjana (7 dies)` },
       { nom: 'Sense gelades', v: fGel, txt: `mínima ${tmin4.toFixed(1)} °C` },
-      { nom: 'Altitud', v: fAlt, txt: `${Math.round(M.elev[i])} m` },
-      { nom: pesBosc < 0 ? 'Espai obert (aprox.)' : 'Bosc (aprox.)', v: fBosc },
-      { nom: 'Substrat', v: fSol, txt: sp.sol ? `${SOL_NOM(S.sol[i])} · prefereix ${sp.sol.replace('-suau', ' (lleu)')}` : `${SOL_NOM(S.sol[i])} · indiferent` },
+      { nom: 'Altitud', v: fAlt, txt: `${Math.round(M.elev[i])} m${S.pendent ? ` · pendent ${S.pendent[i]}°` : ''}` },
+      hostes
+        ? { nom: 'Hàbitat (CREAF)', v: fBosc, txt: hostes.length ? hostes.slice(0, 3).map(h => `${h[1]} % ${ARBRES_NOM[h[0]]}`).join(', ') : `cap hàbitat seu · ${S.boscPct[i]} % de bosc` }
+        : { nom: pesBosc < 0 ? 'Espai obert (aprox.)' : 'Bosc (aprox.)', v: fBosc },
+      ...(S.obaga ? [{ nom: 'Orientació', v: Math.min(1, fOri), txt: `${S.obaga[i]} % obaga, ${S.solell[i]} % solell · ${t7 > 12 ? 'amb calor, millor obagues' : 'amb fred, millor solells'}` }] : []),
+      { nom: 'Substrat', v: fSol, txt: sp.sol ? `${SOL_NOM(S.sol[i])}${S.solGeo ? ' (ICGC)' : ''} · prefereix ${sp.sol.replace('-suau', ' (lleu)')}` : `${SOL_NOM(S.sol[i])} · indiferent` },
     ],
     atles: zona ? { ...zona, prox, bonus: fAtles } : null,
   };

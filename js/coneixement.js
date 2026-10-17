@@ -68,3 +68,36 @@ export function preparaConeixement(grid, sols, atles, municipis) {
 
   return { sol, solNom, zones, perSp, noTrobats };
 }
+
+// ---------- Capes geogràfiques reals (CREAF + ICGC), generades per scripts/build-capes.py ----------
+export const ARBRES_NOM = {
+  pi_roig: 'pi roig', pi_negre: 'pi negre', avet: 'avet', pinassa: 'pinassa', pi_blanc: 'pi blanc', pinyer: 'pi pinyer',
+  pinastre: 'pinastre', faig: 'faig', roure: 'roure', alzina: 'alzina', surera: 'surera', castanyer: 'castanyer',
+  ribera: 'ribera', prat: 'prat', matollar: 'matollar',
+};
+
+/** Substitueix les aproximacions per les capes reals quan existeixen. Modifica S i elev. */
+export function aplicaCapes(S, capes, elev) {
+  if (!capes) return;
+  const n = elev.length;
+  if (capes.bosc?.length === n) {
+    S.bosc = Float32Array.from(capes.bosc, p => Math.max(0.05, Math.min(1, p / 60)));
+    S.boscPct = capes.bosc;
+    S.arbres = capes.arbres;
+  }
+  if (capes.calcari?.length === n) {
+    const atles = S.sol;
+    S.sol = new Float32Array(n).fill(NaN);
+    for (let i = 0; i < n; i++) {
+      const t = capes.calcari[i] + capes.mixt[i] + capes.silici[i];
+      const geo = t > 0 ? (capes.silici[i] + 0.5 * capes.mixt[i]) / t : NaN;
+      // l'Atles descriu descalcificacions i matisos que el mapa 1:250.000 no recull
+      S.sol[i] = isNaN(geo) ? atles[i] : isNaN(atles[i]) ? geo : 0.6 * geo + 0.4 * atles[i];
+    }
+    S.solGeo = true;
+  }
+  if (capes.elev?.length === n) {
+    capes.elev.forEach((z, i) => { if (z != null) elev[i] = z; });
+    S.obaga = capes.obaga; S.solell = capes.solell; S.pendent = capes.pendent;
+  }
+}

@@ -11,14 +11,14 @@ for (const km of [10, 5]) {
   try {
     const meteo = await descarregaMeteo(grid, {
       pesPerMinut: 450, // per sota del límit de 600/minut d'Open-Meteo
-      log: m => console.log('  ' + m),
+      log: m => console.log(`::warning title=Meteo ${km} km::${m}`),
       onProgress: p => { if (Math.round(p * 100) % 25 === 0) console.log(`  ${Math.round(p * 100)} %`); },
     });
     writeFileSync(new URL(`../data/meteo-${km}km.json`, import.meta.url), JSON.stringify(meteo));
     console.log(`${km} km: fet (${meteo.dates[0]} → ${meteo.dates.at(-1)})`);
     fets++;
   } catch (err) {
-    console.error(`${km} km: ERROR — ${err.message}`);
+    console.log(`::error title=Meteo ${km} km::${String(err.message || err).replace(/\r?\n/g, ' ')} ${err.cause ? '(' + (err.cause.code || err.cause.message) + ')' : ''}`);
   }
 }
 if (!fets) process.exit(1);

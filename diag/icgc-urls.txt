@@ -1,0 +1,4 @@
+https://datacloud.icgc.cat/datacloud/descarregues-web/bd/icgc_mgl250mv01_etrs89.zip
+https://datacloud.icgc.cat/datacloud/descarregues-web/bd/mapes/igc_MLito250M_v1g.pdf
+https://geoserveis.icgc.cat/servei/catalunya/geologia-territorial/wms
+https://geoserveis.icgc.cat/servei/catalunya/geologia-territorial/wms?REQUEST=GetMap&amp;SERVICE=WMS&amp;VERSION=1.3.0&amp;LAYERS=unitats-geologiques-250000&amp;STYLES=&amp;FORMAT=image/png&amp;CRS=EPSG:25831&amp;BBOX=389783

@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<WMS_Capabilities version="1.3.0" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms https://www.miramon.cat/ogc/schemas/wms/1_3_0/capabilities_1_3_0.xsd">
+	<Service>
+		<Name>WMS</Name>
+		<Title>Servidor de Mapes del Mapa de Cobertes del Sòl de Catalunya</Title>
+		<Abstract>Servidor de Mapes del Mapa de Cobertes i Usos del Sòl, de l'inventari forestal i de variables biofísiques de Catalunya</Abstract>
+		<KeywordList>
+			<Keyword>Cobertes</Keyword>
+			<Keyword>Sòl</Keyword>
+			<Keyword>Catalunya</Keyword>
+			<Keyword>CREAF</Keyword>
+		</KeywordList>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://www.mcsc.creaf.cat" />
+		<ContactInformation>
+			<ContactPersonPrimary>
+				<ContactPerson>Xavier Calaf Ramirez</ContactPerson>
+				<ContactOrganization>CREAF</ContactOrganization>
+			</ContactPersonPrimary>
+			<ContactPosition></ContactPosition>
+			<ContactAddress>
+				<AddressType>postal</AddressType>
+				<Address>Facultat de Ciències. Universitat Autònoma de Barcelona.</Address>
+				<City>Bellaterra (Cerdanyola del Vallès)</City>
+				<StateOrProvince>Barcelona</StateOrProvince>
+				<PostCode>08193</PostCode>
+				<Country>Catalunya</Country>
+			</ContactAddress>
+			<ContactVoiceTelephone>+34 93 581 13 12</ContactVoiceTelephone>
+			<ContactFacsimileTelephone>+34 93 581 13 12</ContactFacsimileTelephone>
+			<ContactElectronicMailAddress>x.calaf@creaf.uab.cat</ContactElectronicMailAddress>
+		</ContactInformation>
+		<Fees>none</Fees>
+		<AccessConstraints>none</AccessConstraints>
+		<MaxWidth>4096</MaxWidth>
+		<MaxHeight>4096</MaxHeight>
+	</Service>
+
+<Capability>
+<Request>
+<GetCapabilities>
+<Format>text/xml</Format>
+<DCPType>
+<HTTP>
+<Get>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://opengis.grumets.cat/cgi-bin/MCSC/MiraMon.cgi?" />
+</Get>
+</HTTP>
+</DCPType>
+</GetCapabilities>
+<GetMap>
+<Format>image/gif</Format>
+<Format>image/png</Format>
+<Format>image/jpeg</Format>
+<DCPType>
+	<HTTP>
+		<Get>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://opengis.grumets.cat/cgi-bin/MCSC/MiraMon.cgi?" />
+</Get>
+</HTTP>
+</DCPType>
+</GetMap>
+<GetFeatureInfo>
+<Format>text/html</Format>
+<Format>text/xml</Format>
+<DCPType>
+	<HTTP>
+		<Get>
+<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://opengis.grumets.cat/cgi-bin/MCSC/MiraMon.cgi?" />
+</Get>
+</HTTP>
+</DCPType>
+</GetFeatureInfo>
+</Request>
+<Exception>
+<Format>text/html</Format>
+<Format>BLANK</Format>
+</Exception>
+<Layer>
+<Title>Servidor de Mapes del Mapa de Cobertes del Sòl de Catalunya</Title>
+<CRS>EPSG:25831</CRS>
+<CRS>EPSG:23031</CRS>
+<CRS>EPSG:25830</CRS>
+<CRS>EPSG:23030</CRS>
+<CRS>EPSG:4326</CRS>
+<Layer queryable="1">
+<Name>iefc-catalunya</Name>
+<Title>Ecological and Forestry Inventory of Catalonia (IEFC-CREAF)</Title>
+		<Abstract>Ecological and Forestry Inventory of Catalonia (Inventari ecològic i forestal de Catalunya IEFC) is a 10000 point map of ecological and forestry estation each with several measures. MCSC was carried out form Centre de Recerca Ecològica i Aplicacions Forestals (CREAF); funded initially by the Departament d'Agricultura, Ramaderia i Pesca de la Generalitat de Catalunya and now by the Departament de Medi Ambient de la Generalitat de Catalunya.</Abstract>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.174365</westBoundLongitude>
+<eastBoundLongitude>3.227445</eastBoundLongitude>
+<southBoundLatitude>40.634739</southBoundLatitude>
+<northBoundLatitude>42.881940</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:23031" minx="261027.00" miny="4502128.00" maxx="518575.00" maxy="4747815.00" resx="10.00" resy="10.00" />
+</Layer>
+<Layer opaque="1">
+<Name>LimAdmin_BM-5M_v2_0</Name>
+<Title>Límits administratius 1:5·000 (BM-5M) v2.0</Title>
+		<Abstract>Límits administratius 1:5·000 (BM-5M) v2.0</Abstract>
+		<KeywordList>
+			<Keyword>Límits administratius</Keyword>
+			<Keyword>Catalunya</Keyword>
+			<Keyword>BM-5M</Keyword>
+		</KeywordList>
+</Layer>
+<Layer queryable="1">
+<Name>mca-catalunya</Name>
+<Title>Mapa de Cultivos y Aprovechamientos (MCA)</Title>
+		<Abstract>Informatización del "Mapa de Cultivos y Aprovechamientos" correspondientes a Catalunya  (Ministerio de Agricultura, Dirección General de la Producción Agraria). Mapas en papel a escala 1:50.000, basados en el corte 50000 topográfico série L.</Abstract>
+		<KeywordList>
+			<Keyword>Mapa</Keyword>
+			<Keyword>Cultivos</Keyword>
+			<Keyword>Aprovechamientos</Keyword>
+			<Keyword>Ministerio</Keyword>
+			<Keyword>Producción agrária</Keyword>
+			<Keyword>Agricultura</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.170538</westBoundLongitude>
+<eastBoundLongitude>3.336748</eastBoundLongitude>
+<southBoundLatitude>40.516132</southBoundLatitude>
+<northBoundLatitude>42.885408</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:23031" minx="260280.00" miny="4488970.00" maxx="527500.00" maxy="4748230.00" resx="10.00" resy="10.00" />
+<Style>
+<Name>default</Name>
+<Title>default</Title>
+</Style>
+<Style>
+<Name>SEMITRANSPARENT</Name>
+<Title>Semitransparent</Title>
+<Abstract>Semitransparent style for this layer</Abstract>
+</Style>
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>MCSCv4Nivell5</Name>
+<Title>Mapa de Cobertes del Sòl de Catalunya (4ª edició 2009) (Llegenda Nivell 5)</Title>
+		<Abstract>Mapa de Cobertes del Sòl de Catalunya (4ª edició 2009) (Llegenda Nivell 5)</Abstract>
+		<KeywordList>
+			<Keyword>MCSC</Keyword>
+			<Keyword>Sòl</Keyword>
+			<Keyword>Cobertes</Keyword>
+			<Keyword>Catalunya</Keyword>
+			<Keyword>Nivell 5</Keyword>
+			<Keyword>MCSC-4</Keyword>
+			<Keyword>2009</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.169132</westBoundLongitude>
+<eastBoundLongitude>3.354732</eastBoundLongitude>
+<southBoundLatitude>40.515104</southBoundLatitude>
+<northBoundLatitude>42.883889</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="260168.00" miny="4488782.00" maxx="528968.00" maxy="4747982.00" resx="2.00" resy="2.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>MCSCv3_2Nivell5</Name>
+<Title>Mapa de Cobertes del Sòl de Catalunya (3ª edició 2005) (Llegenda Nivell 5)</Title>
+		<Abstract>Mapa de Cobertes del Sòl de Catalunya (3ª edició 2005) (Llegenda Nivell 5)</Abstract>
+		<KeywordList>
+			<Keyword>MCSC</Keyword>
+			<Keyword>Sòl</Keyword>
+			<Keyword>Cobertes</Keyword>
+			<Keyword>Catalunya</Keyword>
+			<Keyword>Nivell 5</Keyword>
+			<Keyword>MCSC-3</Keyword>
+			<Keyword>2005</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.169132</westBoundLongitude>
+<eastBoundLongitude>3.354732</eastBoundLongitude>
+<southBoundLatitude>40.515104</southBoundLatitude>
+<northBoundLatitude>42.883889</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="260168.00" miny="4488782.00" maxx="528968.00" maxy="4747982.00" resx="2.00" resy="2.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>MCSCv4Nivell2</Name>
+<Title>Mapa de Cobertes del Sòl de Catalunya (4ª edició 2009) (Llegenda Nivell 2)</Title>
+		<Abstract>Mapa de Cobertes del Sòl de Catalunya (4ª edició 2009) (Llegenda Nivell 2)</Abstract>
+		<KeywordList>
+			<Keyword>MCSC</Keyword>
+			<Keyword>Sòl</Keyword>
+			<Keyword>Cobertes</Keyword>
+			<Keyword>Catalunya</Keyword>
+			<Keyword>Nivell 2</Keyword>
+			<Keyword>MCSC-4</Keyword>
+			<Keyword>2009</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.169132</westBoundLongitude>
+<eastBoundLongitude>3.354732</eastBoundLongitude>
+<southBoundLatitude>40.515104</southBoundLatitude>
+<northBoundLatitude>42.883889</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="260168.00" miny="4488782.00" maxx="528968.00" maxy="4747982.00" resx="2.00" resy="2.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>MCSCv3_2Nivell2</Name>
+<Title>Mapa de Cobertes del Sòl de Catalunya (3ª edició 2005) (Llegenda Nivell 2)</Title>
+		<Abstract>Mapa de Cobertes del Sòl de Catalunya (3ª edició 2005) (Llegenda Nivell 2)</Abstract>
+		<KeywordList>
+			<Keyword>MCSC</Keyword>
+			<Keyword>Sòl</Keyword>
+			<Keyword>Cobertes</Keyword>
+			<Keyword>Catalunya</Keyword>
+			<Keyword>Nivell 2</Keyword>
+			<Keyword>MCSC-3</Keyword>
+			<Keyword>2005</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.169132</westBoundLongitude>
+<eastBoundLongitude>3.354732</eastBoundLongitude>
+<southBoundLatitude>40.515104</southBoundLatitude>
+<northBoundLatitude>42.883889</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="260168.00" miny="4488782.00" maxx="528968.00" maxy="4747982.00" resx="2.00" resy="2.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>MCSCv2Nivell2</Name>
+<Title>Mapa de Cobertes del Sòl de Catalunya (2ª edició 2002) (Llegenda Nivell 2)</Title>
+		<Abstract>Mapa de Cobertes del Sòl de Catalunya (2ª edició 2002) (Llegenda Nivell 2)</Abstract>
+		<KeywordList>
+			<Keyword>MCSC</Keyword>
+			<Keyword>Sòl</Keyword>
+			<Keyword>Cobertes</Keyword>
+			<Keyword>Catalunya</Keyword>
+			<Keyword>Nivell 2</Keyword>
+			<Keyword>MCSC-2</Keyword>
+			<Keyword>2002</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.646253</westBoundLongitude>
+<eastBoundLongitude>3.352369</eastBoundLongitude>
+<southBoundLatitude>40.904679</southBoundLatitude>
+<northBoundLatitude>42.499006</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="301753.31" miny="4530842.82" maxx="528953.31" maxy="4705242.82" resx="2.00" resy="2.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>MCSCv1Nivell2</Name>
+<Title>Mapa de Cobertes del Sòl de Catalunya (1ª edició 1993) (Llegenda Nivell 2)</Title>
+		<Abstract>Mapa de Cobertes del Sòl de Catalunya (1ª edició 1993) (Llegenda Nivell 2)</Abstract>
+		<KeywordList>
+			<Keyword>MCSC</Keyword>
+			<Keyword>Sòl</Keyword>
+			<Keyword>Cobertes</Keyword>
+			<Keyword>Catalunya</Keyword>
+			<Keyword>Nivell 2</Keyword>
+			<Keyword>MCSC-1</Keyword>
+			<Keyword>1993</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.170841</westBoundLongitude>
+<eastBoundLongitude>3.336303</eastBoundLongitude>
+<southBoundLatitude>40.501087</southBoundLatitude>
+<northBoundLatitude>42.884297</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="260262.92" miny="4487221.20" maxx="527462.92" maxy="4748021.20" resx="2.00" resy="2.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>UsosDTES2017</Name>
+<Title>Mapa d'usos i cobertes del sòl DTES (Edició 2017)</Title>
+		<Abstract>Mapa d'usos i cobertes del sòl DTES (Edició 2017)</Abstract>
+		<KeywordList>
+			<Keyword>Mapa</Keyword>
+			<Keyword>usos</Keyword>
+			<Keyword>cobertes</Keyword>
+			<Keyword>sòl</Keyword>
+			<Keyword>DTES</Keyword>
+			<Keyword>2017</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.169644</westBoundLongitude>
+<eastBoundLongitude>3.374226</eastBoundLongitude>
+<southBoundLatitude>40.500687</southBoundLatitude>
+<northBoundLatitude>42.883809</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="260160.00" miny="4487180.00" maxx="530560.00" maxy="4747980.00" resx="2.00" resy="2.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>UsosDTES2012</Name>
+<Title>Mapa d'usos i cobertes del sòl DTES (Edició 2012)</Title>
+		<Abstract>Mapa d'usos i cobertes del sòl DTES (Edició 2012)</Abstract>
+		<KeywordList>
+			<Keyword>Mapa</Keyword>
+			<Keyword>usos</Keyword>
+			<Keyword>cobertes</Keyword>
+			<Keyword>sòl</Keyword>
+			<Keyword>DTES</Keyword>
+			<Keyword>2012</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.169158</westBoundLongitude>
+<eastBoundLongitude>3.393636</eastBoundLongitude>
+<southBoundLatitude>40.508016</southBoundLatitude>
+<northBoundLatitude>42.883879</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="260145.00" miny="4487995.00" maxx="532145.00" maxy="4747995.00" resx="5.00" resy="5.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>UsosDTES2007</Name>
+<Title>Mapa d'usos i cobertes del sòl DTES (Edició 2007)</Title>
+		<Abstract>Mapa d'usos i cobertes del sòl DTES (Edició 2007)</Abstract>
+		<KeywordList>
+			<Keyword>Mapa</Keyword>
+			<Keyword>usos</Keyword>
+			<Keyword>cobertes</Keyword>
+			<Keyword>sòl</Keyword>
+			<Keyword>DTES</Keyword>
+			<Keyword>2007</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.169158</westBoundLongitude>
+<eastBoundLongitude>3.393636</eastBoundLongitude>
+<southBoundLatitude>40.508016</southBoundLatitude>
+<northBoundLatitude>42.883879</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="260145.00" miny="4487995.00" maxx="532145.00" maxy="4747995.00" resx="5.00" resy="5.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>UsosDTES2002</Name>
+<Title>Mapa d'usos i cobertes del sòl DTES (Edició 2002)</Title>
+		<Abstract>Mapa d'usos i cobertes del sòl DTES (Edició 2002)</Abstract>
+		<KeywordList>
+			<Keyword>Mapa</Keyword>
+			<Keyword>usos</Keyword>
+			<Keyword>cobertes</Keyword>
+			<Keyword>sòl</Keyword>
+			<Keyword>DTES</Keyword>
+			<Keyword>2002</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.169158</westBoundLongitude>
+<eastBoundLongitude>3.393636</eastBoundLongitude>
+<southBoundLatitude>40.508016</southBoundLatitude>
+<northBoundLatitude>42.883879</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="260145.00" miny="4487995.00" maxx="532145.00" maxy="4747995.00" resx="5.00" resy="5.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>UsosDTES1997</Name>
+<Title>Mapa d'usos i cobertes del sòl DTES (Edició 1997)</Title>
+		<Abstract>Mapa d'usos i cobertes del sòl DTES (Edició 1997)</Abstract>
+		<KeywordList>
+			<Keyword>Mapa</Keyword>
+			<Keyword>usos</Keyword>
+			<Keyword>cobertes</Keyword>
+			<Keyword>sòl</Keyword>
+			<Keyword>DTES</Keyword>
+			<Keyword>1997</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.169158</westBoundLongitude>
+<eastBoundLongitude>3.393636</eastBoundLongitude>
+<southBoundLatitude>40.508016</southBoundLatitude>
+<northBoundLatitude>42.883879</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="260145.00" miny="4487995.00" maxx="532145.00" maxy="4747995.00" resx="5.00" resy="5.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>UsosDTES1992</Name>
+<Title>Mapa d'usos i cobertes del sòl DTES (Edició 1992)</Title>
+		<Abstract>Mapa d'usos i cobertes del sòl DTES (Edició 1992)</Abstract>
+		<KeywordList>
+			<Keyword>Mapa</Keyword>
+			<Keyword>usos</Keyword>
+			<Keyword>cobertes</Keyword>
+			<Keyword>sòl</Keyword>
+			<Keyword>DTES</Keyword>
+			<Keyword>1992</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.169158</westBoundLongitude>
+<eastBoundLongitude>3.393636</eastBoundLongitude>
+<southBoundLatitude>40.508016</southBoundLatitude>
+<northBoundLatitude>42.883879</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="260145.00" miny="4487995.00" maxx="532145.00" maxy="4747995.00" resx="5.00" resy="5.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>UsosDTES1987</Name>
+<Title>Mapa d'usos i cobertes del sòl DTES (Edició 1987)</Title>
+		<Abstract>Mapa d'usos i cobertes del sòl DTES (Edició 1987)</Abstract>
+		<KeywordList>
+			<Keyword>Mapa</Keyword>
+			<Keyword>usos</Keyword>
+			<Keyword>cobertes</Keyword>
+			<Keyword>sòl</Keyword>
+			<Keyword>DTES</Keyword>
+			<Keyword>1987</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.169158</westBoundLongitude>
+<eastBoundLongitude>3.393636</eastBoundLongitude>
+<southBoundLatitude>40.508016</southBoundLatitude>
+<northBoundLatitude>42.883879</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="260145.00" miny="4487995.00" maxx="532145.00" maxy="4747995.00" resx="5.00" resy="5.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>VBA_AB</Name>
+<Title>Àrea basal</Title>
+		<Abstract>Àrea basal (m2/ha)</Abstract>
+		<KeywordList>
+			<Keyword>àrea</Keyword>
+			<Keyword>basal</Keyword>
+			<Keyword>variables</Keyword>
+			<Keyword>biofísiques</Keyword>
+			<Keyword>arbrat</Keyword>
+			<Keyword>Catalunya</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.123370</westBoundLongitude>
+<eastBoundLongitude>3.343079</eastBoundLongitude>
+<southBoundLatitude>40.434871</southBoundLatitude>
+<northBoundLatitude>42.920107</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="256000.00" miny="4480000.00" maxx="528000.00" maxy="4752000.00" resx="20.00" resy="20.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>VBA_BAT</Name>
+<Title>Biomassa aèria total</Title>
+		<Abstract>Biomassa aèria total (t/ha)</Abstract>
+		<KeywordList>
+			<Keyword>biomasa</Keyword>
+			<Keyword>aèria</Keyword>
+			<Keyword>total</Keyword>
+			<Keyword>variables</Keyword>
+			<Keyword>biofísiques</Keyword>
+			<Keyword>arbrat</Keyword>
+			<Keyword>Catalunya</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.123370</westBoundLongitude>
+<eastBoundLongitude>3.343079</eastBoundLongitude>
+<southBoundLatitude>40.434871</southBoundLatitude>
+<northBoundLatitude>42.920107</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="256000.00" miny="4480000.00" maxx="528000.00" maxy="4752000.00" resx="20.00" resy="20.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>VBA_BF</Name>
+<Title>Biomassa foliar</Title>
+		<Abstract>Biomassa foliar (t/ha)</Abstract>
+		<KeywordList>
+			<Keyword>biomasa</Keyword>
+			<Keyword>foliar</Keyword>
+			<Keyword>variables</Keyword>
+			<Keyword>biofísiques</Keyword>
+			<Keyword>arbrat</Keyword>
+			<Keyword>Catalunya</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.123370</westBoundLongitude>
+<eastBoundLongitude>3.343079</eastBoundLongitude>
+<southBoundLatitude>40.434871</southBoundLatitude>
+<northBoundLatitude>42.920107</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="256000.00" miny="4480000.00" maxx="528000.00" maxy="4752000.00" resx="20.00" resy="20.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>VBA_CAT</Name>
+<Title>Carboni aeri total</Title>
+		<Abstract>Carboni aeri total (t/ha)</Abstract>
+		<KeywordList>
+			<Keyword>carboni</Keyword>
+			<Keyword>aeri</Keyword>
+			<Keyword>total</Keyword>
+			<Keyword>variables</Keyword>
+			<Keyword>biofísiques</Keyword>
+			<Keyword>arbrat</Keyword>
+			<Keyword>Catalunya</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.123370</westBoundLongitude>
+<eastBoundLongitude>3.343079</eastBoundLongitude>
+<southBoundLatitude>40.434871</southBoundLatitude>
+<northBoundLatitude>42.920107</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="256000.00" miny="4480000.00" maxx="528000.00" maxy="4752000.00" resx="20.00" resy="20.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>VBA_DBH</Name>
+<Title>Diàmetre normal mitjà</Title>
+		<Abstract>Diàmetre normal mitjà (cm)</Abstract>
+		<KeywordList>
+			<Keyword>diàmetre</Keyword>
+			<Keyword>normal</Keyword>
+			<Keyword>mitjà</Keyword>
+			<Keyword>variables</Keyword>
+			<Keyword>biofísiques</Keyword>
+			<Keyword>arbrat</Keyword>
+			<Keyword>Catalunya</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.123370</westBoundLongitude>
+<eastBoundLongitude>3.343079</eastBoundLongitude>
+<southBoundLatitude>40.434871</southBoundLatitude>
+<northBoundLatitude>42.920107</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="256000.00" miny="4480000.00" maxx="528000.00" maxy="4752000.00" resx="20.00" resy="20.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>VBA_HM</Name>
+<Title>Alçada mitjana</Title>
+		<Abstract>Alçada mitjana (m)</Abstract>
+		<KeywordList>
+			<Keyword>alçada</Keyword>
+			<Keyword>mitjana</Keyword>
+			<Keyword>variables</Keyword>
+			<Keyword>biofísiques</Keyword>
+			<Keyword>arbrat</Keyword>
+			<Keyword>Catalunya</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.123370</westBoundLongitude>
+<eastBoundLongitude>3.343079</eastBoundLongitude>
+<southBoundLatitude>40.434871</southBoundLatitude>
+<northBoundLatitude>42.920107</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="256000.00" miny="4480000.00" maxx="528000.00" maxy="4752000.00" resx="20.00" resy="20.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>VBA_REC</Name>
+<Title>Recobriment</Title>
+		<Abstract>Recobriment (%)</Abstract>
+		<KeywordList>
+			<Keyword>recobriment</Keyword>
+			<Keyword>variables</Keyword>
+			<Keyword>biofísiques</Keyword>
+			<Keyword>arbrat</Keyword>
+			<Keyword>Catalunya</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.123370</westBoundLongitude>
+<eastBoundLongitude>3.343079</eastBoundLongitude>
+<southBoundLatitude>40.434871</southBoundLatitude>
+<northBoundLatitude>42.920107</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="256000.00" miny="4480000.00" maxx="528000.00" maxy="4752000.00" resx="20.00" resy="20.00" />
+</Layer>
+<Layer queryable="1" opaque="1">
+<Name>VBA_VAE</Name>
+<Title>Volum amb escorça</Title>
+		<Abstract>Volum amb escorça (m3/ha)</Abstract>
+		<KeywordList>
+			<Keyword>volum</Keyword>
+			<Keyword>amb</Keyword>
+			<Keyword>escorça</Keyword>
+			<Keyword>variables</Keyword>
+			<Keyword>biofísiques</Keyword>
+			<Keyword>arbrat</Keyword>
+			<Keyword>Catalunya</Keyword>
+		</KeywordList>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>0.123370</westBoundLongitude>
+<eastBoundLongitude>3.343079</eastBoundLongitude>
+<southBoundLatitude>40.434871</southBoundLatitude>
+<northBoundLatitude>42.920107</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<BoundingBox CRS="EPSG:25831" minx="256000.00" miny="4480000.00" maxx="528000.00" maxy="4752000.00" resx="20.00" resy="20.00" />
+</Layer>
+</Layer>
+</Capability>
+</WMS_Capabilities>

@@ -1,0 +1,11 @@
+{
+  "nota": "Troballes reals per calibrar el model. Ubicació només a nivell de municipi (el repositori és públic). quantitat: poc | normal | molt.",
+  "observacions": [
+    { "data": "2026-10-17", "municipi": "Canet d'Adri", "comarca": "Gironès", "especies": [
+      { "nom": "Rossinyol", "id": "rossinyol", "quantitat": "molt" },
+      { "nom": "Apagallums", "llati": "Macrolepiota procera" },
+      { "nom": "Cualbres (llores)", "llati": "Russula spp." },
+      { "nom": "Cama-sec de bosc" }
+    ], "notes": "Entre altres espècies." }
+  ]
+}

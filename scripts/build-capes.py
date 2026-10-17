@@ -191,20 +191,32 @@ def cobertes():
 # ---------------------------------------------------------------- ICGC: geologia (WMS 1:250.000)
 GEOWMS = 'https://geoserveis.icgc.cat/servei/catalunya/geologia-territorial/wms'
 GEOCAPA = 'unitats-geologiques-250000'
-CALC = r'calcar|calcari|calcilut|calcaren|dolomi|marg|guix|evapor|travert|carbonat|sal gemma|halit|creta'
-SILI = (r'granit|granodior|tonalit|diorit|pissarr|esquist|gneis|quarsit|gres|arenisc|saul|basalt|volcan|porfir|'
-        r'migmatit|cornubian|lidit|riolit|andesit|filit|arcos|licorell|piroclast|leucogran|ignimbrit|grauvac')
-MIXT = r'conglomerat|al.?luvi|col.?luvi|quaternari|grava|llim|argil|lutit|bretxa|terrass|ventall|dipos'
+CALC = r'calcar|calcari|calcilut|calcaren|dolomi|marg|guix|evapor|travert|carbonat|sal gemma|halit|creta|tosca'
+SILI = (r'granit|granodior|tonalit(a|es)\b|diorit|pissarr|esquist|gneis|quarsit|basalt|volcan|porfir|migmatit|cornubian|'
+        r'lidit|riolit|andesit|filit|arcos|licorell|piroclast|leucogran|ignimbrit|grauvac|saul|metamorf|pelit|ritmit|cornean|ofit')
+DETR = r'gres|arenisc|conglomerat|lutit|argil|llim|grava|sorr|bretxa|al.?luvi|col.?luvi|terrass|ventall|dipos'
+
+
+def descripcio_geo(text):
+    """Del text pla de l'ICGC ('capçalera; valors'), en treu Descripcio i Descripcio_protolit."""
+    m = re.match(r'@\S+\s+(.*?;)\s+(.*)$', text)
+    if not m:
+        return text
+    camps, vals = m.group(1).split(';'), m.group(2).split(';')
+    d = dict(zip(camps, vals))
+    return ' '.join(v for k in ('Descripcio', 'Descripcio_protolit') if (v := d.get(k)) and v != 'Null') or text
 
 
 def classifica_roca(text):
-    t = norm(text)
-    c, s = bool(re.search(CALC, t)), bool(re.search(SILI, t))
-    if c and not s:
-        return 1
-    if s and not c:
+    """1 = calcari, 2 = mixt/detrític, 3 = silici. La primera roca esmentada és la dominant."""
+    t = norm(re.sub(r'\([^)]*\)', ' ', descripcio_geo(text)))  # sense topònims
+    pos = lambda pat: (m.start() if (m := re.search(pat, t)) else 10 ** 6)
+    c, s, d = pos(CALC), pos(SILI), pos(DETR)
+    if s < 10 ** 6 and c == 10 ** 6:
         return 3
-    if c or s or re.search(MIXT, t):
+    if c < 10 ** 6 and s == 10 ** 6:
+        return 1  # roques carbonatades, o detrítics amb margues/calcàries (sòls calcaris de la Depressió Central)
+    if c < 10 ** 6 or s < 10 ** 6 or d < 10 ** 6:
         return 2
     return 0
 
@@ -232,7 +244,7 @@ def geologia():
             else:
                 t = html_net(t)
             t = re.sub(r'\s+', ' ', t).strip()
-            return t[:600] or None
+            return t[:1500] or None
         return None
 
     colors, comptes, pesos, cnt = wms_classifica(GEOWMS, GEOCAPA, 100, 2, consulta)
@@ -245,7 +257,7 @@ def geologia():
         for t, w in p.items():
             px[t] += comptes[ci] * w
     diag['geologia'] = {'format': formats[0], 'classes': collections.Counter(cls.values()),
-                        'mostra': [{'t': t, 'cls': cls[t], 'px': int(n)} for t, n in px.most_common(300)]}
+                        'mostra': [{'t': descripcio_geo(t)[:200], 'cls': cls[t], 'px': int(n)} for t, n in px.most_common(400)]}
     log(f'Geologia: {len(colors)} colors, {len(cls)} unitats, format {formats[0]}, sense classe: {sum(1 for v in cls.values() if v == 0)}')
     out = {}
     for km, C in cnt.items():

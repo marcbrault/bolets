@@ -1,0 +1,792 @@
+{
+ "font": "Atles del Boletaire (fotos aportades). Zones resumides a nivell de municipi o paratge; no reprodueixen els mapes originals.",
+ "radiKm": 7,
+ "comarques": [
+  {
+   "comarca": "Osona",
+   "pagines": "75–78",
+   "resum": "Pi roig (~40 % del bosc), alzinars, rouredes i fagedes (Collsacabra, Vidranès, Montseny). Sòls majoritàriament calcaris; silicis al nord del Montseny, Guilleries i Collsacabra.",
+   "zones": [
+    {
+     "sp": [
+      "rovello",
+      "pinetell"
+     ],
+     "habitat": "Pinedes del Lluçanès i la plana de Vic",
+     "llocs": [
+      "Prats de Lluçanès",
+      "Olost",
+      "Sant Bartomeu del Grau",
+      "Perafita",
+      "Sobremunt",
+      "Oristà",
+      "Sant Feliu Sasserra",
+      "Santa Eulàlia de Riuprimer",
+      "Muntanyola",
+      "Gurb",
+      "Sora",
+      "Alpens"
+     ]
+    },
+    {
+     "sp": [
+      "trompeta",
+      "carlet"
+     ],
+     "habitat": "Fagedes, rouredes i alzinars del Collsacabra, Guilleries, Vidranès i Montseny",
+     "llocs": [
+      "Vidrà",
+      "Sant Pere de Torelló",
+      "Rupit i Pruit",
+      "Tavertet",
+      "Vilanova de Sau",
+      "Sant Sadurní d'Osormort",
+      "Espinelves",
+      "Viladrau",
+      "Seva",
+      "El Brull",
+      "Montesquiu",
+      "Sant Quirze de Besora",
+      "Tavèrnoles",
+      "Sant Julià de Vilatorta"
+     ]
+    },
+    {
+     "sp": [
+      "pinetell",
+      "oudereig"
+     ],
+     "habitat": "Pinedes i planifolis del Montseny i Collsacabra (zona pinetell-reig)",
+     "llocs": [
+      "Taradell",
+      "Viladrau",
+      "El Brull",
+      "Seva",
+      "Tavertet",
+      "L'Esquirol"
+     ]
+    },
+    {
+     "sp": [
+      "marcot"
+     ],
+     "habitat": "Boscos madurs prop de Seva (substrats silicis)",
+     "llocs": [
+      "Seva",
+      "El Brull"
+     ]
+    },
+    {
+     "sp": [
+      "carrereta"
+     ],
+     "habitat": "Prats i pastures",
+     "llocs": [
+      [
+       "Collfred",
+       2.37,
+       42.135
+      ],
+      "Vidrà",
+      "Rupit i Pruit",
+      "Alpens",
+      "Collsuspina",
+      "Centelles"
+     ]
+    },
+    {
+     "sp": [
+      "moixerno",
+      "carrereta"
+     ],
+     "habitat": "Rouredes calcàries esclarissades",
+     "llocs": [
+      "Collsuspina"
+     ]
+    },
+    {
+     "sp": [
+      "murgola"
+     ],
+     "habitat": "Riberes del Ter, el Gurri i el Ges; alzinars calcaris (M. conica)",
+     "llocs": [
+      "Manlleu",
+      "Torelló",
+      "Roda de Ter",
+      "Vic"
+     ]
+    }
+   ]
+  },
+  {
+   "comarca": "Berguedà",
+   "pagines": "21–24",
+   "resum": "Pinedes de pi roig entre 1.000 i 1.500 m (~50 % del bosc), seguides de pinassa i pi negre. Octubre i novembre són els mesos més productius. Els boscos pasturats fan més bolets.",
+   "zones": [
+    {
+     "sp": [
+      "pinetell",
+      "rovello",
+      "fredolic",
+      "camagroc"
+     ],
+     "habitat": "Pinedes de pi roig (de vegades amb roure); pi negre jove i esclarissat",
+     "llocs": [
+      "Saldes",
+      "Gósol",
+      "Gisclareny",
+      "Vallcebre",
+      "Fígols",
+      "La Nou de Berguedà",
+      "Vilada",
+      "Castell de l'Areny",
+      "Capolat",
+      "Berga",
+      "Guardiola de Berguedà",
+      "Cercs",
+      "Sant Julià de Cerdanyola",
+      [
+       "Rasos de Peguera",
+       1.78,
+       42.13
+      ]
+     ]
+    },
+    {
+     "sp": [
+      "cep"
+     ],
+     "habitat": "Pinedes de pi negre/roig en sòls silicis o descalcificats",
+     "llocs": [
+      [
+       "Rasos de Peguera",
+       1.78,
+       42.13
+      ],
+      "Saldes"
+     ]
+    },
+    {
+     "sp": [
+      "moixerno",
+      "carrereta"
+     ],
+     "habitat": "Prats i pastures de muntanya calcaris (coll de Pal, coll de la Creueta)",
+     "llocs": [
+      "Castellar de n'Hug",
+      [
+       "Coll de Pal",
+       1.89,
+       42.28
+      ],
+      "La Pobla de Lillet",
+      "Bagà",
+      "Gisclareny"
+     ]
+    },
+    {
+     "sp": [
+      "rovello-avet"
+     ],
+     "habitat": "Avetoses i boscos mixtos d'avet",
+     "llocs": [
+      "Gósol",
+      "Bagà"
+     ]
+    },
+    {
+     "sp": [
+      "llenega",
+      "rovello",
+      "trompeta",
+      "carlet"
+     ],
+     "habitat": "Pinedes de pinassa i boscos mixtos amb roure o alzina (sòls calcaris)",
+     "llocs": [
+      "Avià",
+      "L'Espunyola",
+      "Casserres",
+      "Puig-reig",
+      "Montclar",
+      "Olvan",
+      "Gironella",
+      "Sagàs",
+      "Santa Maria de Merlès",
+      "Viver i Serrateix"
+     ]
+    },
+    {
+     "sp": [
+      "oudereig"
+     ],
+     "habitat": "Algun reig despistat per sobre dels 1.200 m",
+     "llocs": [
+      [
+       "Gréixer",
+       1.84,
+       42.25
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "comarca": "Cerdanya",
+   "pagines": "25–28",
+   "resum": "Pi negre dominant, seguit de pi roig i avet (98 % coníferes). Sòls silicis al nord i l'est; calcaris al Cadí però descalcificats a les obagues. Millor època: inici de setembre, durant 8–9 setmanes.",
+   "zones": [
+    {
+     "sp": [
+      "rovello-avet",
+      "cep"
+     ],
+     "habitat": "Avetoses barrejades amb pi negre o faig (vessant nord del Cadí-Moixeró)",
+     "llocs": [
+      "Riu de Cerdanya",
+      "Urús",
+      "Das",
+      "Alp",
+      "Bellver de Cerdanya",
+      "Montellà i Martinet"
+     ]
+    },
+    {
+     "sp": [
+      "cep",
+      "rossinyol",
+      "marcot"
+     ],
+     "habitat": "Pinedes de pi negre en sòls silicis o descalcificats",
+     "llocs": [
+      "Lles de Cerdanya",
+      "Meranges",
+      "Guils de Cerdanya",
+      "Llívia",
+      "Puigcerdà",
+      "Prullans"
+     ]
+    },
+    {
+     "sp": [
+      "pinetell",
+      "fredolic",
+      "fredolic-gros"
+     ],
+     "habitat": "Pinedes de pi roig, de vegades amb roure",
+     "llocs": [
+      "Montellà i Martinet",
+      "Bellver de Cerdanya",
+      "Riu de Cerdanya",
+      "Das",
+      "Urús",
+      "Bolvir",
+      "Fontanals de Cerdanya",
+      "Lles de Cerdanya"
+     ]
+    },
+    {
+     "sp": [
+      "carrereta"
+     ],
+     "habitat": "Prats i pastures de muntanya",
+     "llocs": [
+      "Prats i Sansor",
+      "Isòvol",
+      "Ger",
+      "Prullans",
+      "Meranges"
+     ]
+    }
+   ]
+  },
+  {
+   "comarca": "Garrotxa",
+   "pagines": "29–32",
+   "resum": "Pinedes de pi blanc i pi roig, alzinars, rouredes i fagedes. Sòls sovint descalcificats pel clima humit; silicis al sector volcànic i calcaris al nord-est. La meitat nord és més primerenca; l'est i el sud allarguen la temporada.",
+   "zones": [
+    {
+     "sp": [
+      "pinetell",
+      "rovello",
+      "fredolic",
+      "llenega"
+     ],
+     "habitat": "Pinedes de pi roig i plantacions de pinassa (Serra de Malforat)",
+     "llocs": [
+      "Montagut i Oix",
+      "Sales de Llierca",
+      "Mieres"
+     ]
+    },
+    {
+     "sp": [
+      "llenega",
+      "rovello",
+      "camagroc",
+      "fredolic"
+     ],
+     "habitat": "Pinedes amb alzines o pinyer, sòls calcaris",
+     "llocs": [
+      "Beuda",
+      "Maià de Montcal",
+      "Sant Ferriol",
+      "Argelaguer",
+      "Besalú",
+      "Santa Pau",
+      "Tortellà",
+      "Mieres"
+     ]
+    },
+    {
+     "sp": [
+      "carrereta",
+      "moixerno"
+     ],
+     "habitat": "Prats i pastures (moixernó només en calcari); serres de Milany i Puigsacalm",
+     "llocs": [
+      "Montagut i Oix",
+      "Riudaura",
+      "La Vall de Bianya",
+      "La Vall d'en Bas",
+      "Olot"
+     ]
+    },
+    {
+     "sp": [
+      "trompeta",
+      "carlet",
+      "oudereig",
+      "cep",
+      "rossinyol"
+     ],
+     "habitat": "Alzinars, rouredes i fagedes",
+     "llocs": [
+      "Les Preses",
+      "La Vall d'en Bas",
+      "Sant Feliu de Pallerols",
+      "Les Planes d'Hostoles",
+      "Sant Aniol de Finestres",
+      "Santa Pau",
+      "Olot",
+      "Riudaura",
+      "La Vall de Bianya",
+      "Castellfollit de la Roca"
+     ]
+    },
+    {
+     "sp": [
+      "murgola"
+     ],
+     "habitat": "Riberes del Fluvià (pollancredes i avellanedes)",
+     "llocs": [
+      "Castellfollit de la Roca",
+      "Sant Jaume de Llierca",
+      "Argelaguer",
+      "Besalú",
+      "Les Preses",
+      "Olot"
+     ]
+    }
+   ]
+  },
+  {
+   "comarca": "Ripollès",
+   "pagines": "41–44",
+   "resum": "Pi roig (>60 % del bosc), pi negre a les zones altes; faig, roure i alzina. Sòls calcaris al centre i sud; silicis al Puigmal i l'alta vall del Ter. Les tempestes d'estiu avancen la temporada: l'alta vall del Ter, les obagues de Camprodon i la vall de Ribes són els indrets més primerencs.",
+   "zones": [
+    {
+     "sp": [
+      "pinetell",
+      "rovello",
+      "camagroc",
+      "fredolic",
+      "llenega"
+     ],
+     "habitat": "Pinedes de pi roig amb roure (solell) o faig (obac)",
+     "llocs": [
+      "Ripoll",
+      "Les Llosses",
+      "Campdevànol",
+      "Ribes de Freser",
+      "Sant Joan de les Abadesses",
+      "Vallfogona de Ripollès",
+      "Gombrèn",
+      "Sant Pau de Segúries",
+      "Pardines",
+      "Planoles"
+     ]
+    },
+    {
+     "sp": [
+      "cep",
+      "rossinyol",
+      "rovello-avet"
+     ],
+     "habitat": "Pinedes de pi negre amb avets o bedolls, sòls silicis",
+     "llocs": [
+      "Queralbs",
+      "Setcases",
+      "Molló",
+      "Vilallonga de Ter",
+      "Toses",
+      "Pardines"
+     ]
+    },
+    {
+     "sp": [
+      "carrereta",
+      "moixerno"
+     ],
+     "habitat": "Prats i pastures de muntanya (Serra Cavallera)",
+     "llocs": [
+      "Toses",
+      "Planoles",
+      "Campelles",
+      "Ogassa",
+      "Camprodon",
+      "Llanars"
+     ]
+    },
+    {
+     "sp": [
+      "moixerno"
+     ],
+     "habitat": "Rouredes de roure martinenc esclarissades i pasturades, sòls calcaris",
+     "llocs": [
+      "Ogassa",
+      "Sant Joan de les Abadesses",
+      "Les Llosses",
+      "Ripoll"
+     ]
+    },
+    {
+     "sp": [
+      "trompeta",
+      "carlet",
+      "rossinyol"
+     ],
+     "habitat": "Fagedes, rouredes de fulla gran i alzinar muntanyenc (Beget, Milany)",
+     "llocs": [
+      "Camprodon",
+      "Sant Pau de Segúries",
+      "Vallfogona de Ripollès"
+     ]
+    },
+    {
+     "sp": [
+      "marcot"
+     ],
+     "habitat": "Boscos del massís del Puigmal",
+     "llocs": [
+      "Queralbs",
+      "Toses",
+      [
+       "Puigmal",
+       2.117,
+       42.383
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "comarca": "Selva",
+   "pagines": "133–136",
+   "resum": "Granits i saulons gairebé a tot el territori (sòls silicis). Pi pinyer i pinastre, alzinars, suredes i rouredes; Montseny i Guilleries a l'oest. La influència marítima allarga la temporada fins ben entrat el gener; al Montseny i les Guilleries algunes espècies surten abans. Castanyedes als obacs de les Guilleries, suredes als vessants secs i al massís de Cadiretes; pinastre jove amb produccions extraordinàries de pinetells.",
+   "zones": [
+    {
+     "sp": [
+      "rovello-vinader",
+      "pinetell"
+     ],
+     "habitat": "Pinedes de pi pinyer i pinastre",
+     "llocs": [
+      "Caldes de Malavella",
+      "Vidreres",
+      "Maçanet de la Selva",
+      "Tossa de Mar",
+      "Lloret de Mar",
+      "Blanes",
+      "Riudarenes",
+      "Sils",
+      "Santa Coloma de Farners",
+      "Brunyola i Sant Martí Sapresa",
+      "Vilobí d'Onyar"
+     ]
+    },
+    {
+     "sp": [
+      "cep"
+     ],
+     "habitat": "Fagedes del Montseny (B. aestivalis al juny, B. pinophilus a la tardor)",
+     "llocs": [
+      "Arbúcies",
+      "Riells i Viabrea"
+     ]
+    },
+    {
+     "sp": [
+      "carrereta"
+     ],
+     "habitat": "Prats",
+     "llocs": [
+      "Susqueda"
+     ]
+    },
+    {
+     "sp": [
+      "oudereig",
+      "carlet",
+      "trompeta"
+     ],
+     "habitat": "Alzinars, suredes i rouredes de les Guilleries i el centre",
+     "llocs": [
+      "Sant Hilari Sacalm",
+      "Osor",
+      "Arbúcies",
+      "Santa Coloma de Farners",
+      "Sant Feliu de Buixalleu",
+      "Amer",
+      "Anglès",
+      "Susqueda",
+      "Brunyola i Sant Martí Sapresa"
+     ]
+    },
+    {
+     "sp": [
+      "pinetell",
+      "rovello-vinader",
+      "camagroc"
+     ],
+     "habitat": "Pinastre jove sobre saulons i esquistos",
+     "llocs": [
+      "Tossa de Mar",
+      "Lloret de Mar",
+      "Vidreres",
+      "Maçanet de la Selva",
+      "Caldes de Malavella"
+     ]
+    },
+    {
+     "sp": [
+      "llenegall",
+      "esteperol",
+      "rossinyol"
+     ],
+     "habitat": "Castanyedes, suredes i alzinars silicis (zona del reig)",
+     "llocs": [
+      "Santa Coloma de Farners",
+      "Sant Hilari Sacalm",
+      "Arbúcies",
+      "Osor",
+      "Tossa de Mar",
+      "Lloret de Mar",
+      "Riells i Viabrea",
+      "Breda"
+     ]
+    }
+   ]
+  },
+  {
+   "comarca": "Pla de l'Estany",
+   "pagines": "129–132",
+   "resum": "Pinedes de pi blanc (la formació més extensa), clapes de pi pinyer i alzinars amb marfull; per sobre dels 600 m, alzinar muntanyenc a Rocacorba. Sòls calcaris gairebé a tot arreu; descalcificats als racons humits i silicis a Rocacorba. Entre 150 i 700 m la temporada arrenca les dues primeres setmanes d'octubre i culmina al novembre.",
+   "zones": [
+    {
+     "sp": [
+      "rovello",
+      "llenega",
+      "fredolic"
+     ],
+     "habitat": "Pinedes de pi blanc amb alzina o pi pinyer (sòls calcaris)",
+     "llocs": [
+      "Serinyà",
+      "Fontcoberta",
+      "Vilademuls",
+      "Esponellà",
+      "Porqueres",
+      "Cornellà del Terri",
+      "Palol de Revardit",
+      "Sant Miquel de Campmajor",
+      "Banyoles",
+      "Camós"
+     ]
+    },
+    {
+     "sp": [
+      "pinetell",
+      "camagroc"
+     ],
+     "habitat": "Pinedes de pi roig amb roure (sòls calcaris humits i descalcificats)",
+     "llocs": [
+      "Sant Miquel de Campmajor",
+      [
+       "Rocacorba",
+       2.69,
+       42.07
+      ]
+     ]
+    },
+    {
+     "sp": [
+      "carlet",
+      "trompeta",
+      "llenegall",
+      "esteperol",
+      "oudereig"
+     ],
+     "habitat": "Alzinars i claps de roureda i fageda (reig només en sòls descalcificats o silicis)",
+     "llocs": [
+      "Porqueres",
+      "Sant Miquel de Campmajor",
+      "Palol de Revardit",
+      [
+       "Rocacorba",
+       2.69,
+       42.07
+      ]
+     ]
+    },
+    {
+     "sp": [
+      "murgola"
+     ],
+     "habitat": "Riberes del Fluvià i el Terri (pollancredes)",
+     "llocs": [
+      "Esponellà",
+      "Crespià",
+      "Cornellà del Terri",
+      "Banyoles"
+     ]
+    }
+   ]
+  },
+  {
+   "comarca": "Gironès",
+   "pagines": "121–124",
+   "resum": "El Ter fa de frontera: al nord (Sarrià de Ter, Sant Jordi Desvalls) els sòls són calcaris i hi surten llenegues i rovellons; al sud dominen els silicis, amb rossinyols, reigs i ceps. Pinedes de pi pinyer, pi blanc i pinastre, i suredes i alzinars a Rocacorba i les Gavarres.",
+   "zones": [
+    {
+     "sp": [
+      "rovello-vinader",
+      "pinetell",
+      "camagroc"
+     ],
+     "habitat": "Pinedes de pinastre i pi pinyer (sòls silicis); pinastre a l'extrem NO de les Gavarres",
+     "llocs": [
+      "Quart",
+      "Llambilles",
+      "Cassà de la Selva",
+      "Campllong",
+      "Llagostera",
+      "Sant Andreu Salou",
+      "Madremanya",
+      "Sant Martí Vell",
+      "Juià",
+      "Aiguaviva",
+      "Bescanó"
+     ]
+    },
+    {
+     "sp": [
+      "rovello",
+      "llenega",
+      "fredolic",
+      "pinetell"
+     ],
+     "habitat": "Pinedes de pi blanc amb alzina, roure i pinyer; alzinars (sòls calcaris)",
+     "llocs": [
+      "Sant Martí de Llémena",
+      "Canet d'Adri",
+      "Sant Gregori",
+      "Viladasens",
+      "Cervià de Ter",
+      "Sant Jordi Desvalls"
+     ]
+    },
+    {
+     "sp": [
+      "oudereig",
+      "cep",
+      "rossinyol",
+      "trompeta",
+      "carlet",
+      "llenegall"
+     ],
+     "habitat": "Suredes i alzinars silicis, boscos mixtos amb pinastre, claps de castanyer",
+     "llocs": [
+      "Sant Martí de Llémena",
+      "Madremanya",
+      "Aiguaviva",
+      "Bescanó",
+      "Cassà de la Selva",
+      "Llagostera",
+      "Quart"
+     ]
+    },
+    {
+     "sp": [
+      "carrereta",
+      "moixerno"
+     ],
+     "habitat": "Prats i pastures calcaris",
+     "llocs": [
+      "Sant Martí de Llémena"
+     ]
+    },
+    {
+     "sp": [
+      "murgola"
+     ],
+     "habitat": "Riberes del Ter (pollancredes i sòls sorrencs)",
+     "llocs": [
+      "Girona",
+      "Salt",
+      "Sarrià de Ter",
+      "Sant Julià de Ramis",
+      "Bordils",
+      "Celrà",
+      "Flaçà",
+      "Fornells de la Selva"
+     ]
+    }
+   ]
+  },
+  {
+   "comarca": "Altres cites",
+   "pagines": "76, 30",
+   "resum": "Àrees marçoteres destacades i carlets en sòls calcaris del Solsonès.",
+   "zones": [
+    {
+     "sp": [
+      "marcot"
+     ],
+     "habitat": "Boscos entre la Seu d'Urgell i Llavorsí",
+     "llocs": [
+      [
+       "Sant Joan de l'Erm",
+       1.32,
+       42.4
+      ],
+      [
+       "Torreta de l'Orri",
+       1.2,
+       42.39
+      ],
+      "Montferrer i Castellbò",
+      "Llavorsí"
+     ]
+    },
+    {
+     "sp": [
+      "carlet"
+     ],
+     "habitat": "Sòls carregats de calç del Solsonès",
+     "llocs": [
+      "Solsona"
+     ]
+    }
+   ]
+  }
+ ]
+}

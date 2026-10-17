@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mapa Boletaire de Catalunya</title>
+  <meta name="description" content="On anar a buscar bolets a Catalunya: índex d'idoneïtat per espècie a partir de la pluja, la temperatura, l'altitud i el bosc.">
+  <meta name="theme-color" content="#1f2a22">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍄</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="panell" aria-label="Controls">
+      <header class="cap">
+        <button id="tanca-panell" class="icona-btn nomes-mobil" aria-label="Amaga el panell">✕</button>
+        <h1><span aria-hidden="true">🍄</span> Mapa Boletaire</h1>
+        <p class="subtitol">Catalunya · índex d'idoneïtat</p>
+      </header>
+
+      <section class="bloc">
+        <label class="etiqueta" for="especie">Espècie</label>
+        <div id="especies" class="xips" role="radiogroup" aria-label="Espècie"></div>
+        <p id="especie-info" class="info-especie"></p>
+      </section>
+
+      <section class="bloc">
+        <label class="etiqueta" for="cerca">Cerca un municipi</label>
+        <div class="cerca">
+          <input id="cerca" list="llista-municipis" placeholder="p. ex. Solsona, Olot, Prades…" autocomplete="off">
+          <datalist id="llista-municipis"></datalist>
+        </div>
+      </section>
+
+      <section class="bloc">
+        <div class="etiqueta">Capa</div>
+        <div class="segment" id="vista">
+          <button data-v="index" class="actiu">Índex</button>
+          <button data-v="pluja7">Pluja 7 d</button>
+          <button data-v="temp7">Temp.</button>
+          <button data-v="elev">Altitud</button>
+          <button data-v="bosc">Bosc</button>
+          <button data-v="sol">Sòl</button>
+        </div>
+        <div id="llegenda" class="llegenda"></div>
+      </section>
+
+      <section class="bloc" id="fitxa-buida">
+        <p class="pista">Toca el mapa per veure el detall d'una zona.</p>
+      </section>
+      <section class="bloc fitxa" id="fitxa" hidden></section>
+
+      <section class="bloc">
+        <div class="etiqueta">Millors zones del dia</div>
+        <ol id="top-zones" class="top-zones"></ol>
+      </section>
+
+      <details class="bloc ajustos">
+        <summary>Mapa i dades</summary>
+        <label class="fila">Mapa base
+          <select id="base">
+            <option value="icgc-topo">ICGC topogràfic</option>
+            <option value="opentopo">OpenTopoMap</option>
+            <option value="icgc-orto">ICGC ortofoto</option>
+            <option value="osm">OpenStreetMap</option>
+          </select>
+        </label>
+        <label class="fila">Resolució
+          <select id="resolucio">
+            <option value="10">10 km (ràpid)</option>
+            <option value="5">5 km (detall)</option>
+          </select>
+        </label>
+        <label class="fila">Llocs de l'Atles <input id="mostra-atles" type="checkbox" checked></label>
+        <label class="fila">Opacitat <input id="opacitat" type="range" min="0.2" max="1" step="0.05" value="0.78"></label>
+        <p id="estat-dades" class="estat"></p>
+        <button id="recarrega" class="btn-secundari">Torna a descarregar la meteo</button>
+      </details>
+
+      <footer class="peu">
+        <p>Model orientatiu: no garanteix trobar bolets. Les capes de bosc i de sòl són aproximacions; les zones de l'Atles del Boletaire cobreixen, de moment, Osona, Berguedà, Cerdanya, Garrotxa, Ripollès, Selva, Pla de l'Estany i Gironès.
+          Respecta la regulació de cada espai natural i la propietat privada, i no cullis cap bolet que no coneguis amb seguretat.</p>
+        <p>Meteo: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> ·
+          Mapes: <a href="https://www.icgc.cat/" target="_blank" rel="noopener">ICGC</a>, © OpenStreetMap</p>
+      </footer>
+    </aside>
+
+    <main id="zona-mapa">
+      <div id="mapa"></div>
+      <button id="obre-panell" class="flotant nomes-mobil" aria-label="Mostra el panell">☰ <span id="obre-panell-txt">Rovelló</span></button>
+      <div id="avis" class="avis" hidden></div>
+      <div id="carregant" class="carregant">
+        <div class="spinner"></div><span id="carregant-txt">Carregant…</span>
+      </div>
+
+      <div id="linia-temps" class="linia-temps">
+        <button id="play" class="icona-btn" aria-label="Reprodueix">▶</button>
+        <div class="lt-cos">
+          <div class="lt-cap">
+            <strong id="data-txt">—</strong>
+            <span id="data-tag" class="tag"></span>
+          </div>
+          <div id="barres" class="barres" aria-hidden="true"></div>
+          <input id="dia" type="range" min="0" max="20" step="1" value="14" aria-label="Dia">
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

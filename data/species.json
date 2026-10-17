@@ -51,7 +51,7 @@
   "sol": "silici-suau",
   "elev": [
    0,
-   600,
+   100,
    1700,
    2100
   ],
@@ -215,11 +215,11 @@
   "llati": "Cantharellus cibarius",
   "grup": "estiu-tardor",
   "color": "#f0a020",
-  "habitat": "Pinedes de pi negre, fagedes, rouredes i castanyedes",
+  "habitat": "Pinedes de pi negre, fagedes, rouredes, castanyedes; a terra baixa, suredes i alzinars silicis i volcànics",
   "sol": "silici",
   "elev": [
-   200,
-   600,
+   0,
+   150,
    1800,
    2100
   ],
@@ -242,12 +242,12 @@
    0,
    0.1,
    0.6,
-   0.75,
-   0.85,
+   0.7,
+   0.8,
    1,
-   0.75,
-   0.2,
-   0
+   0.9,
+   0.5,
+   0.05
   ],
   "notes": "Només en sòls àcids. Temporada llarga, de juny a octubre, sempre després de pluges."
  },

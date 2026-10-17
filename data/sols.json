@@ -240,6 +240,22 @@
    "lat": 41.89,
    "r": 9,
    "font": "Atles (Gironès)"
+  },
+  {
+   "nom": "Vall del Llémena (volcànica)",
+   "tipus": "silici",
+   "lon": 2.7,
+   "lat": 42.06,
+   "r": 6,
+   "font": "Observació de l'usuari: zona volcànica, rossinyols a Canet d'Adri"
+  },
+  {
+   "nom": "Volcà de la Crosa",
+   "tipus": "silici",
+   "lon": 2.79,
+   "lat": 41.975,
+   "r": 3,
+   "font": "Observació de l'usuari: zona volcànica, rossinyols"
   }
  ]
 }

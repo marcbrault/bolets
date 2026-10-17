@@ -1,11 +1,41 @@
 {
-  "nota": "Troballes reals per calibrar el model. Ubicació només a nivell de municipi (el repositori és públic). quantitat: poc | normal | molt.",
-  "observacions": [
-    { "data": "2026-10-17", "municipi": "Canet d'Adri", "comarca": "Gironès", "especies": [
-      { "nom": "Rossinyol", "id": "rossinyol", "quantitat": "molt" },
-      { "nom": "Apagallums", "llati": "Macrolepiota procera" },
-      { "nom": "Cualbres (llores)", "llati": "Russula spp." },
-      { "nom": "Cama-sec de bosc" }
-    ], "notes": "Entre altres espècies." }
-  ]
+ "nota": "Troballes reals per calibrar el model. Ubicació només a nivell de municipi (el repositori és públic). quantitat: poc | normal | molt.",
+ "observacions": [
+  {
+   "data": "2026-10-17",
+   "municipi": "Canet d'Adri",
+   "comarca": "Gironès",
+   "especies": [
+    {
+     "nom": "Rossinyol",
+     "id": "rossinyol",
+     "quantitat": "molt"
+    },
+    {
+     "nom": "Apagallums",
+     "llati": "Macrolepiota procera"
+    },
+    {
+     "nom": "Cualbres (llores)",
+     "llati": "Russula spp."
+    },
+    {
+     "nom": "Cama-sec de bosc"
+    }
+   ],
+   "notes": "Entre altres espècies. Zona volcànica (basalts, sòl silici), com el volcà de la Crosa, on també hi surten rossinyols."
+  },
+  {
+   "data": null,
+   "municipi": "Volcà de la Crosa (Vilobí d'Onyar / Aiguaviva)",
+   "comarca": "Selva / Gironès",
+   "especies": [
+    {
+     "nom": "Rossinyol",
+     "id": "rossinyol"
+    }
+   ],
+   "notes": "Troballa habitual de l'usuari, sense data concreta. Sòl volcànic."
+  }
+ ]
 }

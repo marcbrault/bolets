@@ -1,0 +1,1142 @@
+{
+ "cobertes": {
+  "Abocadors": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3234
+  },
+  "Aeroports": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 4365
+  },
+  "Altres caducifolis (&gt;= 20%cc)": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 31199
+  },
+  "Altres caducifolis (5-20%cc)": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3520
+  },
+  "Altres conreus herbacis": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1836279
+  },
+  "Altres conreus herbacis abandonats - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 22519
+  },
+  "Altres conreus herbacis abandonats - prats en zones agrícoles en bancals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 798
+  },
+  "Altres conreus herbacis abandonats regadiu no regat - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 11640
+  },
+  "Altres conreus herbacis abandonats regadiu no regat - prats en zones agrícoles en bancals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 25
+  },
+  "Altres conreus herbacis en bancals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 28978
+  },
+  "Altres conreus herbacis en bancals en regadiu": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 439
+  },
+  "Altres conreus herbacis en regadiu": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 645241
+  },
+  "Altres coníferes (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 289
+  },
+  "Altres coníferes (5-20%cc)": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 233
+  },
+  "Altres perennifolis (5-20%cc)": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 33
+  },
+  "Alzinar (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "alzina"
+   ],
+   "pixels": 837094
+  },
+  "Alzinar (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "alzina"
+   ],
+   "pixels": 92384
+  },
+  "Arboçar (&gt;= 20%cc)": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 9010
+  },
+  "Arrossars": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 92290
+  },
+  "Arrossars abandonats regadiu no regat - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 223
+  },
+  "Assentament agrícola residencial": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 607
+  },
+  "Avellanosa (&gt;= 20%cc)": {
+   "bosc": false,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 12769
+  },
+  "Avellanosa (5-20%cc)": {
+   "bosc": false,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 331
+  },
+  "Avetosa (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "avet"
+   ],
+   "pixels": 70570
+  },
+  "Avetosa (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "avet"
+   ],
+   "pixels": 519
+  },
+  "Basses agrícoles": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3597
+  },
+  "Bedollar (&gt;= 20%cc)": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 21555
+  },
+  "Bedollar (5-20%cc)": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1162
+  },
+  "Boscos caducifolis de ribera (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 1555
+  },
+  "Camps de golf": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 9154
+  },
+  "Canals artificials": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 5661
+  },
+  "Canyars": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 9438
+  },
+  "Carreteres": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 11357
+  },
+  "Cases aïllades": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 32176
+  },
+  "Castanyeda (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "castanyer"
+   ],
+   "pixels": 155
+  },
+  "Cementiris": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 2158
+  },
+  "Centrals eòliques": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 528
+  },
+  "Centrals nuclears": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 726
+  },
+  "Centrals solars": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1905
+  },
+  "Centrals tèrmiques": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 118
+  },
+  "Centre urbà": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 36476
+  },
+  "Centres culturals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 2003
+  },
+  "Centres penitenciaris": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 306
+  },
+  "Centres religiosos": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1139
+  },
+  "Colònies i nuclis aïllats": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 2738
+  },
+  "Complexos administratius": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1891
+  },
+  "Complexos hotelers": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3661
+  },
+  "Conreus abandonats - matollars": {
+   "bosc": false,
+   "grups": [
+    "matollar"
+   ],
+   "pixels": 21665
+  },
+  "Conreus abandonats - prats d&apos;alta muntanya en zones forestals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 49
+  },
+  "Conreus abandonats - prats en zones forestals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 15226
+  },
+  "Conreus d&apos;horta sota plàstic": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 569
+  },
+  "Conreus en transformació": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 38979
+  },
+  "Càmpings": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 7825
+  },
+  "Cítrics": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 44342
+  },
+  "Cítrics abandonats - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 526
+  },
+  "Cítrics en bancals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1441
+  },
+  "Depuradores i potabilitzadores": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1902
+  },
+  "Desalinitzadores": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 147
+  },
+  "Eixample": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 83012
+  },
+  "Embassaments": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 32130
+  },
+  "Equipaments educatius": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 9557
+  },
+  "Equipaments sanitaris": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1749
+  },
+  "Estacions d&apos;autobusos": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 108
+  },
+  "Fageda (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "faig"
+   ],
+   "pixels": 136604
+  },
+  "Fageda (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "faig"
+   ],
+   "pixels": 1289
+  },
+  "Franja de protecció d&apos;alzina": {
+   "bosc": true,
+   "grups": [
+    "alzina"
+   ],
+   "pixels": 756
+  },
+  "Franja de protecció d&apos;alzina surera": {
+   "bosc": true,
+   "grups": [
+    "alzina",
+    "surera"
+   ],
+   "pixels": 1115
+  },
+  "Franja de protecció de matollars": {
+   "bosc": false,
+   "grups": [
+    "matollar"
+   ],
+   "pixels": 169
+  },
+  "Franja de protecció de pinastre": {
+   "bosc": false,
+   "grups": [
+    "pinastre"
+   ],
+   "pixels": 251
+  },
+  "Franja de protecció de prats i herbassars": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 502
+  },
+  "Franja de protecció de roure de fulla menuda": {
+   "bosc": false,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 21
+  },
+  "Franja de protecció de roure martinenc": {
+   "bosc": false,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 227
+  },
+  "Freixeneda (&gt;= 20%cc)": {
+   "bosc": false,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 33823
+  },
+  "Freixeneda (5-20%cc)": {
+   "bosc": false,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 1188
+  },
+  "Fruiters no cítrics": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 190656
+  },
+  "Fruiters no cítrics abandonats - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 6539
+  },
+  "Fruiters no cítrics abandonats regadiu no regat - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 2301
+  },
+  "Fruiters no cítrics en bancals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 68219
+  },
+  "Fruiters no cítrics en bancals en regadiu": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 2775
+  },
+  "Fruiters no cítrics en regadiu": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 290414
+  },
+  "Garroferars": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 14583
+  },
+  "Garroferars abandonats - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 1053
+  },
+  "Garroferars abandonats - prats en zones agrícoles en bancals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 104
+  },
+  "Garroferars en bancals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3130
+  },
+  "Garroferars en regadiu": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 86
+  },
+  "Glaceres i congestes": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 214
+  },
+  "Habitatges unifamiliars": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 111240
+  },
+  "Hivernacles": {
+   "bosc": false,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 2657
+  },
+  "Horta familiar": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 15431
+  },
+  "Indústries aïllades": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 25970
+  },
+  "Infraestructures elèctriques": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1085
+  },
+  "Llacs i llacunes continentals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 7275
+  },
+  "Llacunes litorals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 8915
+  },
+  "Lleres naturals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 6642
+  },
+  "Mar": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 95
+  },
+  "Matollars": {
+   "bosc": false,
+   "grups": [
+    "matollar"
+   ],
+   "pixels": 1876835
+  },
+  "Matollars en tallafocs": {
+   "bosc": false,
+   "grups": [
+    "matollar"
+   ],
+   "pixels": 614
+  },
+  "Matollars procedents de tallades arreu": {
+   "bosc": false,
+   "grups": [
+    "matollar"
+   ],
+   "pixels": 3306
+  },
+  "Molleres d&apos;alta muntanya": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3524
+  },
+  "Naus d&apos;ús agrícola": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1791
+  },
+  "Oliverars": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 274775
+  },
+  "Oliverars abandonats - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 4305
+  },
+  "Oliverars abandonats - prats en zones agrícoles en bancals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 2876
+  },
+  "Oliverars abandonats regadiu no regat - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 27
+  },
+  "Oliverars en bancals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 199943
+  },
+  "Oliverars en bancals en regadiu": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 5179
+  },
+  "Oliverars en regadiu": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 29218
+  },
+  "Parcs recreatius": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1518
+  },
+  "Parcs urbans": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 18050
+  },
+  "Pineda de pi blanc (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pi_blanc"
+   ],
+   "pixels": 1157509
+  },
+  "Pineda de pi negre (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pi_negre"
+   ],
+   "pixels": 236303
+  },
+  "Pineda de pi negre (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pi_negre"
+   ],
+   "pixels": 34591
+  },
+  "Pineda de pi pinyer (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pinyer"
+   ],
+   "pixels": 145507
+  },
+  "Pineda de pi roig (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pi_roig"
+   ],
+   "pixels": 119
+  },
+  "Pineda de pi roig (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pi_roig"
+   ],
+   "pixels": 34403
+  },
+  "Pineda de pinassa (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pinassa"
+   ],
+   "pixels": 445035
+  },
+  "Pineda de pinassa (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pinassa"
+   ],
+   "pixels": 26689
+  },
+  "Pineda de pinastre (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pinastre"
+   ],
+   "pixels": 39916
+  },
+  "Pineda de pinastre (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pinastre"
+   ],
+   "pixels": 1200
+  },
+  "Piscifactories i conreus aqüícoles a mar": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 616
+  },
+  "Piscifactories i conreus aqüícoles a terra": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 167
+  },
+  "Plantacions d&apos;alzina surera": {
+   "bosc": true,
+   "grups": [
+    "alzina",
+    "surera"
+   ],
+   "pixels": 49
+  },
+  "Plantacions d&apos;eucaliptus": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 10451
+  },
+  "Plantacions de castanyer": {
+   "bosc": true,
+   "grups": [
+    "castanyer"
+   ],
+   "pixels": 7788
+  },
+  "Plantacions de coníferes no autòctones": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 20059
+  },
+  "Plantacions de pi blanc": {
+   "bosc": true,
+   "grups": [
+    "pi_blanc"
+   ],
+   "pixels": 29225
+  },
+  "Plantacions de pi negre": {
+   "bosc": true,
+   "grups": [
+    "pi_negre"
+   ],
+   "pixels": 8287
+  },
+  "Plantacions de pi pinyer": {
+   "bosc": true,
+   "grups": [
+    "pinyer"
+   ],
+   "pixels": 4157
+  },
+  "Plantacions de pi roig": {
+   "bosc": true,
+   "grups": [
+    "pi_roig"
+   ],
+   "pixels": 24684
+  },
+  "Plantacions de pinassa": {
+   "bosc": true,
+   "grups": [
+    "pinassa"
+   ],
+   "pixels": 19942
+  },
+  "Plantacions de pinastre": {
+   "bosc": true,
+   "grups": [
+    "pinastre"
+   ],
+   "pixels": 13933
+  },
+  "Plantacions de plàtans": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 9162
+  },
+  "Plantacions de pollancres": {
+   "bosc": true,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 35385
+  },
+  "Plantes de tractament": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1558
+  },
+  "Platges": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 19494
+  },
+  "Polígon industrial ordenat": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 76446
+  },
+  "Polígon industrial sense ordenar": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 9343
+  },
+  "Prats de dall abandonats regadiu no regat - prats d&apos;alta muntanya en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 23
+  },
+  "Prats de dall abandonats regadiu no regat - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 923
+  },
+  "Prats i herbassars d&apos;alta muntanya": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 286403
+  },
+  "Prats i herbassars d&apos;alta muntanya procedents de tallades arreu": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 78
+  },
+  "Prats i herbassars en línies elèctriques": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 828793
+  },
+  "Prats i herbassars en tallafocs": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 1131
+  },
+  "Preses": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 256
+  },
+  "Regeneració d&apos;alzina": {
+   "bosc": true,
+   "grups": [
+    "alzina"
+   ],
+   "pixels": 28809
+  },
+  "Regeneració de bedoll": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 219
+  },
+  "Regeneració de pi blanc": {
+   "bosc": true,
+   "grups": [
+    "pi_blanc"
+   ],
+   "pixels": 139549
+  },
+  "Regeneració de pi negre": {
+   "bosc": true,
+   "grups": [
+    "pi_negre"
+   ],
+   "pixels": 926
+  },
+  "Regeneració de pi roig": {
+   "bosc": true,
+   "grups": [
+    "pi_roig"
+   ],
+   "pixels": 887
+  },
+  "Regeneració de pinassa": {
+   "bosc": false,
+   "grups": [
+    "pinassa"
+   ],
+   "pixels": 265
+  },
+  "Regeneració de pinastre": {
+   "bosc": false,
+   "grups": [
+    "pinastre"
+   ],
+   "pixels": 81
+  },
+  "Regeneració de roure de fulla menuda": {
+   "bosc": false,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 33867
+  },
+  "Regeneració de roureda de roure martinenc": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 34866
+  },
+  "Rius": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 21100
+  },
+  "Rompudes agrícoles": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3518
+  },
+  "Roquissars": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 138875
+  },
+  "Roureda de reboll (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 691
+  },
+  "Roureda de reboll (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 25
+  },
+  "Roureda de roure africà (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 1426
+  },
+  "Roureda de roure de fulla gran (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 999
+  },
+  "Roureda de roure de fulla menuda (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 27969
+  },
+  "Roureda de roure martinenc (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 355110
+  },
+  "Roureda de roure martinenc (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 20109
+  },
+  "Roureda de roure pènol (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 16754
+  },
+  "Roureda de roure pènol (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 169
+  },
+  "Salines": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3407
+  },
+  "Sense registre associat (VALUE =/= 255)": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 12383
+  },
+  "Serreries": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 356
+  },
+  "Sureda (&gt;= 20%cc)": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 408644
+  },
+  "Sureda (5-20%cc)": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 27231
+  },
+  "Sòl erosionat per agent natural": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 18424
+  },
+  "Sòl nu en línies elèctriques": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 68
+  },
+  "Sòl nu en tallafocs": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 188
+  },
+  "Sòls nus urbans no edificats": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 470
+  },
+  "Tarteres": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 67810
+  },
+  "Telecomunicacions": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 159
+  },
+  "Urbanitzacions": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 102521
+  },
+  "Vegetació d&apos;aiguamolls continentals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1435
+  },
+  "Vegetació d&apos;aiguamolls litorals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 10058
+  },
+  "Vegetació herbàcia de dunes i sorrals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 694
+  },
+  "Vies de ferrocarril": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 13182
+  },
+  "Vinyes": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 248028
+  },
+  "Vinyes abandonades - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 3864
+  },
+  "Vinyes abandonades - prats en zones agrícoles en bancals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 147
+  },
+  "Vinyes en bancals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 20625
+  },
+  "Vivers": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1141
+  },
+  "Vivers agrícoles": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3442
+  },
+  "Vivers forestals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 2491
+  },
+  "Zones d&apos;aparcament": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 378
+  },
+  "Zones d&apos;esport": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 17897
+  },
+  "Zones d&apos;extracció minera": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 28024
+  },
+  "Zones urbanes en construcció": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 219
+  },
+  "Zones verdes viàries": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 42049
+  },
+  "Àrees de servei en xarxa viària": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1675
+  }
+ }
+}

@@ -6,7 +6,7 @@ Fonts (es descarreguen al runner de GitHub; vegeu .github/workflows/capes.yml):
   - ICGC, Model d'Elevacions del Terreny (WCS icc:met)
 Ús: pip install numpy pillow pyproj geopandas rasterio requests && python scripts/build-capes.py
 """
-import io, json, math, re, sys, time, zipfile, tempfile, collections, unicodedata
+import html, io, json, math, re, sys, time, zipfile, tempfile, collections, unicodedata
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import numpy as np, requests
@@ -76,6 +76,66 @@ def raster_a_cel(classes, x0, y1, res, ncl):
     return out
 
 
+
+# ---------------------------------------------------------------- WMS: mosaic + calibratge de colors
+def wms_classifica(url, capa, res, nt, consulta, vots_base=3, vots_grans=11):
+    """Descarrega la capa en nt×nt peces i, per a cada color, consulta GetFeatureInfo en diversos píxels.
+    Com que dues categories poden compartir color, cada color es reparteix entre les categories segons els vots.
+    Retorna (comptes per color i cel·la per graella, matriu color→{categoria: pes})."""
+    x0, y0, x1, y1 = BBOX
+    tw = math.ceil((x1 - x0) / res / nt)
+    mosaic = np.zeros((nt * tw, nt * tw), np.uint32)
+    for ty in range(nt):
+        for tx in range(nt):
+            bx0, by1 = x0 + tx * tw * res, y1 - ty * tw * res
+            r = get(url, dict(SERVICE='WMS', VERSION='1.3.0', REQUEST='GetMap', LAYERS=capa, STYLES='',
+                              CRS='EPSG:25831', BBOX=f'{bx0},{by1 - tw * res},{bx0 + tw * res},{by1}',
+                              WIDTH=tw, HEIGHT=tw, FORMAT='image/png', TRANSPARENT='TRUE'), timeout=600)
+            a = np.asarray(Image.open(io.BytesIO(r.content)).convert('RGBA')).astype(np.uint32)
+            codi = (a[..., 0] << 24) | (a[..., 1] << 16) | (a[..., 2] << 8) | a[..., 3]
+            codi[a[..., 3] == 0] = 0
+            mosaic[ty * tw:(ty + 1) * tw, tx * tw:(tx + 1) * tw] = codi
+    colors, inv, comptes = np.unique(mosaic, return_inverse=True, return_counts=True)
+    inv = inv.reshape(mosaic.shape)
+    ordre = np.argsort(inv.ravel(), kind='stable')
+    inici = np.concatenate([[0], np.cumsum(comptes)])
+    total = comptes[colors != 0].sum()
+
+    def calibra(ci):
+        if colors[ci] == 0 or comptes[ci] < 10:
+            return ci, {}
+        nv = vots_grans if comptes[ci] / total > 0.002 else vots_base
+        mostra = np.random.default_rng(int(ci)).choice(ordre[inici[ci]:inici[ci + 1]], size=min(nv, comptes[ci]), replace=False)
+        vots = collections.Counter()
+        for k in mostra:
+            y, x = divmod(int(k), mosaic.shape[1])
+            try:
+                cat = consulta(x0 + (x + 0.5) * res, y1 - (y + 0.5) * res)
+            except Exception:
+                cat = None
+            if cat:
+                vots[cat] += 1
+        n = sum(vots.values())
+        return ci, {c: v / n for c, v in vots.items()}
+
+    with ThreadPoolExecutor(4) as ex:
+        pesos = dict(ex.map(calibra, range(len(colors))))
+    cnt = raster_a_cel(inv.astype(np.int64), x0, y1, res, len(colors))
+    return colors, comptes, pesos, cnt
+
+
+def agrega(cnt, pesos, valor):
+    """Suma, per cel·la, els píxels de cada color ponderats per valor(categoria) (0–1). Retorna també els píxels amb dades."""
+    n = len(pesos)
+    w = np.array([sum(p * valor(c) for c, p in pesos[ci].items()) for ci in range(n)])
+    conegut = np.array([1.0 if pesos[ci] else 0.0 for ci in range(n)])
+    return cnt @ w, cnt @ conegut
+
+
+def html_net(s):
+    return html.unescape(re.sub(r'<[^>]+>', ' ', s)).strip()
+
+
 # ---------------------------------------------------------------- CREAF: cobertes del sòl
 MCSC = 'https://opengis.grumets.cat/cgi-bin/MCSC/MiraMon.cgi'
 GRUPS = [  # (clau, patrons sobre la categoria normalitzada)
@@ -83,93 +143,54 @@ GRUPS = [  # (clau, patrons sobre la categoria normalitzada)
     ('avet', r'avet|abies'), ('pinassa', r'pinassa|pinus nigra'), ('pi_blanc', r'pi blanc|pinus halepensis'),
     ('pinyer', r'pi pinyer|pinus pinea'), ('pinastre', r'pinastre|pinus pinaster'),
     ('faig', r'faig|fageda|fagus'), ('roure', r'roure|roured|quercus (humilis|pubescens|petraea|robur|faginea|cerrioides)'),
-    ('alzina', r'alzin|quercus (ilex|rotundifolia)|carrasc'), ('surera', r'surer|suro|quercus suber'),
-    ('castanyer', r'castany'), ('ribera', r'ribera|pollanc|om |omed|vern|freix|salze|plataner|avellan'),
+    ('alzina', r'alzin|quercus (ilex|rotundifolia)|carrasc'), ('surera', r'surer|sured|suro|quercus suber'),
+    ('castanyer', r'castany'), ('ribera', r'ribera|pollanc|omed|vern|freix|salze|plataner|avellan|bedoll'),
     ('prat', r'prat|pastur|herbassar'), ('matollar', r'matoll|bruguer|garriga|boixed|ginestar'),
 ]
-BOSC = re.compile(r'bosc|pined|pi |pins|avet|fage|roured|alzin|sured|castany|ribera|planifoli|conifer|esclerofil|plantaci')
-NO_BOSC = re.compile(r'urba|conreu|regadiu|secan|fruiter|vinya|oliver|aigua|roquissar|tarter|platja|vial|infraestr')
+BOSC = re.compile(r'%cc|regeneracio|plantacio|bosc|pineda|avetosa|fageda|roureda|alzinar|sureda|castanyeda|freixeneda|bedollar|caducifoli|ribera')
+NO_BOSC = re.compile(r'conreu|fruiter|oliver|vinya|prat|herbassar|zones verdes|parc')
 
 
 def classifica_coberta(cat):
     c = norm(cat)
     grups = [k for k, p in GRUPS if re.search(p, c)]
-    bosc = bool(BOSC.search(c)) and not NO_BOSC.search(c) and 'prat' not in grups
+    bosc = bool(BOSC.search(c)) and not NO_BOSC.search(c)
     return bosc, grups
 
 
 def cobertes():
-    res = 50
-    x0, y0, x1, y1 = BBOX
-    nt = 2
-    tw = math.ceil((x1 - x0) / res / nt)
-    tiles = []
-    for ty in range(nt):
-        for tx in range(nt):
-            bx0, by1 = x0 + tx * tw * res, y1 - ty * tw * res
-            r = get(MCSC, dict(SERVICE='WMS', VERSION='1.3.0', REQUEST='GetMap', LAYERS='MCSCv4Nivell5', STYLES='',
-                               CRS='EPSG:25831', BBOX=f'{bx0},{by1 - tw * res},{bx0 + tw * res},{by1}',
-                               WIDTH=tw, HEIGHT=tw, FORMAT='image/png'), timeout=600)
-            a = np.asarray(Image.open(io.BytesIO(r.content)).convert('RGBA'))
-            tiles.append((bx0, by1, a))
-    mosaic = np.zeros((nt * tw, nt * tw), np.uint32)
-    for k, (bx0, by1, a) in enumerate(tiles):
-        ty, tx = divmod(k, nt)
-        rgba = a.astype(np.uint32)
-        codi = (rgba[..., 0] << 24) | (rgba[..., 1] << 16) | (rgba[..., 2] << 8) | rgba[..., 3]
-        codi[rgba[..., 3] == 0] = 0
-        mosaic[ty * tw:(ty + 1) * tw, tx * tw:(tx + 1) * tw] = codi
-    # calibra cada color amb GetFeatureInfo (vot entre 3 píxels)
-    colors, inv, comptes = np.unique(mosaic, return_inverse=True, return_counts=True)
-    inv = inv.reshape(mosaic.shape)
-    ordre = np.argsort(inv.ravel(), kind='stable')
-    inici = np.concatenate([[0], np.cumsum(comptes)])
-    cat_de_color = {}
-
     def consulta(x, y):
         r = get(MCSC, dict(SERVICE='WMS', VERSION='1.3.0', REQUEST='GetFeatureInfo', LAYERS='MCSCv4Nivell5',
                            QUERY_LAYERS='MCSCv4Nivell5', STYLES='', CRS='EPSG:25831',
                            BBOX=f'{x - 3},{y - 3},{x + 3},{y + 3}', WIDTH=3, HEIGHT=3, I=1, J=1,
                            INFO_FORMAT='text/xml', FORMAT='image/png'))
         m = re.search(r'name="CATEGORY"[^>]*value="([^"]*)"', r.content.decode('latin-1'))
-        return m.group(1).strip() if m else None
+        return html.unescape(m.group(1)).strip() if m else None
 
-    def calibra(ci):
-        if colors[ci] == 0 or comptes[ci] < 20:
-            return ci, None
-        vots = collections.Counter()
-        for k in np.random.default_rng(int(ci)).choice(ordre[inici[ci]:inici[ci + 1]], size=3, replace=False):
-            y, x = divmod(int(k), mosaic.shape[1])
-            cat = consulta(x0 + (x + 0.5) * res, y1 - (y + 0.5) * res)
-            if cat:
-                vots[cat] += 1
-        return ci, vots.most_common(1)[0][0] if vots else None
-
-    with ThreadPoolExecutor(4) as ex:
-        for ci, cat in ex.map(calibra, range(len(colors))):
-            cat_de_color[ci] = cat
-    cats = sorted({c for c in cat_de_color.values() if c})
-    # classe de sortida: 0 = sense dades; 1 = no bosc; 2.. = categories
-    cls_de_cat = {c: i + 2 for i, c in enumerate(cats)}
-    lut = np.array([cls_de_cat.get(cat_de_color.get(ci), 1 if colors[ci] else 0) for ci in range(len(colors))], np.int64)
-    classes = lut[inv]
-    cnt = raster_a_cel(classes, x0, y1, res, len(cats) + 2)
-    info = {c: classifica_coberta(c) for c in cats}
-    diag['cobertes'] = {c: {'bosc': b, 'grups': g, 'pixels': int((classes == cls_de_cat[c]).sum())} for c, (b, g) in info.items()}
-    log(f'MCSC: {len(colors)} colors, {len(cats)} categories')
+    colors, comptes, pesos, cnt = wms_classifica(MCSC, 'MCSCv4Nivell5', 50, 2, consulta)
+    info = {}
+    for p in pesos.values():
+        for c in p:
+            info.setdefault(c, classifica_coberta(c))
+    px = collections.Counter()
+    for ci, p in pesos.items():
+        for c, w in p.items():
+            px[c] += comptes[ci] * w
+    diag['cobertes'] = {c: {'bosc': info[c][0], 'grups': info[c][1], 'pixels': int(px[c])} for c in info}
+    diag['cobertes_colors_barrejats'] = [{c: round(w, 2) for c, w in p.items()} for p in pesos.values() if len(p) > 1]
+    log(f'MCSC: {len(colors)} colors, {len(info)} categories, {len(diag["cobertes_colors_barrejats"])} colors compartits')
     out = {}
     for km, C in cnt.items():
-        tot = C[:, 1:].sum(1).clip(min=1)
-        bosc = sum(C[:, cls_de_cat[c]] for c in cats if info[c][0])
-        g = {k: sum((C[:, cls_de_cat[c]] for c in cats if k in info[c][1]), np.zeros(len(tot), np.int64)) for k, _ in GRUPS}
-        out[km] = {'bosc': np.round(100 * bosc / tot).astype(int).tolist(),
-                   'arbres': {k: np.round(100 * v / tot).astype(int).tolist() for k, v in g.items()},
-                   '_dades': (C[:, 1:].sum(1) > 0)}
+        bosc, tot = agrega(C, pesos, lambda c: float(info[c][0]))
+        tot = tot.clip(min=1)
+        arbres = {k: np.round(100 * agrega(C, pesos, lambda c, k=k: float(k in info[c][1]))[0] / tot).astype(int).tolist() for k, _ in GRUPS}
+        out[km] = {'bosc': np.round(100 * bosc / tot).astype(int).tolist(), 'arbres': arbres}
     return out
 
 
-# ---------------------------------------------------------------- ICGC: geologia
-GEOL = 'https://datacloud.icgc.cat/datacloud/descarregues-web/bd/icgc_mgl250mv01_etrs89.zip'
+# ---------------------------------------------------------------- ICGC: geologia (WMS 1:250.000)
+GEOWMS = 'https://geoserveis.icgc.cat/servei/catalunya/geologia-territorial/wms'
+GEOCAPA = 'unitats-geologiques-250000'
 CALC = r'calcar|calcari|calcilut|calcaren|dolomi|marg|guix|evapor|travert|carbonat|sal gemma|halit|creta'
 SILI = (r'granit|granodior|tonalit|diorit|pissarr|esquist|gneis|quarsit|gres|arenisc|saul|basalt|volcan|porfir|'
         r'migmatit|cornubian|lidit|riolit|andesit|filit|arcos|licorell|piroclast|leucogran|ignimbrit|grauvac')
@@ -189,32 +210,52 @@ def classifica_roca(text):
 
 
 def geologia():
-    import geopandas as gpd
-    from rasterio import features
-    from rasterio.transform import from_origin
-    tmp = Path(tempfile.mkdtemp())
-    zipfile.ZipFile(io.BytesIO(get(GEOL, timeout=900).content)).extractall(tmp)
-    fitxers = sorted(tmp.rglob('*.shp')) + sorted(tmp.rglob('*.gpkg'))
-    log('Geologia: ' + ', '.join(f.name for f in fitxers))
-    gdfs = [gpd.read_file(f) for f in fitxers]
-    gdf = max((g for g in gdfs if g.geom_type.isin(['Polygon', 'MultiPolygon']).any()), key=len).to_crs(25831)
-    txt = gdf.drop(columns='geometry').astype(str).agg(' '.join, axis=1)
-    gdf['cls'] = [classifica_roca(t) for t in txt]
-    mostra = collections.Counter(zip(txt.str.slice(0, 160), gdf['cls']))
-    diag['geologia'] = {'camps': list(gdf.columns), 'classes': collections.Counter(map(int, gdf['cls'])),
-                        'mostra': [{'t': t, 'cls': int(c), 'n': n} for (t, c), n in mostra.most_common(400)]}
-    res = 100
-    x0, y0, x1, y1 = BBOX
-    w, h = math.ceil((x1 - x0) / res), math.ceil((y1 - y0) / res)
-    ras = features.rasterize(((g, int(c)) for g, c in zip(gdf.geometry, gdf['cls']) if c), out_shape=(h, w),
-                             transform=from_origin(x0, y1, res, res), fill=0, dtype='int32')
-    cnt = raster_a_cel(ras.astype(np.int64), x0, y1, res, 4)
+    formats = ['application/json', 'text/plain', 'text/html']
+
+    def consulta(x, y):
+        for f in list(formats):
+            r = get(GEOWMS, dict(SERVICE='WMS', VERSION='1.3.0', REQUEST='GetFeatureInfo', LAYERS=GEOCAPA,
+                                 QUERY_LAYERS=GEOCAPA, STYLES='', CRS='EPSG:25831',
+                                 BBOX=f'{x - 10},{y - 10},{x + 10},{y + 10}', WIDTH=3, HEIGHT=3, I=1, J=1,
+                                 INFO_FORMAT=f, FEATURE_COUNT=1, FORMAT='image/png'), intents=3)
+            t = r.content.decode('utf-8', 'replace')
+            if 'ServiceException' in t or len(t.strip()) < 20:
+                if f in formats and len(formats) > 1 and 'ServiceException' in t:
+                    formats.remove(f)
+                continue
+            if f == 'application/json':
+                try:
+                    props = [ft.get('properties', {}) for ft in json.loads(t).get('features', [])]
+                    t = ' | '.join(f'{k}: {v}' for p in props for k, v in p.items() if isinstance(v, str))
+                except ValueError:
+                    pass
+            else:
+                t = html_net(t)
+            t = re.sub(r'\s+', ' ', t).strip()
+            return t[:600] or None
+        return None
+
+    colors, comptes, pesos, cnt = wms_classifica(GEOWMS, GEOCAPA, 100, 2, consulta)
+    cls = {}
+    for p in pesos.values():
+        for t in p:
+            cls.setdefault(t, classifica_roca(t))
+    px = collections.Counter()
+    for ci, p in pesos.items():
+        for t, w in p.items():
+            px[t] += comptes[ci] * w
+    diag['geologia'] = {'format': formats[0], 'classes': collections.Counter(cls.values()),
+                        'mostra': [{'t': t, 'cls': cls[t], 'px': int(n)} for t, n in px.most_common(300)]}
+    log(f'Geologia: {len(colors)} colors, {len(cls)} unitats, format {formats[0]}, sense classe: {sum(1 for v in cls.values() if v == 0)}')
     out = {}
     for km, C in cnt.items():
-        tot = C[:, 1:].sum(1).clip(min=1)
-        out[km] = {k: np.round(100 * C[:, i] / tot).astype(int).tolist() for k, i in (('calcari', 1), ('mixt', 2), ('silici', 3))}
+        cal, _ = agrega(C, pesos, lambda t: float(cls[t] == 1))
+        mix, _ = agrega(C, pesos, lambda t: float(cls[t] == 2))
+        sil, _ = agrega(C, pesos, lambda t: float(cls[t] == 3))
+        tot = (cal + mix + sil).clip(min=1e-9)
+        ok = (cal + mix + sil) > 0
+        out[km] = {k: np.where(ok, np.round(100 * v / tot), 0).astype(int).tolist() for k, v in (('calcari', cal), ('mixt', mix), ('silici', sil))}
     return out
-
 
 # ---------------------------------------------------------------- ICGC: elevacions
 WCS = 'https://geoserveis.icgc.cat/icc_mdt/wcs/service'
@@ -278,7 +319,7 @@ if __name__ == '__main__':
     resultat = {km: {} for km in GRIDS}
     fonts = {
         'cobertes': 'CREAF, Mapa de Cobertes del Sòl de Catalunya, 4a ed. (2009), nivell 5',
-        'geologia': "ICGC, Mapa geològic de Catalunya 1:250.000",
+        'geologia': "ICGC, Mapa geològic de Catalunya 1:250.000 (WMS geologia territorial)",
         'elevacions': "ICGC, Model d'Elevacions del Terreny (WCS icc:met)",
     }
     for km in GRIDS:  # conserva les capes ja construïdes si només se'n refà una part
@@ -291,7 +332,6 @@ if __name__ == '__main__':
             t = time.time()
             r = globals()[p]()
             for km, v in r.items():
-                v.pop('_dades', None)
                 resultat[km].update(v)
                 resultat[km].setdefault('fonts', {})[p] = fonts[p]
             log(f'{p}: fet en {time.time() - t:.0f} s')

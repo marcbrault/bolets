@@ -1,0 +1,37 @@
+name: Construeix capes
+
+on:
+  workflow_dispatch:
+    inputs:
+      parts:
+        description: "Capes a refer (cobertes geologia elevacions)"
+        default: "cobertes geologia elevacions"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: capes
+  cancel-in-progress: false
+
+jobs:
+  capes:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pillow pyproj geopandas rasterio requests
+      - name: Construeix les capes
+        run: python scripts/build-capes.py ${{ inputs.parts }}
+      - name: Desa les dades
+        run: |
+          git config user.name "bolets-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/capes-*.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Capes geogràfiques $(date -u +%F)"
+          git pull --rebase origin main
+          git push

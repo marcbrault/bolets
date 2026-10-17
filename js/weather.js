@@ -1,44 +1,65 @@
 // Meteorologia: Open-Meteo (gratuït, sense clau). Funciona igual al navegador i a Node (GitHub Action).
 // Per a cada cel·la de la graella obtenim, en dies: pluja, temperatura mitjana i mínima, ET0 i altitud.
 
-export const DIES_PASSATS = 40;
+export const DIES_PASSATS = 33;
 export const DIES_PREVISIO = 7;
 const VARS = 'precipitation_sum,temperature_2m_mean,temperature_2m_min,et0_fao_evapotranspiration';
 const LOT = 100; // ubicacions per petició
 
 const espera = ms => new Promise(r => setTimeout(r, ms));
 
-async function fetchLot(cells, fetchImpl) {
+// Open-Meteo gratuït: 600 crides/minut i 5.000/hora. Cada ubicació compta com a
+// max(1, dies/14) crides, així que 40 dies × 1.612 cel·les (5 + 10 km) ≈ 4.600 crides.
+export const PES_UBICACIO = (DIES_PASSATS + DIES_PREVISIO) / 14;
+
+async function fetchLot(cells, fetchImpl, log) {
   const lat = cells.map(c => c[3]).join(',');
   const lon = cells.map(c => c[2]).join(',');
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
     `&daily=${VARS}&past_days=${DIES_PASSATS}&forecast_days=${DIES_PREVISIO}&timezone=Europe%2FMadrid`;
-  for (let intent = 0; intent < 3; intent++) {
+  let darrer = '';
+  for (let intent = 0; intent < 4; intent++) {
     const res = await fetchImpl(url);
     if (res.ok) { const j = await res.json(); return Array.isArray(j) ? j : [j]; }
-    if (res.status === 429 || res.status >= 500) { await espera(1500 * (intent + 1)); continue; }
-    throw new Error(`Open-Meteo ${res.status}: ${await res.text()}`);
+    darrer = `${res.status}: ${(await res.text()).slice(0, 300)}`;
+    if (res.status === 429 || res.status >= 500) {
+      const ms = res.status === 429 ? 65000 : 3000 * (intent + 1);
+      log(`Open-Meteo ${darrer} — reintent en ${Math.round(ms / 1000)} s`);
+      await espera(ms); continue;
+    }
+    break;
   }
-  throw new Error('Open-Meteo no respon (massa peticions?)');
+  throw new Error(`Open-Meteo ${darrer}`);
 }
 
 /** Descarrega la meteo de totes les cel·les. Retorna un objecte compacte serialitzable. */
-export async function descarregaMeteo(grid, { fetchImpl = fetch, onProgress = () => {} } = {}) {
+export async function descarregaMeteo(grid, { fetchImpl = fetch, onProgress = () => {}, pesPerMinut = 0, log = () => {} } = {}) {
   const cells = grid.cells, n = cells.length;
   const lots = [];
   for (let k = 0; k < n; k += LOT) lots.push(cells.slice(k, k + LOT));
   let fets = 0, dates = null;
   const resultats = new Array(lots.length);
-  // 3 peticions en paral·lel com a màxim
-  let seg = 0;
-  async function treballador() {
-    while (seg < lots.length) {
-      const k = seg++;
-      resultats[k] = await fetchLot(lots[k], fetchImpl);
+  if (pesPerMinut > 0) {
+    // Mode servidor (GitHub Action): seqüencial i a ritme controlat
+    for (let k = 0; k < lots.length; k++) {
+      const t0 = Date.now();
+      resultats[k] = await fetchLot(lots[k], fetchImpl, log);
       onProgress(++fets / lots.length);
+      const msMinim = lots[k].length * PES_UBICACIO / pesPerMinut * 60000;
+      if (k < lots.length - 1) await espera(Math.max(0, msMinim - (Date.now() - t0)));
     }
+  } else {
+    // Mode navegador: 3 peticions en paral·lel com a màxim
+    let seg = 0;
+    async function treballador() {
+      while (seg < lots.length) {
+        const k = seg++;
+        resultats[k] = await fetchLot(lots[k], fetchImpl, log);
+        onProgress(++fets / lots.length);
+      }
+    }
+    await Promise.all([treballador(), treballador(), treballador()]);
   }
-  await Promise.all([treballador(), treballador(), treballador()]);
 
   const flat = resultats.flat();
   dates = flat[0].daily.time;

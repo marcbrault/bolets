@@ -8,19 +8,26 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: meteo
+  cancel-in-progress: false
+
 jobs:
   meteo:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 22
       - run: node scripts/update-meteo.mjs
       - name: Desa les dades
         run: |
           git config user.name "bolets-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/meteo-*.json
-          git diff --cached --quiet || git commit -m "Meteo $(date -u +%F)"
+          git diff --cached --quiet && exit 0
+          git commit -m "Meteo $(date -u +%F)"
+          git pull --rebase origin main
           git push

@@ -19,7 +19,15 @@ async function fetchLot(cells, fetchImpl, log) {
     `&daily=${VARS}&past_days=${DIES_PASSATS}&forecast_days=${DIES_PREVISIO}&timezone=Europe%2FMadrid`;
   let darrer = '';
   for (let intent = 0; intent < 4; intent++) {
-    const res = await fetchImpl(url);
+    let res;
+    try {
+      res = await fetchImpl(url);
+    } catch (err) {
+      // error de xarxa (timeout, DNS…): reintenta amb espera creixent
+      darrer = `xarxa: ${err.message}${err.cause ? ' (' + (err.cause.code || err.cause.message) + ')' : ''}`;
+      log(`Open-Meteo ${darrer} — reintent en ${10 * (intent + 1)} s`);
+      await espera(10000 * (intent + 1)); continue;
+    }
     if (res.ok) { const j = await res.json(); return Array.isArray(j) ? j : [j]; }
     darrer = `${res.status}: ${(await res.text()).slice(0, 300)}`;
     if (res.status === 429 || res.status >= 500) {

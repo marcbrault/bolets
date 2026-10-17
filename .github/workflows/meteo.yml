@@ -21,7 +21,15 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 22
-      - run: node scripts/update-meteo.mjs
+      - name: Comprova la connexió amb Open-Meteo
+        run: |
+          r=$(curl -sS -4 -m 60 -o /dev/null -w "HTTP %{http_code}, connexió %{time_connect}s, total %{time_total}s" "https://api.open-meteo.com/v1/forecast?latitude=41.8&longitude=1.8&daily=precipitation_sum&forecast_days=1" 2>&1) || true
+          echo "::notice title=Prova Open-Meteo::$r"
+      - name: Descarrega la meteo
+        run: node scripts/update-meteo.mjs
+        env:
+          # els runners de GitHub no tenen IPv6: força IPv4 i dona més marge per connectar
+          NODE_OPTIONS: --dns-result-order=ipv4first --network-family-autoselection-attempt-timeout=2000
       - name: Desa les dades
         run: |
           git config user.name "bolets-bot"

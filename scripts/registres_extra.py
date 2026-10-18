@@ -90,7 +90,30 @@ def terreny():
     log(f'terreny: {sum(v is not None for v in res)} de {len(res)} punts')
 
 
-# ---- 3) Meteo històrica (Open-Meteo Archive) per cel·la de 0,1° i any
+# ---- 3) Meteo històrica (Open-Meteo Archive, ERA5 / ERA5-Land)
+# Open-Meteo compta cada petició com a ~ dies/14 crides (límits: 600/min, 5.000/hora, 10.000/dia).
+# Per això: quadrícula de 0,25° (resolució d'ERA5), només els 46 dies anteriors a cada troballa,
+# ritme controlat i progrés desat encara que no s'acabi.
+from datetime import date, timedelta
+PES_HORA, PES_DIA, TEMPS_MAX = 4200, 9000, 140 * 60
+INICI = time.time()
+
+
+def finestres(dates):
+    """Agrupa dates properes en finestres [inici, fi] de com a màxim 100 dies (inclosos els 46 previs)."""
+    ds = sorted(set(dates))
+    out, ini, fi = [], None, None
+    for d in ds:
+        if ini is None:
+            ini = fi = d
+        elif (d - ini).days + 46 <= 100:
+            fi = d
+        else:
+            out.append((ini, fi)); ini = fi = d
+    out.append((ini, fi))
+    return out
+
+
 def meteo():
     grups = defaultdict(list)
     for sp, L in R['especies'].items():
@@ -98,36 +121,56 @@ def meteo():
             d = x[2]
             if not d or len(d) != 10 or int(d[:4]) < 1990 or (x[3] or 0) > 5000:
                 continue
-            grups[(round(x[0], 1), round(x[1], 1), int(d[:4]))].append((sp, k, d))
+            q = (round(x[0] * 4) / 4, round(x[1] * 4) / 4)
+            grups[q].append((sp, k, date.fromisoformat(d)))
+    peticions = []
+    for q, regs in grups.items():
+        for ini, fi in finestres([r[2] for r in regs]):
+            peticions.append((q, ini - timedelta(days=46), fi, [r for r in regs if ini <= r[2] <= fi]))
+    peticions.sort(key=lambda p: -len(p[3]))  # primer les que cobreixen més registres
     M = {sp: [None] * len(L) for sp, L in R['especies'].items()}
-    avui = time.strftime('%Y-%m-%d')
-    fets = errors = 0
-    for (lon, lat, any_), regs in sorted(grups.items(), key=lambda kv: kv[0][2]):
-        ini, fi = f'{any_ - 1}-12-01', min(f'{any_}-12-31', avui)
+    pes_total, hora, pes_hora, errors, fetes = 0, time.time(), 0, 0, 0
+    log(f'meteo: {len(peticions)} peticions per a {sum(len(p[3]) for p in peticions)} registres')
+    for (lon, lat), ini, fi, regs in peticions:
+        pes = math.ceil(((fi - ini).days + 1) / 14)
+        if pes_total + pes > PES_DIA or time.time() - INICI > TEMPS_MAX:
+            log(f'meteo: aturat per límit (pes {pes_total}, {fetes} peticions); la resta, en una altra execució', 'warning')
+            break
+        if time.time() - hora > 3600:
+            hora, pes_hora = time.time(), 0
+        if pes_hora + pes > PES_HORA:
+            time.sleep(max(0, 3600 - (time.time() - hora)) + 5); hora, pes_hora = time.time(), 0
         try:
             j = get('https://archive-api.open-meteo.com/v1/archive',
-                    dict(latitude=lat, longitude=lon, start_date=ini, end_date=fi, timezone='Europe/Madrid',
-                         daily='precipitation_sum,temperature_2m_mean,temperature_2m_min')).json()['daily']
+                    dict(latitude=lat, longitude=lon, start_date=str(ini), end_date=str(fi), timezone='Europe/Madrid',
+                         daily='precipitation_sum,temperature_2m_mean,temperature_2m_min'), intents=2)
+            jj = j.json(); dd = jj['daily']
         except Exception as e:
             errors += 1
             if errors <= 3:
-                log(f'Open-Meteo {lon},{lat},{any_}: {e}', 'warning')
+                log(f'Open-Meteo {lon},{lat},{ini}: {e}', 'warning')
+            if errors > 30:
+                log('meteo: massa errors, s\'atura', 'warning'); break
             continue
-        idx = {d: i for i, d in enumerate(j['time'])}
+        pes_total += pes; pes_hora += pes; fetes += 1
+        idx = {d: i for i, d in enumerate(dd['time'])}
         for sp, k, d in regs:
-            i = idx.get(d)
+            i = idx.get(str(d))
             if i is None or i < 45:
                 continue
-            P = j['precipitation_sum'][i - 45:i + 1]
-            T = j['temperature_2m_mean'][i - 9:i + 1]
-            N = j['temperature_2m_min'][i - 4:i + 1]
+            P, T, N = dd['precipitation_sum'][i - 45:i + 1], dd['temperature_2m_mean'][i - 9:i + 1], dd['temperature_2m_min'][i - 4:i + 1]
             if None in P or None in T or None in N:
                 continue
-            M[sp][k] = {'p': [round(v, 1) for v in P], 't': [round(v, 1) for v in T], 'n': [round(v, 1) for v in N]}
-        fets += 1
-        time.sleep(0.4)  # per sota dels límits d'ús gratuït
+            M[sp][k] = {'p': [round(v, 1) for v in P], 't': [round(v, 1) for v in T], 'n': [round(v, 1) for v in N],
+                        'z': jj.get('elevation')}
+        time.sleep(60 * pes / 80)  # ~80 de pes per minut
     out['meteo'] = M
-    log(f'meteo: {fets} sèries (cel·la-any), {errors} errors, {sum(v is not None for L in M.values() for v in L)} registres amb meteo')
+    log(f'meteo: {fetes} peticions (pes {pes_total}), {errors} errors, {sum(v is not None for L in M.values() for v in L)} registres amb meteo')
+
+
+def desa():
+    (ARREL / 'cache').mkdir(exist_ok=True)
+    (ARREL / 'cache/registres-extra.json').write_text(json.dumps(out, separators=(',', ':')))
 
 
 for f in [esforc, terreny, meteo]:
@@ -135,5 +178,4 @@ for f in [esforc, terreny, meteo]:
         f()
     except Exception as e:
         log(f'{f.__name__}: {e}', 'error')
-(ARREL / 'cache').mkdir(exist_ok=True)
-(ARREL / 'cache/registres-extra.json').write_text(json.dumps(out, separators=(',', ':')))
+    desa()  # desa després de cada fase

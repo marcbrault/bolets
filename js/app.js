@@ -20,6 +20,7 @@ const estat = {
   trossos: null, trossosVisibles: new Set(), selTros: null,
 };
 
+
 // ---------- Preferències ----------
 const prefs = (() => { try { return JSON.parse(localStorage.getItem('bolets-prefs') || '{}'); } catch { return {}; } })();
 const desaPrefs = () => { try { localStorage.setItem('bolets-prefs', JSON.stringify({ sp: estat.sp?.id, km: estat.km, vista: estat.vista, detall: estat.detall, base: $('#base').value, opac: $('#opacitat').value })); } catch { /* sense emmagatzematge */ } };
@@ -62,6 +63,7 @@ map.on('error', e => {
 });
 
 const mapaLlest = new Promise(r => map.on('load', r));
+window.bolets = { estat, map }; // per depurar des de la consola
 
 // ---------- Càrrega de dades ----------
 const getJSON = async (url, opts) => { const r = await fetch(url, opts); if (!r.ok) throw new Error(url + ' ' + r.status); return r.json(); };

@@ -220,10 +220,20 @@ def ph():
                     a = ds.read(1).astype(float); a[(a <= 0)] = np.nan; tr = ds.transform
                 capes.append(a / 10)
             v = np.nanmean(np.stack(capes), axis=0)
-            ci = ((LON - tr.c) / tr.a).astype(int); ri = ((LAT - tr.f) / tr.e).astype(int)
-            okc = (ci >= 0) & (ci < v.shape[1]); okr = (ri >= 0) & (ri < v.shape[0])
-            sub = np.full((NY, NX), np.nan)
-            sub[np.ix_(okr, okc)] = v[np.ix_(ri[okr], ci[okc])]
+            # interpolació bilineal (els píxels de 250 m de SoilGrids no fan blocs)
+            fx = (LON - tr.c) / tr.a - 0.5; fy = (LAT - tr.f) / tr.e - 0.5
+            X, Y = np.meshgrid(fx, fy)
+            x0i, y0i = np.floor(X).astype(int), np.floor(Y).astype(int)
+            wx, wy = X - x0i, Y - y0i
+            num = np.zeros((NY, NX)); den = np.zeros((NY, NX))
+            for dy, dx, w in ((0, 0, (1 - wx) * (1 - wy)), (0, 1, wx * (1 - wy)), (1, 0, (1 - wx) * wy), (1, 1, wx * wy)):
+                yy, xx = y0i + dy, x0i + dx
+                ok = (yy >= 0) & (yy < v.shape[0]) & (xx >= 0) & (xx < v.shape[1])
+                val = np.full((NY, NX), np.nan)
+                val[ok] = v[yy[ok], xx[ok]]
+                bo = ok & ~np.isnan(val)
+                num[bo] += (w * val)[bo]; den[bo] += w[bo]
+            sub = np.where(den > 0.25, num / np.maximum(den, 1e-9), np.nan)
             out = np.where(np.isnan(out), sub, out)
     return np.clip((7.3 - out) / (7.3 - 6.2), 0, 1).ravel()
 

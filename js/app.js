@@ -190,13 +190,36 @@ async function actualitzaTrossos() {
     if (map.getSource('tros-' + k)) map.removeSource('tros-' + k);
     estat.trossosVisibles.delete(k);
   }
+  // 1) valors de cada tros visible
+  const V = new Map();
   for (const k of claus) {
     let f;
     try { f = await estat.trossos.tros(k); } catch { continue; }
     if (gen !== genTrossos) return; // ha canviat alguna cosa mentrestant
     f.enllaca(estat.grid);
-    f.heat ||= new Heatmap(f, estat.contorn);
-    const url = f.heat.pintaGraella(f.mapa(estat.vista, estat.sp, estat.M, estat.S, estat.sols, estat.dia), estat.vista);
+    V.set(k, { f, v: f.mapa(estat.vista, estat.sp, estat.M, estat.S, estat.sols, estat.dia) });
+  }
+  // 2) cada tros es pinta amb una vora d'una casella presa dels veïns, perquè el suavitzat travessi les juntes
+  for (const [k, { f, v }] of V) {
+    const n = f.nx, m = n + 2, E = new Float32Array(m * m).fill(NaN);
+    for (let r = 0; r < n; r++) E.set(v.subarray(r * n, (r + 1) * n), (r + 1) * m + 1);
+    const [c0, r0] = k.split('_').map(Number);
+    for (let dr = -1; dr <= 1; dr++) for (let dc = -1; dc <= 1; dc++) {
+      if (!dr && !dc) continue;
+      const w = V.get(`${c0 + dc}_${r0 + dr}`)?.v;
+      if (!w) continue;
+      for (let r = -1; r <= n; r++) for (let c = -1; c <= n; c++) {
+        const rr = r - dr * n, cc = c - dc * n; // posició dins del veí
+        if ((r >= 0 && r < n && c >= 0 && c < n) || rr < 0 || cc < 0 || rr >= n || cc >= n) continue;
+        E[(r + 1) * m + (c + 1)] = w[rr * n + cc];
+      }
+    }
+    f.heatExt ||= new Heatmap({ nx: m, ny: m, x0: f.x0 - f.step, y1: f.y1 + f.step, step: f.step, km: 0.1, cells: [] }, estat.contorn);
+    f.heatExt.pintaGraella(E, estat.vista, false);
+    // retalla la vora: la imatge cobreix exactament el tros
+    const S = f.heatExt.S, cv = (f.retall ||= Object.assign(document.createElement('canvas'), { width: n * S, height: n * S }));
+    const cx = cv.getContext('2d'); cx.clearRect(0, 0, cv.width, cv.height); cx.drawImage(f.heatExt.canvas, -S, -S);
+    const url = cv.toDataURL('image/png');
     if (map.getSource('tros-' + k)) map.getSource('tros-' + k).updateImage({ url, coordinates: f.coordinates });
     else {
       map.addSource('tros-' + k, { type: 'image', url, coordinates: f.coordinates });

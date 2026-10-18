@@ -93,7 +93,7 @@ export class Heatmap {
   }
 
   /** Pinta una graella completa (nx × ny, NaN = buit). */
-  pintaGraella(V, nomRampa) {
+  pintaGraella(V, nomRampa, url = true) {
     const { nx, ny } = this.g, S = this.S;
     // omple 2 anells de vora amb la mitjana dels veïns perquè la interpolació arribi al contorn
     for (let pass = 0; pass < 2; pass++) {
@@ -141,7 +141,7 @@ export class Heatmap {
     this.ctx.globalCompositeOperation = 'destination-in';
     this.ctx.fill(this.cami, 'evenodd');
     this.ctx.globalCompositeOperation = 'source-over';
-    return this.canvas.toDataURL('image/png');
+    return url ? this.canvas.toDataURL('image/png') : null;
   }
 
   /** Cel·la sota un punt (lon, lat), o -1. */

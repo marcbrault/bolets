@@ -1,0 +1,24 @@
+{
+ "5": {
+  "fonts": {
+   "geologia250": 0.756,
+   "vegetacio": 0.674
+  },
+  "pesos": {
+   "geologia250": 2,
+   "vegetacio": 1
+  },
+  "auc_combinat": 0.772
+ },
+ "10": {
+  "fonts": {
+   "geologia250": 0.764,
+   "vegetacio": 0.703
+  },
+  "pesos": {
+   "geologia250": 1,
+   "vegetacio": 1
+  },
+  "auc_combinat": 0.775
+ }
+}

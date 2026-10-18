@@ -24,12 +24,14 @@ bc = importlib.util.module_from_spec(spec); spec.loader.exec_module(bc)
 log, get, BBOX, to3857 = bc.log, bc.get, bc.BBOX, bc.to3857
 
 G5 = bc.GRIDS[5]
-F = 10
+import os
+F = int(os.environ.get('FACTOR', '10'))  # caselles per cel·la de 5 km: 10 → 500 m, 50 → 100 m
+TILE = 4  # amb F > 10: trossos de 4 × 4 cel·les de 5 km (20 km)
 STEP = G5['step'] / F
 NX, NY = G5['nx'] * F, G5['ny'] * F
 X0, Y1 = G5['x0'], G5['y1']
 N = NX * NY
-log(f'graella fina: {NX} × {NY}, pas {STEP:.1f} m Mercator (500 m reals)')
+log(f'graella fina: {NX} × {NY}, pas {STEP:.1f} m Mercator ({round(5000 / F)} m reals)')
 
 
 def idx_fi(x25831, y25831):
@@ -85,7 +87,7 @@ def mascara():
 
 # ---------------------------------------------------------------- MET (ICGC, 100 m)
 def met():
-    res, tile = 100, 10000
+    res, tile = (100, 10000) if F <= 10 else (50, 5000)  # a 100 m cal el MET a 50 m perquè no quedin forats
     x0, y0, x1, y1 = BBOX
     W, H = int((x1 - x0) / res), int((y1 - y0) / res)
     Z = np.full((H, W), np.nan, np.float32)
@@ -238,7 +240,7 @@ if __name__ == '__main__':
     capes['sol'] = sol * 100
     bandes = [('elev', 'int16'), ('pend', 'uint8'), ('nord', 'int8'), ('sol', 'uint8'), ('bosc', 'uint8')] + \
              [(k, 'uint8') for k, _ in bc.GRUPS] + [('dins', 'uint8')]
-    buf, cap = io.BytesIO(), []
+    arr = []
     for nom, tipus in bandes:
         v = np.asarray(capes[nom], float).reshape(-1)
         if nom == 'nord':
@@ -248,11 +250,50 @@ if __name__ == '__main__':
         a = np.where(np.isnan(v), buit, np.clip(np.round(v), info.min + 1 if tipus != 'uint8' else 0, info.max - 1 if tipus == 'uint8' else info.max)).astype(tipus)
         if nom != 'dins':
             a[capes['dins'] == 0] = buit
-        cap.append({'nom': nom, 'tipus': tipus, 'offset': buf.tell(), 'buit': buit})
-        buf.write(a.tobytes())
-    (ARREL / 'data/fina.bin.gz').write_bytes(gzip.compress(buf.getvalue(), 9))
-    (ARREL / 'data/fina.json').write_text(json.dumps({
-        'generat': time.strftime('%Y-%m-%d'), 'nx': NX, 'ny': NY, 'x0': X0, 'y1': Y1, 'step': STEP, 'factor': F,
-        'bandes': cap, 'grups': [k for k, _ in bc.GRUPS],
-        'fonts': 'MET ICGC (100 m), CREAF MCSC-4 (50 m), ICGC geologia 1:50.000, ISRIC SoilGrids pH (250 m)'}, ensure_ascii=False))
-    log(f'fet en {time.time() - t0:.0f} s; {len(buf.getvalue()) / 1e6:.1f} MB → {(ARREL / "data/fina.bin.gz").stat().st_size / 1e6:.2f} MB comprimit')
+        arr.append((nom, tipus, buit, a.reshape(NY, NX)))
+        capes.pop(nom, None)
+
+    def empaqueta(talls):
+        buf, cap = io.BytesIO(), []
+        for (nom, tipus, buit, a), t in zip(arr, talls):
+            cap.append({'nom': nom, 'tipus': tipus, 'offset': buf.tell(), 'buit': buit})
+            buf.write(np.ascontiguousarray(t).tobytes())
+        return buf.getvalue(), cap
+
+    fonts = f'MET ICGC ({"100" if F <= 10 else "50"} m), CREAF MCSC-4 (50 m), ICGC geologia 1:50.000, ISRIC SoilGrids pH (250 m)'
+    if F <= 10:
+        raw, cap = empaqueta([a for *_, a in arr])
+        (ARREL / 'data/fina.bin.gz').write_bytes(gzip.compress(raw, 9))
+        (ARREL / 'data/fina.json').write_text(json.dumps({
+            'generat': time.strftime('%Y-%m-%d'), 'nx': NX, 'ny': NY, 'x0': X0, 'y1': Y1, 'step': STEP, 'factor': F,
+            'bandes': cap, 'grups': [k for k, _ in bc.GRUPS], 'fonts': fonts}, ensure_ascii=False))
+        log(f'fet en {time.time() - t0:.0f} s; {len(raw) / 1e6:.1f} MB → {(ARREL / "data/fina.bin.gz").stat().st_size / 1e6:.2f} MB comprimit')
+    else:
+        dir_ = ARREL / f'data/fina{round(5000 / F)}'
+        dir_.mkdir(exist_ok=True)
+        for f in dir_.glob('*.bin.gz'):
+            f.unlink()
+        tp = TILE * F
+        dins = arr[-1][3]
+        trossos, total = [], 0
+        for tr in range(math.ceil(NY / tp)):
+            for tc in range(math.ceil(NX / tp)):
+                sl = (slice(tr * tp, (tr + 1) * tp), slice(tc * tp, (tc + 1) * tp))
+                if not dins[sl].any():
+                    continue
+                talls = []
+                for nom, _, buit, a in arr:
+                    t = a[sl]
+                    if t.shape != (tp, tp):  # tros de la vora: s'omple fins a la mida completa
+                        ple = np.full((tp, tp), 0 if nom == 'dins' else buit, a.dtype)
+                        ple[:t.shape[0], :t.shape[1]] = t
+                        t = ple
+                    talls.append(t)
+                raw, cap = empaqueta(talls)
+                z = gzip.compress(raw, 9)
+                (dir_ / f'{tc}_{tr}.bin.gz').write_bytes(z)
+                trossos.append(f'{tc}_{tr}'); total += len(z)
+        (dir_ / 'index.json').write_text(json.dumps({
+            'generat': time.strftime('%Y-%m-%d'), 'tros': tp, 'x0': X0, 'y1': Y1, 'step': STEP, 'factor': F,
+            'bandes': cap, 'grups': [k for k, _ in bc.GRUPS], 'trossos': trossos, 'fonts': fonts}, ensure_ascii=False))
+        log(f'fet en {time.time() - t0:.0f} s; {len(trossos)} trossos de {tp} × {tp}, {total / 1e6:.1f} MB comprimits')

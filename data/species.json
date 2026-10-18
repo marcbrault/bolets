@@ -56,7 +56,7 @@
   "grup": "tardor",
   "color": "#e5873a",
   "habitat": "Tota mena de pinedes: pi roig, pi negre, pinassa, pi blanc, pinyer i pinastre",
-  "sol": "silici-suau",
+  "sol": null,
   "elev": [
    0,
    100,
@@ -89,7 +89,7 @@
    0.85,
    0.35
   ],
-  "notes": "Poc exigent de sòl, però prefereix substrats silicis permeables i sorrencs. Comença a l'agost a les zones altes i obagues i acaba cap a Nadal als indrets arrecerats de la costa. Les pinedes joves, esclarissades i pasturades en fan més.",
+  "notes": "Poc exigent de sòl: als registres de Catalunya surt tant en terrenys calcaris com silicis. Comença a l'agost a les zones altes i obagues i acaba cap a Nadal als indrets arrecerats de la costa. Les pinedes joves, esclarissades i pasturades en fan més.",
   "arbres": [
    "pi_roig",
    "pi_negre",
@@ -199,6 +199,10 @@
   ],
   "noms_cientifics": [
    "Lactarius vinosus"
+  ],
+  "arbres2": [
+   "surera",
+   "castanyer"
   ]
  },
  {
@@ -313,6 +317,9 @@
    "Cantharellus cibarius",
    "Cantharellus pallens",
    "Cantharellus subpruinosus"
+  ],
+  "arbres2": [
+   "avet"
   ]
  },
  {
@@ -364,6 +371,10 @@
   ],
   "noms_cientifics": [
    "Amanita caesarea"
+  ],
+  "arbres2": [
+   "pinyer",
+   "pinastre"
   ]
  },
  {
@@ -409,6 +420,7 @@
   "notes": "Prefereix sòls silicis o calcaris descalcificats, però s'adapta. Sol repetir als mateixos rodals cada any.",
   "arbres": [
    "alzina",
+   "surera",
    "roure",
    "faig",
    "castanyer"
@@ -465,6 +477,10 @@
   ],
   "noms_cientifics": [
    "Hygrophorus russula"
+  ],
+  "arbres2": [
+   "castanyer",
+   "pinyer"
   ]
  },
  {
@@ -474,7 +490,7 @@
   "grup": "hivern",
   "color": "#e8b62c",
   "habitat": "Pinedes i boscos mixtos humits, sovint amb molsa",
-  "sol": null,
+  "sol": "calcari-suau",
   "elev": [
    100,
    400,
@@ -509,6 +525,7 @@
   ],
   "notes": "Bolet tardà. Necessita humitat persistent més que no pas una pluja puntual. Aguanta fred moderat.",
   "arbres": [
+   "pinassa",
    "pi_roig",
    "pi_negre",
    "avet",
@@ -525,7 +542,7 @@
   "grup": "hivern",
   "color": "#7d8590",
   "habitat": "Totes les pinedes i avetoses; també apareix a les estepes",
-  "sol": null,
+  "sol": "calcari-suau",
   "elev": [
    0,
    200,
@@ -558,7 +575,7 @@
    1,
    0.9
   ],
-  "notes": "Indiferent al substrat (calcari o silici). Temporada d'excel·lència d'octubre a gener. Hi ha fredolics tòxics (Tricholoma pardinum): en cas de dubte, deixeu-lo al bosc.",
+  "notes": "Surt en tota mena de substrats, però a Catalunya els registres abunden més en terrenys calcaris. Temporada d'excel·lència d'octubre a gener. Hi ha fredolics tòxics (Tricholoma pardinum): en cas de dubte, deixeu-lo al bosc.",
   "arbres": [
    "pi_roig",
    "pi_negre",
@@ -571,6 +588,9 @@
   ],
   "noms_cientifics": [
    "Tricholoma terreum"
+  ],
+  "arbres2": [
+   "matollar"
   ]
  },
  {
@@ -580,7 +600,7 @@
   "grup": "hivern",
   "color": "#5d6470",
   "habitat": "Pinedes de pi roig i avetoses, amb arbres adults",
-  "sol": "silici",
+  "sol": "silici-suau",
   "elev": [
    800,
    1100,
@@ -674,6 +694,9 @@
   "noms_cientifics": [
    "Hygrophorus latitabundus",
    "Hygrophorus limacinus"
+  ],
+  "arbres2": [
+   "pinastre"
   ]
  },
  {
@@ -773,6 +796,10 @@
   ],
   "noms_cientifics": [
    "Calocybe gambosa"
+  ],
+  "arbres2": [
+   "ribera",
+   "matollar"
   ]
  },
  {
@@ -873,6 +900,12 @@
   ],
   "noms_cientifics": [
    "Morchella"
+  ],
+  "arbres2": [
+   "pi_negre",
+   "pi_blanc",
+   "pi_roig",
+   "avet"
   ]
  },
  {
@@ -882,7 +915,7 @@
   "grup": "tardor",
   "color": "#7a6a4f",
   "habitat": "Alzinars, suredes i boscos mixtos d'alzina o surera amb roures i pins",
-  "sol": "silici",
+  "sol": "silici-suau",
   "elev": [
    0,
    100,
@@ -923,6 +956,10 @@
   "noms_cientifics": [
    "Hygrophorus persoonii",
    "Hygrophorus dichrous"
+  ],
+  "arbres2": [
+   "pinyer",
+   "castanyer"
   ]
  },
  {
@@ -977,6 +1014,9 @@
    "Leccinellum corsicum",
    "Leccinum lepidum",
    "Leccinum corsicum"
+  ],
+  "arbres2": [
+   "pinyer"
   ]
  }
 ]

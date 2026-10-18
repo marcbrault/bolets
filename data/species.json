@@ -212,7 +212,7 @@
   "grup": "estiu-tardor",
   "color": "#8a5a32",
   "habitat": "Pinedes de pi negre i pi roig, avetoses, fagedes; B. aereus en alzinars i rouredes",
-  "sol": "silici",
+  "sol": "silici-suau",
   "elev": [
    300,
    900,
@@ -245,7 +245,7 @@
    0.35,
    0.05
   ],
-  "notes": "Acidòfil: no en trobareu en sòls calcaris (si hi ha bulbocodis, no hi busqueu ceps). Al Pirineu el moment just sol ser la 1a–3a setmana de setembre, i les bolades són millors si la primavera ha estat plujosa o amb neu. Al Montseny, B. aestivalis surt al juny a les fagedes; a les suredes i alzinars silicis (B. aereus), una primavera plujosa pot donar una florada a final de primavera.",
+  "notes": "Acidòfil: prefereix sòls silicis o descalcificats; en terrenys francament calcaris és rar (si hi ha bulbocodis, no hi busqueu ceps). Al Pirineu el moment just sol ser la 1a–3a setmana de setembre, i les bolades són millors si la primavera ha estat plujosa o amb neu. Al Montseny, B. aestivalis surt al juny a les fagedes; a les suredes i alzinars silicis (B. aereus), una primavera plujosa pot donar una florada a final de primavera.",
   "arbres": [
    "pi_negre",
    "pi_roig",
@@ -270,7 +270,7 @@
   "grup": "estiu-tardor",
   "color": "#f0a020",
   "habitat": "Pinedes de pi negre, fagedes, rouredes, castanyedes; a terra baixa, suredes i alzinars silicis i volcànics",
-  "sol": "silici",
+  "sol": "silici-suau",
   "elev": [
    0,
    150,
@@ -303,7 +303,7 @@
    0.5,
    0.05
   ],
-  "notes": "Només en sòls àcids. Temporada llarga, de juny a octubre, sempre després de pluges.",
+  "notes": "Prefereix sòls àcids o descalcificats (també surt sota alzines i roures sobre margues). Temporada llarga, de juny a octubre, sempre després de pluges.",
   "arbres": [
    "pi_negre",
    "pi_roig",

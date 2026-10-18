@@ -92,7 +92,7 @@ export function aplicaCapes(S, capes, elev) {
       const t = capes.calcari[i] + capes.mixt[i] + capes.silici[i];
       const geo = t > 0 ? (capes.silici[i] + 0.5 * capes.mixt[i]) / t : NaN;
       // l'Atles descriu descalcificacions i matisos que el mapa 1:250.000 no recull
-      S.sol[i] = isNaN(geo) ? atles[i] : isNaN(atles[i]) ? geo : 0.6 * geo + 0.4 * atles[i];
+      S.sol[i] = isNaN(geo) ? atles[i] : isNaN(atles[i]) ? geo : 0.5 * geo + 0.5 * atles[i];
     }
     S.solGeo = true;
   }

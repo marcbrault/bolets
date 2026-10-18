@@ -29,6 +29,10 @@ export const RAMPES = {
     stops: rampa([[0, '#d9cfa8', 0.75], [0.5, '#b9b4ad', 0.55], [1, '#8a5a7a', 0.75]]),
     min: 0, max: 1, unitat: '', format: v => v < 0.25 ? 'calcari' : v > 0.75 ? 'silici' : 'mixt / ?',
   },
+  habitat: {
+    stops: rampa([[0, '#efe9da', 0.3], [0.1, '#e7d9a2', 0.55], [0.3, '#c7a75a', 0.72], [0.6, '#8a5a2b', 0.88]]),
+    min: 0, max: 0.6, unitat: '', format: v => Math.round(v * 100) + '%',
+  },
   bosc: {
     stops: rampa([[0, '#efe9da', 0.35], [0.4, '#a9c98a', 0.65], [0.75, '#4f8f4a', 0.8], [1, '#1d5531', 0.88]]),
     min: 0, max: 1, unitat: '', format: v => Math.round(v * 100) + '%',

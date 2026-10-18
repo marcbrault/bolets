@@ -2,6 +2,11 @@ name: Descarrega registres
 
 on:
   workflow_dispatch:
+    inputs:
+      gbif:
+        description: "Torna a descarregar els registres de GBIF"
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -13,19 +18,22 @@ concurrency:
 jobs:
   registres:
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - run: pip install requests
-      - run: python scripts/registres.py
+      - run: pip install requests numpy pyproj
+      - if: ${{ inputs.gbif }}
+        run: python scripts/registres.py
+      - name: Terreny, meteo històrica i esforç de mostreig
+        run: python scripts/registres_extra.py
       - name: Desa les dades
         run: |
           git config user.name "bolets-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/registres.json
+          git add data/registres.json cache
           git diff --cached --quiet && exit 0
           git commit -m "Registres GBIF $(date -u +%F)"
           git pull --rebase origin main

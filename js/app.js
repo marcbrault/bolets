@@ -140,7 +140,8 @@ function valorsVista(d) {
     const o = i * nd;
     if (estat.vista === 'elev') out[i] = M.elev[i];
     else if (estat.vista === 'sol') out[i] = isNaN(S.sol[i]) ? 0.5 : S.sol[i];
-    else if (estat.vista === 'bosc') out[i] = S.bosc[i];
+    else if (estat.vista === 'bosc') out[i] = S.boscPct ? S.boscPct[i] / 100 : S.bosc[i];
+    else if (estat.vista === 'habitat') out[i] = S.arbres && estat.sp.arbres ? estat.sp.arbres.reduce((a, k) => a + (S.arbres[k]?.[i] ?? 0), 0) / 100 : S.bosc[i];
     else {
       let s = 0, c = 0;
       for (let j = Math.max(0, d - 6); j <= d; j++) { s += estat.vista === 'pluja7' ? M.precip[o + j] : M.tmean[o + j]; c++; }
@@ -237,7 +238,7 @@ function pintaEspecies() {
 function triaEspecie(sp) {
   estat.sp = sp;
   pintaEspecies(); desaPrefs(); pintaAtles();
-  if (estat.vista !== 'index') triaVista('index'); else actualitzaTot();
+  if (estat.vista !== 'index' && estat.vista !== 'habitat') triaVista('index'); else actualitzaTot();
 }
 
 // ---------- UI: vista / llegenda ----------

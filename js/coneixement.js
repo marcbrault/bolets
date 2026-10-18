@@ -99,6 +99,7 @@ export function aplicaCapes(S, capes, elev) {
   }
   if (capes.sol?.length === n || capes.calcari?.length === n) {
     const atles = S.sol;
+    S.solAtles = atles; // només el criteri de l'Atles (per a la graella fina)
     S.sol = new Float32Array(n).fill(NaN);
     for (let i = 0; i < n; i++) {
       let geo;
@@ -113,6 +114,7 @@ export function aplicaCapes(S, capes, elev) {
     S.solGeo = true;
   }
   if (capes.elev?.length === n) {
+    S.elevMeteo = Float32Array.from(elev); // altitud a la qual Open-Meteo dona les temperatures
     capes.elev.forEach((z, i) => { if (z != null) elev[i] = z; });
     S.obaga = capes.obaga; S.solell = capes.solell; S.pendent = capes.pendent;
   }

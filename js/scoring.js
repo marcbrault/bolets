@@ -58,6 +58,43 @@ export function derivaEstatiques(grid, elev) {
   return { relleu, bosc };
 }
 
+/** Part meteorològica d'una cel·la i un dia: temporada × pluja, temperatura de 7 dies i mínima de 4 dies. */
+export function dinamica(sp, M, i, d) {
+  const nd = M.nd, o = i * nd, P = M.precip, T = M.tmean, Tn = M.tmin;
+  const fTemp = temporada(sp, M.dates[d]);
+  let disparador = 0;
+  for (let j = Math.max(2, d - sp.lag[1]); j <= d - sp.lag[0]; j++) {
+    const r3 = P[o + j] + P[o + j - 1] + P[o + j - 2];
+    if (r3 > disparador) disparador = r3;
+  }
+  const fDisp = satura(disparador / sp.pluja);
+  const aigua = M.aigua[o + d];
+  const fHum = satura(aigua / 25);
+  const fPluja = Math.pow(fDisp, 0.6) * Math.pow(Math.max(fHum, 0.12), 0.4);
+  let ts = 0, tc = 0;
+  for (let j = Math.max(0, d - 6); j <= d; j++) { ts += T[o + j]; tc++; }
+  let tmin4 = Infinity;
+  for (let j = Math.max(0, d - 3); j <= d; j++) tmin4 = Math.min(tmin4, Tn[o + j]);
+  return { fTemp, fDisp, fHum, fPluja, disparador, aigua, t7: ts / tc, tmin4 };
+}
+
+export const fGelada = (sp, tmin4) => tmin4 < sp.gelada ? clamp(1 - (sp.gelada - tmin4) * 0.18, 0.15, 1) : 1;
+
+/** Hàbitat a partir del % de cada grup d'arbres (pct(k) → 0–100). */
+export function fHabitat(sp, pct, ambHostes = false) {
+  let q = 0;
+  for (const k of sp.arbres) q += pct(k) || 0;
+  if (sp.arbres2) for (const k of sp.arbres2) q += 0.5 * (pct(k) || 0);
+  const f = 0.12 + 0.88 * Math.pow(Math.min(1, q / 100 / 0.3), 0.6);
+  if (!ambHostes) return f;
+  const hostes = sp.arbres.map(k => [k, pct(k) || 0]).filter(h => h[1] > 0)
+    .concat((sp.arbres2 || []).map(k => [k, pct(k) || 0, true]).filter(h => h[1] > 0)).sort((a, b) => b[1] - a[1]);
+  return { f, hostes };
+}
+
+/** Orientació: amb calor surten a les obagues; amb fred, als solells. nord = % obaga − % solell. */
+export const fOrientacio = (t7, nord) => clamp(1 + 0.4 * clamp((t7 - 12) / 6, -1, 1) * nord / 100, 0.85, 1.15);
+
 /**
  * Calcula l'índex d'una espècie per a una cel·la i un dia.
  * @param {object} sp  espècie (species.json)
@@ -71,32 +108,11 @@ export function index(sp, M, S, i, d, detall = false) {
   const nd = M.nd, o = i * nd;
   const P = M.precip, T = M.tmean, Tn = M.tmin;
 
-  // 1) Temporada
-  const fTemp = temporada(sp, M.dates[d]);
-
-  // 2) Pluja desencadenant: màxim de pluja acumulada en 3 dies dins la finestra de latència
-  let disparador = 0;
-  for (let j = Math.max(2, d - sp.lag[1]); j <= d - sp.lag[0]; j++) {
-    const r3 = P[o + j] + P[o + j - 1] + P[o + j - 2];
-    if (r3 > disparador) disparador = r3;
-  }
-  const fDisp = satura(disparador / sp.pluja);
-
-  // 3) Humitat del sòl (balanç simple pluja − evapotranspiració)
-  const aigua = M.aigua[o + d];
-  const fHum = satura(aigua / 25);
-  const fPluja = Math.pow(fDisp, 0.6) * Math.pow(Math.max(fHum, 0.12), 0.4);
-
-  // 4) Temperatura mitjana dels últims 7 dies
-  let ts = 0, tc = 0;
-  for (let j = Math.max(0, d - 6); j <= d; j++) { ts += T[o + j]; tc++; }
-  const t7 = ts / tc;
+  // 1–5) Temporada, pluja, humitat, temperatura i gelades (meteo de la cel·la)
+  const D = dinamica(sp, M, i, d);
+  const { fTemp, fDisp, fHum, fPluja, disparador, aigua, t7, tmin4 } = D;
   const fT = trapezi(t7, sp.temp);
-
-  // 5) Gelades recents
-  let tmin4 = Infinity;
-  for (let j = Math.max(0, d - 3); j <= d; j++) tmin4 = Math.min(tmin4, Tn[o + j]);
-  const fGel = tmin4 < sp.gelada ? clamp(1 - (sp.gelada - tmin4) * 0.18, 0.15, 1) : 1;
+  const fGel = fGelada(sp, tmin4);
 
   // 6) Altitud
   const fAlt = trapezi(M.elev[i], sp.elev);
@@ -106,21 +122,13 @@ export function index(sp, M, S, i, d, detall = false) {
   let fBosc, hostes = null;
   if (S.arbres && sp.arbres) {
     // Hàbitat real (CREAF): fracció de la cel·la coberta pels arbres o prats on surt l'espècie
-    hostes = sp.arbres.map(k => [k, S.arbres[k]?.[i] ?? 0]).filter(h => h[1] > 0).sort((a, b) => b[1] - a[1]);
-    const sec = (sp.arbres2 || []).map(k => [k, S.arbres[k]?.[i] ?? 0]).filter(h => h[1] > 0);
-    const quota = (hostes.reduce((a, h) => a + h[1], 0) + 0.5 * sec.reduce((a, h) => a + h[1], 0)) / 100;
-    hostes = hostes.concat(sec.map(h => [h[0], h[1], true])).sort((a, b) => b[1] - a[1]);
-    fBosc = 0.12 + 0.88 * Math.pow(Math.min(1, quota / 0.3), 0.6);
+    ({ f: fBosc, hostes } = fHabitat(sp, k => S.arbres[k]?.[i], true));
   } else {
     fBosc = pesBosc >= 0 ? Math.pow(S.bosc[i], pesBosc) : 1 - Math.abs(pesBosc) * 0.8 * S.bosc[i];
   }
 
   // 7b) Orientació (MET ICGC): amb calor surten a les obagues; amb fred, als solells
-  let fOri = 1;
-  if (S.obaga && S.obaga[i] != null) {
-    const w = clamp((t7 - 12) / 6, -1, 1);
-    fOri = clamp(1 + 0.4 * w * (S.obaga[i] - S.solell[i]) / 100, 0.85, 1.15);
-  }
+  const fOri = S.obaga && S.obaga[i] != null ? fOrientacio(t7, S.obaga[i] - S.solell[i]) : 1;
 
   // 8) Substrat (silici / calcari)
   const fSol = factorSol(sp.sol, S.sol ? S.sol[i] : NaN, sp.solRang);

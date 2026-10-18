@@ -61,7 +61,7 @@ export function gradientCSS(nomRampa) {
 export class Heatmap {
   constructor(grid, contorn) {
     this.g = grid;
-    this.S = grid.km >= 10 ? 16 : 8; // píxels per cel·la
+    this.S = grid.km >= 10 ? 16 : grid.km >= 5 ? 8 : 2; // píxels per cel·la
     this.canvas = document.createElement('canvas');
     this.canvas.width = grid.nx * this.S;
     this.canvas.height = grid.ny * this.S;
@@ -85,10 +85,16 @@ export class Heatmap {
   }
 
   pinta(valors, nomRampa) {
-    const { nx, ny, cells } = this.g, S = this.S;
+    const { nx, ny, cells } = this.g;
     // graella amb buits (NaN) fora de Catalunya
     const V = new Float32Array(nx * ny).fill(NaN);
     cells.forEach(([c, r], i) => { V[r * nx + c] = valors[i]; });
+    return this.pintaGraella(V, nomRampa);
+  }
+
+  /** Pinta una graella completa (nx × ny, NaN = buit). */
+  pintaGraella(V, nomRampa) {
+    const { nx, ny } = this.g, S = this.S;
     // omple 2 anells de vora amb la mitjana dels veïns perquè la interpolació arribi al contorn
     for (let pass = 0; pass < 2; pass++) {
       const W = V.slice();

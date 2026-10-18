@@ -1,7 +1,8 @@
 import { descarregaMeteo, preparaMeteo, meteoDemo, DIES_PASSATS } from './weather.js';
 import { derivaEstatiques, calculaAigua, index, mapaDia } from './scoring.js';
 import { Heatmap, RAMPES, color, css, gradientCSS } from './heatmap.js';
-import { preparaConeixement, aplicaCapes } from './coneixement.js';
+import { preparaConeixement, aplicaCapes, ARBRES_NOM, SOL_NOM } from './coneixement.js';
+import { carregaFina } from './fina.js';
 
 const $ = s => document.querySelector(s);
 // Vista prèvia (artifact de Claude): sense tessel·les externes ni Open-Meteo, que el navegador hi bloqueja.
@@ -15,11 +16,12 @@ const estat = {
   km: 10, grid: null, M: null, S: null, heat: null,
   avui: DIES_PASSATS, dia: DIES_PASSATS, vista: 'index',
   sel: -1, cacheDia: new Map(),
+  fina: null, heatFi: null, detall: 'fi', selPx: -1, cacheFi: new Map(),
 };
 
 // ---------- Preferències ----------
 const prefs = (() => { try { return JSON.parse(localStorage.getItem('bolets-prefs') || '{}'); } catch { return {}; } })();
-const desaPrefs = () => { try { localStorage.setItem('bolets-prefs', JSON.stringify({ sp: estat.sp?.id, km: estat.km, vista: estat.vista, base: $('#base').value, opac: $('#opacitat').value })); } catch { /* sense emmagatzematge */ } };
+const desaPrefs = () => { try { localStorage.setItem('bolets-prefs', JSON.stringify({ sp: estat.sp?.id, km: estat.km, vista: estat.vista, detall: estat.detall, base: $('#base').value, opac: $('#opacitat').value })); } catch { /* sense emmagatzematge */ } };
 
 // ---------- Mapa ----------
 const BASES = {
@@ -114,6 +116,7 @@ async function carregaGraella(km, forca = false) {
   aplicaCapes(estat.S, capes, M.elev);
   estat.capes = capes;
   estat.heat = new Heatmap(grid, estat.contorn);
+  estat.fina?.enllaca(grid); estat.cacheFi.clear();
   estat.cacheDia.clear();
   // índex del dia d'avui dins les dates
   const avuiISO = new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Madrid' });
@@ -156,16 +159,31 @@ const diesVisibles = () => {
   return [a, b];
 };
 
+// ---------- Graella fina (500 m) ----------
+const usaFi = () => estat.fina && estat.detall === 'fi' && !estat.M?.demo;
+function valorsFi(d) {
+  const k = `${estat.vista}:${estat.sp.id}:${d}:${estat.km}`;
+  if (!estat.cacheFi.has(k)) {
+    if (estat.cacheFi.size > 12) estat.cacheFi.delete(estat.cacheFi.keys().next().value);
+    estat.cacheFi.set(k, estat.fina.mapa(estat.vista, estat.sp, estat.M, estat.S, estat.sols, d));
+  }
+  return estat.cacheFi.get(k);
+}
+function imatgeActual() {
+  if (usaFi()) return { url: estat.heatFi.pintaGraella(valorsFi(estat.dia), estat.vista), coordinates: estat.heatFi.coordinates };
+  return { url: estat.heat.pinta(valorsVista(estat.dia), estat.vista), coordinates: estat.heat.coordinates };
+}
+
 // ---------- Capes del mapa ----------
 async function preparaCapes() {
   await mapaLlest;
   const g = estat.heat;
-  const url = g.pinta(valorsVista(estat.dia), estat.vista);
+  const { url, coordinates } = imatgeActual();
   if (map.getSource('heat')) {
-    map.getSource('heat').updateImage({ url, coordinates: g.coordinates });
+    map.getSource('heat').updateImage({ url, coordinates });
     return;
   }
-  map.addSource('heat', { type: 'image', url, coordinates: g.coordinates });
+  map.addSource('heat', { type: 'image', url, coordinates });
   map.addLayer({ id: 'heat', type: 'raster', source: 'heat', paint: { 'raster-opacity': +$('#opacitat').value, 'raster-resampling': 'linear', 'raster-fade-duration': 0 } });
 
   // fora de Catalunya, una mica esvaït
@@ -229,7 +247,7 @@ function pintaAtles() {
 
 function repinta() {
   if (!estat.heat || !map.getSource('heat')) return;
-  map.getSource('heat').updateImage({ url: estat.heat.pinta(valorsVista(estat.dia), estat.vista), coordinates: estat.heat.coordinates });
+  map.getSource('heat').updateImage(imatgeActual());
 }
 
 // ---------- UI: espècies ----------
@@ -431,6 +449,7 @@ function pintaFitxa() {
       <div class="num" style="color:${css([...col.slice(0, 3).map(x => x * 0.8), 1])}">${Math.round(r.valor)}<small>/100</small></div>
       <div class="classe">${estat.sp.nom}: ${cl}<span>${desc}</span></div>
     </div>
+    ${blocPunt()}
     <div class="dades-zona">
       <div class="dada"><b>${Math.round(r.pluja7)} mm</b><span>pluja últims 7 dies</span></div>
       <div class="dada"><b>${r.dies === null ? '> 40' : r.dies} d</b><span>des de pluja ≥ 10 mm</span></div>
@@ -453,6 +472,21 @@ function pintaFitxa() {
       <span>Bonificació +${Math.round((r.atles.bonus - 1) * 100)} %${r.atles.prox < 1 ? ' (a la vora de la zona)' : ''}</span></div>` : ''}`;
 }
 
+function blocPunt() {
+  if (!usaFi() || estat.selPx < 0) return '';
+  const f = estat.fina.detall(estat.selPx, estat.sp, estat.M, estat.S, estat.sols, estat.dia);
+  if (!f) return '';
+  const col = color('index', f.valor);
+  const ori = f.nord > 25 ? 'obaga' : f.nord < -25 ? 'solell' : 'orientació mixta';
+  const host = f.hostes.length ? f.hostes.slice(0, 3).map(h => `${h[1]} % ${ARBRES_NOM[h[0]]}`).join(', ') : `cap hàbitat de l'espècie (${f.bosc} % de bosc)`;
+  return `<div class="punt">
+    <div class="punt-cap"><b style="color:${css([...col.slice(0, 3).map(x => x * 0.8), 1])}">${Math.round(f.valor)}</b>
+      <span>al punt tocat (casella de 500 m)</span></div>
+    <p>${Math.round(f.z)} m · pendent ${f.pend}° · ${ori} · ${f.t7.toFixed(1)} °C (corregida per l'altitud)<br>
+      Sòl: ${SOL_NOM(f.sol)} · Hàbitat: ${host}</p>
+  </div>`;
+}
+
 // ---------- Actualització ----------
 function actualitzaDia() {
   repinta(); pintaLiniaTemps(); pintaTop(); pintaFitxa();
@@ -471,6 +505,7 @@ async function inici() {
   estat.sols = sols; estat.atles = atles;
   estat.sp = especies.find(s => s.id === prefs.sp) || especies[0];
   estat.vista = prefs.vista || 'index';
+  estat.detall = prefs.detall || 'fi'; $('#detall').value = estat.detall;
   if (prefs.opac) $('#opacitat').value = prefs.opac;
   const km = prefs.km === 5 ? 5 : 10;
   $('#resolucio').value = km;
@@ -482,7 +517,11 @@ async function inici() {
   await mapaLlest;
   posaBase(BASES[prefs.base] ? prefs.base : 'icgc-topo');
   if (PREVIEW) $('#base').closest('label').hidden = true;
+  const fina = PREVIEW ? null : carregaFina();
   await carregaGraella(km);
+  estat.fina = await fina;
+  if (estat.fina) { estat.fina.enllaca(estat.grid); estat.heatFi = new Heatmap(estat.fina, estat.contorn); }
+  $('#detall').closest('label').hidden = !estat.fina;
   await preparaCapes();
   pintaEspecies(); pintaAtles(); pintaRecents();
   actualitzaTot();
@@ -495,6 +534,7 @@ document.querySelectorAll('#vista button').forEach(b => b.addEventListener('clic
 $('#opacitat').addEventListener('input', e => { if (map.getLayer('heat')) map.setPaintProperty('heat', 'raster-opacity', +e.target.value); desaPrefs(); });
 $('#mostra-atles').addEventListener('change', pintaAtles);
 $('#mostra-recents').addEventListener('change', pintaRecents);
+$('#detall').addEventListener('change', e => { estat.detall = e.target.value; desaPrefs(); actualitzaTot(); });
 $('#mostra-enp').addEventListener('change', e => { if (map.getLayer('enp')) map.setLayoutProperty('enp', 'visibility', e.target.checked ? 'visible' : 'none'); });
 $('#base').addEventListener('change', e => { posaBase(e.target.value); desaPrefs(); });
 $('#resolucio').addEventListener('change', async e => {
@@ -509,11 +549,13 @@ $('#cerca').addEventListener('change', e => {
   if (!m) return;
   map.flyTo({ center: [m[1], m[2]], zoom: 11.5, speed: 1.5 });
   const i = estat.heat?.cellaA(m[1], m[2]);
+  estat.selPx = estat.fina ? estat.fina.pixel(m[1], m[2]) : -1;
   if (i >= 0) selecciona(i);
   e.target.blur();
 });
 map.on('click', e => {
-  if (!estat.heat || map.queryRenderedFeatures(e.point, { layers: ['atles-punt'] }).length) return;
+  if (!estat.heat || map.queryRenderedFeatures(e.point, { layers: ['atles-punt', 'recents'] }).length) return;
+  estat.selPx = estat.fina ? estat.fina.pixel(e.lngLat.lng, e.lngLat.lat) : -1;
   selecciona(estat.heat.cellaA(e.lngLat.lng, e.lngLat.lat));
 });
 map.on('mousemove', e => { map.getCanvas().style.cursor = estat.heat && estat.heat.cellaA(e.lngLat.lng, e.lngLat.lat) >= 0 ? 'crosshair' : ''; });

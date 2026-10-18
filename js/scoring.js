@@ -123,7 +123,7 @@ export function index(sp, M, S, i, d, detall = false) {
   }
 
   // 8) Substrat (silici / calcari)
-  const fSol = factorSol(sp.sol, S.sol ? S.sol[i] : NaN);
+  const fSol = factorSol(sp.sol, S.sol ? S.sol[i] : NaN, sp.solRang);
 
   // 9) Coneixement expert: zona citada a l'Atles del Boletaire
   const A = S.perSp?.get(sp.id);

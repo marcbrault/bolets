@@ -32,8 +32,9 @@ def fonts(C):
         F['geologia50'] = geo('50')
     if 'ph' in C:
         ph = np.array(C['ph'], float) / 10
-        # pH 5,5 o menys → 1 (àcid); 7,8 o més → 0 (calcari)
-        F['ph'] = np.where(ph > 0, np.clip((7.8 - ph) / (7.8 - 5.5), 0, 1), np.nan)
+        # Escala calibrada amb els registres: mediana de pH 6,0–6,3 a les espècies silicícoles i ~7,0 a les calcícoles.
+        # pH ≤ 6,2 → 1 (àcid); pH ≥ 7,3 → 0 (calcari)
+        F['ph'] = np.where(ph > 0, np.clip((7.3 - ph) / (7.3 - 6.2), 0, 1), np.nan)
     A = {k: np.array(v, float) for k, v in C['arbres'].items()}
     acid = A['surera'] + A['castanyer'] + A['pinastre']
     basic = A['pi_blanc'] + A['pinassa']
@@ -95,5 +96,21 @@ for km in (5, 10):
     C['sol_fonts'] = millor
     path.write_text(json.dumps(C, separators=(',', ':'), ensure_ascii=False))
     print(km, 'km', rep)
+# Rang de sòl de cada espècie (índex combinat a 5 km als seus registres), per a factorSol
+G = json.loads((D / 'grid-5km.json').read_text()); C = json.loads((D / 'capes-5km.json').read_text())
+cel = cel_de(G); sol = np.array([np.nan if v is None else v / 100 for v in C['sol']])
+SPP = json.loads((D / 'species.json').read_text())
+rangs = {}
+for sp in SPP:
+    I = [i for x in R['especies'].get(sp['id'], []) if (x[3] or 0) <= 5000 and (i := cel(x[0], x[1])) is not None]
+    v = sol[I]; v = v[~np.isnan(v)]
+    if len(v) >= 40:
+        sp['solRang'] = [round(float(np.percentile(v, q)), 2) for q in (5, 25, 75, 95)]
+        rangs[sp['id']] = sp['solRang'] + [len(v)]
+    else:
+        sp.pop('solRang', None)
+(D / 'species.json').write_text(json.dumps(SPP, ensure_ascii=False, indent=1) + '\n')
+informe['rangs_especies'] = rangs
+print('rangs de sòl per espècie (p5, p25, p75, p95, n):', rangs)
 (ARREL / 'cache').mkdir(exist_ok=True)
 (ARREL / 'cache/validacio-sol.json').write_text(json.dumps(informe, indent=1))

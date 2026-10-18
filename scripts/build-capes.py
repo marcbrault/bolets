@@ -246,8 +246,15 @@ def descripcio_geo(text):
     return ' '.join(v for k in ('Descripcio', 'Descripcio_protolit') if (v := d.get(k)) and v != 'Null') or text
 
 
+def camps_geo(text):
+    m = re.match(r'@\S+\s+(.*?;)\s+(.*)$', text)
+    return dict(zip(m.group(1).split(';'), m.group(2).split(';'))) if m else {}
+
+
 def classifica_roca(text):
     """1 = calcari, 2 = mixt/detrític, 3 = silici. La primera roca esmentada és la dominant."""
+    f = camps_geo(text)
+    edat = norm(' '.join(f.get(k, '') for k in ('Era', 'Periode', 'Epoca')))
     d = descripcio_geo(text)
     t = norm(re.sub(r'\([^)]*\)', ' ', d))  # sense topònims
     ebre = bool(re.search(EBRE, norm(d)))
@@ -259,6 +266,10 @@ def classifica_roca(text):
         return 1  # roques carbonatades, o detrítics amb margues/calcàries (sòls calcaris de la Depressió Central)
     if ebre and s == 10 ** 6:
         return 1  # detrítics carbonatats de la Depressió Central
+    if d < 10 ** 6 and c == 10 ** 6 and re.search(r'paleozoic|permia|carbonifer|devonia|siluria|ordovicia|cambria', edat):
+        return 3  # detrítics paleozoics i permians: gresos, lutites i pissarres sense carbonats
+    if d < 10 ** 6 and c == 10 ** 6 and re.search(r'triasic inferior', edat):
+        return 3  # Buntsandstein: gresos i conglomerats silicis
     if c < 10 ** 6 or s < 10 ** 6 or d < 10 ** 6:
         return 2
     return 0

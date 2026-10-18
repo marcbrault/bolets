@@ -16,7 +16,19 @@ const TAULA = {
   'calcari':      { silici: 0.25, mixt: 0.75, calcari: 1, desc: 0.8 },
   'calcari-suau': { silici: 0.75, mixt: 0.9, calcari: 1, desc: 0.88 },
 };
-export function factorSol(pref, v) {
+/**
+ * Afinitat espècie–substrat. Si l'espècie té rang calibrat amb registres (solRang = percentils 5, 25, 75, 95
+ * de l'índex de sòl on surt), es fa servir; si no, la preferència qualitativa.
+ */
+export function factorSol(pref, v, rang) {
+  if (rang && !isNaN(v)) {
+    const [a, b, c, d] = rang, lo = Math.max(0, a - 0.05), hi = Math.min(1.05, d + 0.05), mig = (b + c) / 2;
+    // l'extrem del costat que l'espècie prefereix no es penalitza (pocs registres allà per manca de bosc, no de sòl)
+    let t = 1;
+    if (v < b && mig >= 0.45) t = v <= lo ? 0 : (v - lo) / (b - lo);
+    else if (v > c && mig <= 0.55) t = v >= hi ? 0 : (hi - v) / (hi - c);
+    return 0.25 + 0.75 * t;
+  }
   if (!pref) return 1;
   const t = TAULA[pref];
   if (isNaN(v)) return t.desc;

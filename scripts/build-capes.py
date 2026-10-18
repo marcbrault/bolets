@@ -264,13 +264,13 @@ def classifica_roca(text):
     return 0
 
 
-def geologia():
+def geologia(capa=GEOCAPA, res=100, nom='geologia', sufix=''):
     formats = ['application/json', 'text/plain', 'text/html']
 
     def consulta(x, y):
         for f in list(formats):
-            r = get(GEOWMS, dict(SERVICE='WMS', VERSION='1.3.0', REQUEST='GetFeatureInfo', LAYERS=GEOCAPA,
-                                 QUERY_LAYERS=GEOCAPA, STYLES='', CRS='EPSG:25831',
+            r = get(GEOWMS, dict(SERVICE='WMS', VERSION='1.3.0', REQUEST='GetFeatureInfo', LAYERS=capa,
+                                 QUERY_LAYERS=capa, STYLES='', CRS='EPSG:25831',
                                  BBOX=f'{x - 10},{y - 10},{x + 10},{y + 10}', WIDTH=3, HEIGHT=3, I=1, J=1,
                                  INFO_FORMAT=f, FEATURE_COUNT=1, FORMAT='image/png'), intents=3)
             t = r.content.decode('utf-8', 'replace')
@@ -290,7 +290,7 @@ def geologia():
             return t[:1500] or None
         return None
 
-    colors, comptes, pesos, cnt = wms_classifica(GEOWMS, GEOCAPA, 100, 2, consulta, nom='geologia')
+    colors, comptes, pesos, cnt = wms_classifica(GEOWMS, capa, res, 2 if res >= 100 else 3, consulta, nom=nom)
     cls = {}
     for p in pesos.values():
         for t in p:
@@ -299,9 +299,9 @@ def geologia():
     for ci, p in pesos.items():
         for t, w in p.items():
             px[t] += comptes[ci] * w
-    diag['geologia'] = {'format': formats[0], 'classes': collections.Counter(cls.values()),
+    diag[nom] = {'format': formats[0], 'classes': collections.Counter(cls.values()),
                         'mostra': [{'t': descripcio_geo(t)[:200], 'cls': cls[t], 'px': int(n)} for t, n in px.most_common(400)]}
-    log(f'Geologia: {len(colors)} colors, {len(cls)} unitats, format {formats[0]}, sense classe: {sum(1 for v in cls.values() if v == 0)}')
+    log(f'{nom}: {len(colors)} colors, {len(cls)} unitats, format {formats[0]}, sense classe: {sum(1 for v in cls.values() if v == 0)}')
     out = {}
     for km, C in cnt.items():
         cal, _ = agrega(C, pesos, lambda t: float(cls[t] == 1))
@@ -309,8 +309,58 @@ def geologia():
         sil, _ = agrega(C, pesos, lambda t: float(cls[t] == 3))
         tot = (cal + mix + sil).clip(min=1e-9)
         ok = (cal + mix + sil) > 0
-        out[km] = {k: np.where(ok, np.round(100 * v / tot), 0).astype(int).tolist() for k, v in (('calcari', cal), ('mixt', mix), ('silici', sil))}
+        out[km] = {k + sufix: np.where(ok, np.round(100 * v / tot), 0).astype(int).tolist() for k, v in (('calcari', cal), ('mixt', mix), ('silici', sil))}
     return out
+
+
+def geologia50():
+    """Mapa geològic comarcal 1:50.000 (ICGC): hi surten volcans i afloraments petits."""
+    return geologia('unitats-geologiques-50000', 50, 'geologia50', '50')
+
+
+# ---------------------------------------------------------------- ISRIC SoilGrids: pH del sòl (250 m)
+SG = 'https://maps.isric.org/mapserv?map=/map/phh2o.map'
+
+
+def ph():
+    import rasterio
+    out = {km: {'s': np.zeros(len(g['cells'])), 'n': np.zeros(len(g['cells'])), 'a': np.zeros(len(g['cells'])), 'b': np.zeros(len(g['cells']))} for km, g in GRIDS.items()}
+    for lon0 in np.arange(0.1, 3.4, 1.1):
+        for lat0 in np.arange(40.45, 42.9, 1.0):
+            capes = []
+            for prof in ('0-5cm', '5-15cm'):
+                url = (f'{SG}&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=phh2o_{prof}_mean&FORMAT=GEOTIFF_INT16'
+                       f'&SUBSET=long({lon0:.2f},{min(lon0 + 1.1, 3.4):.2f})&SUBSET=lat({lat0:.2f},{min(lat0 + 1.0, 42.9):.2f})'
+                       '&SUBSETTINGCRS=http://www.opengis.net/def/crs/EPSG/0/4326&OUTPUTCRS=http://www.opengis.net/def/crs/EPSG/0/4326')
+                r = get(url, timeout=300)
+                with rasterio.MemoryFile(r.content) as mf, mf.open() as ds:
+                    a = ds.read(1).astype(float)
+                    a[(a <= 0) | (a == ds.nodata)] = np.nan
+                    tr = ds.transform
+                capes.append(a / 10)
+            v = np.nanmean(np.stack(capes), axis=0)
+            h, w = v.shape
+            lons = tr.c + (np.arange(w) + 0.5) * tr.a
+            lats = tr.f + (np.arange(h) + 0.5) * tr.e
+            LO, LA = np.meshgrid(lons, lats)
+            mx = LO * math.pi / 180 * 6378137
+            my = 6378137 * np.log(np.tan(math.pi / 4 + LA * math.pi / 360))
+            for km, g in GRIDS.items():
+                ci = cel_index(g, mx, my).ravel()
+                vv = v.ravel()
+                ok = (ci >= 0) & ~np.isnan(vv)
+                o = out[km]
+                np.add.at(o['s'], ci[ok], vv[ok]); np.add.at(o['n'], ci[ok], 1)
+                np.add.at(o['a'], ci[ok], vv[ok] < 6.0); np.add.at(o['b'], ci[ok], vv[ok] > 7.2)
+    res = {}
+    for km, o in out.items():
+        n = o['n'].clip(min=1)
+        sense = o['n'] == 0
+        res[km] = {'ph': np.where(sense, 0, np.round(10 * o['s'] / n)).astype(int).tolist(),   # pH × 10
+                   'ph_acid': np.where(sense, 0, np.round(100 * o['a'] / n)).astype(int).tolist(),
+                   'ph_basic': np.where(sense, 0, np.round(100 * o['b'] / n)).astype(int).tolist()}
+        log(f'pH {km} km: {int((~sense).sum())} cel·les amb dades, pH mitjà {np.nanmean(np.where(sense, np.nan, o["s"] / n)):.2f}')
+    return res
 
 # ---------------------------------------------------------------- ICGC: elevacions
 WCS = 'https://geoserveis.icgc.cat/icc_mdt/wcs/service'
@@ -375,6 +425,8 @@ if __name__ == '__main__':
     fonts = {
         'cobertes': 'CREAF, Mapa de Cobertes del Sòl de Catalunya, 4a ed. (2009), nivell 5',
         'geologia': "ICGC, Mapa geològic de Catalunya 1:250.000 (WMS geologia territorial)",
+        'geologia50': "ICGC, Mapa geològic comarcal de Catalunya 1:50.000 (WMS geologia territorial)",
+        'ph': 'ISRIC SoilGrids 2.0, pH (H2O) 0–15 cm, 250 m (CC BY 4.0)',
         'elevacions': "ICGC, Model d'Elevacions del Terreny (WCS icc:met)",
     }
     for km in GRIDS:  # conserva les capes ja construïdes si només se'n refà una part

@@ -78,7 +78,38 @@ def raster_a_cel(classes, x0, y1, res, ncl):
 
 
 # ---------------------------------------------------------------- WMS: mosaic + calibratge de colors
-def wms_classifica(url, capa, res, nt, consulta, vots_base=3, vots_grans=11):
+CACHE = Path(__file__).resolve().parent.parent / 'cache'
+USA_CACHE = '--cache' in sys.argv
+
+
+def desa_cache(nom, colors, comptes, pesos, cnt):
+    """Desa el calibratge i els comptes per cel·la (dispersos) per poder reclassificar sense xarxa."""
+    CACHE.mkdir(exist_ok=True)
+    arr = {'colors': colors, 'comptes': comptes}
+    for km, C in cnt.items():
+        i, j = np.nonzero(C)
+        arr[f'c{km}_i'], arr[f'c{km}_j'], arr[f'c{km}_v'] = i.astype(np.int32), j.astype(np.int32), C[i, j].astype(np.int32)
+        arr[f'c{km}_shape'] = np.array(C.shape)
+    np.savez_compressed(CACHE / f'{nom}.npz', **arr)
+    (CACHE / f'{nom}-pesos.json').write_text(json.dumps({str(k): v for k, v in pesos.items() if v}, ensure_ascii=False))
+
+
+def llegeix_cache(nom):
+    z = np.load(CACHE / f'{nom}.npz')
+    pj = json.loads((CACHE / f'{nom}-pesos.json').read_text())
+    pesos = {ci: pj.get(str(ci), {}) for ci in range(len(z['colors']))}
+    cnt = {}
+    for km in GRIDS:
+        C = np.zeros(tuple(z[f'c{km}_shape']), np.int64)
+        C[z[f'c{km}_i'], z[f'c{km}_j']] = z[f'c{km}_v']
+        cnt[km] = C
+    return z['colors'], z['comptes'], pesos, cnt
+
+
+def wms_classifica(url, capa, res, nt, consulta, vots_base=3, vots_grans=11, nom=None):
+    if USA_CACHE and nom and (CACHE / f'{nom}.npz').exists():
+        log(f'{nom}: dades de cache/')
+        return llegeix_cache(nom)
     """Descarrega la capa en nt×nt peces i, per a cada color, consulta GetFeatureInfo en diversos píxels.
     Com que dues categories poden compartir color, cada color es reparteix entre les categories segons els vots.
     Retorna (comptes per color i cel·la per graella, matriu color→{categoria: pes})."""
@@ -121,6 +152,8 @@ def wms_classifica(url, capa, res, nt, consulta, vots_base=3, vots_grans=11):
     with ThreadPoolExecutor(4) as ex:
         pesos = dict(ex.map(calibra, range(len(colors))))
     cnt = raster_a_cel(inv.astype(np.int64), x0, y1, res, len(colors))
+    if nom:
+        desa_cache(nom, colors, comptes, pesos, cnt)
     return colors, comptes, pesos, cnt
 
 
@@ -167,7 +200,7 @@ def cobertes():
         m = re.search(r'name="CATEGORY"[^>]*value="([^"]*)"', r.content.decode('latin-1'))
         return html.unescape(m.group(1)).strip() if m else None
 
-    colors, comptes, pesos, cnt = wms_classifica(MCSC, 'MCSCv4Nivell5', 50, 2, consulta)
+    colors, comptes, pesos, cnt = wms_classifica(MCSC, 'MCSCv4Nivell5', 50, 2, consulta, nom='cobertes')
     info = {}
     for p in pesos.values():
         for c in p:
@@ -191,10 +224,16 @@ def cobertes():
 # ---------------------------------------------------------------- ICGC: geologia (WMS 1:250.000)
 GEOWMS = 'https://geoserveis.icgc.cat/servei/catalunya/geologia-territorial/wms'
 GEOCAPA = 'unitats-geologiques-250000'
-CALC = r'calcar|calcari|calcilut|calcaren|dolomi|marg|guix|evapor|travert|carbonat|sal gemma|halit|creta|tosca'
+CALC = r'calcar|calcari|calcilut|calcaren|dolomi|marg|guix|evapor|travert|carbonat|sal gemma|halit|creta|tosca|griotte'
 SILI = (r'granit|granodior|tonalit(a|es)\b|diorit|pissarr|esquist|gneis|quarsit|basalt|volcan|porfir|migmatit|cornubian|'
-        r'lidit|riolit|andesit|filit|arcos|licorell|piroclast|leucogran|ignimbrit|grauvac|saul|metamorf|pelit|ritmit|cornean|ofit')
-DETR = r'gres|arenisc|conglomerat|lutit|argil|llim|grava|sorr|bretxa|al.?luvi|col.?luvi|terrass|ventall|dipos'
+        r'lidit|riolit|andesit|filit|arcos|licorell|piroclast|leucogran|ignimbrit|grauvac|saul|metamorf|pelit|ritmit|'
+        r'cornean|ofit|intrusiv|silur|devoni|ampelit|radiolarit|siliciclast')
+DETR = r'gres|arenisc|conglomerat|lutit|argil|llim|grav|sorr|bretx|codol|bloc|till|moren|torba|al.?luvi|col.?luvi|terrass|ventall|dipos|turbidit|olistostrom|olistrostom|detritic'
+# Formacions detrítiques de la conca de l'Ebre i del marge continental (Paleogen–Miocè): ciment i matriu
+# carbonatats, sòls calcaris. Es reconeixen pels topònims de la descripció.
+EBRE = (r'fraga|solsona|albages|\bmora\b|margalef|montserrat|sant llorenc|comiols|collegats|sant jeroni|montsant|rabassa|'
+        r'cardell|garumna|granera|\bartes\b|\bflix\b|batea|fatarella|sanauja|\btora\b|calaf|mequinensa|tarrega|castelldans|'
+        r'campaune|bellmunt|montllobar|corca|montanyana|castigaleu|igualada|\bvic\b|pontils|mediona')
 
 
 def descripcio_geo(text):
@@ -209,13 +248,17 @@ def descripcio_geo(text):
 
 def classifica_roca(text):
     """1 = calcari, 2 = mixt/detrític, 3 = silici. La primera roca esmentada és la dominant."""
-    t = norm(re.sub(r'\([^)]*\)', ' ', descripcio_geo(text)))  # sense topònims
+    d = descripcio_geo(text)
+    t = norm(re.sub(r'\([^)]*\)', ' ', d))  # sense topònims
+    ebre = bool(re.search(EBRE, norm(d)))
     pos = lambda pat: (m.start() if (m := re.search(pat, t)) else 10 ** 6)
     c, s, d = pos(CALC), pos(SILI), pos(DETR)
     if s < 10 ** 6 and c == 10 ** 6:
         return 3
     if c < 10 ** 6 and s == 10 ** 6:
         return 1  # roques carbonatades, o detrítics amb margues/calcàries (sòls calcaris de la Depressió Central)
+    if ebre and s == 10 ** 6:
+        return 1  # detrítics carbonatats de la Depressió Central
     if c < 10 ** 6 or s < 10 ** 6 or d < 10 ** 6:
         return 2
     return 0
@@ -247,7 +290,7 @@ def geologia():
             return t[:1500] or None
         return None
 
-    colors, comptes, pesos, cnt = wms_classifica(GEOWMS, GEOCAPA, 100, 2, consulta)
+    colors, comptes, pesos, cnt = wms_classifica(GEOWMS, GEOCAPA, 100, 2, consulta, nom='geologia')
     cls = {}
     for p in pesos.values():
         for t in p:
@@ -327,7 +370,7 @@ def elevacions():
 
 
 if __name__ == '__main__':
-    parts = sys.argv[1:] or ['cobertes', 'geologia', 'elevacions']
+    parts = [a for a in sys.argv[1:] if not a.startswith('--')] or ['cobertes', 'geologia', 'elevacions']
     resultat = {km: {} for km in GRIDS}
     fonts = {
         'cobertes': 'CREAF, Mapa de Cobertes del Sòl de Catalunya, 4a ed. (2009), nivell 5',

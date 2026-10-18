@@ -1,0 +1,32 @@
+name: Descarrega registres
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: registres
+  cancel-in-progress: false
+
+jobs:
+  registres:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - run: python scripts/registres.py
+      - name: Desa les dades
+        run: |
+          git config user.name "bolets-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/registres.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Registres GBIF $(date -u +%F)"
+          git pull --rebase origin main
+          git push

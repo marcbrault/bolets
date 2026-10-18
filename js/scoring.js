@@ -92,8 +92,11 @@ export function fHabitat(sp, pct, ambHostes = false) {
   return { f, hostes };
 }
 
-/** Orientació: amb calor surten a les obagues; amb fred, als solells. nord = % obaga − % solell. */
-export const fOrientacio = (t7, nord) => clamp(1 + 0.4 * clamp((t7 - 12) / 6, -1, 1) * nord / 100, 0.85, 1.15);
+/**
+ * Orientació: amb calor surten a les obagues; amb fred, als solells. nord = % obaga − % solell (−100…100).
+ * sp.orientacio (calibrat amb registres) afegeix la preferència pròpia de l'espècie (+ obaga, − solell).
+ */
+export const fOrientacio = (t7, nord, sp) => clamp(1 + (0.4 * clamp((t7 - 12) / 6, -1, 1) + (sp?.orientacio || 0)) * nord / 100, 0.8, 1.2);
 
 /**
  * Calcula l'índex d'una espècie per a una cel·la i un dia.
@@ -128,7 +131,7 @@ export function index(sp, M, S, i, d, detall = false) {
   }
 
   // 7b) Orientació (MET ICGC): amb calor surten a les obagues; amb fred, als solells
-  const fOri = S.obaga && S.obaga[i] != null ? fOrientacio(t7, S.obaga[i] - S.solell[i]) : 1;
+  const fOri = S.obaga && S.obaga[i] != null ? fOrientacio(t7, S.obaga[i] - S.solell[i], sp) : 1;
 
   // 8) Substrat (silici / calcari)
   const fSol = factorSol(sp.sol, S.sol ? S.sol[i] : NaN, sp.solRang);

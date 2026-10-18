@@ -147,7 +147,7 @@ export class Fina {
     const pct = key => { const v = b[key]?.[p]; return v == null || v === 255 ? 0 : v; };
     const fH = sp.arbres ? fHabitat(sp, pct) : 1;
     const nord = b.nord[p] === -128 ? 0 : b.nord[p];
-    const fOri = fOrientacio(t7, nord);
+    const fOri = fOrientacio(t7, nord, sp);
     const sRaw = b.sol[p], sFi = sRaw === 255 ? NaN : sRaw / 100, sA = this.solAtles(sols)[p];
     const sol = Number.isNaN(sFi) ? sA : Number.isNaN(sA) ? sFi : 0.5 * sFi + 0.5 * sA;
     const fSol = factorSol(sp.sol, sol, sp.solRang);

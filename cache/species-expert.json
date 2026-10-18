@@ -1,0 +1,1130 @@
+[
+ {
+  "id": "rovello",
+  "nom": "Rovelló",
+  "llati": "Lactarius sanguifluus",
+  "grup": "tardor",
+  "color": "#d9772b",
+  "habitat": "Pinedes (pinassa, pi blanc, pi roig), sovint barrejades amb roure o alzina",
+  "sol": "calcari",
+  "elev": [
+   0,
+   300,
+   1300,
+   1800
+  ],
+  "temp": [
+   5,
+   9,
+   17,
+   23
+  ],
+  "pluja": 30,
+  "lag": [
+   8,
+   16
+  ],
+  "gelada": -2,
+  "temporada": [
+   0.05,
+   0,
+   0,
+   0,
+   0.03,
+   0.1,
+   0.05,
+   0.25,
+   0.6,
+   1,
+   0.9,
+   0.4
+  ],
+  "notes": "Només en sòls calcaris. Surt 8–15 dies després d'una pluja forta (≥ 30 mm) amb temperatures suaus; la seva carn només envermelleix als marges.",
+  "arbres": [
+   "pinassa",
+   "pi_blanc",
+   "pi_roig"
+  ],
+  "noms_cientifics": [
+   "Lactarius sanguifluus"
+  ],
+  "solRang": [
+   0.05,
+   0.17,
+   0.5,
+   0.81
+  ]
+ },
+ {
+  "id": "pinetell",
+  "nom": "Pinetell",
+  "llati": "Lactarius deliciosus",
+  "grup": "tardor",
+  "color": "#e5873a",
+  "habitat": "Tota mena de pinedes: pi roig, pi negre, pinassa, pi blanc, pinyer i pinastre",
+  "sol": null,
+  "elev": [
+   0,
+   100,
+   1700,
+   2100
+  ],
+  "temp": [
+   4,
+   8,
+   17,
+   23
+  ],
+  "pluja": 28,
+  "lag": [
+   8,
+   16
+  ],
+  "gelada": -3,
+  "temporada": [
+   0.05,
+   0,
+   0,
+   0,
+   0.05,
+   0.3,
+   0.15,
+   0.45,
+   0.85,
+   1,
+   0.85,
+   0.35
+  ],
+  "notes": "Poc exigent de sòl: als registres de Catalunya surt tant en terrenys calcaris com silicis. Comença a l'agost a les zones altes i obagues i acaba cap a Nadal als indrets arrecerats de la costa. Les pinedes joves, esclarissades i pasturades en fan més.",
+  "arbres": [
+   "pi_roig",
+   "pi_negre",
+   "pinassa",
+   "pi_blanc",
+   "pinyer",
+   "pinastre"
+  ],
+  "noms_cientifics": [
+   "Lactarius deliciosus"
+  ],
+  "solRang": [
+   0.09,
+   0.24,
+   0.69,
+   0.98
+  ]
+ },
+ {
+  "id": "rovello-avet",
+  "nom": "Rovelló d'avet",
+  "llati": "Lactarius salmonicolor",
+  "grup": "tardor",
+  "color": "#e06a4c",
+  "habitat": "Avetoses i boscos mixtos d'avet amb pi roig, pi negre o faig",
+  "sol": "silici-suau",
+  "elev": [
+   900,
+   1200,
+   1900,
+   2200
+  ],
+  "temp": [
+   4,
+   8,
+   16,
+   21
+  ],
+  "pluja": 25,
+  "lag": [
+   7,
+   14
+  ],
+  "gelada": -2,
+  "temporada": [
+   0,
+   0,
+   0,
+   0,
+   0.05,
+   0.25,
+   0.35,
+   0.8,
+   1,
+   0.8,
+   0.3,
+   0
+  ],
+  "notes": "Bolet de muntanya (oròfil, per sobre dels 1.100–1.200 m). Les avetoses són més primerenques que les pinedes.",
+  "arbres": [
+   "avet",
+   "pi_roig",
+   "pi_negre"
+  ],
+  "noms_cientifics": [
+   "Lactarius salmonicolor"
+  ],
+  "solRang": [
+   0.51,
+   0.8,
+   0.97,
+   0.98
+  ]
+ },
+ {
+  "id": "rovello-vinader",
+  "nom": "Rovelló vinader",
+  "llati": "Lactarius vinosus",
+  "grup": "tardor",
+  "color": "#9c3b4d",
+  "habitat": "Pinedes de pi pinyer i pinastre de terra baixa",
+  "sol": "silici",
+  "elev": [
+   0,
+   50,
+   800,
+   1150
+  ],
+  "temp": [
+   7,
+   11,
+   19,
+   24
+  ],
+  "pluja": 28,
+  "lag": [
+   8,
+   16
+  ],
+  "gelada": 0,
+  "temporada": [
+   0.35,
+   0.05,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0.15,
+   0.6,
+   1,
+   0.85
+  ],
+  "notes": "Termòfil, per sota dels 1.100 m i sobre sòls silicis (saulons). Es distingeix del rovelló perquè tota la carn es torna morada en tallar-la. Prop de la costa la temporada s'allarga fins ben entrat el gener.",
+  "arbres": [
+   "pinyer",
+   "pinastre"
+  ],
+  "noms_cientifics": [
+   "Lactarius vinosus"
+  ],
+  "arbres2": [
+   "surera",
+   "castanyer"
+  ]
+ },
+ {
+  "id": "cep",
+  "nom": "Cep",
+  "llati": "Boletus edulis / B. pinophilus / B. aereus",
+  "grup": "estiu-tardor",
+  "color": "#8a5a32",
+  "habitat": "Pinedes de pi negre i pi roig, avetoses, fagedes; B. aereus en alzinars i rouredes",
+  "sol": "silici-suau",
+  "elev": [
+   300,
+   900,
+   2000,
+   2300
+  ],
+  "temp": [
+   8,
+   12,
+   19,
+   24
+  ],
+  "pluja": 25,
+  "lag": [
+   6,
+   12
+  ],
+  "gelada": 0,
+  "temporada": [
+   0,
+   0,
+   0,
+   0,
+   0.15,
+   0.45,
+   0.35,
+   0.7,
+   1,
+   0.8,
+   0.35,
+   0.05
+  ],
+  "notes": "Acidòfil: prefereix sòls silicis o descalcificats; en terrenys francament calcaris és rar (si hi ha bulbocodis, no hi busqueu ceps). Al Pirineu el moment just sol ser la 1a–3a setmana de setembre, i les bolades són millors si la primavera ha estat plujosa o amb neu. Al Montseny, B. aestivalis surt al juny a les fagedes; a les suredes i alzinars silicis (B. aereus), una primavera plujosa pot donar una florada a final de primavera.",
+  "arbres": [
+   "pi_negre",
+   "pi_roig",
+   "avet",
+   "faig",
+   "roure",
+   "castanyer",
+   "alzina",
+   "surera"
+  ],
+  "noms_cientifics": [
+   "Boletus edulis",
+   "Boletus pinophilus",
+   "Boletus aereus",
+   "Boletus reticulatus"
+  ],
+  "solRang": [
+   0.15,
+   0.53,
+   0.91,
+   1.0
+  ]
+ },
+ {
+  "id": "rossinyol",
+  "nom": "Rossinyol",
+  "llati": "Cantharellus cibarius",
+  "grup": "estiu-tardor",
+  "color": "#f0a020",
+  "habitat": "Pinedes de pi negre, fagedes, rouredes, castanyedes; a terra baixa, suredes i alzinars silicis i volcànics",
+  "sol": "silici-suau",
+  "elev": [
+   0,
+   150,
+   1800,
+   2100
+  ],
+  "temp": [
+   9,
+   13,
+   21,
+   26
+  ],
+  "pluja": 20,
+  "lag": [
+   6,
+   14
+  ],
+  "gelada": 0,
+  "temporada": [
+   0,
+   0,
+   0,
+   0,
+   0.1,
+   0.6,
+   0.7,
+   0.8,
+   1,
+   0.9,
+   0.5,
+   0.05
+  ],
+  "notes": "Prefereix sòls àcids o descalcificats (també surt sota alzines i roures sobre margues). Temporada llarga, de juny a octubre, sempre després de pluges.",
+  "arbres": [
+   "pi_negre",
+   "pi_roig",
+   "faig",
+   "roure",
+   "castanyer",
+   "alzina",
+   "surera"
+  ],
+  "noms_cientifics": [
+   "Cantharellus cibarius",
+   "Cantharellus pallens",
+   "Cantharellus subpruinosus"
+  ],
+  "arbres2": [
+   "avet"
+  ],
+  "solRang": [
+   0.11,
+   0.5,
+   0.87,
+   1.0
+  ]
+ },
+ {
+  "id": "oudereig",
+  "nom": "Ou de reig",
+  "llati": "Amanita caesarea",
+  "grup": "estiu-tardor",
+  "color": "#e5502f",
+  "habitat": "Alzinars, suredes, rouredes i castanyedes",
+  "sol": "silici-suau",
+  "elev": [
+   0,
+   150,
+   1000,
+   1350
+  ],
+  "temp": [
+   13,
+   17,
+   24,
+   29
+  ],
+  "pluja": 25,
+  "lag": [
+   7,
+   12
+  ],
+  "gelada": 3,
+  "temporada": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0.25,
+   0.55,
+   0.85,
+   1,
+   0.55,
+   0.05,
+   0
+  ],
+  "notes": "Termòfil (per sota dels 1.100–1.200 m), tot i que n'apareix algun de despistat més amunt. Vigileu la confusió amb Amanita muscaria i la mortal A. phalloides.",
+  "arbres": [
+   "alzina",
+   "surera",
+   "roure",
+   "castanyer"
+  ],
+  "noms_cientifics": [
+   "Amanita caesarea"
+  ],
+  "arbres2": [
+   "pinyer",
+   "pinastre"
+  ],
+  "solRang": [
+   0.11,
+   0.49,
+   0.73,
+   0.98
+  ]
+ },
+ {
+  "id": "trompeta",
+  "nom": "Trompeta de la mort",
+  "llati": "Craterellus cornucopioides",
+  "grup": "tardor",
+  "color": "#3a3530",
+  "habitat": "Planifolis humits: alzinars, rouredes, fagedes i castanyedes; també boscos mixtos",
+  "sol": "silici-suau",
+  "elev": [
+   200,
+   500,
+   1500,
+   1800
+  ],
+  "temp": [
+   6,
+   10,
+   17,
+   22
+  ],
+  "pluja": 25,
+  "lag": [
+   8,
+   16
+  ],
+  "gelada": -2,
+  "temporada": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0.05,
+   0.1,
+   0.25,
+   0.65,
+   1,
+   0.85,
+   0.3
+  ],
+  "notes": "Prefereix sòls silicis o calcaris descalcificats, però s'adapta. Sol repetir als mateixos rodals cada any.",
+  "arbres": [
+   "alzina",
+   "surera",
+   "roure",
+   "faig",
+   "castanyer"
+  ],
+  "noms_cientifics": [
+   "Craterellus cornucopioides"
+  ],
+  "solRang": [
+   0.13,
+   0.51,
+   0.81,
+   1.0
+  ]
+ },
+ {
+  "id": "carlet",
+  "nom": "Carlet",
+  "llati": "Hygrophorus russula",
+  "grup": "tardor",
+  "color": "#b04a5a",
+  "habitat": "Planifolis, sobretot roures, alzines i sureres",
+  "sol": null,
+  "elev": [
+   0,
+   200,
+   1300,
+   1600
+  ],
+  "temp": [
+   5,
+   9,
+   17,
+   22
+  ],
+  "pluja": 25,
+  "lag": [
+   8,
+   18
+  ],
+  "gelada": -3,
+  "temporada": [
+   0.1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0.05,
+   0.15,
+   0.45,
+   0.9,
+   1,
+   0.7
+  ],
+  "notes": "Fa grups nombrosos amagats a la fullaraca. Primerenc a la mitja muntanya i força tardà prop del litoral. Indiferent al sòl: tant saulons silicis com sòls calcaris.",
+  "arbres": [
+   "roure",
+   "alzina",
+   "surera"
+  ],
+  "noms_cientifics": [
+   "Hygrophorus russula"
+  ],
+  "arbres2": [
+   "castanyer",
+   "pinyer"
+  ],
+  "solRang": [
+   0.07,
+   0.32,
+   0.72,
+   0.95
+  ]
+ },
+ {
+  "id": "camagroc",
+  "nom": "Camagroc",
+  "llati": "Craterellus lutescens",
+  "grup": "hivern",
+  "color": "#e8b62c",
+  "habitat": "Pinedes i boscos mixtos humits, sovint amb molsa",
+  "sol": "calcari-suau",
+  "elev": [
+   100,
+   400,
+   1400,
+   1800
+  ],
+  "temp": [
+   2,
+   6,
+   13,
+   18
+  ],
+  "pluja": 20,
+  "lag": [
+   10,
+   22
+  ],
+  "gelada": -4,
+  "temporada": [
+   0.6,
+   0.2,
+   0.05,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0.05,
+   0.5,
+   1,
+   1
+  ],
+  "notes": "Bolet tardà. Necessita humitat persistent més que no pas una pluja puntual. Aguanta fred moderat.",
+  "arbres": [
+   "pinassa",
+   "pi_roig",
+   "pi_negre",
+   "avet",
+   "faig"
+  ],
+  "noms_cientifics": [
+   "Craterellus lutescens"
+  ],
+  "solRang": [
+   0.07,
+   0.17,
+   0.65,
+   0.95
+  ]
+ },
+ {
+  "id": "fredolic",
+  "nom": "Fredolic",
+  "llati": "Tricholoma terreum",
+  "grup": "hivern",
+  "color": "#7d8590",
+  "habitat": "Totes les pinedes i avetoses; també apareix a les estepes",
+  "sol": "calcari-suau",
+  "elev": [
+   0,
+   200,
+   1500,
+   1900
+  ],
+  "temp": [
+   1,
+   4,
+   11,
+   16
+  ],
+  "pluja": 20,
+  "lag": [
+   10,
+   20
+  ],
+  "gelada": -6,
+  "temporada": [
+   0.55,
+   0.15,
+   0.05,
+   0.05,
+   0.05,
+   0,
+   0,
+   0,
+   0.1,
+   0.55,
+   1,
+   0.9
+  ],
+  "notes": "Surt en tota mena de substrats, però a Catalunya els registres abunden més en terrenys calcaris. Temporada d'excel·lència d'octubre a gener. Hi ha fredolics tòxics (Tricholoma pardinum): en cas de dubte, deixeu-lo al bosc.",
+  "arbres": [
+   "pi_roig",
+   "pi_negre",
+   "pinassa",
+   "pi_blanc",
+   "pinyer",
+   "pinastre",
+   "avet",
+   "alzina"
+  ],
+  "noms_cientifics": [
+   "Tricholoma terreum"
+  ],
+  "arbres2": [
+   "matollar"
+  ],
+  "solRang": [
+   0.03,
+   0.15,
+   0.58,
+   0.87
+  ]
+ },
+ {
+  "id": "fredolic-gros",
+  "nom": "Fredolic gros",
+  "llati": "Tricholoma portentosum",
+  "grup": "hivern",
+  "color": "#5d6470",
+  "habitat": "Pinedes de pi roig i avetoses, amb arbres adults",
+  "sol": "silici-suau",
+  "elev": [
+   800,
+   1100,
+   1800,
+   2100
+  ],
+  "temp": [
+   1,
+   4,
+   11,
+   15
+  ],
+  "pluja": 20,
+  "lag": [
+   10,
+   20
+  ],
+  "gelada": -6,
+  "temporada": [
+   0.1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0.1,
+   0.7,
+   1,
+   0.5
+  ],
+  "notes": "Típic de terrenys àcids i de muntanya (per sobre dels 1.100 m). Surt ben entrada la tardor i aguanta els primers freds.",
+  "arbres": [
+   "pi_roig",
+   "avet",
+   "pi_negre"
+  ],
+  "noms_cientifics": [
+   "Tricholoma portentosum"
+  ],
+  "solRang": [
+   0.2,
+   0.59,
+   0.98,
+   1.0
+  ]
+ },
+ {
+  "id": "llenega",
+  "nom": "Llenega negra",
+  "llati": "Hygrophorus latitabundus",
+  "grup": "hivern",
+  "color": "#4b4f58",
+  "habitat": "Pinedes de pinassa; boscos mixtos de roure o alzina amb pinassa o pi blanc",
+  "sol": "calcari",
+  "elev": [
+   200,
+   400,
+   1300,
+   1700
+  ],
+  "temp": [
+   1,
+   4,
+   12,
+   17
+  ],
+  "pluja": 20,
+  "lag": [
+   10,
+   20
+  ],
+  "gelada": -5,
+  "temporada": [
+   0.35,
+   0.05,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0.05,
+   0.6,
+   1,
+   0.9
+  ],
+  "notes": "Tardana, sobre sòls calcaris; sovint coincideix amb el fredolic i el camagroc.",
+  "arbres": [
+   "pinassa",
+   "pi_blanc",
+   "pi_roig",
+   "roure",
+   "alzina"
+  ],
+  "noms_cientifics": [
+   "Hygrophorus latitabundus",
+   "Hygrophorus limacinus"
+  ],
+  "arbres2": [
+   "pinastre"
+  ],
+  "solRang": [
+   0.03,
+   0.1,
+   0.48,
+   0.73
+  ]
+ },
+ {
+  "id": "carrereta",
+  "nom": "Carrereta",
+  "llati": "Marasmius oreades",
+  "grup": "primavera-tardor",
+  "color": "#c9a46a",
+  "habitat": "Prats i pastures, en cercles",
+  "sol": null,
+  "elev": [
+   200,
+   500,
+   2000,
+   2400
+  ],
+  "temp": [
+   6,
+   10,
+   19,
+   24
+  ],
+  "pluja": 12,
+  "lag": [
+   3,
+   9
+  ],
+  "gelada": -2,
+  "boscPes": -0.6,
+  "temporada": [
+   0,
+   0,
+   0.05,
+   0.5,
+   1,
+   0.85,
+   0.2,
+   0.35,
+   0.85,
+   1,
+   0.55,
+   0.05
+  ],
+  "notes": "Sapròfit de prat: surt poc després de les pluges, a la primavera i a la tardor. Prefereix zones obertes, no pas bosc tancat.",
+  "arbres": [
+   "prat"
+  ],
+  "noms_cientifics": [
+   "Marasmius oreades"
+  ],
+  "solRang": [
+   0.2,
+   0.47,
+   0.79,
+   0.98
+  ]
+ },
+ {
+  "id": "moixerno",
+  "nom": "Moixernó",
+  "llati": "Calocybe gambosa",
+  "grup": "primavera",
+  "color": "#d8cdb4",
+  "habitat": "Prats i pastures de muntanya i rouredes esclarissades i pasturades",
+  "sol": "calcari",
+  "elev": [
+   400,
+   700,
+   1800,
+   2200
+  ],
+  "temp": [
+   5,
+   9,
+   16,
+   21
+  ],
+  "pluja": 15,
+  "lag": [
+   5,
+   14
+  ],
+  "gelada": -3,
+  "boscPes": 0.15,
+  "temporada": [
+   0,
+   0,
+   0.1,
+   0.8,
+   1,
+   0.45,
+   0.05,
+   0,
+   0,
+   0,
+   0.03,
+   0
+  ],
+  "notes": "Només en sòls calcaris. Fa erols (corros) als prats, però també a les rouredes ben esclarissades.",
+  "arbres": [
+   "prat",
+   "roure"
+  ],
+  "noms_cientifics": [
+   "Calocybe gambosa"
+  ],
+  "arbres2": [
+   "ribera",
+   "matollar"
+  ],
+  "solRang": [
+   0.3,
+   0.49,
+   0.7,
+   0.85
+  ]
+ },
+ {
+  "id": "marcot",
+  "nom": "Marçot",
+  "llati": "Hygrophorus marzuolus",
+  "grup": "primavera",
+  "color": "#6f7a86",
+  "habitat": "Pinedes de pi roig i pi negre, avetoses, fagedes i boscos mixtos de pi roig i roure, amb arbres madurs",
+  "sol": "silici",
+  "elev": [
+   700,
+   1000,
+   1900,
+   2100
+  ],
+  "temp": [
+   0,
+   3,
+   10,
+   15
+  ],
+  "pluja": 15,
+  "lag": [
+   8,
+   20
+  ],
+  "gelada": -8,
+  "temporada": [
+   0.05,
+   0.55,
+   0.9,
+   1,
+   0.8,
+   0.35,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "notes": "El 'bolet de neu': surt de febrer a juny (fins ben entrat juny als boscos subalpins de 1.600–1.900 m). Prefereix gresos i pelites, humus gruixut i vessants obacs; sovint gairebé enterrat.",
+  "arbres": [
+   "pi_roig",
+   "pi_negre",
+   "avet",
+   "faig"
+  ],
+  "noms_cientifics": [
+   "Hygrophorus marzuolus"
+  ],
+  "solRang": [
+   0.31,
+   0.77,
+   0.98,
+   0.98
+  ]
+ },
+ {
+  "id": "murgola",
+  "nom": "Múrgola",
+  "llati": "Morchella esculenta / M. conica",
+  "grup": "primavera",
+  "color": "#a0805c",
+  "habitat": "Vegetació de ribera (omedes, pollancredes, avellanedes) i alzinars calcaris",
+  "sol": null,
+  "elev": [
+   0,
+   0,
+   1900,
+   2300
+  ],
+  "temp": [
+   5,
+   9,
+   16,
+   21
+  ],
+  "pluja": 15,
+  "lag": [
+   6,
+   14
+  ],
+  "gelada": -2,
+  "boscPes": 0,
+  "temporada": [
+   0,
+   0.05,
+   0.75,
+   1,
+   0.55,
+   0.2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "notes": "De la segona setmana de març a finals d'abril (fins al juny a l'alta muntanya). Busqueu-la a les riberes dels rius i en sòls llimosos o sorrencs. Als registres de Catalunya surt des de la costa fins als 1.900 m.",
+  "arbres": [
+   "ribera"
+  ],
+  "noms_cientifics": [
+   "Morchella"
+  ],
+  "arbres2": [
+   "pi_negre",
+   "pi_blanc",
+   "pi_roig",
+   "avet"
+  ],
+  "solRang": [
+   0.06,
+   0.25,
+   0.83,
+   0.98
+  ]
+ },
+ {
+  "id": "llenegall",
+  "nom": "Llenegall",
+  "llati": "Hygrophorus dichrous (= H. personii)",
+  "grup": "tardor",
+  "color": "#7a6a4f",
+  "habitat": "Alzinars, suredes i boscos mixtos d'alzina o surera amb roures i pins",
+  "sol": "silici-suau",
+  "elev": [
+   0,
+   100,
+   1000,
+   1300
+  ],
+  "temp": [
+   5,
+   9,
+   17,
+   22
+  ],
+  "pluja": 25,
+  "lag": [
+   8,
+   18
+  ],
+  "gelada": -3,
+  "temporada": [
+   0.15,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0.1,
+   0.7,
+   1,
+   0.75
+  ],
+  "notes": "També anomenat llenega d'alzina o de suro. A diferència de la llenega negra (calcària), surt en sòls silicis o calcaris descalcificats.",
+  "arbres": [
+   "alzina",
+   "surera"
+  ],
+  "noms_cientifics": [
+   "Hygrophorus persoonii",
+   "Hygrophorus dichrous"
+  ],
+  "arbres2": [
+   "pinyer",
+   "castanyer"
+  ],
+  "solRang": [
+   0.15,
+   0.42,
+   0.75,
+   0.95
+  ]
+ },
+ {
+  "id": "esteperol",
+  "nom": "Esteperol",
+  "llati": "Leccinum lepidum / L. corsicum",
+  "grup": "tardor",
+  "color": "#c9a227",
+  "habitat": "Alzinars, suredes i boscos mixtos de planifolis i coníferes; L. corsicum vora les estepes",
+  "sol": null,
+  "elev": [
+   0,
+   100,
+   1000,
+   1300
+  ],
+  "temp": [
+   6,
+   10,
+   18,
+   23
+  ],
+  "pluja": 25,
+  "lag": [
+   7,
+   14
+  ],
+  "gelada": -1,
+  "temporada": [
+   0.2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0.1,
+   0.6,
+   1,
+   0.8
+  ],
+  "notes": "Termòfil (per sota dels 1.100–1.200 m) i indiferent al substrat. Sembla un cep però té la cama aspra i groguenca i la carn s'enfosqueix en tallar-la.",
+  "arbres": [
+   "alzina",
+   "surera",
+   "roure",
+   "castanyer"
+  ],
+  "noms_cientifics": [
+   "Leccinellum lepidum",
+   "Leccinellum corsicum",
+   "Leccinum lepidum",
+   "Leccinum corsicum"
+  ],
+  "arbres2": [
+   "pinyer"
+  ],
+  "solRang": [
+   0.12,
+   0.28,
+   0.61,
+   0.95
+  ]
+ }
+]

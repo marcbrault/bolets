@@ -9,34 +9,34 @@
   "sol": "calcari",
   "elev": [
    0,
-   300,
-   1300,
-   1800
+   210,
+   980,
+   1840
   ],
   "temp": [
-   5,
-   9,
-   17,
-   23
+   4.8,
+   9.0,
+   16.3,
+   21.4
   ],
-  "pluja": 30,
+  "pluja": 27,
   "lag": [
    8,
    16
   ],
   "gelada": -2,
   "temporada": [
-   0.05,
-   0,
-   0,
-   0,
-   0.03,
+   0.19,
+   0.0,
+   0.0,
+   0.0,
+   0.02,
+   0.02,
+   0.01,
    0.1,
-   0.05,
-   0.25,
-   0.6,
-   1,
-   0.9,
+   0.59,
+   0.83,
+   1.0,
    0.4
   ],
   "notes": "Només en sòls calcaris. Surt 8–15 dies després d'una pluja forta (≥ 30 mm) amb temperatures suaus; la seva carn només envermelleix als marges.",
@@ -53,7 +53,8 @@
    0.17,
    0.5,
    0.81
-  ]
+  ],
+  "orientacio": -0.033
  },
  {
   "id": "pinetell",
@@ -65,35 +66,35 @@
   "sol": null,
   "elev": [
    0,
-   100,
-   1700,
-   2100
+   430,
+   1360,
+   2010
   ],
   "temp": [
-   4,
-   8,
-   17,
-   23
+   2.6,
+   7.7,
+   15.3,
+   20.8
   ],
-  "pluja": 28,
+  "pluja": 23,
   "lag": [
    8,
    16
   ],
   "gelada": -3,
   "temporada": [
-   0.05,
-   0,
-   0,
-   0,
-   0.05,
-   0.3,
-   0.15,
-   0.45,
-   0.85,
-   1,
-   0.85,
-   0.35
+   0.09,
+   0.02,
+   0.06,
+   0.0,
+   0.04,
+   0.1,
+   0.08,
+   0.28,
+   0.83,
+   0.97,
+   1.0,
+   0.53
   ],
   "notes": "Poc exigent de sòl: als registres de Catalunya surt tant en terrenys calcaris com silicis. Comença a l'agost a les zones altes i obagues i acaba cap a Nadal als indrets arrecerats de la costa. Les pinedes joves, esclarissades i pasturades en fan més.",
   "arbres": [
@@ -112,7 +113,8 @@
    0.24,
    0.69,
    0.98
-  ]
+  ],
+  "orientacio": 0.039
  },
  {
   "id": "rovello-avet",
@@ -123,36 +125,36 @@
   "habitat": "Avetoses i boscos mixtos d'avet amb pi roig, pi negre o faig",
   "sol": "silici-suau",
   "elev": [
-   900,
-   1200,
-   1900,
-   2200
+   910,
+   1330,
+   1780,
+   2340
   ],
   "temp": [
-   4,
-   8,
-   16,
-   21
+   3.8,
+   8.2,
+   15.7,
+   20.3
   ],
-  "pluja": 25,
+  "pluja": 20,
   "lag": [
    7,
    14
   ],
   "gelada": -2,
   "temporada": [
-   0,
-   0,
-   0,
-   0,
-   0.05,
-   0.25,
-   0.35,
-   0.8,
-   1,
-   0.8,
-   0.3,
-   0
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.02,
+   0.12,
+   0.32,
+   0.84,
+   1.0,
+   0.63,
+   0.14,
+   0.04
   ],
   "notes": "Bolet de muntanya (oròfil, per sobre dels 1.100–1.200 m). Les avetoses són més primerenques que les pinedes.",
   "arbres": [
@@ -168,7 +170,8 @@
    0.8,
    0.97,
    0.98
-  ]
+  ],
+  "orientacio": 0.032
  },
  {
   "id": "rovello-vinader",
@@ -197,18 +200,18 @@
   ],
   "gelada": 0,
   "temporada": [
-   0.35,
-   0.05,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0.15,
-   0.6,
-   1,
-   0.85
+   0.28,
+   0.04,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.13,
+   0.53,
+   1.0,
+   0.79
   ],
   "notes": "Termòfil, per sota dels 1.100 m i sobre sòls silicis (saulons). Es distingeix del rovelló perquè tota la carn es torna morada en tallar-la. Prop de la costa la temporada s'allarga fins ben entrat el gener.",
   "arbres": [
@@ -238,30 +241,30 @@
    2300
   ],
   "temp": [
-   8,
-   12,
-   19,
-   24
+   6.2,
+   10.7,
+   17.8,
+   22.6
   ],
-  "pluja": 25,
+  "pluja": 21,
   "lag": [
    6,
    12
   ],
   "gelada": 0,
   "temporada": [
-   0,
-   0,
-   0,
-   0,
-   0.15,
-   0.45,
-   0.35,
-   0.7,
-   1,
-   0.8,
-   0.35,
-   0.05
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.13,
+   0.58,
+   0.49,
+   1.0,
+   0.98,
+   0.9,
+   0.29,
+   0.03
   ],
   "notes": "Acidòfil: prefereix sòls silicis o descalcificats; en terrenys francament calcaris és rar (si hi ha bulbocodis, no hi busqueu ceps). Al Pirineu el moment just sol ser la 1a–3a setmana de setembre, i les bolades són millors si la primavera ha estat plujosa o amb neu. Al Montseny, B. aestivalis surt al juny a les fagedes; a les suredes i alzinars silicis (B. aereus), una primavera plujosa pot donar una florada a final de primavera.",
   "arbres": [
@@ -285,7 +288,8 @@
    0.53,
    0.91,
    1.0
-  ]
+  ],
+  "orientacio": 0.033
  },
  {
   "id": "rossinyol",
@@ -302,10 +306,10 @@
    2100
   ],
   "temp": [
-   9,
-   13,
-   21,
-   26
+   5.5,
+   11.1,
+   18.8,
+   23.4
   ],
   "pluja": 20,
   "lag": [
@@ -314,18 +318,18 @@
   ],
   "gelada": 0,
   "temporada": [
-   0,
-   0,
-   0,
-   0,
-   0.1,
-   0.6,
-   0.7,
-   0.8,
-   1,
-   0.9,
-   0.5,
-   0.05
+   0.09,
+   0.0,
+   0.0,
+   0.03,
+   0.02,
+   0.54,
+   0.47,
+   0.83,
+   0.73,
+   1.0,
+   0.52,
+   0.21
   ],
   "notes": "Prefereix sòls àcids o descalcificats (també surt sota alzines i roures sobre margues). Temporada llarga, de juny a octubre, sempre després de pluges.",
   "arbres": [
@@ -350,7 +354,8 @@
    0.5,
    0.87,
    1.0
-  ]
+  ],
+  "orientacio": 0.045
  },
  {
   "id": "oudereig",
@@ -362,35 +367,35 @@
   "sol": "silici-suau",
   "elev": [
    0,
-   150,
-   1000,
-   1350
+   170,
+   860,
+   1330
   ],
   "temp": [
-   13,
-   17,
-   24,
-   29
+   9.7,
+   15.1,
+   21.8,
+   26.4
   ],
-  "pluja": 25,
+  "pluja": 21,
   "lag": [
    7,
    12
   ],
   "gelada": 3,
   "temporada": [
-   0,
-   0,
-   0,
-   0,
-   0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.06,
+   0.14,
    0.25,
-   0.55,
-   0.85,
-   1,
-   0.55,
-   0.05,
-   0
+   0.67,
+   1.0,
+   0.89,
+   0.31,
+   0.0
   ],
   "notes": "Termòfil (per sota dels 1.100–1.200 m), tot i que n'apareix algun de despistat més amunt. Vigileu la confusió amb Amanita muscaria i la mortal A. phalloides.",
   "arbres": [
@@ -411,7 +416,8 @@
    0.49,
    0.73,
    0.98
-  ]
+  ],
+  "orientacio": 0.016
  },
  {
   "id": "trompeta",
@@ -422,16 +428,16 @@
   "habitat": "Planifolis humits: alzinars, rouredes, fagedes i castanyedes; també boscos mixtos",
   "sol": "silici-suau",
   "elev": [
-   200,
-   500,
-   1500,
-   1800
+   60,
+   270,
+   900,
+   1470
   ],
   "temp": [
-   6,
-   10,
-   17,
-   22
+   4.9,
+   9.1,
+   16.7,
+   21.4
   ],
   "pluja": 25,
   "lag": [
@@ -440,18 +446,18 @@
   ],
   "gelada": -2,
   "temporada": [
-   0,
-   0,
-   0,
-   0,
-   0,
-   0.05,
-   0.1,
-   0.25,
-   0.65,
-   1,
-   0.85,
-   0.3
+   0.21,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.01,
+   0.03,
+   0.19,
+   0.39,
+   0.99,
+   1.0,
+   0.57
   ],
   "notes": "Prefereix sòls silicis o calcaris descalcificats, però s'adapta. Sol repetir als mateixos rodals cada any.",
   "arbres": [
@@ -469,7 +475,8 @@
    0.51,
    0.81,
    1.0
-  ]
+  ],
+  "orientacio": 0.026
  },
  {
   "id": "carlet",
@@ -481,15 +488,15 @@
   "sol": null,
   "elev": [
    0,
-   200,
-   1300,
-   1600
+   260,
+   1000,
+   1400
   ],
   "temp": [
-   5,
-   9,
-   17,
-   22
+   3.8,
+   8.4,
+   15.9,
+   20.6
   ],
   "pluja": 25,
   "lag": [
@@ -498,18 +505,18 @@
   ],
   "gelada": -3,
   "temporada": [
-   0.1,
-   0,
-   0,
-   0,
-   0,
-   0,
+   0.22,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.02,
+   0.02,
    0.05,
-   0.15,
-   0.45,
-   0.9,
-   1,
-   0.7
+   0.19,
+   0.66,
+   1.0,
+   0.48
   ],
   "notes": "Fa grups nombrosos amagats a la fullaraca. Primerenc a la mitja muntanya i força tardà prop del litoral. Indiferent al sòl: tant saulons silicis com sòls calcaris.",
   "arbres": [
@@ -529,7 +536,8 @@
    0.32,
    0.72,
    0.95
-  ]
+  ],
+  "orientacio": 0.028
  },
  {
   "id": "camagroc",
@@ -540,16 +548,16 @@
   "habitat": "Pinedes i boscos mixtos humits, sovint amb molsa",
   "sol": "calcari-suau",
   "elev": [
-   100,
-   400,
-   1400,
-   1800
+   30,
+   450,
+   1150,
+   1940
   ],
   "temp": [
-   2,
-   6,
-   13,
-   18
+   1.5,
+   7.2,
+   15.1,
+   20.1
   ],
   "pluja": 20,
   "lag": [
@@ -558,18 +566,18 @@
   ],
   "gelada": -4,
   "temporada": [
-   0.6,
-   0.2,
-   0.05,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0.05,
-   0.5,
-   1,
-   1
+   0.28,
+   0.06,
+   0.01,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.21,
+   0.63,
+   0.94,
+   1.0,
+   0.83
   ],
   "notes": "Bolet tardà. Necessita humitat persistent més que no pas una pluja puntual. Aguanta fred moderat.",
   "arbres": [
@@ -587,7 +595,8 @@
    0.17,
    0.65,
    0.95
-  ]
+  ],
+  "orientacio": 0.048
  },
  {
   "id": "fredolic",
@@ -599,15 +608,15 @@
   "sol": "calcari-suau",
   "elev": [
    0,
-   200,
-   1500,
-   1900
+   330,
+   1180,
+   2100
   ],
   "temp": [
-   1,
-   4,
-   11,
-   16
+   1.5,
+   5.9,
+   12.5,
+   17.6
   ],
   "pluja": 20,
   "lag": [
@@ -616,18 +625,18 @@
   ],
   "gelada": -6,
   "temporada": [
-   0.55,
+   0.61,
+   0.16,
    0.15,
-   0.05,
-   0.05,
-   0.05,
-   0,
-   0,
-   0,
-   0.1,
-   0.55,
-   1,
-   0.9
+   0.02,
+   0.03,
+   0.07,
+   0.03,
+   0.03,
+   0.25,
+   0.58,
+   0.79,
+   1.0
   ],
   "notes": "Surt en tota mena de substrats, però a Catalunya els registres abunden més en terrenys calcaris. Temporada d'excel·lència d'octubre a gener. Hi ha fredolics tòxics (Tricholoma pardinum): en cas de dubte, deixeu-lo al bosc.",
   "arbres": [
@@ -651,7 +660,8 @@
    0.15,
    0.58,
    0.87
-  ]
+  ],
+  "orientacio": -0.036
  },
  {
   "id": "fredolic-gros",
@@ -662,36 +672,36 @@
   "habitat": "Pinedes de pi roig i avetoses, amb arbres adults",
   "sol": "silici-suau",
   "elev": [
-   800,
-   1100,
-   1800,
-   2100
+   520,
+   1040,
+   1740,
+   2130
   ],
   "temp": [
-   1,
-   4,
-   11,
-   15
+   1.6,
+   4.9,
+   11.8,
+   15.8
   ],
-  "pluja": 20,
+  "pluja": 17,
   "lag": [
    10,
    20
   ],
   "gelada": -6,
   "temporada": [
-   0.1,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0.1,
-   0.7,
-   1,
-   0.5
+   0.06,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.21,
+   1.0,
+   0.85,
+   0.42
   ],
   "notes": "Típic de terrenys àcids i de muntanya (per sobre dels 1.100 m). Surt ben entrada la tardor i aguanta els primers freds.",
   "arbres": [
@@ -707,7 +717,8 @@
    0.59,
    0.98,
    1.0
-  ]
+  ],
+  "orientacio": 0.056
  },
  {
   "id": "llenega",
@@ -718,16 +729,16 @@
   "habitat": "Pinedes de pinassa; boscos mixtos de roure o alzina amb pinassa o pi blanc",
   "sol": "calcari",
   "elev": [
-   200,
-   400,
-   1300,
-   1700
+   80,
+   370,
+   1110,
+   1630
   ],
   "temp": [
-   1,
-   4,
-   12,
-   17
+   2.5,
+   5.8,
+   12.8,
+   17.7
   ],
   "pluja": 20,
   "lag": [
@@ -736,18 +747,18 @@
   ],
   "gelada": -5,
   "temporada": [
-   0.35,
-   0.05,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0.05,
-   0.6,
-   1,
-   0.9
+   0.33,
+   0.02,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.19,
+   0.73,
+   1.0,
+   0.69
   ],
   "notes": "Tardana, sobre sòls calcaris; sovint coincideix amb el fredolic i el camagroc.",
   "arbres": [
@@ -769,7 +780,8 @@
    0.1,
    0.48,
    0.73
-  ]
+  ],
+  "orientacio": -0.017
  },
  {
   "id": "carrereta",
@@ -780,16 +792,16 @@
   "habitat": "Prats i pastures, en cercles",
   "sol": null,
   "elev": [
-   200,
-   500,
-   2000,
-   2400
+   50,
+   310,
+   1540,
+   2210
   ],
   "temp": [
-   6,
-   10,
-   19,
-   24
+   5.5,
+   9.1,
+   17.4,
+   22.5
   ],
   "pluja": 12,
   "lag": [
@@ -799,18 +811,18 @@
   "gelada": -2,
   "boscPes": -0.6,
   "temporada": [
-   0,
-   0,
-   0.05,
-   0.5,
-   1,
-   0.85,
-   0.2,
-   0.35,
-   0.85,
-   1,
-   0.55,
-   0.05
+   0.04,
+   0.02,
+   0.06,
+   0.21,
+   1.0,
+   0.77,
+   0.14,
+   0.15,
+   0.44,
+   0.58,
+   0.39,
+   0.18
   ],
   "notes": "Sapròfit de prat: surt poc després de les pluges, a la primavera i a la tardor. Prefereix zones obertes, no pas bosc tancat.",
   "arbres": [
@@ -824,7 +836,8 @@
    0.47,
    0.79,
    0.98
-  ]
+  ],
+  "orientacio": -0.043
  },
  {
   "id": "moixerno",
@@ -835,16 +848,16 @@
   "habitat": "Prats i pastures de muntanya i rouredes esclarissades i pasturades",
   "sol": "calcari",
   "elev": [
-   400,
-   700,
-   1800,
-   2200
+   300,
+   740,
+   1610,
+   2080
   ],
   "temp": [
-   5,
-   9,
-   16,
-   21
+   4.7,
+   8.7,
+   15.2,
+   20.3
   ],
   "pluja": 15,
   "lag": [
@@ -854,18 +867,18 @@
   "gelada": -3,
   "boscPes": 0.15,
   "temporada": [
-   0,
-   0,
-   0.1,
-   0.8,
-   1,
-   0.45,
-   0.05,
-   0,
-   0,
-   0,
+   0.04,
+   0.0,
+   0.11,
+   0.53,
+   1.0,
+   0.43,
    0.03,
-   0
+   0.0,
+   0.0,
+   0.0,
+   0.02,
+   0.0
   ],
   "notes": "Només en sòls calcaris. Fa erols (corros) als prats, però també a les rouredes ben esclarissades.",
   "arbres": [
@@ -884,7 +897,8 @@
    0.49,
    0.7,
    0.85
-  ]
+  ],
+  "orientacio": -0.072
  },
  {
   "id": "marcot",
@@ -895,16 +909,16 @@
   "habitat": "Pinedes de pi roig i pi negre, avetoses, fagedes i boscos mixtos de pi roig i roure, amb arbres madurs",
   "sol": "silici",
   "elev": [
-   700,
-   1000,
-   1900,
-   2100
+   640,
+   920,
+   1770,
+   2070
   ],
   "temp": [
-   0,
-   3,
-   10,
-   15
+   1.0,
+   4.0,
+   10.5,
+   15.3
   ],
   "pluja": 15,
   "lag": [
@@ -913,18 +927,18 @@
   ],
   "gelada": -8,
   "temporada": [
-   0.05,
-   0.55,
-   0.9,
-   1,
-   0.8,
-   0.35,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0
+   0.04,
+   0.45,
+   0.95,
+   0.91,
+   1.0,
+   0.31,
+   0.01,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
   ],
   "notes": "El 'bolet de neu': surt de febrer a juny (fins ben entrat juny als boscos subalpins de 1.600–1.900 m). Prefereix gresos i pelites, humus gruixut i vessants obacs; sovint gairebé enterrat.",
   "arbres": [
@@ -941,7 +955,8 @@
    0.77,
    0.98,
    0.98
-  ]
+  ],
+  "orientacio": -0.115
  },
  {
   "id": "murgola",
@@ -953,15 +968,15 @@
   "sol": null,
   "elev": [
    0,
-   150,
-   1400,
-   1800
+   0,
+   1900,
+   2300
   ],
   "temp": [
-   5,
-   9,
-   16,
-   21
+   3.4,
+   8.3,
+   14.7,
+   19.3
   ],
   "pluja": 15,
   "lag": [
@@ -971,20 +986,20 @@
   "gelada": -2,
   "boscPes": 0,
   "temporada": [
-   0,
-   0.05,
-   0.75,
-   1,
-   0.55,
-   0.2,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0
+   0.0,
+   0.01,
+   0.57,
+   1.0,
+   0.66,
+   0.12,
+   0.01,
+   0.0,
+   0.0,
+   0.01,
+   0.01,
+   0.01
   ],
-  "notes": "De la segona setmana de març a finals d'abril (fins al juny a l'alta muntanya). Busqueu-la a les riberes dels rius i en sòls llimosos o sorrencs.",
+  "notes": "De la segona setmana de març a finals d'abril (fins al juny a l'alta muntanya). Busqueu-la a les riberes dels rius i en sòls llimosos o sorrencs. Als registres de Catalunya surt des de la costa fins als 1.900 m.",
   "arbres": [
    "ribera"
   ],
@@ -1002,7 +1017,8 @@
    0.25,
    0.83,
    0.98
-  ]
+  ],
+  "orientacio": -0.027
  },
  {
   "id": "llenegall",
@@ -1014,35 +1030,35 @@
   "sol": "silici-suau",
   "elev": [
    0,
-   100,
-   1000,
-   1300
+   150,
+   820,
+   1330
   ],
   "temp": [
-   5,
-   9,
-   17,
-   22
+   4.7,
+   8.6,
+   15.8,
+   20.6
   ],
-  "pluja": 25,
+  "pluja": 24,
   "lag": [
    8,
    18
   ],
   "gelada": -3,
   "temporada": [
-   0.15,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0.1,
-   0.7,
-   1,
-   0.75
+   0.12,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.06,
+   0.53,
+   1.0,
+   0.69
   ],
   "notes": "També anomenat llenega d'alzina o de suro. A diferència de la llenega negra (calcària), surt en sòls silicis o calcaris descalcificats.",
   "arbres": [
@@ -1062,7 +1078,8 @@
    0.42,
    0.75,
    0.95
-  ]
+  ],
+  "orientacio": -0.017
  },
  {
   "id": "esteperol",
@@ -1074,35 +1091,35 @@
   "sol": null,
   "elev": [
    0,
-   100,
-   1000,
-   1300
+   190,
+   880,
+   1200
   ],
   "temp": [
-   6,
-   10,
-   18,
-   23
+   4.0,
+   8.5,
+   16.0,
+   20.9
   ],
-  "pluja": 25,
+  "pluja": 21,
   "lag": [
    7,
    14
   ],
   "gelada": -1,
   "temporada": [
-   0.2,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0.1,
-   0.6,
-   1,
-   0.8
+   0.19,
+   0.06,
+   0.06,
+   0.17,
+   0.17,
+   0.08,
+   0.0,
+   0.0,
+   0.08,
+   0.43,
+   1.0,
+   0.99
   ],
   "notes": "Termòfil (per sota dels 1.100–1.200 m) i indiferent al substrat. Sembla un cep però té la cama aspra i groguenca i la carn s'enfosqueix en tallar-la.",
   "arbres": [
@@ -1125,6 +1142,7 @@
    0.28,
    0.61,
    0.95
-  ]
+  ],
+  "orientacio": 0.001
  }
 ]

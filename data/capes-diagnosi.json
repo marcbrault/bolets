@@ -1,11 +1,2117 @@
 {
+ "cobertes": {
+  "Cementiris": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 2158
+  },
+  "Llacs i llacunes continentals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 7275
+  },
+  "Zones portuàries": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 2541
+  },
+  "Mar": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 63
+  },
+  "Llacunes litorals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 12267
+  },
+  "Molleres d'alta muntanya": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3524
+  },
+  "Plantacions de pollancres": {
+   "bosc": true,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 12695
+  },
+  "Altres conreus herbacis": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1574904
+  },
+  "Carreteres": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 31654
+  },
+  "Vinyes": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 331976
+  },
+  "Boscos caducifolis de ribera (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 43413
+  },
+  "Matollars": {
+   "bosc": false,
+   "grups": [
+    "matollar"
+   ],
+   "pixels": 1648761
+  },
+  "Prats i herbassars": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 240433
+  },
+  "Roureda de roure martinenc (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 373304
+  },
+  "Sense registre associat (VALUE =/= 255)": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 40111
+  },
+  "Fruiters no cítrics en regadiu": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 189891
+  },
+  "Polígon industrial sense ordenar": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 18081
+  },
+  "Boscos caducifolis de ribera (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 14008
+  },
+  "Arrossars abandonats regadiu no regat - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 223
+  },
+  "Altres conreus herbacis abandonats - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 22519
+  },
+  "Pineda de pi roig (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pi_roig"
+   ],
+   "pixels": 816600
+  },
+  "Altres conreus herbacis abandonats - prats en zones agrícoles en bancals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 532
+  },
+  "Prats de dall abandonats regadiu no regat - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 615
+  },
+  "Prats de dall abandonats regadiu no regat - prats d'alta muntanya en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 15
+  },
+  "Vinyes abandonades - prats en zones agrícoles en bancals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 98
+  },
+  "Pineda de pi blanc (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pi_blanc"
+   ],
+   "pixels": 1045114
+  },
+  "Altres conreus herbacis abandonats regadiu no regat - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 7935
+  },
+  "Piscifactories i conreus aqüícoles a terra": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 111
+  },
+  "Piscifactories i conreus aqüícoles a mar": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 410
+  },
+  "Altres conreus herbacis abandonats regadiu no regat - prats en zones agrícoles en bancals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 16
+  },
+  "Altres conreus herbacis en bancals en regadiu": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 300
+  },
+  "Canals artificials": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 25210
+  },
+  "Àrees de servei en xarxa viària": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3562
+  },
+  "Complexos administratius": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1314
+  },
+  "Camps de golf": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 6102
+  },
+  "Basses agrícoles": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 2398
+  },
+  "Vegetació d'aiguamolls continentals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1435
+  },
+  "Abocadors": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 2156
+  },
+  "Autopistes i autovies": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 9525
+  },
+  "Zones verdes viàries": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 118167
+  },
+  "Vies de ferrocarril": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 10258
+  },
+  "Zones verdes ferroviàries": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1462
+  },
+  "Estacions d'autobusos": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 72
+  },
+  "Eixample": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 55175
+  },
+  "Preses": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 170
+  },
+  "Salines": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3407
+  },
+  "Rius": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 21100
+  },
+  "Plantacions de coníferes no autòctones": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 37391
+  },
+  "Vivers forestals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1660
+  },
+  "Plantacions d'eucaliptus": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 6967
+  },
+  "Parcs urbans": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 18050
+  },
+  "Zones d'extracció minera": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 25443
+  },
+  "Zones d'esport": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 55051
+  },
+  "Parcs recreatius": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1518
+  },
+  "Aeroports": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 4365
+  },
+  "Pineda de pi pinyer (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pinyer"
+   ],
+   "pixels": 153183
+  },
+  "Pineda de pinastre (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pinastre"
+   ],
+   "pixels": 33030
+  },
+  "Alzinar (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "alzina"
+   ],
+   "pixels": 664645
+  },
+  "Oliverars": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 330858
+  },
+  "Pineda de pinassa (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pinassa"
+   ],
+   "pixels": 289843
+  },
+  "Roureda de roure martinenc (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 47160
+  },
+  "Roquissars": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 291086
+  },
+  "Fageda (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "faig"
+   ],
+   "pixels": 187111
+  },
+  "Pineda de pi negre (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pi_negre"
+   ],
+   "pixels": 223862
+  },
+  "Prats i herbassars d'alta muntanya": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 290285
+  },
+  "Avetosa (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "avet"
+   ],
+   "pixels": 53428
+  },
+  "Altres coníferes (>= 20%cc)": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 289
+  },
+  "Castanyeda (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "castanyer"
+   ],
+   "pixels": 87176
+  },
+  "Sureda (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "surera"
+   ],
+   "pixels": 259498
+  },
+  "Arboçar (>= 20%cc)": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 6006
+  },
+  "Altres perennifolis (>= 20%cc)": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 39
+  },
+  "Regeneració de pi blanc": {
+   "bosc": true,
+   "grups": [
+    "pi_blanc"
+   ],
+   "pixels": 76051
+  },
+  "Bedollar (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 17514
+  },
+  "Prats de dall": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 46368
+  },
+  "Roureda de roure pènol (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 16810
+  },
+  "Roureda de roure africà (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 1426
+  },
+  "Roureda de roure de fulla menuda (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 74718
+  },
+  "Pineda de pi blanc (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pi_blanc"
+   ],
+   "pixels": 112711
+  },
+  "Roureda de reboll (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 460
+  },
+  "Avellanosa (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 8512
+  },
+  "Freixeneda (>= 20%cc)": {
+   "bosc": true,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 30748
+  },
+  "Altres caducifolis (>= 20%cc)": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 22998
+  },
+  "Prats i herbassars en línies elèctriques": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 2836
+  },
+  "Plantacions d'alzina surera": {
+   "bosc": true,
+   "grups": [
+    "alzina",
+    "surera"
+   ],
+   "pixels": 32
+  },
+  "Plantacions de castanyer": {
+   "bosc": true,
+   "grups": [
+    "castanyer"
+   ],
+   "pixels": 7788
+  },
+  "Horta familiar": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 10502
+  },
+  "Plantacions de plàtans": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 3269
+  },
+  "Plantacions de pi pinyer": {
+   "bosc": true,
+   "grups": [
+    "pinyer"
+   ],
+   "pixels": 4157
+  },
+  "Plantacions de pinastre": {
+   "bosc": true,
+   "grups": [
+    "pinastre"
+   ],
+   "pixels": 9288
+  },
+  "Plantacions de pi blanc": {
+   "bosc": true,
+   "grups": [
+    "pi_blanc"
+   ],
+   "pixels": 21430
+  },
+  "Oliverars en bancals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 291922
+  },
+  "Plantacions de pinassa": {
+   "bosc": true,
+   "grups": [
+    "pinassa"
+   ],
+   "pixels": 15783
+  },
+  "Plantacions de pi roig": {
+   "bosc": true,
+   "grups": [
+    "pi_roig"
+   ],
+   "pixels": 24684
+  },
+  "Plantacions de pi negre": {
+   "bosc": true,
+   "grups": [
+    "pi_negre"
+   ],
+   "pixels": 5524
+  },
+  "Embassaments": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 32130
+  },
+  "Polígon industrial ordenat": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 76446
+  },
+  "Indústries aïllades": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 9443
+  },
+  "Cases aïllades": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 25761
+  },
+  "Arrossars": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 94650
+  },
+  "Altres conreus herbacis en regadiu": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 665815
+  },
+  "Serreries": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 237
+  },
+  "Complexos comercials i d'oficines": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 11056
+  },
+  "Vivers": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 760
+  },
+  "Complexos hotelers": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3661
+  },
+  "Moviments de terres": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3448
+  },
+  "Centrals eòliques": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 352
+  },
+  "Centrals solars": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1270
+  },
+  "Centrals nuclears": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 726
+  },
+  "Centrals tèrmiques": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 118
+  },
+  "Infraestructures elèctriques": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 723
+  },
+  "Depuradores i potabilitzadores": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1902
+  },
+  "Desalinitzadores": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 147
+  },
+  "Telecomunicacions": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 159
+  },
+  "Plantes de tractament": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1558
+  },
+  "Fruiters no cítrics en bancals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 98391
+  },
+  "Fruiters no cítrics abandonats - prats en zones agrícoles en bancals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 362
+  },
+  "Fruiters no cítrics abandonats regadiu no regat - prats en zones agrícoles en bancals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 12
+  },
+  "Penya-segats marins": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1617
+  },
+  "Tarteres": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 81842
+  },
+  "Cítrics": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 47885
+  },
+  "Fruiters no cítrics": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 134413
+  },
+  "Oliverars en regadiu": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 32760
+  },
+  "Garroferars": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 14583
+  },
+  "Garroferars en regadiu": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 57
+  },
+  "Cítrics en bancals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1441
+  },
+  "Fruiters no cítrics en bancals en regadiu": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1850
+  },
+  "Oliverars en bancals en regadiu": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3452
+  },
+  "Garroferars en bancals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3130
+  },
+  "Vivers agrícoles": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 3442
+  },
+  "Franja de protecció de pi pinyer": {
+   "bosc": false,
+   "grups": [
+    "pinyer"
+   ],
+   "pixels": 272
+  },
+  "Franja de protecció de pinastre": {
+   "bosc": false,
+   "grups": [
+    "pinastre"
+   ],
+   "pixels": 83
+  },
+  "Urbanitzacions": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 72936
+  },
+  "Franja de protecció de pi blanc": {
+   "bosc": false,
+   "grups": [
+    "pi_blanc"
+   ],
+   "pixels": 20673
+  },
+  "Regeneració de roure de fulla menuda": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 27408
+  },
+  "Franja de protecció de pinassa": {
+   "bosc": false,
+   "grups": [
+    "pinassa"
+   ],
+   "pixels": 211
+  },
+  "Franja de protecció de pi roig": {
+   "bosc": false,
+   "grups": [
+    "pi_roig"
+   ],
+   "pixels": 39
+  },
+  "Franja de protecció d'alzina": {
+   "bosc": false,
+   "grups": [
+    "alzina"
+   ],
+   "pixels": 252
+  },
+  "Franja de protecció d'alzina surera": {
+   "bosc": false,
+   "grups": [
+    "alzina",
+    "surera"
+   ],
+   "pixels": 371
+  },
+  "Franja de protecció de roure martinenc": {
+   "bosc": false,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 227
+  },
+  "Franja de protecció de roure de fulla menuda": {
+   "bosc": false,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 7
+  },
+  "Vegetació d'aiguamolls litorals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 6705
+  },
+  "Càmpings": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 7825
+  },
+  "Matollars procedents de tallades arreu": {
+   "bosc": false,
+   "grups": [
+    "matollar"
+   ],
+   "pixels": 3306
+  },
+  "Prats i herbassars d'alta muntanya procedents de tallades arreu": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 52
+  },
+  "Pineda de pi negre (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pi_negre"
+   ],
+   "pixels": 18893
+  },
+  "Prats i herbassars procedents de tallades arreu": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 1886
+  },
+  "Pineda de pi pinyer (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pinyer"
+   ],
+   "pixels": 1942
+  },
+  "Pineda de pinastre (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pinastre"
+   ],
+   "pixels": 1200
+  },
+  "Pineda de pinassa (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pinassa"
+   ],
+   "pixels": 7278
+  },
+  "Regeneració de roureda de roure martinenc": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 24613
+  },
+  "Pineda de pi roig (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "pi_roig"
+   ],
+   "pixels": 18765
+  },
+  "Avetosa (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "avet"
+   ],
+   "pixels": 346
+  },
+  "Altres coníferes (5-20%cc)": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 233
+  },
+  "Alzinar (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "alzina"
+   ],
+   "pixels": 84385
+  },
+  "Sureda (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "surera"
+   ],
+   "pixels": 19804
+  },
+  "Arboçar (5-20%cc)": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 162
+  },
+  "Altres perennifolis (5-20%cc)": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 22
+  },
+  "Bedollar (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 1162
+  },
+  "Castanyeda (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "castanyer"
+   ],
+   "pixels": 103
+  },
+  "Fageda (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "faig"
+   ],
+   "pixels": 1289
+  },
+  "Roureda de roure pènol (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 112
+  },
+  "Roureda de roure de fulla gran (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 999
+  },
+  "Roureda de roure africà (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 4
+  },
+  "Roureda de roure de fulla menuda (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 25426
+  },
+  "Roureda de reboll (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "roure"
+   ],
+   "pixels": 25
+  },
+  "Avellanosa (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 220
+  },
+  "Freixeneda (5-20%cc)": {
+   "bosc": true,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 792
+  },
+  "Altres caducifolis (5-20%cc)": {
+   "bosc": true,
+   "grups": [],
+   "pixels": 3520
+  },
+  "Vinyes en bancals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 13750
+  },
+  "Fruiters no cítrics abandonats - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 4359
+  },
+  "Sòl nu per acció antròpica": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 2198
+  },
+  "Fruiters no cítrics abandonats regadiu no regat - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 1534
+  },
+  "Regeneració de pinastre": {
+   "bosc": true,
+   "grups": [
+    "pinastre"
+   ],
+   "pixels": 81
+  },
+  "Regeneració de pinassa": {
+   "bosc": true,
+   "grups": [
+    "pinassa"
+   ],
+   "pixels": 176
+  },
+  "Regeneració de pi roig": {
+   "bosc": true,
+   "grups": [
+    "pi_roig"
+   ],
+   "pixels": 887
+  },
+  "Regeneració de pi negre": {
+   "bosc": true,
+   "grups": [
+    "pi_negre"
+   ],
+   "pixels": 617
+  },
+  "Platges": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 17095
+  },
+  "Vegetació arbustiva de dunes i sorrals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1199
+  },
+  "Regeneració d'alzina": {
+   "bosc": true,
+   "grups": [
+    "alzina"
+   ],
+   "pixels": 26190
+  },
+  "Regeneració de bedoll": {
+   "bosc": true,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 146
+  },
+  "Regeneració de faig": {
+   "bosc": true,
+   "grups": [
+    "faig"
+   ],
+   "pixels": 5
+  },
+  "Sòl erosionat per agent natural": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 169577
+  },
+  "Matollars en línies elèctriques": {
+   "bosc": false,
+   "grups": [
+    "matollar"
+   ],
+   "pixels": 1326
+  },
+  "Franja de protecció de matollars": {
+   "bosc": false,
+   "grups": [
+    "matollar"
+   ],
+   "pixels": 112
+  },
+  "Matollars en tallafocs": {
+   "bosc": false,
+   "grups": [
+    "matollar"
+   ],
+   "pixels": 614
+  },
+  "Matollars de formacions de ribera": {
+   "bosc": true,
+   "grups": [
+    "ribera",
+    "matollar"
+   ],
+   "pixels": 7925
+  },
+  "Canyars": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 9438
+  },
+  "Naus d'ús agrícola": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1194
+  },
+  "Granges": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 30209
+  },
+  "Glaceres i congestes": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 214
+  },
+  "Hivernacles": {
+   "bosc": false,
+   "grups": [
+    "ribera"
+   ],
+   "pixels": 1771
+  },
+  "Vinyes abandonades - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 3864
+  },
+  "Conreus en transformació": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 35253
+  },
+  "Rompudes agrícoles": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 2345
+  },
+  "Habitatges unifamiliars": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 82742
+  },
+  "Conreus d'horta sota plàstic": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 379
+  },
+  "Oliverars abandonats - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 2870
+  },
+  "Garroferars abandonats - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 702
+  },
+  "Oliverars abandonats - prats en zones agrícoles en bancals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 2876
+  },
+  "Garroferars abandonats - prats en zones agrícoles en bancals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 104
+  },
+  "Altres conreus herbacis en bancals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 50703
+  },
+  "Oliverars abandonats regadiu no regat - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 9
+  },
+  "Assentament agrícola residencial": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 607
+  },
+  "Zones cremades": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 629
+  },
+  "Centre urbà": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 33160
+  },
+  "Equipaments sanitaris": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1166
+  },
+  "Equipaments educatius": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 6371
+  },
+  "Centres penitenciaris": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 306
+  },
+  "Centres religiosos": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1139
+  },
+  "Centres culturals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1335
+  },
+  "Lleres naturals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 6642
+  },
+  "Sòl nu en tallafocs": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 62
+  },
+  "Prats i herbassars en tallafocs": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 816
+  },
+  "Conreus abandonats - matollars": {
+   "bosc": false,
+   "grups": [
+    "matollar"
+   ],
+   "pixels": 36557
+  },
+  "Sòl nu en línies elèctriques": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 45
+  },
+  "Colònies i nuclis aïllats": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 2738
+  },
+  "Sòls nus urbans no edificats": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 313
+  },
+  "Zones urbanes en construcció": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 219
+  },
+  "Grans vials": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 19
+  },
+  "Zones d'aparcament": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 126
+  },
+  "Conreus abandonats - boscos": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 1474
+  },
+  "Conreus abandonats - prats en zones forestals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 10150
+  },
+  "Conreus abandonats - prats d'alta muntanya en zones forestals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 49
+  },
+  "Cítrics abandonats - prats en zones agrícoles": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 350
+  },
+  "Cítrics abandonats - prats en zones agrícoles en bancals": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 8
+  },
+  "Franja de protecció de prats i herbassars": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 502
+  },
+  "Prats i herbassars d'alta muntanya en línies elèctriques": {
+   "bosc": false,
+   "grups": [
+    "prat"
+   ],
+   "pixels": 14
+  },
+  "Vegetació herbàcia de dunes i sorrals": {
+   "bosc": false,
+   "grups": [],
+   "pixels": 462
+  }
+ },
+ "cobertes_colors_barrejats": [
+  {
+   "Zones portuàries": 0.33,
+   "Mar": 0.67
+  },
+  {
+   "Plantacions de pollancres": 0.36,
+   "Altres conreus herbacis": 0.27,
+   "Carreteres": 0.09,
+   "Vinyes": 0.09,
+   "Boscos caducifolis de ribera (>= 20%cc)": 0.18
+  },
+  {
+   "Boscos caducifolis de ribera (>= 20%cc)": 0.36,
+   "Matollars": 0.18,
+   "Prats i herbassars": 0.09,
+   "Roureda de roure martinenc (>= 20%cc)": 0.09,
+   "Sense registre associat (VALUE =/= 255)": 0.09,
+   "Fruiters no cítrics en regadiu": 0.09,
+   "Polígon industrial sense ordenar": 0.09
+  },
+  {
+   "Pineda de pi roig (>= 20%cc)": 0.33,
+   "Altres conreus herbacis abandonats - prats en zones agrícoles en bancals": 0.67
+  },
+  {
+   "Prats de dall abandonats regadiu no regat - prats en zones agrícoles": 0.67,
+   "Prats i herbassars": 0.33
+  },
+  {
+   "Prats de dall abandonats regadiu no regat - prats d'alta muntanya en zones agrícoles": 0.67,
+   "Matollars": 0.33
+  },
+  {
+   "Vinyes abandonades - prats en zones agrícoles en bancals": 0.67,
+   "Pineda de pi blanc (>= 20%cc)": 0.33
+  },
+  {
+   "Altres conreus herbacis abandonats regadiu no regat - prats en zones agrícoles": 0.67,
+   "Prats i herbassars": 0.33
+  },
+  {
+   "Prats i herbassars": 0.33,
+   "Piscifactories i conreus aqüícoles a terra": 0.67
+  },
+  {
+   "Piscifactories i conreus aqüícoles a mar": 0.67,
+   "Sense registre associat (VALUE =/= 255)": 0.33
+  },
+  {
+   "Altres conreus herbacis abandonats regadiu no regat - prats en zones agrícoles en bancals": 0.67,
+   "Altres conreus herbacis en bancals en regadiu": 0.33
+  },
+  {
+   "Canals artificials": 0.33,
+   "Àrees de servei en xarxa viària": 0.33,
+   "Vinyes": 0.33
+  },
+  {
+   "Complexos administratius": 0.33,
+   "Camps de golf": 0.67
+  },
+  {
+   "Basses agrícoles": 0.67,
+   "Prats i herbassars": 0.33
+  },
+  {
+   "Abocadors": 0.67,
+   "Matollars": 0.33
+  },
+  {
+   "Autopistes i autovies": 0.33,
+   "Zones verdes viàries": 0.67
+  },
+  {
+   "Vies de ferrocarril": 0.33,
+   "Pineda de pi blanc (>= 20%cc)": 0.33,
+   "Zones verdes ferroviàries": 0.33
+  },
+  {
+   "Estacions d'autobusos": 0.67,
+   "Eixample": 0.33
+  },
+  {
+   "Preses": 0.67,
+   "Prats i herbassars": 0.33
+  },
+  {
+   "Sense registre associat (VALUE =/= 255)": 0.67,
+   "Zones portuàries": 0.33
+  },
+  {
+   "Prats i herbassars": 0.33,
+   "Vivers forestals": 0.67
+  },
+  {
+   "Matollars": 0.33,
+   "Plantacions d'eucaliptus": 0.67
+  },
+  {
+   "Zones d'extracció minera": 0.91,
+   "Pineda de pi blanc (>= 20%cc)": 0.09
+  },
+  {
+   "Zones d'esport": 0.67,
+   "Eixample": 0.33
+  },
+  {
+   "Matollars": 0.09,
+   "Pineda de pinastre (>= 20%cc)": 0.82,
+   "Pineda de pi pinyer (>= 20%cc)": 0.09
+  },
+  {
+   "Pineda de pi blanc (>= 20%cc)": 0.82,
+   "Alzinar (>= 20%cc)": 0.09,
+   "Oliverars": 0.09
+  },
+  {
+   "Pineda de pinassa (>= 20%cc)": 0.64,
+   "Matollars": 0.09,
+   "Roureda de roure martinenc (5-20%cc)": 0.09,
+   "Roquissars": 0.18
+  },
+  {
+   "Pineda de pi roig (>= 20%cc)": 0.91,
+   "Fageda (>= 20%cc)": 0.09
+  },
+  {
+   "Pineda de pi negre (>= 20%cc)": 0.91,
+   "Pineda de pi roig (>= 20%cc)": 0.09
+  },
+  {
+   "Prats i herbassars d'alta muntanya": 0.09,
+   "Avetosa (>= 20%cc)": 0.91
+  },
+  {
+   "Pineda de pi blanc (>= 20%cc)": 0.09,
+   "Vinyes": 0.09,
+   "Alzinar (>= 20%cc)": 0.64,
+   "Zones verdes viàries": 0.09,
+   "Roquissars": 0.09
+  },
+  {
+   "Castanyeda (>= 20%cc)": 0.18,
+   "Sureda (>= 20%cc)": 0.82
+  },
+  {
+   "Matollars": 0.33,
+   "Arboçar (>= 20%cc)": 0.67
+  },
+  {
+   "Alzinar (>= 20%cc)": 0.33,
+   "Altres perennifolis (>= 20%cc)": 0.33,
+   "Regeneració de pi blanc": 0.33
+  },
+  {
+   "Bedollar (>= 20%cc)": 0.67,
+   "Prats de dall": 0.33
+  },
+  {
+   "Fageda (>= 20%cc)": 0.82,
+   "Pineda de pi roig (>= 20%cc)": 0.09,
+   "Roureda de roure martinenc (>= 20%cc)": 0.09
+  },
+  {
+   "Avetosa (>= 20%cc)": 0.33,
+   "Roureda de roure martinenc (>= 20%cc)": 0.33,
+   "Alzinar (>= 20%cc)": 0.33
+  },
+  {
+   "Roureda de roure martinenc (>= 20%cc)": 0.82,
+   "Prats i herbassars": 0.09,
+   "Roquissars": 0.09
+  },
+  {
+   "Roureda de roure de fulla menuda (>= 20%cc)": 0.55,
+   "Pineda de pi blanc (5-20%cc)": 0.09,
+   "Matollars": 0.18,
+   "Boscos caducifolis de ribera (5-20%cc)": 0.09,
+   "Prats i herbassars": 0.09
+  },
+  {
+   "Carreteres": 0.33,
+   "Roureda de reboll (>= 20%cc)": 0.67
+  },
+  {
+   "Avellanosa (>= 20%cc)": 0.67,
+   "Pineda de pi roig (>= 20%cc)": 0.33
+  },
+  {
+   "Freixeneda (>= 20%cc)": 0.91,
+   "Alzinar (>= 20%cc)": 0.09
+  },
+  {
+   "Prats de dall": 0.09,
+   "Altres caducifolis (>= 20%cc)": 0.64,
+   "Alzinar (>= 20%cc)": 0.09,
+   "Prats i herbassars en línies elèctriques": 0.09,
+   "Matollars": 0.09
+  },
+  {
+   "Plantacions d'alzina surera": 0.67,
+   "Matollars": 0.33
+  },
+  {
+   "Altres conreus herbacis": 0.33,
+   "Horta familiar": 0.33,
+   "Plantacions de plàtans": 0.33
+  },
+  {
+   "Prats i herbassars": 0.33,
+   "Plantacions de pinastre": 0.67
+  },
+  {
+   "Plantacions de pi blanc": 0.73,
+   "Pineda de pi blanc (>= 20%cc)": 0.09,
+   "Oliverars en bancals": 0.09,
+   "Matollars": 0.09
+  },
+  {
+   "Matollars": 0.33,
+   "Plantacions de pinassa": 0.67
+  },
+  {
+   "Plantacions de pi negre": 0.67,
+   "Pineda de pi negre (>= 20%cc)": 0.33
+  },
+  {
+   "Indústries aïllades": 0.36,
+   "Cases aïllades": 0.09,
+   "Arrossars": 0.09,
+   "Altres conreus herbacis en regadiu": 0.09,
+   "Prats i herbassars": 0.09,
+   "Matollars": 0.27
+  },
+  {
+   "Serreries": 0.67,
+   "Carreteres": 0.33
+  },
+  {
+   "Matollars": 0.33,
+   "Complexos comercials i d'oficines": 0.33,
+   "Pineda de pi pinyer (>= 20%cc)": 0.33
+  },
+  {
+   "Altres conreus herbacis": 0.33,
+   "Vivers": 0.67
+  },
+  {
+   "Moviments de terres": 0.33,
+   "Carreteres": 0.67
+  },
+  {
+   "Centrals eòliques": 0.67,
+   "Plantacions de pi blanc": 0.33
+  },
+  {
+   "Centrals solars": 0.67,
+   "Vinyes": 0.33
+  },
+  {
+   "Prats i herbassars": 0.33,
+   "Infraestructures elèctriques": 0.67
+  },
+  {
+   "Fruiters no cítrics en bancals": 0.33,
+   "Fruiters no cítrics abandonats - prats en zones agrícoles en bancals": 0.33,
+   "Matollars": 0.33
+  },
+  {
+   "Fruiters no cítrics abandonats regadiu no regat - prats en zones agrícoles en bancals": 0.67,
+   "Pineda de pi blanc (5-20%cc)": 0.33
+  },
+  {
+   "Sense registre associat (VALUE =/= 255)": 0.33,
+   "Penya-segats marins": 0.33,
+   "Pineda de pi blanc (>= 20%cc)": 0.33
+  },
+  {
+   "Roquissars": 0.73,
+   "Regeneració de pi blanc": 0.09,
+   "Prats i herbassars d'alta muntanya": 0.09,
+   "Tarteres": 0.09
+  },
+  {
+   "Plantacions de coníferes no autòctones": 0.09,
+   "Fruiters no cítrics": 0.64,
+   "Zones d'esport": 0.09,
+   "Carreteres": 0.09,
+   "Vinyes": 0.09
+  },
+  {
+   "Fruiters no cítrics en regadiu": 0.64,
+   "Sense registre associat (VALUE =/= 255)": 0.09,
+   "Canals artificials": 0.09,
+   "Matollars": 0.09,
+   "Altres conreus herbacis en regadiu": 0.09
+  },
+  {
+   "Oliverars": 0.73,
+   "Pineda de pi blanc (5-20%cc)": 0.09,
+   "Matollars": 0.18
+  },
+  {
+   "Oliverars en regadiu": 0.82,
+   "Fruiters no cítrics en regadiu": 0.09,
+   "Fruiters no cítrics": 0.09
+  },
+  {
+   "Garroferars en regadiu": 0.67,
+   "Zones verdes viàries": 0.33
+  },
+  {
+   "Fruiters no cítrics en bancals en regadiu": 0.67,
+   "Oliverars en bancals": 0.33
+  },
+  {
+   "Pineda de pi blanc (>= 20%cc)": 0.18,
+   "Oliverars en bancals": 0.82
+  },
+  {
+   "Oliverars en bancals en regadiu": 0.67,
+   "Matollars": 0.33
+  },
+  {
+   "Alzinar (>= 20%cc)": 0.67,
+   "Franja de protecció de pi pinyer": 0.33
+  },
+  {
+   "Franja de protecció de pinastre": 0.33,
+   "Alzinar (>= 20%cc)": 0.33,
+   "Urbanitzacions": 0.33
+  },
+  {
+   "Urbanitzacions": 0.33,
+   "Franja de protecció de pi blanc": 0.33,
+   "Matollars": 0.33
+  },
+  {
+   "Regeneració de roure de fulla menuda": 0.33,
+   "Franja de protecció de pinassa": 0.33,
+   "Pineda de pinassa (>= 20%cc)": 0.33
+  },
+  {
+   "Franja de protecció de pi roig": 0.33,
+   "Pineda de pi roig (>= 20%cc)": 0.67
+  },
+  {
+   "Franja de protecció d'alzina": 0.33,
+   "Alzinar (>= 20%cc)": 0.33,
+   "Urbanitzacions": 0.33
+  },
+  {
+   "Franja de protecció d'alzina surera": 0.33,
+   "Sureda (>= 20%cc)": 0.33,
+   "Pineda de pinastre (>= 20%cc)": 0.33
+  },
+  {
+   "Franja de protecció de roure de fulla menuda": 0.33,
+   "Sense registre associat (VALUE =/= 255)": 0.33,
+   "Regeneració de roure de fulla menuda": 0.33
+  },
+  {
+   "Vegetació d'aiguamolls litorals": 0.67,
+   "Llacunes litorals": 0.33
+  },
+  {
+   "Prats i herbassars d'alta muntanya procedents de tallades arreu": 0.67,
+   "Pineda de pi negre (5-20%cc)": 0.33
+  },
+  {
+   "Plantacions de pollancres": 0.33,
+   "Sureda (>= 20%cc)": 0.33,
+   "Prats i herbassars procedents de tallades arreu": 0.33
+  },
+  {
+   "Pineda de pi pinyer (5-20%cc)": 0.33,
+   "Pineda de pi pinyer (>= 20%cc)": 0.67
+  },
+  {
+   "Pineda de pi blanc (>= 20%cc)": 0.27,
+   "Pineda de pi blanc (5-20%cc)": 0.55,
+   "Fruiters no cítrics": 0.09,
+   "Sureda (>= 20%cc)": 0.09
+  },
+  {
+   "Pineda de pinassa (5-20%cc)": 0.27,
+   "Prats i herbassars": 0.09,
+   "Matollars": 0.27,
+   "Regeneració de roureda de roure martinenc": 0.09,
+   "Altres conreus herbacis": 0.18,
+   "Plantacions de pinassa": 0.09
+  },
+  {
+   "Pineda de pi roig (>= 20%cc)": 0.27,
+   "Prats i herbassars": 0.09,
+   "Pineda de pi roig (5-20%cc)": 0.55,
+   "Roureda de roure martinenc (>= 20%cc)": 0.09
+  },
+  {
+   "Altres caducifolis (>= 20%cc)": 0.09,
+   "Pineda de pi roig (>= 20%cc)": 0.09,
+   "Pineda de pi negre (5-20%cc)": 0.55,
+   "Pineda de pi negre (>= 20%cc)": 0.18,
+   "Bedollar (>= 20%cc)": 0.09
+  },
+  {
+   "Avetosa (5-20%cc)": 0.67,
+   "Avetosa (>= 20%cc)": 0.33
+  },
+  {
+   "Alzinar (5-20%cc)": 0.82,
+   "Alzinar (>= 20%cc)": 0.09,
+   "Matollars": 0.09
+  },
+  {
+   "Sureda (5-20%cc)": 0.73,
+   "Sureda (>= 20%cc)": 0.18,
+   "Pineda de pi pinyer (>= 20%cc)": 0.09
+  },
+  {
+   "Roquissars": 0.33,
+   "Arboçar (5-20%cc)": 0.33,
+   "Matollars": 0.33
+  },
+  {
+   "Altres perennifolis (5-20%cc)": 0.67,
+   "Pineda de pi roig (>= 20%cc)": 0.33
+  },
+  {
+   "Castanyeda (5-20%cc)": 0.67,
+   "Matollars": 0.33
+  },
+  {
+   "Roureda de roure pènol (>= 20%cc)": 0.33,
+   "Roureda de roure pènol (5-20%cc)": 0.67
+  },
+  {
+   "Pineda de pi pinyer (5-20%cc)": 0.33,
+   "Roureda de roure africà (5-20%cc)": 0.33,
+   "Matollars": 0.33
+  },
+  {
+   "Roureda de roure martinenc (5-20%cc)": 0.33,
+   "Altres conreus herbacis": 0.33,
+   "Roureda de roure martinenc (>= 20%cc)": 0.33
+  },
+  {
+   "Roureda de roure de fulla menuda (5-20%cc)": 0.91,
+   "Altres conreus herbacis": 0.09
+  },
+  {
+   "Prats i herbassars": 0.33,
+   "Avellanosa (5-20%cc)": 0.67
+  },
+  {
+   "Freixeneda (5-20%cc)": 0.67,
+   "Roquissars": 0.33
+  },
+  {
+   "Vinyes": 0.91,
+   "Fruiters no cítrics en bancals": 0.09
+  },
+  {
+   "Vinyes en bancals": 0.67,
+   "Fruiters no cítrics en bancals": 0.33
+  },
+  {
+   "Camps de golf": 0.67,
+   "Matollars": 0.33
+  },
+  {
+   "Fruiters no cítrics abandonats - prats en zones agrícoles": 0.67,
+   "Sòl nu per acció antròpica": 0.33
+  },
+  {
+   "Altres conreus herbacis en regadiu": 0.33,
+   "Fruiters no cítrics abandonats regadiu no regat - prats en zones agrícoles": 0.67
+  },
+  {
+   "Pineda de pi blanc (5-20%cc)": 0.09,
+   "Pineda de pi blanc (>= 20%cc)": 0.18,
+   "Regeneració de pi blanc": 0.45,
+   "Matollars": 0.18,
+   "Alzinar (>= 20%cc)": 0.09
+  },
+  {
+   "Regeneració de pinassa": 0.67,
+   "Pineda de pinassa (>= 20%cc)": 0.33
+  },
+  {
+   "Prats i herbassars d'alta muntanya": 0.33,
+   "Regeneració de pi negre": 0.67
+  },
+  {
+   "Platges": 0.33,
+   "Vegetació arbustiva de dunes i sorrals": 0.33,
+   "Sense registre associat (VALUE =/= 255)": 0.33
+  },
+  {
+   "Regeneració d'alzina": 0.91,
+   "Matollars": 0.09
+  },
+  {
+   "Regeneració de bedoll": 0.67,
+   "Tarteres": 0.33
+  },
+  {
+   "Prats i herbassars d'alta muntanya": 0.33,
+   "Regeneració de faig": 0.33,
+   "Matollars": 0.33
+  },
+  {
+   "Matollars": 0.09,
+   "Regeneració de roureda de roure martinenc": 0.64,
+   "Pineda de pinassa (>= 20%cc)": 0.18,
+   "Altres conreus herbacis": 0.09
+  },
+  {
+   "Regeneració de roure de fulla menuda": 0.82,
+   "Altres conreus herbacis": 0.18
+  },
+  {
+   "Matollars": 0.82,
+   "Sòl erosionat per agent natural": 0.09,
+   "Oliverars en bancals": 0.09
+  },
+  {
+   "Pineda de pi blanc (>= 20%cc)": 0.67,
+   "Matollars en línies elèctriques": 0.33
+  },
+  {
+   "Franja de protecció de matollars": 0.67,
+   "Urbanitzacions": 0.33
+  },
+  {
+   "Fruiters no cítrics en regadiu": 0.33,
+   "Vinyes": 0.33,
+   "Matollars de formacions de ribera": 0.33
+  },
+  {
+   "Plantacions de plàtans": 0.33,
+   "Fruiters no cítrics en regadiu": 0.33,
+   "Boscos caducifolis de ribera (>= 20%cc)": 0.33
+  },
+  {
+   "Naus d'ús agrícola": 0.67,
+   "Altres conreus herbacis": 0.33
+  },
+  {
+   "Granges": 0.82,
+   "Prats i herbassars": 0.09,
+   "Sureda (>= 20%cc)": 0.09
+  },
+  {
+   "Tarteres": 0.64,
+   "Alzinar (5-20%cc)": 0.09,
+   "Matollars": 0.09,
+   "Prats i herbassars d'alta muntanya": 0.18
+  },
+  {
+   "Hivernacles": 0.67,
+   "Fruiters no cítrics en regadiu": 0.33
+  },
+  {
+   "Conreus en transformació": 0.82,
+   "Autopistes i autovies": 0.09,
+   "Cítrics": 0.09
+  },
+  {
+   "Rompudes agrícoles": 0.67,
+   "Habitatges unifamiliars": 0.33
+  },
+  {
+   "Prats de dall": 0.55,
+   "Zones verdes viàries": 0.09,
+   "Roureda de roure martinenc (>= 20%cc)": 0.09,
+   "Prats i herbassars": 0.09,
+   "Pineda de pi roig (>= 20%cc)": 0.18
+  },
+  {
+   "Conreus d'horta sota plàstic": 0.67,
+   "Prats i herbassars": 0.33
+  },
+  {
+   "Oliverars": 0.33,
+   "Oliverars abandonats - prats en zones agrícoles": 0.67
+  },
+  {
+   "Garroferars abandonats - prats en zones agrícoles": 0.67,
+   "Zones d'esport": 0.33
+  },
+  {
+   "Altres conreus herbacis en bancals": 0.82,
+   "Pineda de pi blanc (>= 20%cc)": 0.09,
+   "Alzinar (5-20%cc)": 0.09
+  },
+  {
+   "Altres conreus herbacis en bancals en regadiu": 0.67,
+   "Matollars": 0.33
+  },
+  {
+   "Oliverars abandonats regadiu no regat - prats en zones agrícoles": 0.33,
+   "Fruiters no cítrics en regadiu": 0.33,
+   "Matollars": 0.33
+  },
+  {
+   "Sureda (>= 20%cc)": 0.33,
+   "Horta familiar": 0.67
+  },
+  {
+   "Complexos administratius": 0.67,
+   "Roureda de roure martinenc (>= 20%cc)": 0.33
+  },
+  {
+   "Pineda de pi blanc (>= 20%cc)": 0.33,
+   "Zones cremades": 0.33,
+   "Prats i herbassars": 0.33
+  },
+  {
+   "Centre urbà": 0.91,
+   "Granges": 0.09
+  },
+  {
+   "Eixample": 0.55,
+   "Zones d'esport": 0.18,
+   "Complexos comercials i d'oficines": 0.09,
+   "Prats i herbassars": 0.09,
+   "Matollars": 0.09
+  },
+  {
+   "Equipaments sanitaris": 0.67,
+   "Eixample": 0.33
+  },
+  {
+   "Equipaments educatius": 0.67,
+   "Eixample": 0.33
+  },
+  {
+   "Centres culturals": 0.67,
+   "Habitatges unifamiliars": 0.33
+  },
+  {
+   "Sòl nu en tallafocs": 0.33,
+   "Prats i herbassars en tallafocs": 0.33,
+   "Plantacions de pinassa": 0.33
+  },
+  {
+   "Conreus abandonats - matollars": 0.33,
+   "Oliverars": 0.33,
+   "Pineda de pi blanc (>= 20%cc)": 0.33
+  },
+  {
+   "Alzinar (>= 20%cc)": 0.33,
+   "Sòl nu en línies elèctriques": 0.67
+  },
+  {
+   "Urbanitzacions": 0.73,
+   "Roureda de roure martinenc (>= 20%cc)": 0.09,
+   "Oliverars en regadiu": 0.09,
+   "Franja de protecció de pi blanc": 0.09
+  },
+  {
+   "Alzinar (>= 20%cc)": 0.09,
+   "Altres conreus herbacis": 0.09,
+   "Cases aïllades": 0.73,
+   "Roureda de roure martinenc (>= 20%cc)": 0.09
+  },
+  {
+   "Habitatges unifamiliars": 0.73,
+   "Franja de protecció de pi blanc": 0.09,
+   "Prats i herbassars": 0.09,
+   "Zones d'esport": 0.09
+  },
+  {
+   "Sòls nus urbans no edificats": 0.67,
+   "Matollars": 0.33
+  },
+  {
+   "Fruiters no cítrics en regadiu": 0.33,
+   "Conreus en transformació": 0.33,
+   "Moviments de terres": 0.33
+  },
+  {
+   "Zones d'extracció minera": 0.33,
+   "Grans vials": 0.33,
+   "Sòl nu per acció antròpica": 0.33
+  },
+  {
+   "Zones d'aparcament": 0.33,
+   "Eixample": 0.33,
+   "Matollars": 0.33
+  },
+  {
+   "Pineda de pi blanc (>= 20%cc)": 0.33,
+   "Fruiters no cítrics en bancals": 0.33,
+   "Conreus abandonats - boscos": 0.33
+  },
+  {
+   "Matollars": 0.09,
+   "Conreus abandonats - matollars": 0.91
+  },
+  {
+   "Conreus abandonats - prats en zones forestals": 0.67,
+   "Prats i herbassars": 0.33
+  },
+  {
+   "Altres conreus herbacis abandonats regadiu no regat - prats en zones agrícoles": 0.33,
+   "Cítrics abandonats - prats en zones agrícoles": 0.67
+  },
+  {
+   "Pineda de pi blanc (5-20%cc)": 0.33,
+   "Cítrics abandonats - prats en zones agrícoles en bancals": 0.67
+  },
+  {
+   "Altres conreus herbacis en bancals": 0.09,
+   "Matollars": 0.09,
+   "Prats i herbassars": 0.45,
+   "Altres conreus herbacis en regadiu": 0.09,
+   "Oliverars": 0.09,
+   "Roureda de roure martinenc (>= 20%cc)": 0.09,
+   "Sureda (>= 20%cc)": 0.09
+  },
+  {
+   "Pineda de pi blanc (>= 20%cc)": 0.33,
+   "Roquissars": 0.33,
+   "Altres conreus herbacis": 0.33
+  },
+  {
+   "Prats i herbassars d'alta muntanya": 0.91,
+   "Tarteres": 0.09
+  },
+  {
+   "Pineda de pi negre (>= 20%cc)": 0.67,
+   "Prats i herbassars d'alta muntanya en línies elèctriques": 0.33
+  },
+  {
+   "Prats i herbassars en tallafocs": 0.67,
+   "Matollars": 0.33
+  },
+  {
+   "Vegetació herbàcia de dunes i sorrals": 0.67,
+   "Zones d'esport": 0.33
+  }
+ ],
  "geologia": {
   "format": "text/plain",
   "classes": {
-   "1": 1557,
-   "2": 1826,
-   "3": 681,
-   "0": 439
+   "1": 1869,
+   "2": 1890,
+   "3": 709,
+   "0": 35
   },
   "mostra": [
    {
@@ -20,12 +2126,12 @@
    },
    {
     "t": "Conglomerats, gresos i lutites (Solsona, Margalef)",
-    "cls": 2,
+    "cls": 1,
     "px": 87920
    },
    {
     "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 2,
+    "cls": 1,
     "px": 86316
    },
    {
@@ -35,32 +2141,32 @@
    },
    {
     "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 2,
+    "cls": 1,
     "px": 84833
    },
    {
     "t": "Conglomerats massius (Sant Llorenç de Morunys, Comiols, Collegats, Sant Jeroni, Montsant)",
-    "cls": 2,
+    "cls": 1,
     "px": 84278
    },
    {
     "t": "Conglomerats massius (Sant Llorenç de Morunys, Comiols, Collegats, Sant Jeroni, Montsant)",
-    "cls": 2,
+    "cls": 1,
     "px": 84013
    },
    {
     "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 2,
+    "cls": 1,
     "px": 83578
    },
    {
     "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 2,
+    "cls": 1,
     "px": 83578
    },
    {
     "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 2,
+    "cls": 1,
     "px": 83578
    },
    {
@@ -75,7 +2181,7 @@
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 46883
    },
    {
@@ -135,17 +2241,17 @@
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 34123
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 33315
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 33203
    },
    {
@@ -160,22 +2266,22 @@
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 32813
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 32803
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 32794
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 32794
    },
    {
@@ -255,7 +2361,7 @@
    },
    {
     "t": "Conglomerats i gresos (Campauné, Serra de Bellmunt)",
-    "cls": 2,
+    "cls": 1,
     "px": 18681
    },
    {
@@ -275,7 +2381,7 @@
    },
    {
     "t": "Lutites (Cardell)",
-    "cls": 2,
+    "cls": 1,
     "px": 16367
    },
    {
@@ -285,7 +2391,7 @@
    },
    {
     "t": "Silurià i Devonià indiferenciat. Fàcies central, Pirineu central",
-    "cls": 0,
+    "cls": 3,
     "px": 15737
    },
    {
@@ -295,7 +2401,7 @@
    },
    {
     "t": "Conglomerats (Montserrat, Sant Llorenç del Munt)",
-    "cls": 2,
+    "cls": 1,
     "px": 15210
    },
    {
@@ -360,7 +2466,7 @@
    },
    {
     "t": "Fàcies garumna. Conglomerats, argiles i gresos vermells",
-    "cls": 2,
+    "cls": 1,
     "px": 11515
    },
    {
@@ -415,7 +2521,7 @@
    },
    {
     "t": "Gresos i lutites continentals amb intercalacions de conglomerats (I), Montllobar, Corçà, Montanyana",
-    "cls": 2,
+    "cls": 1,
     "px": 10472
    },
    {
@@ -490,7 +2596,7 @@
    },
    {
     "t": "Conglomerats i gresos (Campauné, Serra de Bellmunt)",
-    "cls": 2,
+    "cls": 1,
     "px": 8783
    },
    {
@@ -640,7 +2746,7 @@
    },
    {
     "t": "Roques intrusives varisques. Roques heterogènies pluricomposicionals",
-    "cls": 0,
+    "cls": 3,
     "px": 6200
    },
    {
@@ -650,7 +2756,7 @@
    },
    {
     "t": "Conglomerats (la Rabassa)",
-    "cls": 2,
+    "cls": 1,
     "px": 6120
    },
    {
@@ -720,7 +2826,7 @@
    },
    {
     "t": "Fàcies garumna. Conglomerats, argiles i gresos vermells",
-    "cls": 2,
+    "cls": 1,
     "px": 5830
    },
    {
@@ -730,7 +2836,7 @@
    },
    {
     "t": "Bretxes (Rosselló)",
-    "cls": 0,
+    "cls": 2,
     "px": 5699
    },
    {
@@ -750,12 +2856,12 @@
    },
    {
     "t": "Intercalacions de conglomerats (Castigaleu, Sant Esteve de Llitera)",
-    "cls": 2,
+    "cls": 1,
     "px": 5568
    },
    {
     "t": "Fàcies garumna. Conglomerats, argiles i gresos vermells",
-    "cls": 2,
+    "cls": 1,
     "px": 5528
    },
    {
@@ -780,12 +2886,12 @@
    },
    {
     "t": "Fàcies garumna. Conglomerats, argiles i gresos vermells",
-    "cls": 2,
+    "cls": 1,
     "px": 5477
    },
    {
     "t": "Fàcies garumna. Conglomerats, argiles i gresos vermells",
-    "cls": 2,
+    "cls": 1,
     "px": 5470
    },
    {
@@ -795,7 +2901,7 @@
    },
    {
     "t": "Fàcies garumna. Conglomerats, argiles i gresos vermells",
-    "cls": 2,
+    "cls": 1,
     "px": 5437
    },
    {
@@ -885,7 +2991,7 @@
    },
    {
     "t": "Gresos i lutites (Montserrat, Sant Llorenç del Munt)",
-    "cls": 2,
+    "cls": 1,
     "px": 4880
    },
    {
@@ -910,7 +3016,7 @@
    },
    {
     "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 2,
+    "cls": 1,
     "px": 4626
    },
    {
@@ -925,12 +3031,12 @@
    },
    {
     "t": "Turbidites (Mascarell)",
-    "cls": 0,
+    "cls": 2,
     "px": 4512
    },
    {
     "t": "Turbidites (Mascarell)",
-    "cls": 0,
+    "cls": 2,
     "px": 4493
    },
    {
@@ -955,12 +3061,12 @@
    },
    {
     "t": "Turbidites (Mascarell)",
-    "cls": 0,
+    "cls": 2,
     "px": 4460
    },
    {
     "t": "Bretxes (Campo, Viu)",
-    "cls": 0,
+    "cls": 2,
     "px": 4460
    },
    {
@@ -1045,7 +3151,7 @@
    },
    {
     "t": "Conglomerats (Montserrat, Sant Llorenç del Munt)",
-    "cls": 2,
+    "cls": 1,
     "px": 4072
    },
    {
@@ -1060,7 +3166,7 @@
    },
    {
     "t": "Silurià i Devonià indiferenciat. Fàcies central, Pirineu central",
-    "cls": 0,
+    "cls": 3,
     "px": 4066
    },
    {
@@ -1085,12 +3191,12 @@
    },
    {
     "t": "Conglomerats, gresos i lutites (Solsona, Margalef)",
-    "cls": 2,
+    "cls": 1,
     "px": 3904
    },
    {
     "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 2,
+    "cls": 1,
     "px": 3897
    },
    {
@@ -1100,17 +3206,17 @@
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 3849
    },
    {
     "t": "Turbidites siliciclàstiques (es Bòrdes, Vielha, Sía, es Agudes). Fàcies central, Pirineu central",
-    "cls": 0,
+    "cls": 3,
     "px": 3823
    },
    {
     "t": "Silurià i Devonià indiferenciat. Fàcies central, Pirineu central",
-    "cls": 0,
+    "cls": 3,
     "px": 3814
    },
    {
@@ -1120,12 +3226,12 @@
    },
    {
     "t": "Turbidites siliciclàstiques (es Bòrdes, Vielha, Sía, es Agudes). Fàcies central, Pirineu central",
-    "cls": 0,
+    "cls": 3,
     "px": 3787
    },
    {
     "t": "Turbidites siliciclàstiques (es Bòrdes, Vielha, Sía, es Agudes). Fàcies central, Pirineu central",
-    "cls": 0,
+    "cls": 3,
     "px": 3787
    },
    {
@@ -1150,7 +3256,7 @@
    },
    {
     "t": "Grup Pontils no diferenciat, localment inclou la Fm. Mediona",
-    "cls": 0,
+    "cls": 1,
     "px": 3657
    },
    {
@@ -1165,7 +3271,7 @@
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 3618
    },
    {
@@ -1285,7 +3391,7 @@
    },
    {
     "t": "Lutites (Cardell)",
-    "cls": 2,
+    "cls": 1,
     "px": 3195
    },
    {
@@ -1325,7 +3431,7 @@
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 3138
    },
    {
@@ -1360,7 +3466,7 @@
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 3092
    },
    {
@@ -1375,17 +3481,17 @@
    },
    {
     "t": "Conglomerats (la Rabassa)",
-    "cls": 2,
+    "cls": 1,
     "px": 3062
    },
    {
     "t": "Olistrostomes",
-    "cls": 0,
+    "cls": 2,
     "px": 3061
    },
    {
     "t": "Conglomerats (la Rabassa)",
-    "cls": 2,
+    "cls": 1,
     "px": 3045
    },
    {
@@ -1395,12 +3501,12 @@
    },
    {
     "t": "Conglomerats (la Rabassa)",
-    "cls": 2,
+    "cls": 1,
     "px": 3045
    },
    {
     "t": "Conglomerats (la Rabassa)",
-    "cls": 2,
+    "cls": 1,
     "px": 3045
    },
    {
@@ -1410,7 +3516,7 @@
    },
    {
     "t": "Conglomerats (la Rabassa)",
-    "cls": 2,
+    "cls": 1,
     "px": 3045
    },
    {
@@ -1420,7 +3526,7 @@
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 3044
    },
    {
@@ -1435,7 +3541,7 @@
    },
    {
     "t": "Gresos i lutites (Montserrat, Sant Llorenç del Munt)",
-    "cls": 2,
+    "cls": 1,
     "px": 3032
    },
    {
@@ -1470,7 +3576,7 @@
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 2919
    },
    {
@@ -1610,7 +3716,7 @@
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 2798
    },
    {
@@ -1680,7 +3786,7 @@
    },
    {
     "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 2,
+    "cls": 1,
     "px": 2658
    },
    {
@@ -1865,7 +3971,7 @@
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 2430
    },
    {
@@ -1890,7 +3996,7 @@
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 2399
    },
    {
@@ -1910,7 +4016,7 @@
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 2389
    },
    {
@@ -1970,7 +4076,7 @@
    },
    {
     "t": "Bretxes (Esbints, Zona Nord-pirinenca)",
-    "cls": 0,
+    "cls": 2,
     "px": 2316
    },
    {
@@ -1995,7 +4101,7 @@
    },
    {
     "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 0,
+    "cls": 2,
     "px": 2280
    },
    {

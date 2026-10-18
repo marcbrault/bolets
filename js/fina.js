@@ -206,3 +206,57 @@ export class Fina {
     return { fTP, t7, tmin, p7, zM: S.elevMeteo || M.elev };
   }
 }
+
+// ---------- Trossos de 100 m (es carreguen en fer zoom) ----------
+export class Trossos {
+  static async carrega(dir = 'data/fina100/') {
+    try {
+      const r = await fetch(dir + 'index.json');
+      if (!r.ok) return null;
+      return new Trossos(await r.json(), dir);
+    } catch { return null; }
+  }
+
+  constructor(index, dir) {
+    Object.assign(this, index);
+    this.dir = dir;
+    this.disponibles = new Set(index.trossos);
+    this.cache = new Map(); // clau → Promise<Fina>
+  }
+
+  clauA(lon, lat) {
+    const c = Math.floor((mercX(lon) - this.x0) / (this.step * this.tros)), r = Math.floor((this.y1 - mercY(lat)) / (this.step * this.tros));
+    return `${c}_${r}`;
+  }
+
+  /** Claus dels trossos que toquen un rectangle (lon/lat). */
+  visibles(w, s, e, n, max = 16) {
+    const T = this.step * this.tros;
+    const c0 = Math.floor((mercX(w) - this.x0) / T), c1 = Math.floor((mercX(e) - this.x0) / T);
+    const r0 = Math.floor((this.y1 - mercY(n)) / T), r1 = Math.floor((this.y1 - mercY(s)) / T);
+    const out = [];
+    for (let r = r0; r <= r1; r++) for (let c = c0; c <= c1; c++) if (this.disponibles.has(`${c}_${r}`)) out.push(`${c}_${r}`);
+    return out.length <= max ? out : [];
+  }
+
+  tros(clau) {
+    if (!this.cache.has(clau)) {
+      if (this.cache.size > 40) this.cache.delete(this.cache.keys().next().value);
+      const [c, r] = clau.split('_').map(Number);
+      const meta = { nx: this.tros, ny: this.tros, step: this.step, bandes: this.bandes, grups: this.grups, factor: this.factor,
+        x0: this.x0 + c * this.tros * this.step, y1: this.y1 - r * this.tros * this.step };
+      this.cache.set(clau, (async () => {
+        const res = await fetch(`${this.dir}${clau}.bin.gz`);
+        if (!res.ok) throw new Error(clau);
+        let buf = await res.arrayBuffer();
+        const u = new Uint8Array(buf, 0, 2);
+        if (u[0] === 0x1f && u[1] === 0x8b)
+          buf = await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
+        const f = new Fina(meta, buf);
+        f.km = 0.1;
+        return f;
+      })());
+    }
+    return this.cache.get(clau);
+  }
+}

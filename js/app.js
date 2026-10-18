@@ -2,7 +2,7 @@ import { descarregaMeteo, preparaMeteo, meteoDemo, DIES_PASSATS } from './weathe
 import { derivaEstatiques, calculaAigua, index, mapaDia } from './scoring.js';
 import { Heatmap, RAMPES, color, css, gradientCSS } from './heatmap.js';
 import { preparaConeixement, aplicaCapes, ARBRES_NOM, SOL_NOM } from './coneixement.js';
-import { carregaFina } from './fina.js';
+import { carregaFina, Trossos } from './fina.js';
 
 const $ = s => document.querySelector(s);
 // Vista prèvia (artifact de Claude): sense tessel·les externes ni Open-Meteo, que el navegador hi bloqueja.
@@ -17,6 +17,7 @@ const estat = {
   avui: DIES_PASSATS, dia: DIES_PASSATS, vista: 'index',
   sel: -1, cacheDia: new Map(),
   fina: null, heatFi: null, detall: 'fi', selPx: -1, cacheFi: new Map(),
+  trossos: null, trossosVisibles: new Set(), selTros: null,
 };
 
 // ---------- Preferències ----------
@@ -174,6 +175,36 @@ function imatgeActual() {
   return { url: estat.heat.pinta(valorsVista(estat.dia), estat.vista), coordinates: estat.heat.coordinates };
 }
 
+// ---------- Trossos de 100 m en fer zoom ----------
+const ZOOM_TROSSOS = 11;
+let genTrossos = 0;
+async function actualitzaTrossos() {
+  const gen = ++genTrossos;
+  const vol = estat.trossos && usaFi() && map.getZoom() >= ZOOM_TROSSOS;
+  const b = map.getBounds();
+  const claus = vol ? estat.trossos.visibles(b.getWest(), b.getSouth(), b.getEast(), b.getNorth()) : [];
+  for (const k of [...estat.trossosVisibles]) if (!claus.includes(k)) {
+    if (map.getLayer('tros-' + k)) map.removeLayer('tros-' + k);
+    if (map.getSource('tros-' + k)) map.removeSource('tros-' + k);
+    estat.trossosVisibles.delete(k);
+  }
+  for (const k of claus) {
+    let f;
+    try { f = await estat.trossos.tros(k); } catch { continue; }
+    if (gen !== genTrossos) return; // ha canviat alguna cosa mentrestant
+    f.enllaca(estat.grid);
+    f.heat ||= new Heatmap(f, estat.contorn);
+    const url = f.heat.pintaGraella(f.mapa(estat.vista, estat.sp, estat.M, estat.S, estat.sols, estat.dia), estat.vista);
+    if (map.getSource('tros-' + k)) map.getSource('tros-' + k).updateImage({ url, coordinates: f.coordinates });
+    else {
+      map.addSource('tros-' + k, { type: 'image', url, coordinates: f.coordinates });
+      map.addLayer({ id: 'tros-' + k, type: 'raster', source: 'tros-' + k,
+        paint: { 'raster-opacity': +$('#opacitat').value, 'raster-resampling': 'linear', 'raster-fade-duration': 0 } }, 'mascara');
+    }
+    estat.trossosVisibles.add(k);
+  }
+}
+
 // ---------- Capes del mapa ----------
 async function preparaCapes() {
   await mapaLlest;
@@ -248,6 +279,7 @@ function pintaAtles() {
 function repinta() {
   if (!estat.heat || !map.getSource('heat')) return;
   map.getSource('heat').updateImage(imatgeActual());
+  actualitzaTrossos();
 }
 
 // ---------- UI: espècies ----------
@@ -473,15 +505,19 @@ function pintaFitxa() {
 }
 
 function blocPunt() {
-  if (!usaFi() || estat.selPx < 0) return '';
-  const f = estat.fina.detall(estat.selPx, estat.sp, estat.M, estat.S, estat.sols, estat.dia);
+  if (!usaFi()) return '';
+  const t = estat.selTros && estat.selTros.p >= 0 ? estat.selTros : null;
+  if (!t && estat.selPx < 0) return '';
+  const font = t ? t.f : estat.fina, px = t ? t.p : estat.selPx, mida = t ? 100 : 500;
+  if (t) t.f.enllaca(estat.grid);
+  const f = font.detall(px, estat.sp, estat.M, estat.S, estat.sols, estat.dia);
   if (!f) return '';
   const col = color('index', f.valor);
   const ori = f.nord > 25 ? 'obaga' : f.nord < -25 ? 'solell' : 'orientació mixta';
   const host = f.hostes.length ? f.hostes.slice(0, 3).map(h => `${h[1]} % ${ARBRES_NOM[h[0]]}`).join(', ') : `cap hàbitat de l'espècie (${f.bosc} % de bosc)`;
   return `<div class="detall-punt">
     <div class="detall-punt-cap"><b style="color:${css([...col.slice(0, 3).map(x => x * 0.8), 1])}">${Math.round(f.valor)}</b>
-      <span>al punt tocat (casella de 500 m)</span></div>
+      <span>al punt tocat (casella de ${mida} m)</span></div>
     <p>${Math.round(f.z)} m · pendent ${f.pend}° · ${ori} · ${f.t7.toFixed(1)} °C (corregida per l'altitud)<br>
       Sòl: ${SOL_NOM(f.sol)} · Hàbitat: ${host}</p>
   </div>`;
@@ -521,6 +557,7 @@ async function inici() {
   await carregaGraella(km);
   estat.fina = await fina;
   if (estat.fina) { estat.fina.enllaca(estat.grid); estat.heatFi = new Heatmap(estat.fina, estat.contorn); }
+  if (estat.fina) estat.trossos = await Trossos.carrega();
   $('#detall').closest('label').hidden = !estat.fina;
   await preparaCapes();
   pintaEspecies(); pintaAtles(); pintaRecents();
@@ -531,9 +568,13 @@ async function inici() {
 $('#dia').addEventListener('input', e => { estat.dia = +e.target.value; actualitzaDia(); });
 $('#play').addEventListener('click', play);
 document.querySelectorAll('#vista button').forEach(b => b.addEventListener('click', () => triaVista(b.dataset.v)));
-$('#opacitat').addEventListener('input', e => { if (map.getLayer('heat')) map.setPaintProperty('heat', 'raster-opacity', +e.target.value); desaPrefs(); });
+$('#opacitat').addEventListener('input', e => {
+  for (const id of ['heat', ...[...estat.trossosVisibles].map(k => 'tros-' + k)]) if (map.getLayer(id)) map.setPaintProperty(id, 'raster-opacity', +e.target.value);
+  desaPrefs();
+});
 $('#mostra-atles').addEventListener('change', pintaAtles);
 $('#mostra-recents').addEventListener('change', pintaRecents);
+map.on('moveend', () => { if (estat.M) actualitzaTrossos(); });
 $('#detall').addEventListener('change', e => { estat.detall = e.target.value; desaPrefs(); actualitzaTot(); });
 $('#mostra-enp').addEventListener('change', e => { if (map.getLayer('enp')) map.setLayoutProperty('enp', 'visibility', e.target.checked ? 'visible' : 'none'); });
 $('#base').addEventListener('change', e => { posaBase(e.target.value); desaPrefs(); });
@@ -556,6 +597,11 @@ $('#cerca').addEventListener('change', e => {
 map.on('click', e => {
   if (!estat.heat || map.queryRenderedFeatures(e.point, { layers: ['atles-punt', 'recents'] }).length) return;
   estat.selPx = estat.fina ? estat.fina.pixel(e.lngLat.lng, e.lngLat.lat) : -1;
+  estat.selTros = null;
+  const k = estat.trossos?.clauA(e.lngLat.lng, e.lngLat.lat);
+  if (k && estat.trossosVisibles.has(k)) estat.trossos.tros(k).then(f => {
+    estat.selTros = { f, p: f.pixel(e.lngLat.lng, e.lngLat.lat) }; pintaFitxa();
+  });
   selecciona(estat.heat.cellaA(e.lngLat.lng, e.lngLat.lat));
 });
 map.on('mousemove', e => { map.getCanvas().style.cursor = estat.heat && estat.heat.cellaA(e.lngLat.lng, e.lngLat.lat) >= 0 ? 'crosshair' : ''; });

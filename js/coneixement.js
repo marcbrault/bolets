@@ -85,12 +85,16 @@ export function aplicaCapes(S, capes, elev) {
     S.boscPct = capes.bosc;
     S.arbres = capes.arbres;
   }
-  if (capes.calcari?.length === n) {
+  if (capes.sol?.length === n || capes.calcari?.length === n) {
     const atles = S.sol;
     S.sol = new Float32Array(n).fill(NaN);
     for (let i = 0; i < n; i++) {
-      const t = capes.calcari[i] + capes.mixt[i] + capes.silici[i];
-      const geo = t > 0 ? (capes.silici[i] + 0.5 * capes.mixt[i]) / t : NaN;
+      let geo;
+      if (capes.sol?.length === n) geo = capes.sol[i] == null ? NaN : capes.sol[i] / 100; // geologia + pH + vegetació (scripts/combina_sol.py)
+      else {
+        const t = capes.calcari[i] + capes.mixt[i] + capes.silici[i];
+        geo = t > 0 ? (capes.silici[i] + 0.5 * capes.mixt[i]) / t : NaN;
+      }
       // l'Atles descriu descalcificacions i matisos que el mapa 1:250.000 no recull
       S.sol[i] = isNaN(geo) ? atles[i] : isNaN(atles[i]) ? geo : 0.5 * geo + 0.5 * atles[i];
     }

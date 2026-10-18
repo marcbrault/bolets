@@ -153,7 +153,7 @@ export function index(sp, M, S, i, d, detall = false) {
         ? { nom: 'Hàbitat (CREAF)', v: fBosc, txt: hostes.length ? hostes.slice(0, 3).map(h => `${h[1]} % ${ARBRES_NOM[h[0]]}${h[2] ? ' (secundari)' : ''}`).join(', ') : `cap hàbitat seu · ${S.boscPct[i]} % de bosc` }
         : { nom: pesBosc < 0 ? 'Espai obert (aprox.)' : 'Bosc (aprox.)', v: fBosc },
       ...(S.obaga ? [{ nom: 'Orientació', v: Math.min(1, fOri), txt: `${S.obaga[i]} % obaga, ${S.solell[i]} % solell · ${t7 > 12 ? 'amb calor, millor obagues' : 'amb fred, millor solells'}` }] : []),
-      { nom: 'Substrat', v: fSol, txt: sp.sol ? `${SOL_NOM(S.sol[i])}${S.solGeo ? ' (ICGC)' : ''} · prefereix ${sp.sol.replace('-suau', ' (lleu)')}` : `${SOL_NOM(S.sol[i])} · indiferent` },
+      { nom: 'Substrat', v: fSol, txt: sp.sol ? `${SOL_NOM(S.sol[i])}${S.solGeo ? ' (mapes)' : ''} · prefereix ${sp.sol.replace('-suau', ' (lleu)')}` : `${SOL_NOM(S.sol[i])} · indiferent` },
     ],
     atles: zona ? { ...zona, prox, bonus: fAtles } : null,
   };

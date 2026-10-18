@@ -44,6 +44,9 @@
    "pinassa",
    "pi_blanc",
    "pi_roig"
+  ],
+  "noms_cientifics": [
+   "Lactarius sanguifluus"
   ]
  },
  {
@@ -94,6 +97,9 @@
    "pi_blanc",
    "pinyer",
    "pinastre"
+  ],
+  "noms_cientifics": [
+   "Lactarius deliciosus"
   ]
  },
  {
@@ -141,6 +147,9 @@
    "avet",
    "pi_roig",
    "pi_negre"
+  ],
+  "noms_cientifics": [
+   "Lactarius salmonicolor"
   ]
  },
  {
@@ -187,6 +196,9 @@
   "arbres": [
    "pinyer",
    "pinastre"
+  ],
+  "noms_cientifics": [
+   "Lactarius vinosus"
   ]
  },
  {
@@ -239,6 +251,12 @@
    "castanyer",
    "alzina",
    "surera"
+  ],
+  "noms_cientifics": [
+   "Boletus edulis",
+   "Boletus pinophilus",
+   "Boletus aereus",
+   "Boletus reticulatus"
   ]
  },
  {
@@ -290,6 +308,11 @@
    "castanyer",
    "alzina",
    "surera"
+  ],
+  "noms_cientifics": [
+   "Cantharellus cibarius",
+   "Cantharellus pallens",
+   "Cantharellus subpruinosus"
   ]
  },
  {
@@ -338,6 +361,9 @@
    "surera",
    "roure",
    "castanyer"
+  ],
+  "noms_cientifics": [
+   "Amanita caesarea"
   ]
  },
  {
@@ -386,6 +412,9 @@
    "roure",
    "faig",
    "castanyer"
+  ],
+  "noms_cientifics": [
+   "Craterellus cornucopioides"
   ]
  },
  {
@@ -433,6 +462,9 @@
    "roure",
    "alzina",
    "surera"
+  ],
+  "noms_cientifics": [
+   "Hygrophorus russula"
   ]
  },
  {
@@ -481,6 +513,9 @@
    "pi_negre",
    "avet",
    "faig"
+  ],
+  "noms_cientifics": [
+   "Craterellus lutescens"
   ]
  },
  {
@@ -533,6 +568,9 @@
    "pinastre",
    "avet",
    "alzina"
+  ],
+  "noms_cientifics": [
+   "Tricholoma terreum"
   ]
  },
  {
@@ -580,6 +618,9 @@
    "pi_roig",
    "avet",
    "pi_negre"
+  ],
+  "noms_cientifics": [
+   "Tricholoma portentosum"
   ]
  },
  {
@@ -629,6 +670,10 @@
    "pi_roig",
    "roure",
    "alzina"
+  ],
+  "noms_cientifics": [
+   "Hygrophorus latitabundus",
+   "Hygrophorus limacinus"
   ]
  },
  {
@@ -675,6 +720,9 @@
   "notes": "Sapròfit de prat: surt poc després de les pluges, a la primavera i a la tardor. Prefereix zones obertes, no pas bosc tancat.",
   "arbres": [
    "prat"
+  ],
+  "noms_cientifics": [
+   "Marasmius oreades"
   ]
  },
  {
@@ -722,6 +770,9 @@
   "arbres": [
    "prat",
    "roure"
+  ],
+  "noms_cientifics": [
+   "Calocybe gambosa"
   ]
  },
  {
@@ -770,6 +821,9 @@
    "pi_negre",
    "avet",
    "faig"
+  ],
+  "noms_cientifics": [
+   "Hygrophorus marzuolus"
   ]
  },
  {
@@ -816,6 +870,9 @@
   "notes": "De la segona setmana de març a finals d'abril (fins al juny a l'alta muntanya). Busqueu-la a les riberes dels rius i en sòls llimosos o sorrencs.",
   "arbres": [
    "ribera"
+  ],
+  "noms_cientifics": [
+   "Morchella"
   ]
  },
  {
@@ -862,6 +919,10 @@
   "arbres": [
    "alzina",
    "surera"
+  ],
+  "noms_cientifics": [
+   "Hygrophorus persoonii",
+   "Hygrophorus dichrous"
   ]
  },
  {
@@ -910,6 +971,12 @@
    "surera",
    "roure",
    "castanyer"
+  ],
+  "noms_cientifics": [
+   "Leccinellum lepidum",
+   "Leccinellum corsicum",
+   "Leccinum lepidum",
+   "Leccinum corsicum"
   ]
  }
 ]

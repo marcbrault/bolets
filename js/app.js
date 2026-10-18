@@ -186,6 +186,18 @@ async function preparaCapes() {
       tiles: ['https://geoserveis.ide.cat/servei/catalunya/inspire-espais-naturals-proteccio-especial/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=PS.ProtectedSite&STYLES=&CRS=EPSG:3857&BBOX={bbox-epsg-3857}&WIDTH=256&HEIGHT=256&FORMAT=image/png&TRANSPARENT=true'] });
     map.addLayer({ id: 'enp', type: 'raster', source: 'enp', layout: { visibility: $('#mostra-enp').checked ? 'visible' : 'none' }, paint: { 'raster-opacity': 0.75 } });
   }
+  map.addSource('recents', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+  map.addLayer({ id: 'recents', type: 'circle', source: 'recents', paint: {
+    'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 4, 11, 7], 'circle-color': '#c2410c',
+    'circle-opacity': ['interpolate', ['linear'], ['get', 'dies'], 0, 0.95, 21, 0.35],
+    'circle-stroke-color': '#fffdf8', 'circle-stroke-width': 1.5 } });
+  map.on('click', 'recents', e => {
+    const p = e.features[0].properties;
+    new maplibregl.Popup({ className: 'popup-zona', closeButton: false, offset: 8 })
+      .setLngLat(e.lngLat).setHTML(`<b>${p.nom}</b><br><small>${p.data} · fa ${p.dies} dies · <a href="${p.url}" target="_blank" rel="noopener">iNaturalist</a></small>`).addTo(map);
+  });
+  map.on('mouseenter', 'recents', () => { map.getCanvas().style.cursor = 'pointer'; });
+  map.on('mouseleave', 'recents', () => { map.getCanvas().style.cursor = ''; });
   map.addSource('atles', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
   map.addLayer({ id: 'atles-punt', type: 'circle', source: 'atles', paint: {
     'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 3, 11, 6], 'circle-color': '#fffdf8',
@@ -243,8 +255,32 @@ function pintaEspecies() {
 
 function triaEspecie(sp) {
   estat.sp = sp;
-  pintaEspecies(); desaPrefs(); pintaAtles();
+  pintaEspecies(); desaPrefs(); pintaAtles(); pintaRecents();
   if (estat.vista !== 'index' && estat.vista !== 'habitat') triaVista('index'); else actualitzaTot();
+}
+
+// ---------- Troballes recents (iNaturalist, últims 21 dies) ----------
+const recentsCache = new Map();
+async function pintaRecents() {
+  const src = map.getSource('recents');
+  if (!src) return;
+  const sp = estat.sp, on = $('#mostra-recents').checked && !PREVIEW;
+  if (!on || !sp.noms_cientifics) { src.setData({ type: 'FeatureCollection', features: [] }); $('#recents-info').textContent = ''; return; }
+  if (!recentsCache.has(sp.id)) {
+    const d1 = new Date(Date.now() - 21 * 864e5).toISOString().slice(0, 10);
+    const peticions = sp.noms_cientifics.map(nom => fetch(`https://api.inaturalist.org/v1/observations?taxon_name=${encodeURIComponent(nom)}` +
+      `&swlat=40.45&swlng=0.1&nelat=42.9&nelng=3.4&d1=${d1}&per_page=200&order_by=observed_on`).then(r => r.ok ? r.json() : { error: true }).catch(() => ({ error: true })));
+    const resp = await Promise.all(peticions);
+    if (resp.every(j => j.error)) { $('#recents-info').textContent = 'No s\'ha pogut consultar iNaturalist'; return; }
+    const obs = resp.flatMap(j => j.results || []);
+    recentsCache.set(sp.id, obs.filter(o => o.geojson).map(o => ({ type: 'Feature', geometry: o.geojson,
+      properties: { nom: o.taxon?.preferred_common_name || o.taxon?.name || sp.nom, data: o.observed_on, url: o.uri,
+        dies: Math.max(0, Math.round((Date.now() - Date.parse(o.observed_on)) / 864e5)) } })));
+  }
+  if (estat.sp !== sp) return;
+  const f = recentsCache.get(sp.id);
+  src.setData({ type: 'FeatureCollection', features: f });
+  $('#recents-info').textContent = f.length ? `${f.length} troballes a iNaturalist els últims 21 dies` : 'Cap troballa a iNaturalist els últims 21 dies';
 }
 
 // ---------- UI: vista / llegenda ----------
@@ -448,7 +484,7 @@ async function inici() {
   if (PREVIEW) $('#base').closest('label').hidden = true;
   await carregaGraella(km);
   await preparaCapes();
-  pintaEspecies(); pintaAtles();
+  pintaEspecies(); pintaAtles(); pintaRecents();
   actualitzaTot();
 }
 
@@ -458,6 +494,7 @@ $('#play').addEventListener('click', play);
 document.querySelectorAll('#vista button').forEach(b => b.addEventListener('click', () => triaVista(b.dataset.v)));
 $('#opacitat').addEventListener('input', e => { if (map.getLayer('heat')) map.setPaintProperty('heat', 'raster-opacity', +e.target.value); desaPrefs(); });
 $('#mostra-atles').addEventListener('change', pintaAtles);
+$('#mostra-recents').addEventListener('change', pintaRecents);
 $('#mostra-enp').addEventListener('change', e => { if (map.getLayer('enp')) map.setLayoutProperty('enp', 'visibility', e.target.checked ? 'visible' : 'none'); });
 $('#base').addEventListener('change', e => { posaBase(e.target.value); desaPrefs(); });
 $('#resolucio').addEventListener('change', async e => {

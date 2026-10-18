@@ -1,4118 +1,2012 @@
 {
- "cobertes": {
-  "Cementiris": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 2158
-  },
-  "Llacs i llacunes continentals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 7275
-  },
-  "Zones portuàries": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 2541
-  },
-  "Mar": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 63
-  },
-  "Llacunes litorals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 12267
-  },
-  "Molleres d'alta muntanya": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 3524
-  },
-  "Plantacions de pollancres": {
-   "bosc": true,
-   "grups": [
-    "ribera"
-   ],
-   "pixels": 12695
-  },
-  "Altres conreus herbacis": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1574904
-  },
-  "Carreteres": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 31654
-  },
-  "Vinyes": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 331976
-  },
-  "Boscos caducifolis de ribera (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "ribera"
-   ],
-   "pixels": 43413
-  },
-  "Matollars": {
-   "bosc": false,
-   "grups": [
-    "matollar"
-   ],
-   "pixels": 1648761
-  },
-  "Prats i herbassars": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 240433
-  },
-  "Roureda de roure martinenc (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 373304
-  },
-  "Sense registre associat (VALUE =/= 255)": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 40111
-  },
-  "Fruiters no cítrics en regadiu": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 189891
-  },
-  "Polígon industrial sense ordenar": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 18081
-  },
-  "Boscos caducifolis de ribera (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "ribera"
-   ],
-   "pixels": 14008
-  },
-  "Arrossars abandonats regadiu no regat - prats en zones agrícoles": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 223
-  },
-  "Altres conreus herbacis abandonats - prats en zones agrícoles": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 22519
-  },
-  "Pineda de pi roig (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "pi_roig"
-   ],
-   "pixels": 816600
-  },
-  "Altres conreus herbacis abandonats - prats en zones agrícoles en bancals": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 532
-  },
-  "Prats de dall abandonats regadiu no regat - prats en zones agrícoles": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 615
-  },
-  "Prats de dall abandonats regadiu no regat - prats d'alta muntanya en zones agrícoles": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 15
-  },
-  "Vinyes abandonades - prats en zones agrícoles en bancals": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 98
-  },
-  "Pineda de pi blanc (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "pi_blanc"
-   ],
-   "pixels": 1045114
-  },
-  "Altres conreus herbacis abandonats regadiu no regat - prats en zones agrícoles": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 7935
-  },
-  "Piscifactories i conreus aqüícoles a terra": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 111
-  },
-  "Piscifactories i conreus aqüícoles a mar": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 410
-  },
-  "Altres conreus herbacis abandonats regadiu no regat - prats en zones agrícoles en bancals": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 16
-  },
-  "Altres conreus herbacis en bancals en regadiu": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 300
-  },
-  "Canals artificials": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 25210
-  },
-  "Àrees de servei en xarxa viària": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 3562
-  },
-  "Complexos administratius": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1314
-  },
-  "Camps de golf": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 6102
-  },
-  "Basses agrícoles": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 2398
-  },
-  "Vegetació d'aiguamolls continentals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1435
-  },
-  "Abocadors": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 2156
-  },
-  "Autopistes i autovies": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 9525
-  },
-  "Zones verdes viàries": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 118167
-  },
-  "Vies de ferrocarril": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 10258
-  },
-  "Zones verdes ferroviàries": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1462
-  },
-  "Estacions d'autobusos": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 72
-  },
-  "Eixample": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 55175
-  },
-  "Preses": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 170
-  },
-  "Salines": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 3407
-  },
-  "Rius": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 21100
-  },
-  "Plantacions de coníferes no autòctones": {
-   "bosc": true,
-   "grups": [],
-   "pixels": 37391
-  },
-  "Vivers forestals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1660
-  },
-  "Plantacions d'eucaliptus": {
-   "bosc": true,
-   "grups": [],
-   "pixels": 6967
-  },
-  "Parcs urbans": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 18050
-  },
-  "Zones d'extracció minera": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 25443
-  },
-  "Zones d'esport": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 55051
-  },
-  "Parcs recreatius": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1518
-  },
-  "Aeroports": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 4365
-  },
-  "Pineda de pi pinyer (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "pinyer"
-   ],
-   "pixels": 153183
-  },
-  "Pineda de pinastre (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "pinastre"
-   ],
-   "pixels": 33030
-  },
-  "Alzinar (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "alzina"
-   ],
-   "pixels": 664645
-  },
-  "Oliverars": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 330858
-  },
-  "Pineda de pinassa (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "pinassa"
-   ],
-   "pixels": 289843
-  },
-  "Roureda de roure martinenc (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 47160
-  },
-  "Roquissars": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 291086
-  },
-  "Fageda (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "faig"
-   ],
-   "pixels": 187111
-  },
-  "Pineda de pi negre (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "pi_negre"
-   ],
-   "pixels": 223862
-  },
-  "Prats i herbassars d'alta muntanya": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 290285
-  },
-  "Avetosa (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "avet"
-   ],
-   "pixels": 53428
-  },
-  "Altres coníferes (>= 20%cc)": {
-   "bosc": true,
-   "grups": [],
-   "pixels": 289
-  },
-  "Castanyeda (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "castanyer"
-   ],
-   "pixels": 87176
-  },
-  "Sureda (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "surera"
-   ],
-   "pixels": 259498
-  },
-  "Arboçar (>= 20%cc)": {
-   "bosc": true,
-   "grups": [],
-   "pixels": 6006
-  },
-  "Altres perennifolis (>= 20%cc)": {
-   "bosc": true,
-   "grups": [],
-   "pixels": 39
-  },
-  "Regeneració de pi blanc": {
-   "bosc": true,
-   "grups": [
-    "pi_blanc"
-   ],
-   "pixels": 76051
-  },
-  "Bedollar (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "ribera"
-   ],
-   "pixels": 17514
-  },
-  "Prats de dall": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 46368
-  },
-  "Roureda de roure pènol (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 16810
-  },
-  "Roureda de roure africà (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 1426
-  },
-  "Roureda de roure de fulla menuda (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 74718
-  },
-  "Pineda de pi blanc (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "pi_blanc"
-   ],
-   "pixels": 112711
-  },
-  "Roureda de reboll (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 460
-  },
-  "Avellanosa (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "ribera"
-   ],
-   "pixels": 8512
-  },
-  "Freixeneda (>= 20%cc)": {
-   "bosc": true,
-   "grups": [
-    "ribera"
-   ],
-   "pixels": 30748
-  },
-  "Altres caducifolis (>= 20%cc)": {
-   "bosc": true,
-   "grups": [],
-   "pixels": 22998
-  },
-  "Prats i herbassars en línies elèctriques": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 2836
-  },
-  "Plantacions d'alzina surera": {
-   "bosc": true,
-   "grups": [
-    "alzina",
-    "surera"
-   ],
-   "pixels": 32
-  },
-  "Plantacions de castanyer": {
-   "bosc": true,
-   "grups": [
-    "castanyer"
-   ],
-   "pixels": 7788
-  },
-  "Horta familiar": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 10502
-  },
-  "Plantacions de plàtans": {
-   "bosc": true,
-   "grups": [],
-   "pixels": 3269
-  },
-  "Plantacions de pi pinyer": {
-   "bosc": true,
-   "grups": [
-    "pinyer"
-   ],
-   "pixels": 4157
-  },
-  "Plantacions de pinastre": {
-   "bosc": true,
-   "grups": [
-    "pinastre"
-   ],
-   "pixels": 9288
-  },
-  "Plantacions de pi blanc": {
-   "bosc": true,
-   "grups": [
-    "pi_blanc"
-   ],
-   "pixels": 21430
-  },
-  "Oliverars en bancals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 291922
-  },
-  "Plantacions de pinassa": {
-   "bosc": true,
-   "grups": [
-    "pinassa"
-   ],
-   "pixels": 15783
-  },
-  "Plantacions de pi roig": {
-   "bosc": true,
-   "grups": [
-    "pi_roig"
-   ],
-   "pixels": 24684
-  },
-  "Plantacions de pi negre": {
-   "bosc": true,
-   "grups": [
-    "pi_negre"
-   ],
-   "pixels": 5524
-  },
-  "Embassaments": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 32130
-  },
-  "Polígon industrial ordenat": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 76446
-  },
-  "Indústries aïllades": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 9443
-  },
-  "Cases aïllades": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 25761
-  },
-  "Arrossars": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 94650
-  },
-  "Altres conreus herbacis en regadiu": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 665815
-  },
-  "Serreries": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 237
-  },
-  "Complexos comercials i d'oficines": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 11056
-  },
-  "Vivers": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 760
-  },
-  "Complexos hotelers": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 3661
-  },
-  "Moviments de terres": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 3448
-  },
-  "Centrals eòliques": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 352
-  },
-  "Centrals solars": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1270
-  },
-  "Centrals nuclears": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 726
-  },
-  "Centrals tèrmiques": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 118
-  },
-  "Infraestructures elèctriques": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 723
-  },
-  "Depuradores i potabilitzadores": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1902
-  },
-  "Desalinitzadores": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 147
-  },
-  "Telecomunicacions": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 159
-  },
-  "Plantes de tractament": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1558
-  },
-  "Fruiters no cítrics en bancals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 98391
-  },
-  "Fruiters no cítrics abandonats - prats en zones agrícoles en bancals": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 362
-  },
-  "Fruiters no cítrics abandonats regadiu no regat - prats en zones agrícoles en bancals": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 12
-  },
-  "Penya-segats marins": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1617
-  },
-  "Tarteres": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 81842
-  },
-  "Cítrics": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 47885
-  },
-  "Fruiters no cítrics": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 134413
-  },
-  "Oliverars en regadiu": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 32760
-  },
-  "Garroferars": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 14583
-  },
-  "Garroferars en regadiu": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 57
-  },
-  "Cítrics en bancals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1441
-  },
-  "Fruiters no cítrics en bancals en regadiu": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1850
-  },
-  "Oliverars en bancals en regadiu": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 3452
-  },
-  "Garroferars en bancals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 3130
-  },
-  "Vivers agrícoles": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 3442
-  },
-  "Franja de protecció de pi pinyer": {
-   "bosc": false,
-   "grups": [
-    "pinyer"
-   ],
-   "pixels": 272
-  },
-  "Franja de protecció de pinastre": {
-   "bosc": false,
-   "grups": [
-    "pinastre"
-   ],
-   "pixels": 83
-  },
-  "Urbanitzacions": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 72936
-  },
-  "Franja de protecció de pi blanc": {
-   "bosc": false,
-   "grups": [
-    "pi_blanc"
-   ],
-   "pixels": 20673
-  },
-  "Regeneració de roure de fulla menuda": {
-   "bosc": true,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 27408
-  },
-  "Franja de protecció de pinassa": {
-   "bosc": false,
-   "grups": [
-    "pinassa"
-   ],
-   "pixels": 211
-  },
-  "Franja de protecció de pi roig": {
-   "bosc": false,
-   "grups": [
-    "pi_roig"
-   ],
-   "pixels": 39
-  },
-  "Franja de protecció d'alzina": {
-   "bosc": false,
-   "grups": [
-    "alzina"
-   ],
-   "pixels": 252
-  },
-  "Franja de protecció d'alzina surera": {
-   "bosc": false,
-   "grups": [
-    "alzina",
-    "surera"
-   ],
-   "pixels": 371
-  },
-  "Franja de protecció de roure martinenc": {
-   "bosc": false,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 227
-  },
-  "Franja de protecció de roure de fulla menuda": {
-   "bosc": false,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 7
-  },
-  "Vegetació d'aiguamolls litorals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 6705
-  },
-  "Càmpings": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 7825
-  },
-  "Matollars procedents de tallades arreu": {
-   "bosc": false,
-   "grups": [
-    "matollar"
-   ],
-   "pixels": 3306
-  },
-  "Prats i herbassars d'alta muntanya procedents de tallades arreu": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 52
-  },
-  "Pineda de pi negre (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "pi_negre"
-   ],
-   "pixels": 18893
-  },
-  "Prats i herbassars procedents de tallades arreu": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 1886
-  },
-  "Pineda de pi pinyer (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "pinyer"
-   ],
-   "pixels": 1942
-  },
-  "Pineda de pinastre (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "pinastre"
-   ],
-   "pixels": 1200
-  },
-  "Pineda de pinassa (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "pinassa"
-   ],
-   "pixels": 7278
-  },
-  "Regeneració de roureda de roure martinenc": {
-   "bosc": true,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 24613
-  },
-  "Pineda de pi roig (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "pi_roig"
-   ],
-   "pixels": 18765
-  },
-  "Avetosa (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "avet"
-   ],
-   "pixels": 346
-  },
-  "Altres coníferes (5-20%cc)": {
-   "bosc": true,
-   "grups": [],
-   "pixels": 233
-  },
-  "Alzinar (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "alzina"
-   ],
-   "pixels": 84385
-  },
-  "Sureda (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "surera"
-   ],
-   "pixels": 19804
-  },
-  "Arboçar (5-20%cc)": {
-   "bosc": true,
-   "grups": [],
-   "pixels": 162
-  },
-  "Altres perennifolis (5-20%cc)": {
-   "bosc": true,
-   "grups": [],
-   "pixels": 22
-  },
-  "Bedollar (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "ribera"
-   ],
-   "pixels": 1162
-  },
-  "Castanyeda (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "castanyer"
-   ],
-   "pixels": 103
-  },
-  "Fageda (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "faig"
-   ],
-   "pixels": 1289
-  },
-  "Roureda de roure pènol (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 112
-  },
-  "Roureda de roure de fulla gran (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 999
-  },
-  "Roureda de roure africà (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 4
-  },
-  "Roureda de roure de fulla menuda (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 25426
-  },
-  "Roureda de reboll (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "roure"
-   ],
-   "pixels": 25
-  },
-  "Avellanosa (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "ribera"
-   ],
-   "pixels": 220
-  },
-  "Freixeneda (5-20%cc)": {
-   "bosc": true,
-   "grups": [
-    "ribera"
-   ],
-   "pixels": 792
-  },
-  "Altres caducifolis (5-20%cc)": {
-   "bosc": true,
-   "grups": [],
-   "pixels": 3520
-  },
-  "Vinyes en bancals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 13750
-  },
-  "Fruiters no cítrics abandonats - prats en zones agrícoles": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 4359
-  },
-  "Sòl nu per acció antròpica": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 2198
-  },
-  "Fruiters no cítrics abandonats regadiu no regat - prats en zones agrícoles": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 1534
-  },
-  "Regeneració de pinastre": {
-   "bosc": true,
-   "grups": [
-    "pinastre"
-   ],
-   "pixels": 81
-  },
-  "Regeneració de pinassa": {
-   "bosc": true,
-   "grups": [
-    "pinassa"
-   ],
-   "pixels": 176
-  },
-  "Regeneració de pi roig": {
-   "bosc": true,
-   "grups": [
-    "pi_roig"
-   ],
-   "pixels": 887
-  },
-  "Regeneració de pi negre": {
-   "bosc": true,
-   "grups": [
-    "pi_negre"
-   ],
-   "pixels": 617
-  },
-  "Platges": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 17095
-  },
-  "Vegetació arbustiva de dunes i sorrals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1199
-  },
-  "Regeneració d'alzina": {
-   "bosc": true,
-   "grups": [
-    "alzina"
-   ],
-   "pixels": 26190
-  },
-  "Regeneració de bedoll": {
-   "bosc": true,
-   "grups": [
-    "ribera"
-   ],
-   "pixels": 146
-  },
-  "Regeneració de faig": {
-   "bosc": true,
-   "grups": [
-    "faig"
-   ],
-   "pixels": 5
-  },
-  "Sòl erosionat per agent natural": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 169577
-  },
-  "Matollars en línies elèctriques": {
-   "bosc": false,
-   "grups": [
-    "matollar"
-   ],
-   "pixels": 1326
-  },
-  "Franja de protecció de matollars": {
-   "bosc": false,
-   "grups": [
-    "matollar"
-   ],
-   "pixels": 112
-  },
-  "Matollars en tallafocs": {
-   "bosc": false,
-   "grups": [
-    "matollar"
-   ],
-   "pixels": 614
-  },
-  "Matollars de formacions de ribera": {
-   "bosc": true,
-   "grups": [
-    "ribera",
-    "matollar"
-   ],
-   "pixels": 7925
-  },
-  "Canyars": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 9438
-  },
-  "Naus d'ús agrícola": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1194
-  },
-  "Granges": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 30209
-  },
-  "Glaceres i congestes": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 214
-  },
-  "Hivernacles": {
-   "bosc": false,
-   "grups": [
-    "ribera"
-   ],
-   "pixels": 1771
-  },
-  "Vinyes abandonades - prats en zones agrícoles": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 3864
-  },
-  "Conreus en transformació": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 35253
-  },
-  "Rompudes agrícoles": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 2345
-  },
-  "Habitatges unifamiliars": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 82742
-  },
-  "Conreus d'horta sota plàstic": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 379
-  },
-  "Oliverars abandonats - prats en zones agrícoles": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 2870
-  },
-  "Garroferars abandonats - prats en zones agrícoles": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 702
-  },
-  "Oliverars abandonats - prats en zones agrícoles en bancals": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 2876
-  },
-  "Garroferars abandonats - prats en zones agrícoles en bancals": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 104
-  },
-  "Altres conreus herbacis en bancals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 50703
-  },
-  "Oliverars abandonats regadiu no regat - prats en zones agrícoles": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 9
-  },
-  "Assentament agrícola residencial": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 607
-  },
-  "Zones cremades": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 629
-  },
-  "Centre urbà": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 33160
-  },
-  "Equipaments sanitaris": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1166
-  },
-  "Equipaments educatius": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 6371
-  },
-  "Centres penitenciaris": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 306
-  },
-  "Centres religiosos": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1139
-  },
-  "Centres culturals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1335
-  },
-  "Lleres naturals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 6642
-  },
-  "Sòl nu en tallafocs": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 62
-  },
-  "Prats i herbassars en tallafocs": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 816
-  },
-  "Conreus abandonats - matollars": {
-   "bosc": false,
-   "grups": [
-    "matollar"
-   ],
-   "pixels": 36557
-  },
-  "Sòl nu en línies elèctriques": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 45
-  },
-  "Colònies i nuclis aïllats": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 2738
-  },
-  "Sòls nus urbans no edificats": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 313
-  },
-  "Zones urbanes en construcció": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 219
-  },
-  "Grans vials": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 19
-  },
-  "Zones d'aparcament": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 126
-  },
-  "Conreus abandonats - boscos": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 1474
-  },
-  "Conreus abandonats - prats en zones forestals": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 10150
-  },
-  "Conreus abandonats - prats d'alta muntanya en zones forestals": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 49
-  },
-  "Cítrics abandonats - prats en zones agrícoles": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 350
-  },
-  "Cítrics abandonats - prats en zones agrícoles en bancals": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 8
-  },
-  "Franja de protecció de prats i herbassars": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 502
-  },
-  "Prats i herbassars d'alta muntanya en línies elèctriques": {
-   "bosc": false,
-   "grups": [
-    "prat"
-   ],
-   "pixels": 14
-  },
-  "Vegetació herbàcia de dunes i sorrals": {
-   "bosc": false,
-   "grups": [],
-   "pixels": 462
-  }
- },
- "cobertes_colors_barrejats": [
-  {
-   "Zones portuàries": 0.33,
-   "Mar": 0.67
-  },
-  {
-   "Plantacions de pollancres": 0.36,
-   "Altres conreus herbacis": 0.27,
-   "Carreteres": 0.09,
-   "Vinyes": 0.09,
-   "Boscos caducifolis de ribera (>= 20%cc)": 0.18
-  },
-  {
-   "Boscos caducifolis de ribera (>= 20%cc)": 0.36,
-   "Matollars": 0.18,
-   "Prats i herbassars": 0.09,
-   "Roureda de roure martinenc (>= 20%cc)": 0.09,
-   "Sense registre associat (VALUE =/= 255)": 0.09,
-   "Fruiters no cítrics en regadiu": 0.09,
-   "Polígon industrial sense ordenar": 0.09
-  },
-  {
-   "Pineda de pi roig (>= 20%cc)": 0.33,
-   "Altres conreus herbacis abandonats - prats en zones agrícoles en bancals": 0.67
-  },
-  {
-   "Prats de dall abandonats regadiu no regat - prats en zones agrícoles": 0.67,
-   "Prats i herbassars": 0.33
-  },
-  {
-   "Prats de dall abandonats regadiu no regat - prats d'alta muntanya en zones agrícoles": 0.67,
-   "Matollars": 0.33
-  },
-  {
-   "Vinyes abandonades - prats en zones agrícoles en bancals": 0.67,
-   "Pineda de pi blanc (>= 20%cc)": 0.33
-  },
-  {
-   "Altres conreus herbacis abandonats regadiu no regat - prats en zones agrícoles": 0.67,
-   "Prats i herbassars": 0.33
-  },
-  {
-   "Prats i herbassars": 0.33,
-   "Piscifactories i conreus aqüícoles a terra": 0.67
-  },
-  {
-   "Piscifactories i conreus aqüícoles a mar": 0.67,
-   "Sense registre associat (VALUE =/= 255)": 0.33
-  },
-  {
-   "Altres conreus herbacis abandonats regadiu no regat - prats en zones agrícoles en bancals": 0.67,
-   "Altres conreus herbacis en bancals en regadiu": 0.33
-  },
-  {
-   "Canals artificials": 0.33,
-   "Àrees de servei en xarxa viària": 0.33,
-   "Vinyes": 0.33
-  },
-  {
-   "Complexos administratius": 0.33,
-   "Camps de golf": 0.67
-  },
-  {
-   "Basses agrícoles": 0.67,
-   "Prats i herbassars": 0.33
-  },
-  {
-   "Abocadors": 0.67,
-   "Matollars": 0.33
-  },
-  {
-   "Autopistes i autovies": 0.33,
-   "Zones verdes viàries": 0.67
-  },
-  {
-   "Vies de ferrocarril": 0.33,
-   "Pineda de pi blanc (>= 20%cc)": 0.33,
-   "Zones verdes ferroviàries": 0.33
-  },
-  {
-   "Estacions d'autobusos": 0.67,
-   "Eixample": 0.33
-  },
-  {
-   "Preses": 0.67,
-   "Prats i herbassars": 0.33
-  },
-  {
-   "Sense registre associat (VALUE =/= 255)": 0.67,
-   "Zones portuàries": 0.33
-  },
-  {
-   "Prats i herbassars": 0.33,
-   "Vivers forestals": 0.67
-  },
-  {
-   "Matollars": 0.33,
-   "Plantacions d'eucaliptus": 0.67
-  },
-  {
-   "Zones d'extracció minera": 0.91,
-   "Pineda de pi blanc (>= 20%cc)": 0.09
-  },
-  {
-   "Zones d'esport": 0.67,
-   "Eixample": 0.33
-  },
-  {
-   "Matollars": 0.09,
-   "Pineda de pinastre (>= 20%cc)": 0.82,
-   "Pineda de pi pinyer (>= 20%cc)": 0.09
-  },
-  {
-   "Pineda de pi blanc (>= 20%cc)": 0.82,
-   "Alzinar (>= 20%cc)": 0.09,
-   "Oliverars": 0.09
-  },
-  {
-   "Pineda de pinassa (>= 20%cc)": 0.64,
-   "Matollars": 0.09,
-   "Roureda de roure martinenc (5-20%cc)": 0.09,
-   "Roquissars": 0.18
-  },
-  {
-   "Pineda de pi roig (>= 20%cc)": 0.91,
-   "Fageda (>= 20%cc)": 0.09
-  },
-  {
-   "Pineda de pi negre (>= 20%cc)": 0.91,
-   "Pineda de pi roig (>= 20%cc)": 0.09
-  },
-  {
-   "Prats i herbassars d'alta muntanya": 0.09,
-   "Avetosa (>= 20%cc)": 0.91
-  },
-  {
-   "Pineda de pi blanc (>= 20%cc)": 0.09,
-   "Vinyes": 0.09,
-   "Alzinar (>= 20%cc)": 0.64,
-   "Zones verdes viàries": 0.09,
-   "Roquissars": 0.09
-  },
-  {
-   "Castanyeda (>= 20%cc)": 0.18,
-   "Sureda (>= 20%cc)": 0.82
-  },
-  {
-   "Matollars": 0.33,
-   "Arboçar (>= 20%cc)": 0.67
-  },
-  {
-   "Alzinar (>= 20%cc)": 0.33,
-   "Altres perennifolis (>= 20%cc)": 0.33,
-   "Regeneració de pi blanc": 0.33
-  },
-  {
-   "Bedollar (>= 20%cc)": 0.67,
-   "Prats de dall": 0.33
-  },
-  {
-   "Fageda (>= 20%cc)": 0.82,
-   "Pineda de pi roig (>= 20%cc)": 0.09,
-   "Roureda de roure martinenc (>= 20%cc)": 0.09
-  },
-  {
-   "Avetosa (>= 20%cc)": 0.33,
-   "Roureda de roure martinenc (>= 20%cc)": 0.33,
-   "Alzinar (>= 20%cc)": 0.33
-  },
-  {
-   "Roureda de roure martinenc (>= 20%cc)": 0.82,
-   "Prats i herbassars": 0.09,
-   "Roquissars": 0.09
-  },
-  {
-   "Roureda de roure de fulla menuda (>= 20%cc)": 0.55,
-   "Pineda de pi blanc (5-20%cc)": 0.09,
-   "Matollars": 0.18,
-   "Boscos caducifolis de ribera (5-20%cc)": 0.09,
-   "Prats i herbassars": 0.09
-  },
-  {
-   "Carreteres": 0.33,
-   "Roureda de reboll (>= 20%cc)": 0.67
-  },
-  {
-   "Avellanosa (>= 20%cc)": 0.67,
-   "Pineda de pi roig (>= 20%cc)": 0.33
-  },
-  {
-   "Freixeneda (>= 20%cc)": 0.91,
-   "Alzinar (>= 20%cc)": 0.09
-  },
-  {
-   "Prats de dall": 0.09,
-   "Altres caducifolis (>= 20%cc)": 0.64,
-   "Alzinar (>= 20%cc)": 0.09,
-   "Prats i herbassars en línies elèctriques": 0.09,
-   "Matollars": 0.09
-  },
-  {
-   "Plantacions d'alzina surera": 0.67,
-   "Matollars": 0.33
-  },
-  {
-   "Altres conreus herbacis": 0.33,
-   "Horta familiar": 0.33,
-   "Plantacions de plàtans": 0.33
-  },
-  {
-   "Prats i herbassars": 0.33,
-   "Plantacions de pinastre": 0.67
-  },
-  {
-   "Plantacions de pi blanc": 0.73,
-   "Pineda de pi blanc (>= 20%cc)": 0.09,
-   "Oliverars en bancals": 0.09,
-   "Matollars": 0.09
-  },
-  {
-   "Matollars": 0.33,
-   "Plantacions de pinassa": 0.67
-  },
-  {
-   "Plantacions de pi negre": 0.67,
-   "Pineda de pi negre (>= 20%cc)": 0.33
-  },
-  {
-   "Indústries aïllades": 0.36,
-   "Cases aïllades": 0.09,
-   "Arrossars": 0.09,
-   "Altres conreus herbacis en regadiu": 0.09,
-   "Prats i herbassars": 0.09,
-   "Matollars": 0.27
-  },
-  {
-   "Serreries": 0.67,
-   "Carreteres": 0.33
-  },
-  {
-   "Matollars": 0.33,
-   "Complexos comercials i d'oficines": 0.33,
-   "Pineda de pi pinyer (>= 20%cc)": 0.33
-  },
-  {
-   "Altres conreus herbacis": 0.33,
-   "Vivers": 0.67
-  },
-  {
-   "Moviments de terres": 0.33,
-   "Carreteres": 0.67
-  },
-  {
-   "Centrals eòliques": 0.67,
-   "Plantacions de pi blanc": 0.33
-  },
-  {
-   "Centrals solars": 0.67,
-   "Vinyes": 0.33
-  },
-  {
-   "Prats i herbassars": 0.33,
-   "Infraestructures elèctriques": 0.67
-  },
-  {
-   "Fruiters no cítrics en bancals": 0.33,
-   "Fruiters no cítrics abandonats - prats en zones agrícoles en bancals": 0.33,
-   "Matollars": 0.33
-  },
-  {
-   "Fruiters no cítrics abandonats regadiu no regat - prats en zones agrícoles en bancals": 0.67,
-   "Pineda de pi blanc (5-20%cc)": 0.33
-  },
-  {
-   "Sense registre associat (VALUE =/= 255)": 0.33,
-   "Penya-segats marins": 0.33,
-   "Pineda de pi blanc (>= 20%cc)": 0.33
-  },
-  {
-   "Roquissars": 0.73,
-   "Regeneració de pi blanc": 0.09,
-   "Prats i herbassars d'alta muntanya": 0.09,
-   "Tarteres": 0.09
-  },
-  {
-   "Plantacions de coníferes no autòctones": 0.09,
-   "Fruiters no cítrics": 0.64,
-   "Zones d'esport": 0.09,
-   "Carreteres": 0.09,
-   "Vinyes": 0.09
-  },
-  {
-   "Fruiters no cítrics en regadiu": 0.64,
-   "Sense registre associat (VALUE =/= 255)": 0.09,
-   "Canals artificials": 0.09,
-   "Matollars": 0.09,
-   "Altres conreus herbacis en regadiu": 0.09
-  },
-  {
-   "Oliverars": 0.73,
-   "Pineda de pi blanc (5-20%cc)": 0.09,
-   "Matollars": 0.18
-  },
-  {
-   "Oliverars en regadiu": 0.82,
-   "Fruiters no cítrics en regadiu": 0.09,
-   "Fruiters no cítrics": 0.09
-  },
-  {
-   "Garroferars en regadiu": 0.67,
-   "Zones verdes viàries": 0.33
-  },
-  {
-   "Fruiters no cítrics en bancals en regadiu": 0.67,
-   "Oliverars en bancals": 0.33
-  },
-  {
-   "Pineda de pi blanc (>= 20%cc)": 0.18,
-   "Oliverars en bancals": 0.82
-  },
-  {
-   "Oliverars en bancals en regadiu": 0.67,
-   "Matollars": 0.33
-  },
-  {
-   "Alzinar (>= 20%cc)": 0.67,
-   "Franja de protecció de pi pinyer": 0.33
-  },
-  {
-   "Franja de protecció de pinastre": 0.33,
-   "Alzinar (>= 20%cc)": 0.33,
-   "Urbanitzacions": 0.33
-  },
-  {
-   "Urbanitzacions": 0.33,
-   "Franja de protecció de pi blanc": 0.33,
-   "Matollars": 0.33
-  },
-  {
-   "Regeneració de roure de fulla menuda": 0.33,
-   "Franja de protecció de pinassa": 0.33,
-   "Pineda de pinassa (>= 20%cc)": 0.33
-  },
-  {
-   "Franja de protecció de pi roig": 0.33,
-   "Pineda de pi roig (>= 20%cc)": 0.67
-  },
-  {
-   "Franja de protecció d'alzina": 0.33,
-   "Alzinar (>= 20%cc)": 0.33,
-   "Urbanitzacions": 0.33
-  },
-  {
-   "Franja de protecció d'alzina surera": 0.33,
-   "Sureda (>= 20%cc)": 0.33,
-   "Pineda de pinastre (>= 20%cc)": 0.33
-  },
-  {
-   "Franja de protecció de roure de fulla menuda": 0.33,
-   "Sense registre associat (VALUE =/= 255)": 0.33,
-   "Regeneració de roure de fulla menuda": 0.33
-  },
-  {
-   "Vegetació d'aiguamolls litorals": 0.67,
-   "Llacunes litorals": 0.33
-  },
-  {
-   "Prats i herbassars d'alta muntanya procedents de tallades arreu": 0.67,
-   "Pineda de pi negre (5-20%cc)": 0.33
-  },
-  {
-   "Plantacions de pollancres": 0.33,
-   "Sureda (>= 20%cc)": 0.33,
-   "Prats i herbassars procedents de tallades arreu": 0.33
-  },
-  {
-   "Pineda de pi pinyer (5-20%cc)": 0.33,
-   "Pineda de pi pinyer (>= 20%cc)": 0.67
-  },
-  {
-   "Pineda de pi blanc (>= 20%cc)": 0.27,
-   "Pineda de pi blanc (5-20%cc)": 0.55,
-   "Fruiters no cítrics": 0.09,
-   "Sureda (>= 20%cc)": 0.09
-  },
-  {
-   "Pineda de pinassa (5-20%cc)": 0.27,
-   "Prats i herbassars": 0.09,
-   "Matollars": 0.27,
-   "Regeneració de roureda de roure martinenc": 0.09,
-   "Altres conreus herbacis": 0.18,
-   "Plantacions de pinassa": 0.09
-  },
-  {
-   "Pineda de pi roig (>= 20%cc)": 0.27,
-   "Prats i herbassars": 0.09,
-   "Pineda de pi roig (5-20%cc)": 0.55,
-   "Roureda de roure martinenc (>= 20%cc)": 0.09
-  },
-  {
-   "Altres caducifolis (>= 20%cc)": 0.09,
-   "Pineda de pi roig (>= 20%cc)": 0.09,
-   "Pineda de pi negre (5-20%cc)": 0.55,
-   "Pineda de pi negre (>= 20%cc)": 0.18,
-   "Bedollar (>= 20%cc)": 0.09
-  },
-  {
-   "Avetosa (5-20%cc)": 0.67,
-   "Avetosa (>= 20%cc)": 0.33
-  },
-  {
-   "Alzinar (5-20%cc)": 0.82,
-   "Alzinar (>= 20%cc)": 0.09,
-   "Matollars": 0.09
-  },
-  {
-   "Sureda (5-20%cc)": 0.73,
-   "Sureda (>= 20%cc)": 0.18,
-   "Pineda de pi pinyer (>= 20%cc)": 0.09
-  },
-  {
-   "Roquissars": 0.33,
-   "Arboçar (5-20%cc)": 0.33,
-   "Matollars": 0.33
-  },
-  {
-   "Altres perennifolis (5-20%cc)": 0.67,
-   "Pineda de pi roig (>= 20%cc)": 0.33
-  },
-  {
-   "Castanyeda (5-20%cc)": 0.67,
-   "Matollars": 0.33
-  },
-  {
-   "Roureda de roure pènol (>= 20%cc)": 0.33,
-   "Roureda de roure pènol (5-20%cc)": 0.67
-  },
-  {
-   "Pineda de pi pinyer (5-20%cc)": 0.33,
-   "Roureda de roure africà (5-20%cc)": 0.33,
-   "Matollars": 0.33
-  },
-  {
-   "Roureda de roure martinenc (5-20%cc)": 0.33,
-   "Altres conreus herbacis": 0.33,
-   "Roureda de roure martinenc (>= 20%cc)": 0.33
-  },
-  {
-   "Roureda de roure de fulla menuda (5-20%cc)": 0.91,
-   "Altres conreus herbacis": 0.09
-  },
-  {
-   "Prats i herbassars": 0.33,
-   "Avellanosa (5-20%cc)": 0.67
-  },
-  {
-   "Freixeneda (5-20%cc)": 0.67,
-   "Roquissars": 0.33
-  },
-  {
-   "Vinyes": 0.91,
-   "Fruiters no cítrics en bancals": 0.09
-  },
-  {
-   "Vinyes en bancals": 0.67,
-   "Fruiters no cítrics en bancals": 0.33
-  },
-  {
-   "Camps de golf": 0.67,
-   "Matollars": 0.33
-  },
-  {
-   "Fruiters no cítrics abandonats - prats en zones agrícoles": 0.67,
-   "Sòl nu per acció antròpica": 0.33
-  },
-  {
-   "Altres conreus herbacis en regadiu": 0.33,
-   "Fruiters no cítrics abandonats regadiu no regat - prats en zones agrícoles": 0.67
-  },
-  {
-   "Pineda de pi blanc (5-20%cc)": 0.09,
-   "Pineda de pi blanc (>= 20%cc)": 0.18,
-   "Regeneració de pi blanc": 0.45,
-   "Matollars": 0.18,
-   "Alzinar (>= 20%cc)": 0.09
-  },
-  {
-   "Regeneració de pinassa": 0.67,
-   "Pineda de pinassa (>= 20%cc)": 0.33
-  },
-  {
-   "Prats i herbassars d'alta muntanya": 0.33,
-   "Regeneració de pi negre": 0.67
-  },
-  {
-   "Platges": 0.33,
-   "Vegetació arbustiva de dunes i sorrals": 0.33,
-   "Sense registre associat (VALUE =/= 255)": 0.33
-  },
-  {
-   "Regeneració d'alzina": 0.91,
-   "Matollars": 0.09
-  },
-  {
-   "Regeneració de bedoll": 0.67,
-   "Tarteres": 0.33
-  },
-  {
-   "Prats i herbassars d'alta muntanya": 0.33,
-   "Regeneració de faig": 0.33,
-   "Matollars": 0.33
-  },
-  {
-   "Matollars": 0.09,
-   "Regeneració de roureda de roure martinenc": 0.64,
-   "Pineda de pinassa (>= 20%cc)": 0.18,
-   "Altres conreus herbacis": 0.09
-  },
-  {
-   "Regeneració de roure de fulla menuda": 0.82,
-   "Altres conreus herbacis": 0.18
-  },
-  {
-   "Matollars": 0.82,
-   "Sòl erosionat per agent natural": 0.09,
-   "Oliverars en bancals": 0.09
-  },
-  {
-   "Pineda de pi blanc (>= 20%cc)": 0.67,
-   "Matollars en línies elèctriques": 0.33
-  },
-  {
-   "Franja de protecció de matollars": 0.67,
-   "Urbanitzacions": 0.33
-  },
-  {
-   "Fruiters no cítrics en regadiu": 0.33,
-   "Vinyes": 0.33,
-   "Matollars de formacions de ribera": 0.33
-  },
-  {
-   "Plantacions de plàtans": 0.33,
-   "Fruiters no cítrics en regadiu": 0.33,
-   "Boscos caducifolis de ribera (>= 20%cc)": 0.33
-  },
-  {
-   "Naus d'ús agrícola": 0.67,
-   "Altres conreus herbacis": 0.33
-  },
-  {
-   "Granges": 0.82,
-   "Prats i herbassars": 0.09,
-   "Sureda (>= 20%cc)": 0.09
-  },
-  {
-   "Tarteres": 0.64,
-   "Alzinar (5-20%cc)": 0.09,
-   "Matollars": 0.09,
-   "Prats i herbassars d'alta muntanya": 0.18
-  },
-  {
-   "Hivernacles": 0.67,
-   "Fruiters no cítrics en regadiu": 0.33
-  },
-  {
-   "Conreus en transformació": 0.82,
-   "Autopistes i autovies": 0.09,
-   "Cítrics": 0.09
-  },
-  {
-   "Rompudes agrícoles": 0.67,
-   "Habitatges unifamiliars": 0.33
-  },
-  {
-   "Prats de dall": 0.55,
-   "Zones verdes viàries": 0.09,
-   "Roureda de roure martinenc (>= 20%cc)": 0.09,
-   "Prats i herbassars": 0.09,
-   "Pineda de pi roig (>= 20%cc)": 0.18
-  },
-  {
-   "Conreus d'horta sota plàstic": 0.67,
-   "Prats i herbassars": 0.33
-  },
-  {
-   "Oliverars": 0.33,
-   "Oliverars abandonats - prats en zones agrícoles": 0.67
-  },
-  {
-   "Garroferars abandonats - prats en zones agrícoles": 0.67,
-   "Zones d'esport": 0.33
-  },
-  {
-   "Altres conreus herbacis en bancals": 0.82,
-   "Pineda de pi blanc (>= 20%cc)": 0.09,
-   "Alzinar (5-20%cc)": 0.09
-  },
-  {
-   "Altres conreus herbacis en bancals en regadiu": 0.67,
-   "Matollars": 0.33
-  },
-  {
-   "Oliverars abandonats regadiu no regat - prats en zones agrícoles": 0.33,
-   "Fruiters no cítrics en regadiu": 0.33,
-   "Matollars": 0.33
-  },
-  {
-   "Sureda (>= 20%cc)": 0.33,
-   "Horta familiar": 0.67
-  },
-  {
-   "Complexos administratius": 0.67,
-   "Roureda de roure martinenc (>= 20%cc)": 0.33
-  },
-  {
-   "Pineda de pi blanc (>= 20%cc)": 0.33,
-   "Zones cremades": 0.33,
-   "Prats i herbassars": 0.33
-  },
-  {
-   "Centre urbà": 0.91,
-   "Granges": 0.09
-  },
-  {
-   "Eixample": 0.55,
-   "Zones d'esport": 0.18,
-   "Complexos comercials i d'oficines": 0.09,
-   "Prats i herbassars": 0.09,
-   "Matollars": 0.09
-  },
-  {
-   "Equipaments sanitaris": 0.67,
-   "Eixample": 0.33
-  },
-  {
-   "Equipaments educatius": 0.67,
-   "Eixample": 0.33
-  },
-  {
-   "Centres culturals": 0.67,
-   "Habitatges unifamiliars": 0.33
-  },
-  {
-   "Sòl nu en tallafocs": 0.33,
-   "Prats i herbassars en tallafocs": 0.33,
-   "Plantacions de pinassa": 0.33
-  },
-  {
-   "Conreus abandonats - matollars": 0.33,
-   "Oliverars": 0.33,
-   "Pineda de pi blanc (>= 20%cc)": 0.33
-  },
-  {
-   "Alzinar (>= 20%cc)": 0.33,
-   "Sòl nu en línies elèctriques": 0.67
-  },
-  {
-   "Urbanitzacions": 0.73,
-   "Roureda de roure martinenc (>= 20%cc)": 0.09,
-   "Oliverars en regadiu": 0.09,
-   "Franja de protecció de pi blanc": 0.09
-  },
-  {
-   "Alzinar (>= 20%cc)": 0.09,
-   "Altres conreus herbacis": 0.09,
-   "Cases aïllades": 0.73,
-   "Roureda de roure martinenc (>= 20%cc)": 0.09
-  },
-  {
-   "Habitatges unifamiliars": 0.73,
-   "Franja de protecció de pi blanc": 0.09,
-   "Prats i herbassars": 0.09,
-   "Zones d'esport": 0.09
-  },
-  {
-   "Sòls nus urbans no edificats": 0.67,
-   "Matollars": 0.33
-  },
-  {
-   "Fruiters no cítrics en regadiu": 0.33,
-   "Conreus en transformació": 0.33,
-   "Moviments de terres": 0.33
-  },
-  {
-   "Zones d'extracció minera": 0.33,
-   "Grans vials": 0.33,
-   "Sòl nu per acció antròpica": 0.33
-  },
-  {
-   "Zones d'aparcament": 0.33,
-   "Eixample": 0.33,
-   "Matollars": 0.33
-  },
-  {
-   "Pineda de pi blanc (>= 20%cc)": 0.33,
-   "Fruiters no cítrics en bancals": 0.33,
-   "Conreus abandonats - boscos": 0.33
-  },
-  {
-   "Matollars": 0.09,
-   "Conreus abandonats - matollars": 0.91
-  },
-  {
-   "Conreus abandonats - prats en zones forestals": 0.67,
-   "Prats i herbassars": 0.33
-  },
-  {
-   "Altres conreus herbacis abandonats regadiu no regat - prats en zones agrícoles": 0.33,
-   "Cítrics abandonats - prats en zones agrícoles": 0.67
-  },
-  {
-   "Pineda de pi blanc (5-20%cc)": 0.33,
-   "Cítrics abandonats - prats en zones agrícoles en bancals": 0.67
-  },
-  {
-   "Altres conreus herbacis en bancals": 0.09,
-   "Matollars": 0.09,
-   "Prats i herbassars": 0.45,
-   "Altres conreus herbacis en regadiu": 0.09,
-   "Oliverars": 0.09,
-   "Roureda de roure martinenc (>= 20%cc)": 0.09,
-   "Sureda (>= 20%cc)": 0.09
-  },
-  {
-   "Pineda de pi blanc (>= 20%cc)": 0.33,
-   "Roquissars": 0.33,
-   "Altres conreus herbacis": 0.33
-  },
-  {
-   "Prats i herbassars d'alta muntanya": 0.91,
-   "Tarteres": 0.09
-  },
-  {
-   "Pineda de pi negre (>= 20%cc)": 0.67,
-   "Prats i herbassars d'alta muntanya en línies elèctriques": 0.33
-  },
-  {
-   "Prats i herbassars en tallafocs": 0.67,
-   "Matollars": 0.33
-  },
-  {
-   "Vegetació herbàcia de dunes i sorrals": 0.67,
-   "Zones d'esport": 0.33
-  }
- ],
- "geologia": {
+ "geologia50": {
   "format": "text/plain",
   "classes": {
-   "1": 1869,
-   "2": 1890,
-   "3": 709,
-   "0": 35
+   "3": 1798,
+   "2": 9683,
+   "1": 4628,
+   "0": 322
   },
   "mostra": [
    {
-    "t": "Lutites, gresos, margues i calcàries localment dolomies i guixos (la Fatarella, la Granja d'Escarp, Sanaüja, Torà) i localment lignits (Calaf, Mequinensa)",
+    "t": "Margues, limolites i gresos amb intercalacions de conglomerats. Formació Molassa de Solsona",
     "cls": 1,
-    "px": 101943
+    "px": 234738
    },
    {
-    "t": "Lutites roges, gresos i calcàries (Batea, Granera, Artés, Flix)",
+    "t": "Margues, calcàries i gresos. Formació Molassa de Solsona",
     "cls": 1,
-    "px": 97766
+    "px": 161899
    },
    {
-    "t": "Conglomerats, gresos i lutites (Solsona, Margalef)",
-    "cls": 1,
-    "px": 87920
-   },
-   {
-    "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 1,
-    "px": 86316
-   },
-   {
-    "t": "Lutites, gresos, margues i calcàries localment dolomies i guixos (la Fatarella, la Granja d'Escarp, Sanaüja, Torà) i localment lignits (Calaf, Mequinensa)",
-    "cls": 1,
-    "px": 85900
-   },
-   {
-    "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 1,
-    "px": 84833
-   },
-   {
-    "t": "Conglomerats massius (Sant Llorenç de Morunys, Comiols, Collegats, Sant Jeroni, Montsant)",
-    "cls": 1,
-    "px": 84278
-   },
-   {
-    "t": "Conglomerats massius (Sant Llorenç de Morunys, Comiols, Collegats, Sant Jeroni, Montsant)",
-    "cls": 1,
-    "px": 84013
-   },
-   {
-    "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 1,
-    "px": 83578
-   },
-   {
-    "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 1,
-    "px": 83578
-   },
-   {
-    "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 1,
-    "px": 83578
-   },
-   {
-    "t": "Pelites, gresos i grauvaques (ritmites). La Seu d'Urgell, Canavelles, Jújols, Planoles, amb intercalacions de microconglomerats i gresos (B). Localment inclouen roques de la part superior del Neoprote",
+    "t": "Granodiorites i granits alcalins",
     "cls": 3,
-    "px": 70560
+    "px": 95793
    },
    {
-    "t": "Roques intrusives varisques. Granodiorites biotítiques",
-    "cls": 3,
-    "px": 61195
+    "t": "Gresos i argiles vermelles amb guix",
+    "cls": 1,
+    "px": 93571
    },
    {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
+    "t": "Graves i blocs amb matriu arenosoargilosa. Ventall al·luvial correlacionable amb la terrassa Qt3",
     "cls": 2,
-    "px": 46883
+    "px": 90754
    },
    {
-    "t": "Conglomerats, gresos i lutites (cons de dejecció)",
+    "t": "Graves amb matriu lutítica i llentillons sorrencs",
     "cls": 2,
-    "px": 40365
+    "px": 88505
    },
    {
-    "t": "Conglomerats, gresos i lutites (cons de dejecció)",
+    "t": "Graves, sorres i lutites.Ventall al·luvial antic",
     "cls": 2,
-    "px": 38800
+    "px": 87623
    },
    {
-    "t": "Pelites, gresos i grauvaques (ritmites). La Seu d'Urgell, Canavelles, Jújols, Planoles, amb intercalacions de microconglomerats i gresos (B). Localment inclouen roques de la part superior del Neoprote",
-    "cls": 3,
-    "px": 36232
-   },
-   {
-    "t": "Pelites, gresos i grauvaques (ritmites). La Seu d'Urgell, Canavelles, Jújols, Planoles, amb intercalacions de microconglomerats i gresos (B). Localment inclouen roques de la part superior del Neoprote",
-    "cls": 3,
-    "px": 35911
-   },
-   {
-    "t": "Roques pelítiques de la unitat ECOA afectades pel metamorfisme regional varisc. Zona de la biotita Pelites, gresos i grauvaques (ritmites). La Seu d'Urgell, Canavelles, Jújols, Planoles, amb intercala",
-    "cls": 3,
-    "px": 35854
-   },
-   {
-    "t": "Roques pelítiques de la unitat ECOA afectades pel metamorfisme regional varisc. Zona de la sil·limanita-feldspat potàssic, migmatites Pelites, gresos i grauvaques (ritmites). La Seu d'Urgell, Canavell",
-    "cls": 3,
-    "px": 35795
-   },
-   {
-    "t": "Pelites, gresos i grauvaques (ritmites). La Seu d'Urgell, Canavelles, Jújols, Planoles, amb intercalacions de microconglomerats i gresos (B). Localment inclouen roques de la part superior del Neoprote",
-    "cls": 3,
-    "px": 35280
-   },
-   {
-    "t": "Pelites, gresos i grauvaques (ritmites). La Seu d'Urgell, Canavelles, Jújols, Planoles, amb intercalacions de microconglomerats i gresos (B). Localment inclouen roques de la part superior del Neoprote",
-    "cls": 3,
-    "px": 35280
-   },
-   {
-    "t": "Roques pelítiques de la unitat ECOA afectades pel metamorfisme regional varisc. Zona de la cordierita-andalusita Pelites, gresos i grauvaques (ritmites). La Seu d'Urgell, Canavelles, Jújols, Planoles,",
-    "cls": 3,
-    "px": 35280
-   },
-   {
-    "t": "Pelites, gresos i grauvaques (ritmites). La Seu d'Urgell, Canavelles, Jújols, Planoles, amb intercalacions de microconglomerats i gresos (B). Localment inclouen roques de la part superior del Neoprote",
-    "cls": 3,
-    "px": 35280
-   },
-   {
-    "t": "Pelites, gresos i grauvaques (ritmites). La Seu d'Urgell, Canavelles, Jújols, Planoles, amb intercalacions de microconglomerats i gresos (B). Localment inclouen roques de la part superior del Neoprote",
-    "cls": 3,
-    "px": 35280
-   },
-   {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
+    "t": "Alternança centimètrica de gresos i lutites. Formació Jújols",
     "cls": 2,
-    "px": 34123
+    "px": 86750
    },
    {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
+    "t": "Alternança centimètrica de gresos i lutites. Formació Jújols",
     "cls": 2,
-    "px": 33315
+    "px": 82782
    },
    {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
+    "t": "Alternança centimètrica de gresos i lutites. Formació Jújols",
     "cls": 2,
-    "px": 33203
+    "px": 82634
    },
    {
-    "t": "Graves, sorres i llims (terrasses fluvials baixes, planes al∙luvials i deltes)",
-    "cls": 2,
-    "px": 33194
-   },
-   {
-    "t": "Blocs i argiles (tills, morenes)",
-    "cls": 2,
-    "px": 32876
-   },
-   {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 2,
-    "px": 32813
-   },
-   {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 2,
-    "px": 32803
-   },
-   {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 2,
-    "px": 32794
-   },
-   {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 2,
-    "px": 32794
-   },
-   {
-    "t": "Graves, sorres i llims (terrasses fluvials baixes, planes al∙luvials i deltes)",
-    "cls": 2,
-    "px": 30585
-   },
-   {
-    "t": "Graves, sorres i llims (terrasses fluvials baixes, planes al∙luvials i deltes)",
-    "cls": 2,
-    "px": 27662
-   },
-   {
-    "t": "Graves, sorres i llims (terrasses fluvials baixes, planes al∙luvials i deltes)",
-    "cls": 2,
-    "px": 27449
-   },
-   {
-    "t": "Graves, sorres i llims (terrasses fluvials baixes, planes al∙luvials i deltes)",
-    "cls": 2,
-    "px": 26783
-   },
-   {
-    "t": "Còdols i llims (fons de vall)",
-    "cls": 2,
-    "px": 26658
-   },
-   {
-    "t": "Graves, sorres i llims (terrasses fluvials baixes, planes al∙luvials i deltes)",
-    "cls": 2,
-    "px": 26626
-   },
-   {
-    "t": "Graves, gresos i lutites (cons de dejecció)",
-    "cls": 2,
-    "px": 26535
-   },
-   {
-    "t": "Graves, sorres i llims (terrasses fluvials baixes, planes al∙luvials i deltes)",
-    "cls": 2,
-    "px": 26481
-   },
-   {
-    "t": "Lutites amb matèria orgànica i torba (aiguamolls i canals abandonats)",
-    "cls": 2,
-    "px": 26445
-   },
-   {
-    "t": "Graves, sorres i llims (terrasses fluvials baixes, planes al∙luvials i deltes)",
-    "cls": 2,
-    "px": 26445
-   },
-   {
-    "t": "Margues blaves i nivells de gresos (Igualada, Vic)",
+    "t": "Conglomerats, gresos i argiles vermelles. Formació Bellmunt",
     "cls": 1,
-    "px": 25999
+    "px": 74901
    },
    {
-    "t": "Margues blaves i nivells de gresos (Igualada, Vic)",
-    "cls": 1,
-    "px": 24901
-   },
-   {
-    "t": "Gresos amb glauconita (Folgueroles, Collbàs, Puigsacalm)",
-    "cls": 2,
-    "px": 21348
-   },
-   {
-    "t": "Roques intrusives tardivarisques. Granits biotítics, localment amb amfíbol accessori",
+    "t": "Granodiorites i granits alcalins",
     "cls": 3,
-    "px": 21001
+    "px": 64296
    },
    {
-    "t": "Lutites i gresos (Cerdanya, Vallès, Penedès)",
+    "t": "Granodiorites i granits alcalins",
+    "cls": 3,
+    "px": 64086
+   },
+   {
+    "t": "Graves i blocs amb matriu arenosoargilosa. Ventall al·luvial correlacionable amb la terrassa Qt3",
     "cls": 2,
-    "px": 19114
-   },
-   {
-    "t": "Conglomerats i gresos (Campauné, Serra de Bellmunt)",
-    "cls": 1,
-    "px": 18681
-   },
-   {
-    "t": "Roques intrusives varisques. Granodiorites biotíticohornblèndiques",
-    "cls": 3,
-    "px": 18061
-   },
-   {
-    "t": "Gresos i margues grises (Coubet, Bracons)",
-    "cls": 1,
-    "px": 17433
-   },
-   {
-    "t": "Margues blaves (Banyoles, Malla, Aïnsa)",
-    "cls": 1,
-    "px": 16826
-   },
-   {
-    "t": "Lutites (Cardell)",
-    "cls": 1,
-    "px": 16367
-   },
-   {
-    "t": "Lutites, gresos, margues i calcàries localment dolomies i guixos (la Fatarella, la Granja d'Escarp, Sanaüja, Torà) i localment lignits (Calaf, Mequinensa)",
-    "cls": 1,
-    "px": 16086
-   },
-   {
-    "t": "Silurià i Devonià indiferenciat. Fàcies central, Pirineu central",
-    "cls": 3,
-    "px": 15737
-   },
-   {
-    "t": "Gresos, margues, calcàries esculloses (Calders, Centelles, Rocacorba, Milany, Sant Martí Xic)",
-    "cls": 1,
-    "px": 15234
-   },
-   {
-    "t": "Conglomerats (Montserrat, Sant Llorenç del Munt)",
-    "cls": 1,
-    "px": 15210
-   },
-   {
-    "t": "Calcàries micrítiques de tonalitats fosques (Aguas Salenz)",
-    "cls": 1,
-    "px": 15115
-   },
-   {
-    "t": "Dolomies i calcàries",
-    "cls": 1,
-    "px": 14361
-   },
-   {
-    "t": "Roques intrusives varisques. Granodiorites biotíticohornblèndiques",
-    "cls": 3,
-    "px": 13974
-   },
-   {
-    "t": "Roques intrusives varisques. Granodiorites biotíticohornblèndiques",
-    "cls": 3,
-    "px": 13933
-   },
-   {
-    "t": "Roques intrusives varisques. Granodiorites biotíticohornblèndiques",
-    "cls": 3,
-    "px": 13835
-   },
-   {
-    "t": "Roques intrusives varisques. Granodiorites biotítiques",
-    "cls": 3,
-    "px": 13822
-   },
-   {
-    "t": "Roques intrusives varisques. Granodiorites biotíticohornblèndiques",
-    "cls": 3,
-    "px": 13814
-   },
-   {
-    "t": "Roques intrusives varisques. Granodiorites biotíticohornblèndiques",
-    "cls": 3,
-    "px": 13809
-   },
-   {
-    "t": "Pelites i calcopelites amb intercalacions calcàries. Calcàries griotte. Fàcies septentrional, Pirineu central",
-    "cls": 2,
-    "px": 12867
-   },
-   {
-    "t": "Roques intrusives tardivarisques. Granits biotítics, localment amb amfíbol accessori",
-    "cls": 3,
-    "px": 12187
-   },
-   {
-    "t": "Margues i margocalcàries amb ammonits (Lluçà, Marnes à Hypacantoplites)",
-    "cls": 1,
-    "px": 12125
-   },
-   {
-    "t": "Gresos amb glauconita (Folgueroles, Collbàs, Puigsacalm)",
-    "cls": 2,
-    "px": 12115
-   },
-   {
-    "t": "Fàcies garumna. Conglomerats, argiles i gresos vermells",
-    "cls": 1,
-    "px": 11515
-   },
-   {
-    "t": "Arcoses, lutites i conglomerats (Pliocè-Selva)",
-    "cls": 3,
-    "px": 11411
-   },
-   {
-    "t": "Lutites vermelles, gresos i conglomerats (Miocè-Empordà)",
-    "cls": 2,
-    "px": 11323
-   },
-   {
-    "t": "Calcàries i lutites, localment dolomies i guixos (Torrent de Cinca)",
-    "cls": 1,
-    "px": 11302
-   },
-   {
-    "t": "Conglomerats, gresos i lutites (Cerdanya, Vallès i Valls)",
-    "cls": 2,
-    "px": 11266
-   },
-   {
-    "t": "Lutites vermelles, gresos i conglomerats (Miocè-Empordà)",
-    "cls": 2,
-    "px": 11218
-   },
-   {
-    "t": "Roques intrusives tardivarisques. Granits biotítics, localment amb amfíbol accessori",
-    "cls": 3,
-    "px": 10904
-   },
-   {
-    "t": "Gresos, conglomerats, margues i nivells de lignits (Escanilla, Sossís, Queixigar, Bonner, Vilada)",
-    "cls": 1,
-    "px": 10725
-   },
-   {
-    "t": "Margues blaves i nivells de gresos (Igualada, Vic)",
-    "cls": 1,
-    "px": 10690
-   },
-   {
-    "t": "Margues blaves i nivells de gresos (Igualada, Vic)",
-    "cls": 1,
-    "px": 10672
-   },
-   {
-    "t": "Lutites vermelles, gresos i conglomerats (Miocè-Empordà)",
-    "cls": 2,
-    "px": 10570
-   },
-   {
-    "t": "Gresos i lutites continentals amb intercalacions de conglomerats (I), Montllobar, Corçà, Montanyana",
-    "cls": 1,
-    "px": 10472
-   },
-   {
-    "t": "Roques intrusives tardivarisques. Granits biotítics, localment amb amfíbol accessori",
-    "cls": 3,
-    "px": 10336
-   },
-   {
-    "t": "Lidites amb nòduls de fosfats i calcàries (Carbonífer Pre-Culm). Turbidites, gresos, pelites i conglomerats poligènics (Fàcies Culm, Bellver)",
-    "cls": 2,
-    "px": 10146
-   },
-   {
-    "t": "Roques sedimentàries mesozoiques antecenomanianes de la unitat C3A afectades pel metamorfisme tèrmic del Cretaci (92-104 m.a.) Margues amb ammonits (Cabó, Marnes à Deshayesites)",
-    "cls": 2,
-    "px": 10132
-   },
-   {
-    "t": "Roques intrusives tardivarisques. Leucogranit amb biotita i muscovita",
-    "cls": 3,
-    "px": 10057
-   },
-   {
-    "t": "Gresos i margues amb intercalacions de conglomerats (G), Castigaleu, Sant Esteve de Llitera",
-    "cls": 1,
-    "px": 9965
-   },
-   {
-    "t": "Roques intrusives tardivarisques. Granits biotítics, localment amb amfíbol accessori",
-    "cls": 3,
-    "px": 9950
-   },
-   {
-    "t": "Roques intrusives tardivarisques. Leucogranit amb biotita i muscovita",
-    "cls": 3,
-    "px": 9923
-   },
-   {
-    "t": "Roques intrusives tardivarisques. Leucogranit amb biotita i muscovita",
-    "cls": 3,
-    "px": 9869
-   },
-   {
-    "t": "Roques intrusives tardivarisques. Granits biotítics, localment amb amfíbol accessori",
-    "cls": 3,
-    "px": 9860
-   },
-   {
-    "t": "Roques intrusives tardivarisques. Granits biotítics, localment amb amfíbol accessori",
-    "cls": 3,
-    "px": 9852
-   },
-   {
-    "t": "Calcàries (Tàrrega, Castelldans)",
-    "cls": 1,
-    "px": 9689
-   },
-   {
-    "t": "Calcàries bioclàstiques i esculloses (Ventamillo, Bona, Eixea, Collades de Basturs)",
-    "cls": 1,
-    "px": 9199
-   },
-   {
-    "t": "Pelites, calcopelites i calcàries (Aneto, Gelada), calcàries, dolomies i gresos (Baciver- Castanesa), pelites (Fontjanina), calcàries noduloses amb tufs (Manyanet). Fàcies Valiera, Pirineu central",
-    "cls": 2,
-    "px": 9026
-   },
-   {
-    "t": "Guixos (Barbastre, Balaguer)",
-    "cls": 1,
-    "px": 8992
-   },
-   {
-    "t": "Conglomerats i gresos (Campauné, Serra de Bellmunt)",
-    "cls": 1,
-    "px": 8783
-   },
-   {
-    "t": "Calcàries no diferenciades (Pedraforca, Zona Nord-pirinenca, Serralades Costaneres)",
-    "cls": 1,
-    "px": 8741
-   },
-   {
-    "t": "Calcàries no diferenciades (Pedraforca, Zona Nord-pirinenca, Serralades Costaneres)",
-    "cls": 1,
-    "px": 8714
-   },
-   {
-    "t": "Gresos i margues grises (Coubet, Bracons)",
-    "cls": 1,
-    "px": 8680
-   },
-   {
-    "t": "Gresos i margues grises (Coubet, Bracons)",
-    "cls": 1,
-    "px": 8671
-   },
-   {
-    "t": "Calcàries amb nummulits (Travertet)",
-    "cls": 1,
-    "px": 8665
-   },
-   {
-    "t": "Margues blaves (Banyoles, Malla, Aïnsa)",
-    "cls": 1,
-    "px": 8665
-   },
-   {
-    "t": "Gresos i margues grises (Coubet, Bracons)",
-    "cls": 1,
-    "px": 8665
-   },
-   {
-    "t": "Calcàries no diferenciades (Pedraforca, Zona Nord-pirinenca, Serralades Costaneres)",
-    "cls": 1,
-    "px": 8664
-   },
-   {
-    "t": "Conglomerats, sorres i lutites (cons de dejecció)",
-    "cls": 2,
-    "px": 8638
-   },
-   {
-    "t": "Calcàries laminades i margues amb intercalacions dolomítiques (la Pleta, Garraf)",
-    "cls": 1,
-    "px": 8569
-   },
-   {
-    "t": "Dolomies i calcàries",
-    "cls": 1,
-    "px": 8501
-   },
-   {
-    "t": "Arcoses i lutites (Caldes de Montbui)",
-    "cls": 3,
-    "px": 8192
-   },
-   {
-    "t": "Calcàries bioclàstiques i esculloses (Urgo-Barremien)",
-    "cls": 1,
-    "px": 8026
-   },
-   {
-    "t": "Dolomies i calcàries",
-    "cls": 1,
-    "px": 7451
-   },
-   {
-    "t": "Gresos (Areny de Noguera, Marboré)",
-    "cls": 2,
-    "px": 7449
-   },
-   {
-    "t": "Margues (Areny de Noguera)",
-    "cls": 1,
-    "px": 7214
-   },
-   {
-    "t": "Margues, localment nivells turbidítics (Salàs de Pallars, Barbaruens)",
-    "cls": 1,
-    "px": 7214
-   },
-   {
-    "t": "Margues i guixos amb intercalacions de calcàries (Sagnari, Fígols de la Conca, Morillo de Liena)",
-    "cls": 1,
-    "px": 7142
-   },
-   {
-    "t": "Margues i margocalcàries amb ammonits (Lluçà, Marnes à Hypacantoplites)",
-    "cls": 1,
-    "px": 6919
-   },
-   {
-    "t": "Calcàries amb alveolines (Àger, Cadí, Orpí)",
-    "cls": 1,
-    "px": 6897
-   },
-   {
-    "t": "Calcàries amb alveolines (Àger, Cadí, Orpí)",
-    "cls": 1,
-    "px": 6897
-   },
-   {
-    "t": "Calcàries amb alveolines (Àger, Cadí, Orpí)",
-    "cls": 1,
-    "px": 6897
-   },
-   {
-    "t": "Calcàries i lutites, localment dolomies i guixos (Torrent de Cinca)",
-    "cls": 1,
-    "px": 6656
-   },
-   {
-    "t": "Roques pelítiques de la unitat GNA afectades pel metamorfisme regional varisc. Zona de la sil·limanita-feldspat potàssic, migmatites Granitoides, en general de composició àcida, emplaçats durant la pa",
-    "cls": 3,
-    "px": 6532
-   },
-   {
-    "t": "Calcàries i dolomies",
-    "cls": 1,
-    "px": 6442
-   },
-   {
-    "t": "Pissarres ampelítiques, localment calcàries, lidites i radiolarites",
-    "cls": 2,
-    "px": 6332
-   },
-   {
-    "t": "Graves, sorres i llims (terrasses fluvials baixes, planes al∙luvials i deltes)",
-    "cls": 2,
-    "px": 6292
-   },
-   {
-    "t": "Granitoides, en general de composició àcida, emplaçats durant la part baixa de l'Ordovicià superior i l'Ordovicià mitjà. Són roques deformades durant l'orogènia varisca. Guilleries, Albera, Roc de Fra",
-    "cls": 3,
-    "px": 6251
-   },
-   {
-    "t": "Pelites i calcopelites amb intercalacions calcàries. Calcàries griotte. Fàcies septentrional, Pirineu central",
-    "cls": 2,
-    "px": 6201
-   },
-   {
-    "t": "Roques intrusives varisques. Roques heterogènies pluricomposicionals",
-    "cls": 3,
-    "px": 6200
-   },
-   {
-    "t": "Roques sedimentàries de la unitat DSNA afectades pel metamorfisme de contacte associat als granitoides variscs Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites (Fontjanina), calcàri",
-    "cls": 2,
-    "px": 6162
-   },
-   {
-    "t": "Conglomerats (la Rabassa)",
-    "cls": 1,
-    "px": 6120
-   },
-   {
-    "t": "Pelites (Civís-Vilaller). Fàcies Valiera, Pirineu central",
-    "cls": 3,
-    "px": 6087
-   },
-   {
-    "t": "Pelites, calcopelites i calcàries (Aneto, Gelada), calcàries, dolomies i gresos (Baciver- Castanesa), pelites (Fontjanina), calcàries noduloses amb tufs (Manyanet). Fàcies Valiera, Pirineu central",
-    "cls": 2,
-    "px": 6079
-   },
-   {
-    "t": "Roques pelítiques de la unitat GNA afectades pel metamorfisme regional varisc. Zona de la sil·limanita-feldspat potàssic, migmatites Granitoides, en general de composició àcida, emplaçats durant la pa",
-    "cls": 3,
-    "px": 6063
-   },
-   {
-    "t": "Granitoides, en general de composició àcida, emplaçats durant la part baixa de l'Ordovicià superior i l'Ordovicià mitjà. Són roques deformades durant l'orogènia varisca. Guilleries, Albera, Roc de Fra",
-    "cls": 3,
-    "px": 6027
-   },
-   {
-    "t": "Roques pelítiques de la unitat GNA afectades pel metamorfisme regional varisc. Zona de la sil·limanita-feldspat potàssic, migmatites Granitoides, en general de composició àcida, emplaçats durant la pa",
-    "cls": 3,
-    "px": 6027
-   },
-   {
-    "t": "Granitoides, en general de composició àcida, emplaçats durant la part baixa de l'Ordovicià superior i l'Ordovicià mitjà. Són roques deformades durant l'orogènia varisca. Guilleries, Albera, Roc de Fra",
-    "cls": 3,
-    "px": 6027
-   },
-   {
-    "t": "Granitoides, en general de composició àcida, emplaçats durant la part baixa de l'Ordovicià superior i l'Ordovicià mitjà. Són roques deformades durant l'orogènia varisca. Guilleries, Albera, Roc de Fra",
-    "cls": 3,
-    "px": 6027
-   },
-   {
-    "t": "Granitoides, en general de composició àcida, emplaçats durant la part baixa de l'Ordovicià superior i l'Ordovicià mitjà. Són roques deformades durant l'orogènia varisca. Guilleries, Albera, Roc de Fra",
-    "cls": 3,
-    "px": 6027
-   },
-   {
-    "t": "Granitoides, en general de composició àcida, emplaçats durant la part baixa de l'Ordovicià superior i l'Ordovicià mitjà. Són roques deformades durant l'orogènia varisca. Guilleries, Albera, Roc de Fra",
-    "cls": 3,
-    "px": 6027
-   },
-   {
-    "t": "Granitoides, en general de composició àcida, emplaçats durant la part baixa de l'Ordovicià superior i l'Ordovicià mitjà. Són roques deformades durant l'orogènia varisca. Guilleries, Albera, Roc de Fra",
-    "cls": 3,
-    "px": 6027
-   },
-   {
-    "t": "Granitoides, en general de composició àcida, emplaçats durant la part baixa de l'Ordovicià superior i l'Ordovicià mitjà. Són roques deformades durant l'orogènia varisca. Guilleries, Albera, Roc de Fra",
-    "cls": 3,
-    "px": 6027
-   },
-   {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites (Fontjanina), calcàries noduloses (Manyanet). Fàcies Serra Negra, Pirineu central",
-    "cls": 2,
-    "px": 5877
-   },
-   {
-    "t": "Dolomies, calcàries i margues (Fàcies Muschelkalk superior)",
-    "cls": 1,
-    "px": 5837
-   },
-   {
-    "t": "Fàcies garumna. Conglomerats, argiles i gresos vermells",
-    "cls": 1,
-    "px": 5830
-   },
-   {
-    "t": "Gresos, margues, calcàries esculloses (Calders, Centelles, Rocacorba, Milany, Sant Martí Xic)",
-    "cls": 1,
-    "px": 5768
-   },
-   {
-    "t": "Bretxes (Rosselló)",
-    "cls": 2,
-    "px": 5699
-   },
-   {
-    "t": "Lutites vermelles, gresos i conglomerats (Miocè-Empordà)",
-    "cls": 2,
-    "px": 5691
-   },
-   {
-    "t": "Arcoses, lutites i conglomerats (Pliocè-Selva)",
-    "cls": 3,
-    "px": 5609
-   },
-   {
-    "t": "Arcoses, lutites i conglomerats (Pliocè-Selva)",
-    "cls": 3,
-    "px": 5609
-   },
-   {
-    "t": "Intercalacions de conglomerats (Castigaleu, Sant Esteve de Llitera)",
-    "cls": 1,
-    "px": 5568
-   },
-   {
-    "t": "Fàcies garumna. Conglomerats, argiles i gresos vermells",
-    "cls": 1,
-    "px": 5528
-   },
-   {
-    "t": "Margues i margocalcàries amb ammonits (Lluçà, Marnes à Hypacantoplites)",
-    "cls": 1,
-    "px": 5523
-   },
-   {
-    "t": "Roques intrusives varisques. Tonalites biotítiques o biotiticohornblèndiques",
-    "cls": 3,
-    "px": 5494
-   },
-   {
-    "t": "Alternances detriticocarbonàtiques (Baregiennes), calcàries (Moredo-Salau), pelites i calcàries, turbidites carbonàtiques (Perosa, era Entecada). Fàcies central, Pirineu central",
-    "cls": 2,
-    "px": 5493
-   },
-   {
-    "t": "Fàcies garumna. Calcàries lacustres i nivells de lignit (Tremp, Mediona)",
-    "cls": 1,
-    "px": 5491
-   },
-   {
-    "t": "Fàcies garumna. Conglomerats, argiles i gresos vermells",
-    "cls": 1,
-    "px": 5477
-   },
-   {
-    "t": "Fàcies garumna. Conglomerats, argiles i gresos vermells",
-    "cls": 1,
-    "px": 5470
-   },
-   {
-    "t": "Dolomies i calcàries",
-    "cls": 1,
-    "px": 5440
-   },
-   {
-    "t": "Fàcies garumna. Conglomerats, argiles i gresos vermells",
-    "cls": 1,
-    "px": 5437
-   },
-   {
-    "t": "Fàcies garumna. Calcàries lacustres i nivells de lignit (Tremp, Mediona)",
-    "cls": 1,
-    "px": 5437
-   },
-   {
-    "t": "Fàcies garumna. Calcàries lacustres i nivells de lignit (Tremp, Mediona)",
-    "cls": 1,
-    "px": 5437
-   },
-   {
-    "t": "Fàcies garumna. Calcàries lacustres i nivells de lignit (Tremp, Mediona)",
-    "cls": 1,
-    "px": 5437
-   },
-   {
-    "t": "Lutites roges, gresos i calcàries (Batea, Granera, Artés, Flix)",
-    "cls": 1,
-    "px": 5317
-   },
-   {
-    "t": "Lidites amb nòduls de fosfats i calcàries (Carbonífer Pre-Culm). Turbidites, gresos, pelites i conglomerats poligènics (Fàcies Culm, Bellver)",
-    "cls": 2,
-    "px": 5210
-   },
-   {
-    "t": "Lutites roges, gresos i calcàries (Batea, Granera, Artés, Flix)",
-    "cls": 1,
-    "px": 5207
+    "px": 60484
    },
    {
     "t": "Dolomies negres",
     "cls": 1,
-    "px": 5177
+    "px": 58531
    },
    {
-    "t": "Roques sedimentàries de la unitat CAA afectades pel metamorfisme de contacte associat als granitoides variscs Lidites amb nòduls de fosfats i calcàries (Carbonífer Pre-Culm). Turbidites, gresos, pelit",
+    "t": "Lutites amb intercalacions de gresos i microconglomerats",
     "cls": 2,
-    "px": 5162
+    "px": 56348
    },
    {
-    "t": "Roques sedimentàries de la unitat CAB afectades pel metamorfisme de contacte associat als granitoides variscs Microconglomerats, calcofil∙lites, pelites i carbonats (Fàcies Culm, Pla dels Estanys)",
+    "t": "Margues, calcàries grises i lutites",
+    "cls": 1,
+    "px": 50694
+   },
+   {
+    "t": "Graves, conglomerats, sorres i crostes carbonatades. Ventall al·luvial",
+    "cls": 1,
+    "px": 49693
+   },
+   {
+    "t": "Conglomerats amb intercalacions de gresos i margues",
+    "cls": 1,
+    "px": 48488
+   },
+   {
+    "t": "Margues amb intercalacions de calcàries",
+    "cls": 1,
+    "px": 46491
+   },
+   {
+    "t": "Lutites vermelles, gresos i conglomerats. Fàcies distals del Sistema Al·luvial mitjà de Berga",
     "cls": 2,
-    "px": 5153
+    "px": 45990
    },
    {
-    "t": "Lidites amb nòduls de fosfats i calcàries (Carbonífer Pre-Culm). Turbidites, gresos, pelites i conglomerats poligènics (Fàcies Culm, Bellver)",
+    "t": "Lutites vermelles, gresos i conglomerats. Fàcies distals del Sistema Al·luvial mitjà de Berga",
     "cls": 2,
-    "px": 5149
+    "px": 45333
    },
    {
-    "t": "Roques sedimentàries de la unitat CAA afectades pel metamorfisme de contacte associat als granitoides variscs Lidites amb nòduls de fosfats i calcàries (Carbonífer Pre-Culm). Turbidites, gresos, pelit",
+    "t": "Graves amb matriu sorrenca i argilosa. Dipòsit al·luvial-col·luvial",
     "cls": 2,
-    "px": 5058
+    "px": 43884
    },
    {
-    "t": "Lidites amb nòduls de fosfats i calcàries (Carbonífer Pre-Culm). Turbidites, gresos, pelites i conglomerats poligènics (Fàcies Culm, Bellver)",
+    "t": "Sorres que localment inclouen nivells argilosos amb més o menys matèria orgànica. Plana al·luvial i/o deltaica del Llobregat",
     "cls": 2,
-    "px": 5046
+    "px": 43212
    },
    {
-    "t": "Lidites amb nòduls de fosfats i calcàries (Carbonífer Pre-Culm). Turbidites, gresos, pelites i conglomerats poligènics (Fàcies Culm, Bellver)",
-    "cls": 2,
-    "px": 5028
-   },
-   {
-    "t": "Lidites amb nòduls de fosfats i calcàries (Carbonífer Pre-Culm). Turbidites, gresos, pelites i conglomerats poligènics (Fàcies Culm, Bellver)",
-    "cls": 2,
-    "px": 5014
-   },
-   {
-    "t": "Lidites amb nòduls de fosfats i calcàries (Carbonífer Pre-Culm). Turbidites, gresos, pelites i conglomerats poligènics (Fàcies Culm, Bellver)",
-    "cls": 2,
-    "px": 5014
-   },
-   {
-    "t": "Guixos (Barbastre, Balaguer)",
+    "t": "Limolites amb intercalacions de gresos i conglomerats. Formació Molassa de Solsona",
     "cls": 1,
-    "px": 4950
-   },
-   {
-    "t": "Gresos, margues, calcàries esculloses (Calders, Centelles, Rocacorba, Milany, Sant Martí Xic)",
-    "cls": 1,
-    "px": 4940
-   },
-   {
-    "t": "Gresos i lutites (Montserrat, Sant Llorenç del Munt)",
-    "cls": 1,
-    "px": 4880
-   },
-   {
-    "t": "Guixos (Barbastre, Balaguer)",
-    "cls": 1,
-    "px": 4846
-   },
-   {
-    "t": "Turbidites (Campdevànol), guixos a sostre",
-    "cls": 1,
-    "px": 4794
-   },
-   {
-    "t": "Calcàries bioclàstiques amb rudistes i orbitolines (Calcaries à Iraquia, Roca de Narieda, Montgrí, Xerta)",
-    "cls": 1,
-    "px": 4676
-   },
-   {
-    "t": "Calcàries (Tàrrega, Castelldans)",
-    "cls": 1,
-    "px": 4627
-   },
-   {
-    "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 1,
-    "px": 4626
-   },
-   {
-    "t": "Alternances detriticocarbonàtiques (Baregiennes), calcàries (Moredo-Salau), pelites i calcàries, turbidites carbonàtiques (Perosa, era Entecada). Fàcies central, Pirineu central",
-    "cls": 2,
-    "px": 4581
-   },
-   {
-    "t": "Calcàries (Tàrrega, Castelldans)",
-    "cls": 1,
-    "px": 4520
-   },
-   {
-    "t": "Turbidites (Mascarell)",
-    "cls": 2,
-    "px": 4512
-   },
-   {
-    "t": "Turbidites (Mascarell)",
-    "cls": 2,
-    "px": 4493
-   },
-   {
-    "t": "Calcàries bioclàstiques i esculloses (Ventamillo, Bona, Eixea, Collades de Basturs)",
-    "cls": 1,
-    "px": 4492
-   },
-   {
-    "t": "Lutites roges, gresos i calcàries (Batea, Granera, Artés, Flix)",
-    "cls": 1,
-    "px": 4483
-   },
-   {
-    "t": "Calcàries bioclàstiques i esculloses (Ventamillo, Bona, Eixea, Collades de Basturs)",
-    "cls": 1,
-    "px": 4467
-   },
-   {
-    "t": "Argiles i margues (Herba-savina, Montsec)",
-    "cls": 1,
-    "px": 4466
-   },
-   {
-    "t": "Turbidites (Mascarell)",
-    "cls": 2,
-    "px": 4460
-   },
-   {
-    "t": "Bretxes (Campo, Viu)",
-    "cls": 2,
-    "px": 4460
-   },
-   {
-    "t": "Calcàries bioclàstiques i esculloses (Ventamillo, Bona, Eixea, Collades de Basturs)",
-    "cls": 1,
-    "px": 4460
-   },
-   {
-    "t": "Calcàries bioclàstiques i esculloses (Ventamillo, Bona, Eixea, Collades de Basturs)",
-    "cls": 1,
-    "px": 4460
-   },
-   {
-    "t": "Calcàries no diferenciades (Pedraforca, Zona Nord-pirinenca, Serralades Costaneres)",
-    "cls": 1,
-    "px": 4440
-   },
-   {
-    "t": "Calcàries amb nummulits i assilines (la Penya, Terrades)",
-    "cls": 1,
-    "px": 4411
-   },
-   {
-    "t": "Calcàries no diferenciades (Pedraforca, Zona Nord-pirinenca, Serralades Costaneres)",
-    "cls": 1,
-    "px": 4364
-   },
-   {
-    "t": "Calcàries no diferenciades (Pedraforca, Zona Nord-pirinenca, Serralades Costaneres)",
-    "cls": 1,
-    "px": 4332
-   },
-   {
-    "t": "Calcàries no diferenciades (Pedraforca, Zona Nord-pirinenca, Serralades Costaneres)",
-    "cls": 1,
-    "px": 4332
-   },
-   {
-    "t": "Calcàries no diferenciades (Pedraforca, Zona Nord-pirinenca, Serralades Costaneres)",
-    "cls": 1,
-    "px": 4332
-   },
-   {
-    "t": "Argiles versicolors i evaporites (Fàcies Keuper)",
-    "cls": 1,
-    "px": 4256
-   },
-   {
-    "t": "Conglomerats, gresos i lutites (cons de dejecció)",
-    "cls": 2,
-    "px": 4230
-   },
-   {
-    "t": "Gresos, margues, calcàries esculloses (Calders, Centelles, Rocacorba, Milany, Sant Martí Xic)",
-    "cls": 1,
-    "px": 4171
-   },
-   {
-    "t": "Turbidites (Campdevànol), guixos a sostre",
-    "cls": 1,
-    "px": 4169
-   },
-   {
-    "t": "Còdols i llims (fons de vall)",
-    "cls": 2,
-    "px": 4162
-   },
-   {
-    "t": "Graves, sorres i llims (terrasses fluvials baixes, planes al∙luvials i deltes)",
-    "cls": 2,
-    "px": 4139
-   },
-   {
-    "t": "Conglomerats, gresos i lutites (Cerdanya, Vallès i Valls)",
-    "cls": 2,
-    "px": 4084
-   },
-   {
-    "t": "Conglomerats, gresos i lutites (Cerdanya, Vallès i Valls)",
-    "cls": 2,
-    "px": 4075
-   },
-   {
-    "t": "Conglomerats (Montserrat, Sant Llorenç del Munt)",
-    "cls": 1,
-    "px": 4072
-   },
-   {
-    "t": "Arcoses i lutites (Caldes de Montbui)",
-    "cls": 3,
-    "px": 4071
-   },
-   {
-    "t": "Arcoses i lutites (Caldes de Montbui)",
-    "cls": 3,
-    "px": 4071
-   },
-   {
-    "t": "Silurià i Devonià indiferenciat. Fàcies central, Pirineu central",
-    "cls": 3,
-    "px": 4066
-   },
-   {
-    "t": "Argiles i còdols (col∙luvions)",
-    "cls": 2,
-    "px": 3996
-   },
-   {
-    "t": "Dolomies i calcàries (Fàcies Muschelkalk inferior)",
-    "cls": 1,
-    "px": 3940
-   },
-   {
-    "t": "Conglomerats, sorres i lutites (cons de dejecció)",
-    "cls": 2,
-    "px": 3922
-   },
-   {
-    "t": "Gresos (Areny de Noguera, Marboré)",
-    "cls": 2,
-    "px": 3920
-   },
-   {
-    "t": "Conglomerats, gresos i lutites (Solsona, Margalef)",
-    "cls": 1,
-    "px": 3904
-   },
-   {
-    "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 1,
-    "px": 3897
-   },
-   {
-    "t": "Margues, localment nivells turbidítics (Salàs de Pallars, Barbaruens)",
-    "cls": 1,
-    "px": 3875
-   },
-   {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 2,
-    "px": 3849
-   },
-   {
-    "t": "Turbidites siliciclàstiques (es Bòrdes, Vielha, Sía, es Agudes). Fàcies central, Pirineu central",
-    "cls": 3,
-    "px": 3823
-   },
-   {
-    "t": "Silurià i Devonià indiferenciat. Fàcies central, Pirineu central",
-    "cls": 3,
-    "px": 3814
-   },
-   {
-    "t": "Gresos (Areny de Noguera, Marboré)",
-    "cls": 2,
-    "px": 3787
-   },
-   {
-    "t": "Turbidites siliciclàstiques (es Bòrdes, Vielha, Sía, es Agudes). Fàcies central, Pirineu central",
-    "cls": 3,
-    "px": 3787
-   },
-   {
-    "t": "Turbidites siliciclàstiques (es Bòrdes, Vielha, Sía, es Agudes). Fàcies central, Pirineu central",
-    "cls": 3,
-    "px": 3787
-   },
-   {
-    "t": "Calcàries bioclàstiques amb rudistes i orbitolines (Calcaries à Iraquia, Roca de Narieda, Montgrí, Xerta)",
-    "cls": 1,
-    "px": 3755
-   },
-   {
-    "t": "Dolomies i calcàries",
-    "cls": 1,
-    "px": 3736
-   },
-   {
-    "t": "Calcàries laminades i margues amb intercalacions dolomítiques (la Pleta, Garraf)",
-    "cls": 1,
-    "px": 3722
-   },
-   {
-    "t": "Margues, localment nivells turbidítics (Salàs de Pallars, Barbaruens)",
-    "cls": 1,
-    "px": 3667
-   },
-   {
-    "t": "Grup Pontils no diferenciat, localment inclou la Fm. Mediona",
-    "cls": 1,
-    "px": 3657
-   },
-   {
-    "t": "Llims llacustres (Olot)",
-    "cls": 2,
-    "px": 3643
-   },
-   {
-    "t": "Calcàries laminades i margues amb intercalacions dolomítiques (la Pleta, Garraf)",
-    "cls": 1,
-    "px": 3638
-   },
-   {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 2,
-    "px": 3618
-   },
-   {
-    "t": "Gresos (Areny de Noguera, Marboré)",
-    "cls": 2,
-    "px": 3611
-   },
-   {
-    "t": "Calcàries amb alveolines (Àger, Cadí, Orpí)",
-    "cls": 1,
-    "px": 3469
-   },
-   {
-    "t": "Calcàries amb alveolines (Àger, Cadí, Orpí)",
-    "cls": 1,
-    "px": 3468
-   },
-   {
-    "t": "Calcàries amb alveolines (Àger, Cadí, Orpí)",
-    "cls": 1,
-    "px": 3448
-   },
-   {
-    "t": "Calcàries amb alveolines (Àger, Cadí, Orpí)",
-    "cls": 1,
-    "px": 3448
-   },
-   {
-    "t": "Calcàries amb alveolines (Àger, Cadí, Orpí)",
-    "cls": 1,
-    "px": 3448
-   },
-   {
-    "t": "Gresos (la Baronia de Sant Oïsme, l'Ametlla de Montsec, Roda d'Isàvena)",
-    "cls": 2,
-    "px": 3425
-   },
-   {
-    "t": "Argiles versicolors i evaporites (Fàcies Keuper)",
-    "cls": 1,
-    "px": 3423
-   },
-   {
-    "t": "Còdols i llims (fons de vall)",
-    "cls": 2,
-    "px": 3419
+    "px": 42974
    },
    {
     "t": "Conglomerats, gresos i lutites",
     "cls": 2,
-    "px": 3397
+    "px": 42312
    },
    {
-    "t": "Roques intrusives varisques. Granits leucocràtics moscovítics, localment amb biotita",
+    "t": "Graves i sorres. Ventall al·luvial",
+    "cls": 2,
+    "px": 41987
+   },
+   {
+    "t": "Gresos i calcàries amb ciment esparític",
+    "cls": 1,
+    "px": 41981
+   },
+   {
+    "t": "Alternança centimètrica de gresos i lutites. Formació Jújols",
+    "cls": 2,
+    "px": 41924
+   },
+   {
+    "t": "Alternança centimètrica de gresos i lutites. Formació Jújols",
+    "cls": 2,
+    "px": 41876
+   },
+   {
+    "t": "Conglomerats quarsítics. Formació Rabassa",
     "cls": 3,
-    "px": 3358
+    "px": 41317
    },
    {
-    "t": "Pelites (Civís-Vilaller). Fàcies Serra Negra, Pirineu central",
+    "t": "Pissarres, cornianes i quarsites . Roques de la unitat EÇOrgl afectades per metamorfisme de contacte varisc Alternança centimètrica de gresos i lutites. Formació Jújols",
     "cls": 3,
-    "px": 3295
+    "px": 41317
    },
    {
-    "t": "Margues i guixos amb intercalacions de calcàries (Sagnari, Fígols de la Conca, Morillo de Liena)",
-    "cls": 1,
-    "px": 3292
-   },
-   {
-    "t": "Pelites i calcopelites amb intercalacions calcàries. Calcàries griotte. Fàcies septentrional, Pirineu central",
+    "t": "Alternança centimètrica de gresos i lutites. Formació Jújols",
     "cls": 2,
-    "px": 3279
+    "px": 41317
    },
    {
-    "t": "Argiles versicolors i evaporites (Fàcies Keuper)",
-    "cls": 1,
-    "px": 3264
-   },
-   {
-    "t": "Pelites i calcopelites amb intercalacions calcàries. Calcàries griotte. Fàcies septentrional, Pirineu central",
-    "cls": 2,
-    "px": 3245
-   },
-   {
-    "t": "Calcàries bioclàstiques i esculloses (Ventamillo, Bona, Eixea, Collades de Basturs)",
-    "cls": 1,
-    "px": 3239
-   },
-   {
-    "t": "Margues, margocalcàries i bretxes (Armàncies)",
-    "cls": 1,
-    "px": 3226
-   },
-   {
-    "t": "Pelites i calcopelites amb intercalacions calcàries. Calcàries griotte. Fàcies septentrional, Pirineu central",
-    "cls": 2,
-    "px": 3223
-   },
-   {
-    "t": "Calcàries bioclàstiques i esculloses (Ventamillo, Bona, Eixea, Collades de Basturs)",
-    "cls": 1,
-    "px": 3208
-   },
-   {
-    "t": "Calcàries bioclàstiques i esculloses (Ventamillo, Bona, Eixea, Collades de Basturs)",
-    "cls": 1,
-    "px": 3208
-   },
-   {
-    "t": "Margues amb turbidites",
-    "cls": 1,
-    "px": 3203
-   },
-   {
-    "t": "Conglomerats amb abundants còdols de quars, gresos i lutites roges (Fàcies Buntsandstein)",
-    "cls": 2,
-    "px": 3201
-   },
-   {
-    "t": "Lutites (Cardell)",
-    "cls": 1,
-    "px": 3195
-   },
-   {
-    "t": "Calcàries (Tàrrega, Castelldans)",
-    "cls": 1,
-    "px": 3189
-   },
-   {
-    "t": "Calcàries (Tàrrega, Castelldans)",
-    "cls": 1,
-    "px": 3189
-   },
-   {
-    "t": "Calcàries (Tàrrega, Castelldans)",
-    "cls": 1,
-    "px": 3189
-   },
-   {
-    "t": "Calcàries (Tàrrega, Castelldans)",
-    "cls": 1,
-    "px": 3189
-   },
-   {
-    "t": "Calcàries (Tàrrega, Castelldans)",
-    "cls": 1,
-    "px": 3189
-   },
-   {
-    "t": "Calcàries (Tàrrega, Castelldans)",
-    "cls": 1,
-    "px": 3189
-   },
-   {
-    "t": "Margues, margocalcàries i bretxes (Armàncies)",
-    "cls": 1,
-    "px": 3165
-   },
-   {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 2,
-    "px": 3138
-   },
-   {
-    "t": "Calcàries, calcarenites, capes de lignit, calcàries litogràfiques i margues",
-    "cls": 1,
-    "px": 3136
-   },
-   {
-    "t": "Gresos i margues amb intercalacions de conglomerats (G), Castigaleu, Sant Esteve de Llitera",
-    "cls": 1,
-    "px": 3128
-   },
-   {
-    "t": "Gresos i lutites (Castissent)",
-    "cls": 2,
-    "px": 3111
-   },
-   {
-    "t": "Pelites i calcopelites amb intercalacions calcàries. Calcàries griotte. Fàcies septentrional, Pirineu central",
-    "cls": 2,
-    "px": 3108
-   },
-   {
-    "t": "Pelites i calcopelites amb intercalacions calcàries. Calcàries griotte. Fàcies septentrional, Pirineu central",
-    "cls": 2,
-    "px": 3100
-   },
-   {
-    "t": "Dolomies ben estratificades (Imón)",
-    "cls": 1,
-    "px": 3097
-   },
-   {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 2,
-    "px": 3092
-   },
-   {
-    "t": "Margues i margocalcàries amb ammonits (Lluçà, Marnes à Hypacantoplites)",
-    "cls": 1,
-    "px": 3076
-   },
-   {
-    "t": "Roques sedimentàries de la unitat OA afectades pel metamorfisme de contacte associat als granitoides variscs Conglomerats (la Rabassa)",
+    "t": "Gresos i pissarres amb nivells de conglomerats, i andesites a la base",
     "cls": 3,
-    "px": 3067
+    "px": 41259
    },
    {
-    "t": "Conglomerats (la Rabassa)",
+    "t": "Calcàries i margocalcàries",
     "cls": 1,
-    "px": 3062
+    "px": 41197
    },
    {
-    "t": "Olistrostomes",
+    "t": "Graves, sorres i lutites. Llit actual, plana d'inundació ordinària i terrassa més baixa (0-2 m)",
     "cls": 2,
-    "px": 3061
+    "px": 40132
    },
    {
-    "t": "Conglomerats (la Rabassa)",
+    "t": "Còdols amb matriu llim-arenosa i ciment carbonatat. Dipòsit fluvial de riu trenat de procedència pirenaica, situat a 140 m sobre el nivell del riu",
     "cls": 1,
-    "px": 3045
+    "px": 39684
    },
    {
-    "t": "Roques sedimentàries de la unitat OA afectades pel metamorfisme de contacte associat als granitoides variscs Conglomerats (la Rabassa)",
+    "t": "Margues i gresos",
+    "cls": 1,
+    "px": 39472
+   },
+   {
+    "t": "Conglomerats i gresos amb margues i limolites",
+    "cls": 1,
+    "px": 38325
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos i microconglomerats",
+    "cls": 2,
+    "px": 38074
+   },
+   {
+    "t": "Pissarres micacítiques i pissarres sorrenques",
     "cls": 3,
-    "px": 3045
+    "px": 36606
    },
    {
-    "t": "Conglomerats (la Rabassa)",
-    "cls": 1,
-    "px": 3045
-   },
-   {
-    "t": "Conglomerats (la Rabassa)",
-    "cls": 1,
-    "px": 3045
-   },
-   {
-    "t": "Roques volcàniques i porfirites",
+    "t": "Pissarres micacítiques i pissarres sorrenques",
     "cls": 3,
-    "px": 3045
+    "px": 36598
    },
    {
-    "t": "Conglomerats (la Rabassa)",
-    "cls": 1,
-    "px": 3045
+    "t": "Alternança de gresos i lutites",
+    "cls": 2,
+    "px": 36430
    },
    {
-    "t": "Roques sedimentàries de la unitat OA afectades pel metamorfisme de contacte associat als granitoides variscs Conglomerats (la Rabassa)",
+    "t": "Argiles i gresos arcòsics",
     "cls": 3,
-    "px": 3045
+    "px": 34545
    },
    {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 2,
-    "px": 3044
-   },
-   {
-    "t": "Dolomies (el Pont de Suert)",
+    "t": "Margues gris blavós",
     "cls": 1,
-    "px": 3043
+    "px": 33715
    },
    {
-    "t": "Margues i gresos vermells i calcàries (Corones)",
-    "cls": 1,
-    "px": 3032
-   },
-   {
-    "t": "Gresos i lutites (Montserrat, Sant Llorenç del Munt)",
-    "cls": 1,
-    "px": 3032
-   },
-   {
-    "t": "Lutites amb matèria orgànica i torba (aiguamolls i canals abandonats)",
+    "t": "Graves, sorres, llims i localment blocs. llits actuals de les rieres i dels torrents",
     "cls": 2,
-    "px": 3019
+    "px": 33505
    },
    {
-    "t": "Llims i sorres (levées i dipòsits no diferenciats)",
-    "cls": 2,
-    "px": 3019
+    "t": "Margues blaves fossilíferes amb limolites vermelles",
+    "cls": 1,
+    "px": 32397
    },
    {
-    "t": "Roques intrusives varisques. Tonalites biotítiques o biotiticohornblèndiques",
+    "t": "Granodiorites i granits alcalins",
     "cls": 3,
-    "px": 2945
+    "px": 32281
    },
    {
-    "t": "Pissarres ampelítiques, localment calcàries, lidites i radiolarites",
+    "t": "Calcàries micrítiques massives i/o calcàries amb caròfits",
     "cls": 2,
-    "px": 2930
+    "px": 31848
    },
    {
-    "t": "Calcàries esculloses (Tossa de Montbui, Puy de Cinca)",
-    "cls": 1,
-    "px": 2928
-   },
-   {
-    "t": "Calcàries i dolomies, calcàries amb nòduls",
-    "cls": 1,
-    "px": 2923
-   },
-   {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 2,
-    "px": 2919
-   },
-   {
-    "t": "Argiles versicolors, evaporites (el Pont de Suert)",
-    "cls": 1,
-    "px": 2914
-   },
-   {
-    "t": "Pelites, calcopelites i calcàries (Aneto, Gelada), calcàries, dolomies i gresos (Baciver- Castanesa), pelites (Fontjanina), calcàries noduloses amb tufs (Manyanet). Fàcies Valiera, Pirineu central",
-    "cls": 2,
-    "px": 2913
-   },
-   {
-    "t": "Argiles versicolors, evaporites (el Pont de Suert)",
-    "cls": 1,
-    "px": 2907
-   },
-   {
-    "t": "Argiles versicolors, evaporites (el Pont de Suert)",
-    "cls": 1,
-    "px": 2907
-   },
-   {
-    "t": "Argiles versicolors, evaporites (el Pont de Suert)",
-    "cls": 1,
-    "px": 2907
-   },
-   {
-    "t": "Argiles versicolors, evaporites (el Pont de Suert)",
-    "cls": 1,
-    "px": 2907
-   },
-   {
-    "t": "Argiles versicolors, evaporites (el Pont de Suert)",
-    "cls": 1,
-    "px": 2907
-   },
-   {
-    "t": "Argiles versicolors, evaporites (el Pont de Suert)",
-    "cls": 1,
-    "px": 2907
-   },
-   {
-    "t": "Dolomies (el Pont de Suert)",
-    "cls": 1,
-    "px": 2907
-   },
-   {
-    "t": "Argiles versicolors, evaporites (el Pont de Suert)",
-    "cls": 1,
-    "px": 2907
-   },
-   {
-    "t": "Argiles versicolors, evaporites (el Pont de Suert)",
-    "cls": 1,
-    "px": 2907
-   },
-   {
-    "t": "Pelites (Civís-Vilaller). Fàcies Valiera, Pirineu central",
+    "t": "Granodiorites i granits alcalins",
     "cls": 3,
-    "px": 2896
+    "px": 31819
    },
    {
-    "t": "Pelites, calcopelites i calcàries (Aneto, Gelada), calcàries, dolomies i gresos (Baciver- Castanesa), pelites (Fontjanina), calcàries noduloses amb tufs (Manyanet). Fàcies Valiera, Pirineu central",
-    "cls": 2,
-    "px": 2896
-   },
-   {
-    "t": "Pelites (Civís-Vilaller). Fàcies Valiera, Pirineu central",
+    "t": "Granodiorites i granits alcalins",
     "cls": 3,
-    "px": 2896
+    "px": 31547
    },
    {
-    "t": "Roques intrusives varisques. Tonalites biotítiques o biotiticohornblèndiques",
+    "t": "Granodiorites i granits alcalins",
     "cls": 3,
-    "px": 2895
+    "px": 31547
    },
    {
-    "t": "Turbidites (Campdevànol), guixos a sostre",
+    "t": "Margues amb nivells de guixos i argiles",
     "cls": 1,
-    "px": 2869
+    "px": 30834
    },
    {
-    "t": "Calcàries bioclàstiques i esculloses (Urgo-Barremien)",
-    "cls": 1,
-    "px": 2857
-   },
-   {
-    "t": "Calcàries i lutites, localment dolomies i guixos (Torrent de Cinca)",
-    "cls": 1,
-    "px": 2837
-   },
-   {
-    "t": "Pissarres ampelítiques, localment calcàries, lidites i radiolarites",
+    "t": "Graves i blocs amb matriu arenosoargilosa. Ventall al·luvial correlacionable amb la terrassa Qt3",
     "cls": 2,
-    "px": 2834
+    "px": 30395
    },
    {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites (Fontjanina), calcàries noduloses (Manyanet). Fàcies Serra Negra, Pirineu central",
+    "t": "Graves i blocs amb matriu arenosoargilosa. Ventall al·luvial correlacionable amb la terrassa Qt3",
     "cls": 2,
-    "px": 2831
+    "px": 30385
    },
    {
-    "t": "Pelites (Civís-Vilaller). Fàcies Serra Negra, Pirineu central",
-    "cls": 3,
-    "px": 2827
-   },
-   {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites (Fontjanina), calcàries noduloses (Manyanet). Fàcies Serra Negra, Pirineu central",
+    "t": "Graves i blocs amb matriu arenosoargilosa. Ventall al·luvial correlacionable amb la terrassa Qt3",
     "cls": 2,
-    "px": 2827
+    "px": 30310
    },
    {
-    "t": "Pelites (Civís-Vilaller). Fàcies Serra Negra, Pirineu central",
-    "cls": 3,
-    "px": 2827
-   },
-   {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites (Fontjanina), calcàries noduloses (Manyanet). Fàcies Serra Negra, Pirineu central",
+    "t": "Graves i blocs amb matriu arenosoargilosa. Ventall al·luvial correlacionable amb la terrassa Qt3",
     "cls": 2,
-    "px": 2827
+    "px": 30292
    },
    {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites (Fontjanina), calcàries noduloses (Manyanet). Fàcies Serra Negra, Pirineu central",
-    "cls": 2,
-    "px": 2827
-   },
-   {
-    "t": "Calcarenites (Portell de Gassó)",
+    "t": "Margues amb intercalacions de calcàries",
     "cls": 1,
-    "px": 2812
+    "px": 30241
    },
    {
-    "t": "Roques pelítiques de la unitat S afectades pel metamorfisme regional varisc. Zona de la cordierita-andalusita Pissarres ampelítiques, localment calcàries, lidites i radiolarites",
+    "t": "Graves i blocs amb matriu arenosoargilosa. Ventall al·luvial correlacionable amb la terrassa Qt3",
     "cls": 2,
-    "px": 2804
+    "px": 30227
    },
    {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
+    "t": "Graves i blocs amb matriu arenosoargilosa. Ventall al·luvial correlacionable amb la terrassa Qt3",
     "cls": 2,
-    "px": 2798
+    "px": 30227
    },
    {
-    "t": "Pissarres ampelítiques, localment calcàries, lidites i radiolarites",
+    "t": "Graves, sorres i lutites. Llit actual, plana d'inundació ordinària i terrassa més baixa (0-2 m)",
     "cls": 2,
-    "px": 2779
+    "px": 30163
    },
    {
-    "t": "Pissarres ampelítiques, localment calcàries, lidites i radiolarites",
+    "t": "Graves amb matriu sorrenca i argilosa. Dipòsit al·luvial-col·luvial",
     "cls": 2,
-    "px": 2779
-   },
-   {
-    "t": "Pissarres ampelítiques, localment calcàries, lidites i radiolarites",
-    "cls": 2,
-    "px": 2779
-   },
-   {
-    "t": "Pissarres ampelítiques, localment calcàries, lidites i radiolarites",
-    "cls": 2,
-    "px": 2779
-   },
-   {
-    "t": "Pissarres ampelítiques, localment calcàries, lidites i radiolarites",
-    "cls": 2,
-    "px": 2779
-   },
-   {
-    "t": "Pissarres ampelítiques, localment calcàries, lidites i radiolarites",
-    "cls": 2,
-    "px": 2779
-   },
-   {
-    "t": "Margues blaves (Banyoles, Malla, Aïnsa)",
-    "cls": 1,
-    "px": 2770
-   },
-   {
-    "t": "Calcàries i argiles laterítiques (Cantaperdius)",
-    "cls": 1,
-    "px": 2764
-   },
-   {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites carbonàtiques multicolors (Víllec), calcàries grises i calcàries griotte (el Comte-Comabona-La Mena-Barousse-Aspe Brousset). Subfàci",
-    "cls": 2,
-    "px": 2722
-   },
-   {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites carbonàtiques multicolors (Víllec), calcàries grises i calcàries griotte (el Comte-Comabona-La Mena-Barousse-Aspe Brousset). Subfàci",
-    "cls": 2,
-    "px": 2722
-   },
-   {
-    "t": "Gresos verds (grès verd, Corberes)",
-    "cls": 2,
-    "px": 2697
-   },
-   {
-    "t": "Margues i guixos amb intercalacions de calcàries (Sagnari, Fígols de la Conca, Morillo de Liena)",
-    "cls": 1,
-    "px": 2674
-   },
-   {
-    "t": "Lutites roges, gresos i calcàries (Batea, Granera, Artés, Flix)",
-    "cls": 1,
-    "px": 2658
-   },
-   {
-    "t": "Gresos i lutites (Fraga, Solsona, l'Albagés, Conca de Móra)",
-    "cls": 1,
-    "px": 2658
-   },
-   {
-    "t": "Margues i guixos amb intercalacions de calcàries (Sagnari, Fígols de la Conca, Morillo de Liena)",
-    "cls": 1,
-    "px": 2656
-   },
-   {
-    "t": "Margues i margocalcàries amb ammonits (Lluçà, Marnes à Hypacantoplites)",
-    "cls": 1,
-    "px": 2645
-   },
-   {
-    "t": "Calcàries bioclàstiques amb rudistes i orbitolines (Montanissell, Benassal, Calcaires Urgo-Albiens Moyenes, Montgrí)",
-    "cls": 1,
-    "px": 2645
-   },
-   {
-    "t": "Calcàries bioclàstiques amb rudistes i orbitolines (Montanissell, Benassal, Calcaires Urgo-Albiens Moyenes, Montgrí)",
-    "cls": 1,
-    "px": 2645
-   },
-   {
-    "t": "Margues i margocalcàries amb ammonits (Lluçà, Marnes à Hypacantoplites)",
-    "cls": 1,
-    "px": 2645
-   },
-   {
-    "t": "Bretxes, dolomies, calcàries, margues i calcarenites, localment evaporites a la base",
-    "cls": 1,
-    "px": 2644
-   },
-   {
-    "t": "Calcàries micrítiques de tonalitats fosques (Aguas Salenz)",
-    "cls": 1,
-    "px": 2627
-   },
-   {
-    "t": "Bretxes, dolomies, calcàries, margues i calcarenites, localment evaporites a la base",
-    "cls": 1,
-    "px": 2617
+    "px": 29530
    },
    {
     "t": "Dolomies negres",
     "cls": 1,
-    "px": 2613
+    "px": 29494
    },
    {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites carbonàtiques multicolors (Víllec), calcàries grises i calcàries griotte (el Comte-Comabona-La Mena-Barousse-Aspe Brousset). Subfàci",
+    "t": "Dolomies negres",
+    "cls": 1,
+    "px": 29276
+   },
+   {
+    "t": "Dolomies negres",
+    "cls": 1,
+    "px": 29228
+   },
+   {
+    "t": "Llims i sorres de color gris fosc. Plana al·luvial i/o deltaica del Ter",
     "cls": 2,
-    "px": 2606
+    "px": 28969
    },
    {
-    "t": "Bretxes, dolomies, calcàries, margues i calcarenites, localment evaporites a la base",
-    "cls": 1,
-    "px": 2586
-   },
-   {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites carbonàtiques multicolors (Víllec), calcàries grises i calcàries griotte (el Comte-Comabona-La Mena-Barousse-Aspe Brousset). Subfàci",
+    "t": "Lutites negres amb graptòlits",
     "cls": 2,
-    "px": 2571
+    "px": 28437
    },
    {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites carbonàtiques multicolors (Víllec), calcàries grises i calcàries griotte (el Comte-Comabona-La Mena-Barousse-Aspe Brousset). Subfàci",
+    "t": "Graves, sorres i lutites. Plana al·luvial",
     "cls": 2,
-    "px": 2571
+    "px": 28223
    },
    {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites carbonàtiques multicolors (Víllec), calcàries grises i calcàries griotte (el Comte-Comabona-La Mena-Barousse-Aspe Brousset). Subfàci",
+    "t": "Conglomerats, gresos i lutites",
     "cls": 2,
-    "px": 2571
+    "px": 28054
    },
    {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites carbonàtiques multicolors (Víllec), calcàries grises i calcàries griotte (el Comte-Comabona-La Mena-Barousse-Aspe Brousset). Subfàci",
+    "t": "Llims sorrencs amb fauna",
     "cls": 2,
-    "px": 2571
+    "px": 27577
    },
    {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites carbonàtiques multicolors (Víllec), calcàries grises i calcàries griotte (el Comte-Comabona-La Mena-Barousse-Aspe Brousset). Subfàci",
+    "t": "Bretxes, argiles vermelles, llims groguencs (tipus loess) amb passades de detrítics i cap sostre nòduls de calitx i crosta carbonatada. Ventall al·luvial i plana de la Riera de les Arenes equivalent a",
+    "cls": 1,
+    "px": 27000
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos",
     "cls": 2,
-    "px": 2571
+    "px": 26970
    },
    {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites carbonàtiques multicolors (Víllec), calcàries grises i calcàries griotte (el Comte-Comabona-La Mena-Barousse-Aspe Brousset). Subfàci",
+    "t": "Margues, limolites i gresos amb intercalacions de conglomerats. Formació Molassa de Solsona",
+    "cls": 1,
+    "px": 26268
+   },
+   {
+    "t": "Margues i gresos",
+    "cls": 1,
+    "px": 26176
+   },
+   {
+    "t": "Margues, limolites i gresos amb intercalacions de conglomerats. Formació Molassa de Solsona",
+    "cls": 1,
+    "px": 25984
+   },
+   {
+    "t": "Bretxes i llims amb graves anguloses disperses. Dipòsit al·luvial-col·luvial correlacionable amb la terrassa Qt3",
     "cls": 2,
-    "px": 2571
+    "px": 25895
    },
    {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites carbonàtiques multicolors (Víllec), calcàries grises i calcàries griotte (el Comte-Comabona-La Mena-Barousse-Aspe Brousset). Subfàci",
-    "cls": 2,
-    "px": 2571
-   },
-   {
-    "t": "Pelites i calcàries (Rueda), calcàries (Baciver-Castanesa), pelites carbonàtiques multicolors (Víllec), calcàries grises i calcàries griotte (el Comte-Comabona-La Mena-Barousse-Aspe Brousset). Subfàci",
-    "cls": 2,
-    "px": 2571
-   },
-   {
-    "t": "Guixos (Barbastre, Balaguer)",
+    "t": "Graves, conglomerats, sorres i crostes carbonatades. Ventall al·luvial",
     "cls": 1,
-    "px": 2570
+    "px": 25820
    },
    {
-    "t": "Lutites, gresos i conglomerats (Castellbisbal)",
-    "cls": 2,
-    "px": 2570
-   },
-   {
-    "t": "Margues i guixos amb intercalacions de calcàries (Sagnari, Fígols de la Conca, Morillo de Liena)",
+    "t": "Calcàries, gresos, margues i lignits",
     "cls": 1,
-    "px": 2562
+    "px": 25739
    },
    {
-    "t": "Calcàries bioclàstiques amb rudistes i orbitolines (Senyús, Calcaires Urgo-Aptiens, Villarroya de los Pinares, Forcall)",
+    "t": "Margues i gresos",
     "cls": 1,
-    "px": 2527
+    "px": 25712
    },
    {
-    "t": "Conglomerats, gresos, lutites i tufs àcids (Peranera, Unitat Roja Inferior-Unitat Roja Superior)",
-    "cls": 2,
-    "px": 2498
-   },
-   {
-    "t": "Bretxes, dolomies, calcàries, margues i calcarenites, localment evaporites a la base",
-    "cls": 1,
-    "px": 2488
-   },
-   {
-    "t": "Margues i guixos amb intercalacions de calcàries (Sagnari, Fígols de la Conca, Morillo de Liena)",
-    "cls": 1,
-    "px": 2474
-   },
-   {
-    "t": "Roques sedimentàries mesozoiques antecenomanianes de la unitat T4J1 afectades pel metamorfisme tèrmic del Cretaci (92-104 m.a.) Bretxes, dolomies, calcàries, margues i calcarenites, localment evaporit",
-    "cls": 2,
-    "px": 2469
-   },
-   {
-    "t": "Llims i còdols (col∙luvions, dipòsits fluvioglacials)",
-    "cls": 2,
-    "px": 2467
-   },
-   {
-    "t": "Bretxes, dolomies, calcàries, margues i calcarenites, localment evaporites a la base",
-    "cls": 1,
-    "px": 2460
-   },
-   {
-    "t": "Bretxes, dolomies, calcàries, margues i calcarenites, localment evaporites a la base",
-    "cls": 1,
-    "px": 2460
-   },
-   {
-    "t": "Bretxes, dolomies, calcàries, margues i calcarenites, localment evaporites a la base",
-    "cls": 1,
-    "px": 2460
-   },
-   {
-    "t": "Bretxes, dolomies, calcàries, margues i calcarenites, localment evaporites a la base",
-    "cls": 1,
-    "px": 2460
-   },
-   {
-    "t": "Bretxes, dolomies, calcàries, margues i calcarenites, localment evaporites a la base",
-    "cls": 1,
-    "px": 2460
-   },
-   {
-    "t": "Bretxes, dolomies, calcàries, margues i calcarenites, localment evaporites a la base",
-    "cls": 1,
-    "px": 2460
-   },
-   {
-    "t": "Margues i guixos amb intercalacions de calcàries (Sagnari, Fígols de la Conca, Morillo de Liena)",
-    "cls": 1,
-    "px": 2453
-   },
-   {
-    "t": "Calcàries micrítiques amb nivells de lignit (calcàries amb anèl∙lids, calcàries amb caròfits)",
-    "cls": 1,
-    "px": 2448
-   },
-   {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 2,
-    "px": 2430
-   },
-   {
-    "t": "Calcàries arenoses (Aramunt, Montsec, Serrado, Cotiella, Montgrí)",
-    "cls": 1,
-    "px": 2422
-   },
-   {
-    "t": "Margues i guixos amb intercalacions de calcàries (Sagnari, Fígols de la Conca, Morillo de Liena)",
-    "cls": 1,
-    "px": 2414
-   },
-   {
-    "t": "Margues i guixos amb intercalacions de calcàries (Sagnari, Fígols de la Conca, Morillo de Liena)",
-    "cls": 1,
-    "px": 2414
-   },
-   {
-    "t": "Margues i guixos amb intercalacions de calcàries (Sagnari, Fígols de la Conca, Morillo de Liena)",
-    "cls": 1,
-    "px": 2401
-   },
-   {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 2,
-    "px": 2399
-   },
-   {
-    "t": "Turbidites carbonàtiques (Flysch à Fucoïdes)",
-    "cls": 1,
-    "px": 2397
-   },
-   {
-    "t": "Dolomies, calcàries i margues (Fàcies Muschelkalk superior)",
-    "cls": 1,
-    "px": 2395
-   },
-   {
-    "t": "Argiles i margocalcàries amb slumps (Reguard)",
-    "cls": 1,
-    "px": 2394
-   },
-   {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 2,
-    "px": 2389
-   },
-   {
-    "t": "Dolomies, calcàries i margues (Fàcies Muschelkalk superior)",
-    "cls": 1,
-    "px": 2365
-   },
-   {
-    "t": "Margues i guixos amb intercalacions de calcàries (Sagnari, Fígols de la Conca, Morillo de Liena)",
-    "cls": 1,
-    "px": 2365
-   },
-   {
-    "t": "Margues i guixos amb intercalacions de calcàries (Sagnari, Fígols de la Conca, Morillo de Liena)",
-    "cls": 1,
-    "px": 2365
-   },
-   {
-    "t": "Calcàries bioclàstiques amb prealveolines. Nivells de gresos i margues (Montsec)",
-    "cls": 1,
-    "px": 2363
-   },
-   {
-    "t": "Dolomies, calcàries, calcarenites i margues",
-    "cls": 1,
-    "px": 2362
-   },
-   {
-    "t": "Dolomies, calcàries, calcarenites i margues",
-    "cls": 1,
-    "px": 2362
-   },
-   {
-    "t": "Conglomerats, gresos, lutites i tufs àcids (Peranera, Unitat Roja Inferior-Unitat Roja Superior)",
-    "cls": 2,
-    "px": 2342
-   },
-   {
-    "t": "Conglomerats, gresos, lutites i tufs àcids (Peranera, Unitat Roja Inferior-Unitat Roja Superior)",
-    "cls": 2,
-    "px": 2342
-   },
-   {
-    "t": "Lutites, gresos, margues i calcàries localment dolomies i guixos (la Fatarella, la Granja d'Escarp, Sanaüja, Torà) i localment lignits (Calaf, Mequinensa)",
-    "cls": 1,
-    "px": 2317
-   },
-   {
-    "t": "Lutites, localment gresos i calcàries (Costa de Fraga)",
-    "cls": 1,
-    "px": 2317
-   },
-   {
-    "t": "Lutites, gresos, margues i calcàries localment dolomies i guixos (la Fatarella, la Granja d'Escarp, Sanaüja, Torà) i localment lignits (Calaf, Mequinensa)",
-    "cls": 1,
-    "px": 2317
-   },
-   {
-    "t": "Bretxes (Esbints, Zona Nord-pirinenca)",
-    "cls": 2,
-    "px": 2316
-   },
-   {
-    "t": "Travertins i toves calcàries (Banyoles)",
-    "cls": 1,
-    "px": 2311
-   },
-   {
-    "t": "Conglomerats, sorres i lutites (cons de dejecció)",
-    "cls": 2,
-    "px": 2296
-   },
-   {
-    "t": "Dolomies, calcàries i margues (Fàcies Muschelkalk superior)",
-    "cls": 1,
-    "px": 2290
-   },
-   {
-    "t": "Guixos (Barbastre, Balaguer)",
-    "cls": 1,
-    "px": 2280
-   },
-   {
-    "t": "Graves (terrasses fluvials mitjanes i glacis)",
-    "cls": 2,
-    "px": 2280
-   },
-   {
-    "t": "Blocs i argiles (tills, morenes)",
-    "cls": 2,
-    "px": 2267
-   },
-   {
-    "t": "Roques intrusives tardivarisques. Granits leucocràtics",
+    "t": "Argiles i gresos arcòsics",
     "cls": 3,
-    "px": 2267
+    "px": 25577
+   },
+   {
+    "t": "Argiles, gresos i conglomerats",
+    "cls": 2,
+    "px": 24917
+   },
+   {
+    "t": "Calcàries, gresos i margues",
+    "cls": 1,
+    "px": 24342
+   },
+   {
+    "t": "Calcàries, gresos i margues",
+    "cls": 1,
+    "px": 24228
+   },
+   {
+    "t": "Argiles, llims, margues i gresos fins",
+    "cls": 1,
+    "px": 23785
+   },
+   {
+    "t": "Clasts angulosos heteromètrics inclosos en una matriu d'argiles vermelles. Dipòsit de peu de mont",
+    "cls": 2,
+    "px": 23693
+   },
+   {
+    "t": "Conglomerats, lutites i gresos",
+    "cls": 2,
+    "px": 23454
+   },
+   {
+    "t": "Granodiorita biotiticohornblèndica",
+    "cls": 3,
+    "px": 22603
+   },
+   {
+    "t": "Conglomerats heteromètrics",
+    "cls": 2,
+    "px": 22558
+   },
+   {
+    "t": "Limolites amb intercalacions de gresos i conglomerats. Formació Molassa de Solsona",
+    "cls": 1,
+    "px": 22401
+   },
+   {
+    "t": "Gresos i calcarenites localment bioclàstiques. Formació Gresos d'Areny",
+    "cls": 1,
+    "px": 22233
+   },
+   {
+    "t": "Pissarres pigallades. Roques de la unitat Capg afectades pel metamorfisme de contacte varisc Gresos i pissarres amb nivells de conglomerats, i andesites a la base",
+    "cls": 3,
+    "px": 22133
+   },
+   {
+    "t": "Grauvaques, gresos, limolites i alternança rítmica de pelites i psammites",
+    "cls": 3,
+    "px": 21636
+   },
+   {
+    "t": "Pissarres pigallades. Roques de la unitat Capg afectades pel metamorfisme de contacte varisc Gresos i pissarres amb nivells de conglomerats, i andesites a la base",
+    "cls": 3,
+    "px": 21384
+   },
+   {
+    "t": "Conglomerats massius i gresos",
+    "cls": 2,
+    "px": 21113
+   },
+   {
+    "t": "Conglomerats, gresos i argiles vermelles. Formació Bellmunt",
+    "cls": 1,
+    "px": 21096
+   },
+   {
+    "t": "Granodiorita biotiticohornblèndica",
+    "cls": 3,
+    "px": 21067
+   },
+   {
+    "t": "Limolites amb intercalacions de gresos i conglomerats. Formació Molassa de Solsona",
+    "cls": 1,
+    "px": 20868
+   },
+   {
+    "t": "Gresos i calcàries amb ciment esparític",
+    "cls": 1,
+    "px": 20044
+   },
+   {
+    "t": "Granit porfiroide amb moscovita, biotita i cordierita",
+    "cls": 3,
+    "px": 19812
+   },
+   {
+    "t": "Margues, calcàries grises i lutites",
+    "cls": 1,
+    "px": 19804
+   },
+   {
+    "t": "Clasts angulosos heteromètrics inclosos en una matriu d'argiles vermelles. Dipòsit de peu de mont",
+    "cls": 2,
+    "px": 19799
+   },
+   {
+    "t": "Lutites i gresos. Formació Castigaleu",
+    "cls": 1,
+    "px": 19508
+   },
+   {
+    "t": "Margues, calcàries grises i lutites",
+    "cls": 1,
+    "px": 19441
+   },
+   {
+    "t": "Conglomerats amb matriu argilosa sense cimentar",
+    "cls": 2,
+    "px": 19429
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos i microconglomerats",
+    "cls": 2,
+    "px": 19398
+   },
+   {
+    "t": "Sorres, graves i llims a sostre. Terrassa fluvial 1 de l'Ebre situada entre 2 i 10 metres sobre el nivell del riu",
+    "cls": 2,
+    "px": 19318
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos i microconglomerats",
+    "cls": 2,
+    "px": 19099
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos i microconglomerats",
+    "cls": 2,
+    "px": 18803
+   },
+   {
+    "t": "Graves, sorres i lutites. Llit actual, plana d'inundació ordinària i terrassa més baixa (0-2 m)",
+    "cls": 2,
+    "px": 18784
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos i microconglomerats",
+    "cls": 2,
+    "px": 18773
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos i microconglomerats",
+    "cls": 2,
+    "px": 18773
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos i microconglomerats",
+    "cls": 2,
+    "px": 18773
+   },
+   {
+    "t": "Conglomerats calcaris, gresos i lutites vermelles",
+    "cls": 1,
+    "px": 18674
+   },
+   {
+    "t": "Alternances de gresos i lutites vermelles, amb nivells de conglomerats i guixos",
+    "cls": 1,
+    "px": 18625
+   },
+   {
+    "t": "Calcàries, lutites i margocalcàries. Fàcies garumniana",
+    "cls": 1,
+    "px": 18413
+   },
+   {
+    "t": "Pissarres micacítiques i pissarres sorrenques",
+    "cls": 3,
+    "px": 18296
+   },
+   {
+    "t": "Pissarres micacítiques i pissarres sorrenques",
+    "cls": 3,
+    "px": 18296
+   },
+   {
+    "t": "Pissarres micacítiques i pissarres sorrenques",
+    "cls": 3,
+    "px": 18296
+   },
+   {
+    "t": "Pissarres micacítiques i pissarres sorrenques",
+    "cls": 3,
+    "px": 18296
+   },
+   {
+    "t": "Pissarres micacítiques i pissarres sorrenques",
+    "cls": 3,
+    "px": 18296
+   },
+   {
+    "t": "Pissarres micacítiques i pissarres sorrenques",
+    "cls": 3,
+    "px": 18296
+   },
+   {
+    "t": "Pissarres micacítiques i pissarres sorrenques",
+    "cls": 3,
+    "px": 18296
+   },
+   {
+    "t": "Graves, sorres i lutites. Terrassa fluvial 1",
+    "cls": 2,
+    "px": 17980
+   },
+   {
+    "t": "Graves, sorres i lutites. Terrassa fluvial 1",
+    "cls": 2,
+    "px": 17957
+   },
+   {
+    "t": "Dolomies i calcàries. Fàcies Muschelkalk superior",
+    "cls": 1,
+    "px": 17851
+   },
+   {
+    "t": "Sorres, graves i llims a sostre. Terrassa fluvial 1 de l'Ebre situada entre 2 i 10 metres sobre el nivell del riu",
+    "cls": 2,
+    "px": 17844
+   },
+   {
+    "t": "Margues, calcàries i gresos. Formació Molassa de Solsona",
+    "cls": 1,
+    "px": 17763
+   },
+   {
+    "t": "Graves i llims. Terrassa més baixa del Segre, situada a 3 m per sobre del nivell actual del riu",
+    "cls": 2,
+    "px": 17713
+   },
+   {
+    "t": "Graves, sorres i lutites. Terrassa fluvial 1",
+    "cls": 2,
+    "px": 17713
+   },
+   {
+    "t": "Graves, sorres i lutites. Terrassa fluvial 1",
+    "cls": 2,
+    "px": 17713
+   },
+   {
+    "t": "Graves, sorres i lutites. Terrassa fluvial 1",
+    "cls": 2,
+    "px": 17713
+   },
+   {
+    "t": "Graves i llims. Terrassa més baixa del Segre, situada a 3 m per sobre del nivell actual del riu",
+    "cls": 2,
+    "px": 17713
+   },
+   {
+    "t": "Graves, sorres i lutites. Terrassa fluvial 1",
+    "cls": 2,
+    "px": 17713
+   },
+   {
+    "t": "Graves, sorres, llims i argiles.Terrassa fluvial 1 del Fluvià i afluents, situada entre 2 i 3 m sobre el nivell del riu",
+    "cls": 2,
+    "px": 17713
+   },
+   {
+    "t": "Graves i sorres. Ventall al·luvial",
+    "cls": 2,
+    "px": 17676
+   },
+   {
+    "t": "Margues i margocalcàries amb algun nivell de gres. Formació Armàncies",
+    "cls": 1,
+    "px": 17673
+   },
+   {
+    "t": "Gresos, lutites grises i roges i conglomerats. Formació Montllobar",
+    "cls": 1,
+    "px": 17618
+   },
+   {
+    "t": "Calcàries amb intercalacions de margues",
+    "cls": 1,
+    "px": 17570
+   },
+   {
+    "t": "Conglomerats heteromètrics",
+    "cls": 2,
+    "px": 17413
+   },
+   {
+    "t": "Graves, sorres i lutites. Llit actual, plana d'inundació ordinària i terrassa més baixa (0-2 m)",
+    "cls": 2,
+    "px": 17412
+   },
+   {
+    "t": "Calcàries amb nivells de margues",
+    "cls": 1,
+    "px": 17412
+   },
+   {
+    "t": "Lutites, gresos, calcàries i guix fibrós",
+    "cls": 1,
+    "px": 17368
+   },
+   {
+    "t": "Conglomerats massius i gresos",
+    "cls": 2,
+    "px": 17269
+   },
+   {
+    "t": "Lutites marrons i vermelles, gresos arcòsics i alguns paleocanals conglomeràtics. Fàcies més distals del Sistema Al·luvial 5",
+    "cls": 3,
+    "px": 17136
+   },
+   {
+    "t": "Graves, sorres i lutites. Llit actual, plana d'inundació ordinària i terrassa més baixa (0-2 m)",
+    "cls": 2,
+    "px": 17079
+   },
+   {
+    "t": "Argiles i gresos amb alguns guixos",
+    "cls": 1,
+    "px": 17030
+   },
+   {
+    "t": "Gresos, margues i conglomerats. Segon cicle de la Formació Vidrà Superior",
+    "cls": 1,
+    "px": 16975
+   },
+   {
+    "t": "Margues i gresos bioclàstics",
+    "cls": 1,
+    "px": 16838
+   },
+   {
+    "t": "Graves, sorres i lutites. Llit actual, plana d'inundació ordinària i terrassa més baixa (0-2 m)",
+    "cls": 2,
+    "px": 16681
+   },
+   {
+    "t": "Calcàries amb intercalacions dolomítiques",
+    "cls": 1,
+    "px": 16621
+   },
+   {
+    "t": "Argiles, gresos i conglomerats",
+    "cls": 2,
+    "px": 16611
+   },
+   {
+    "t": "Gresos, margues grises i alguna intercalació de conglomerats",
+    "cls": 1,
+    "px": 16406
+   },
+   {
+    "t": "Graves, sorres i lutites. Llit actual, plana d'inundació ordinària i terrassa més baixa (0-2 m)",
+    "cls": 2,
+    "px": 16342
+   },
+   {
+    "t": "Graves, sorres i lutites. Llit actual, plana d'inundació ordinària i terrassa més baixa (0-2 m)",
+    "cls": 2,
+    "px": 16275
+   },
+   {
+    "t": "Graves, sorres i lutites. Llit actual, plana d'inundació ordinària i terrassa més baixa (0-2 m)",
+    "cls": 2,
+    "px": 16223
+   },
+   {
+    "t": "Graves, sorres i lutites. Llit actual, plana d'inundació ordinària i terrassa més baixa (0-2 m)",
+    "cls": 2,
+    "px": 16194
+   },
+   {
+    "t": "Graves, sorres i lutites. Llit actual, plana d'inundació ordinària i terrassa més baixa (0-2 m)",
+    "cls": 2,
+    "px": 16194
+   },
+   {
+    "t": "Microconglomerats i gresos de composició arcòsica. Formació Gresos de Folgueroles",
+    "cls": 3,
+    "px": 16146
+   },
+   {
+    "t": "Tonalita biotiticohornblèndica",
+    "cls": 3,
+    "px": 15748
+   },
+   {
+    "t": "Alternança de gresos i lutites",
+    "cls": 2,
+    "px": 15702
+   },
+   {
+    "t": "Sorres fines ben classificades de composició variada: quars i roques metamòrfiques Cordons de dunes litorals",
+    "cls": 3,
+    "px": 15659
+   },
+   {
+    "t": "Dolomies negres",
+    "cls": 1,
+    "px": 15621
+   },
+   {
+    "t": "Graves, sorres, llims i localment blocs. llits actuals de les rieres i dels torrents",
+    "cls": 2,
+    "px": 15573
+   },
+   {
+    "t": "Conglomerats, gresos calcaris i margues",
+    "cls": 1,
+    "px": 15152
+   },
+   {
+    "t": "Argiles, llims i gresos de gra fi amb intercalacions de conglomerats, gresos i calcàries",
+    "cls": 1,
+    "px": 15080
+   },
+   {
+    "t": "Graves, sorres, còdols i llims amb un baix percentatge de matriu.Terrassa fluvial 0 ",
+    "cls": 2,
+    "px": 15074
+   },
+   {
+    "t": "Leucogranits de gra groller",
+    "cls": 3,
+    "px": 15003
+   },
+   {
+    "t": "Leucogranits de gra groller",
+    "cls": 3,
+    "px": 14911
+   },
+   {
+    "t": "Margues, lutites i gresos turbidítics. Formació Gresos d'Areny",
+    "cls": 1,
+    "px": 14909
+   },
+   {
+    "t": "Conglomerats amb matriu argilosa sense cimentar",
+    "cls": 2,
+    "px": 14730
+   },
+   {
+    "t": "Calcàries biomicrítiques",
+    "cls": 1,
+    "px": 14685
+   },
+   {
+    "t": "Margues i calcàries margoses. Fàcies Keuper",
+    "cls": 1,
+    "px": 14625
+   },
+   {
+    "t": "Graves, sorres i lutites. Plana al·luvial",
+    "cls": 2,
+    "px": 14487
+   },
+   {
+    "t": "Conglomerats massius i gresos",
+    "cls": 2,
+    "px": 14393
+   },
+   {
+    "t": "Graves amb matriu sorrenca i argilosa. Dipòsit al·luvial-col·luvial",
+    "cls": 2,
+    "px": 14316
+   },
+   {
+    "t": "Lutites marrons i vermelles, gresos arcòsics i alguns paleocanals conglomeràtics. Fàcies més distals del Sistema Al·luvial 5",
+    "cls": 3,
+    "px": 14280
+   },
+   {
+    "t": "Graves amb matriu sorrenca i argilosa. Dipòsit al·luvial-col·luvial",
+    "cls": 2,
+    "px": 14210
+   },
+   {
+    "t": "Graves, sorres i lutites. Plana al·luvial",
+    "cls": 2,
+    "px": 14207
+   },
+   {
+    "t": "Granit amb megacristalls de feldspat potàssic. Amb la unitat Gpf1 constitueix el Granit de Sant Llorenç o Granit porfiroblàstic de Montavà",
+    "cls": 3,
+    "px": 14139
+   },
+   {
+    "t": "Graves amb matriu sorrenca i argilosa. Dipòsit al·luvial-col·luvial",
+    "cls": 2,
+    "px": 14107
+   },
+   {
+    "t": "Graves, sorres, llims i localment blocs. llits actuals de les rieres i dels torrents",
+    "cls": 2,
+    "px": 14000
+   },
+   {
+    "t": "Graves, sorres i lutites. Plana al·luvial",
+    "cls": 2,
+    "px": 13999
+   },
+   {
+    "t": "Graves, sorres i lutites. Plana al·luvial",
+    "cls": 2,
+    "px": 13999
+   },
+   {
+    "t": "Grauvaques, gresos, limolites i alternança rítmica de pelites i psammites",
+    "cls": 3,
+    "px": 13980
+   },
+   {
+    "t": "Graves amb matriu lutítica i llentillons sorrencs",
+    "cls": 2,
+    "px": 13809
+   },
+   {
+    "t": "Graves amb matriu sorrenca i argilosa. Dipòsit al·luvial-col·luvial",
+    "cls": 2,
+    "px": 13709
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos",
+    "cls": 2,
+    "px": 13692
+   },
+   {
+    "t": "Graves amb matriu sorrenca i argilosa. Dipòsit al·luvial-col·luvial",
+    "cls": 2,
+    "px": 13667
+   },
+   {
+    "t": "Margues i gresos",
+    "cls": 1,
+    "px": 13661
+   },
+   {
+    "t": "Graves amb matriu sorrenca i argilosa. Dipòsit al·luvial-col·luvial",
+    "cls": 2,
+    "px": 13661
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos",
+    "cls": 2,
+    "px": 13646
+   },
+   {
+    "t": "Pissarres i calcàries. Formació Rueda",
+    "cls": 2,
+    "px": 13608
+   },
+   {
+    "t": "Calcàries, gresos i margues",
+    "cls": 1,
+    "px": 13599
+   },
+   {
+    "t": "Conglomerats amb intercalacions de gresos i margues",
+    "cls": 1,
+    "px": 13588
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos",
+    "cls": 2,
+    "px": 13480
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos",
+    "cls": 2,
+    "px": 13480
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos",
+    "cls": 2,
+    "px": 13480
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos",
+    "cls": 2,
+    "px": 13480
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos",
+    "cls": 2,
+    "px": 13480
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos",
+    "cls": 2,
+    "px": 13480
+   },
+   {
+    "t": "Lutites amb intercalacions de gresos",
+    "cls": 2,
+    "px": 13480
+   },
+   {
+    "t": "Bretxes i llims amb graves anguloses disperses. Dipòsit al·luvial-col·luvial correlacionable amb la terrassa Qt3",
+    "cls": 2,
+    "px": 13454
+   },
+   {
+    "t": "Gresos quarsifeldspàtics, roques volcàniques àcides i intermèdies, lutites fosques i, localment, conglomerats a la base",
+    "cls": 3,
+    "px": 13366
+   },
+   {
+    "t": "Graves, sorres, llims i localment blocs. llits actuals de les rieres i dels torrents",
+    "cls": 2,
+    "px": 13359
+   },
+   {
+    "t": "Graves, sorres, llims i localment blocs. llits actuals de les rieres i dels torrents",
+    "cls": 2,
+    "px": 13356
+   },
+   {
+    "t": "Graves i sorres. Ventall al·luvial",
+    "cls": 2,
+    "px": 13335
+   },
+   {
+    "t": "Graves, sorres, llims i localment blocs. llits actuals de les rieres i dels torrents",
+    "cls": 2,
+    "px": 13333
+   },
+   {
+    "t": "Graves, sorres, llims i localment blocs. llits actuals de les rieres i dels torrents",
+    "cls": 2,
+    "px": 13332
+   },
+   {
+    "t": "Graves, sorres, llims i localment blocs. llits actuals de les rieres i dels torrents",
+    "cls": 2,
+    "px": 13279
+   },
+   {
+    "t": "Graves, sorres, llims i localment blocs. llits actuals de les rieres i dels torrents",
+    "cls": 2,
+    "px": 13279
+   },
+   {
+    "t": "Graves, sorres, llims i localment blocs. llits actuals de les rieres i dels torrents",
+    "cls": 2,
+    "px": 13279
+   },
+   {
+    "t": "Argiles i llims amb còdols i fragments de roques procedents de la Cadena Prelitoral, surant dintre de la matriu. Ventall al·luvial de Terrassa i Castellar del Vallès",
+    "cls": 2,
+    "px": 13270
+   },
+   {
+    "t": "Margues i gresos",
+    "cls": 1,
+    "px": 13230
+   },
+   {
+    "t": "Graves amb matriu lutítica i llentillons sorrencs",
+    "cls": 2,
+    "px": 13207
+   },
+   {
+    "t": "Argiles i llims amb intercalacions de gresos, conglomerats i calcàries",
+    "cls": 1,
+    "px": 13199
+   },
+   {
+    "t": "Argiles i llims amb intercalacions de gresos, conglomerats i calcàries",
+    "cls": 1,
+    "px": 13199
+   },
+   {
+    "t": "Graves amb matriu lutítica i llentillons sorrencs",
+    "cls": 2,
+    "px": 13141
+   },
+   {
+    "t": "Graves amb matriu lutítica i llentillons sorrencs",
+    "cls": 2,
+    "px": 13141
+   },
+   {
+    "t": "Graves amb matriu lutítica i llentillons sorrencs",
+    "cls": 2,
+    "px": 13141
+   },
+   {
+    "t": "Calcàries amb nivells de margues",
+    "cls": 1,
+    "px": 13089
+   },
+   {
+    "t": "Margues i margocalcàries amb algun nivell de gres. Formació Armàncies",
+    "cls": 1,
+    "px": 13003
+   },
+   {
+    "t": "Margues i gresos",
+    "cls": 1,
+    "px": 12988
+   },
+   {
+    "t": "Conglomerats amb matriu argilosa sense cimentar",
+    "cls": 2,
+    "px": 12913
+   },
+   {
+    "t": "Clasts angulosos heteromètrics inclosos en una matriu d'argiles vermelles. Dipòsit de peu de mont",
+    "cls": 2,
+    "px": 12908
+   },
+   {
+    "t": "Blocs, graves, sorres i argiles. Ventall al·luvial correlacionable amb la terrassa Qt2",
+    "cls": 2,
+    "px": 12864
+   },
+   {
+    "t": "Argiles amb còdols angulosos dispersos. Dipòsit col·luvial",
+    "cls": 2,
+    "px": 12862
+   },
+   {
+    "t": "Margues i gresos",
+    "cls": 1,
+    "px": 12738
+   },
+   {
+    "t": "Llims i llims sorrencs amb gravilla i llentillons de grava. Dipòsit al·luvial-col·luvial",
+    "cls": 2,
+    "px": 12704
+   },
+   {
+    "t": "Argiles amb còdols angulosos dispersos. Dipòsit col·luvial",
+    "cls": 2,
+    "px": 12625
+   },
+   {
+    "t": "Pissarres pigallades. Roques de la unitat Capg afectades pel metamorfisme de contacte varisc Gresos i pissarres amb nivells de conglomerats, i andesites a la base",
+    "cls": 3,
+    "px": 12608
+   },
+   {
+    "t": "Argiles amb còdols angulosos dispersos. Dipòsit col·luvial",
+    "cls": 2,
+    "px": 12555
+   },
+   {
+    "t": "Argiles amb còdols angulosos dispersos. Dipòsit col·luvial",
+    "cls": 2,
+    "px": 12526
+   },
+   {
+    "t": "Argiles amb còdols angulosos dispersos. Dipòsit col·luvial",
+    "cls": 2,
+    "px": 12451
+   },
+   {
+    "t": "Argiles amb còdols angulosos dispersos. Dipòsit col·luvial",
+    "cls": 2,
+    "px": 12424
+   },
+   {
+    "t": "Calcàries beix i margues gris blavós",
+    "cls": 1,
+    "px": 12424
+   },
+   {
+    "t": "Argiles amb còdols angulosos dispersos. Dipòsit col·luvial",
+    "cls": 2,
+    "px": 12416
+   },
+   {
+    "t": "Conglomerats, gresos i argiles. Formació Bracons i Rupit",
+    "cls": 2,
+    "px": 12402
+   },
+   {
+    "t": "Argiles amb còdols angulosos dispersos. Dipòsit col·luvial",
+    "cls": 2,
+    "px": 12394
+   },
+   {
+    "t": "Argiles amb còdols angulosos dispersos. Dipòsit col·luvial",
+    "cls": 2,
+    "px": 12385
+   },
+   {
+    "t": "Argiles amb còdols angulosos dispersos. Dipòsit col·luvial",
+    "cls": 2,
+    "px": 12385
+   },
+   {
+    "t": "Argiles amb còdols angulosos dispersos. Dipòsit col·luvial",
+    "cls": 2,
+    "px": 12385
+   },
+   {
+    "t": "Conglomerats. Inclòs al Sistema Al·luvial superior de Berga",
+    "cls": 2,
+    "px": 12365
+   },
+   {
+    "t": "Conglomerats, gresos i margues",
+    "cls": 1,
+    "px": 12255
+   },
+   {
+    "t": "Argiles, gresos i limolites",
+    "cls": 2,
+    "px": 12239
+   },
+   {
+    "t": "Calcàries, gresos i margues",
+    "cls": 1,
+    "px": 12221
+   },
+   {
+    "t": "Calcàries, gresos i margues",
+    "cls": 1,
+    "px": 12111
+   },
+   {
+    "t": "Gresos, lutites, conglomerats i algunes calcàries. Formació Escanilla",
+    "cls": 1,
+    "px": 12078
+   },
+   {
+    "t": "Sorres mitjanes i llims. Localment capes de torba.\"Levée\" natural",
+    "cls": 2,
+    "px": 12045
+   },
+   {
+    "t": "Clasts angulosos heteromètrics inclosos en una matriu d'argiles vermelles. Dipòsit de peu de mont",
+    "cls": 2,
+    "px": 11985
+   },
+   {
+    "t": "Lutites i margues amb intercalacions de gresos i calcàries",
+    "cls": 1,
+    "px": 11916
+   },
+   {
+    "t": "Argiles, llims i sorres",
+    "cls": 2,
+    "px": 11836
+   },
+   {
+    "t": "Calcàries, gresos i margues",
+    "cls": 1,
+    "px": 11818
+   },
+   {
+    "t": "Blocs, graves, sorres i argiles. Ventall al·luvial correlacionable amb la terrassa Qt2",
+    "cls": 2,
+    "px": 11760
+   },
+   {
+    "t": "Conglomerats i lutites ocres i vermelloses",
+    "cls": 2,
+    "px": 11674
+   },
+   {
+    "t": "Calcàries micrítiques",
+    "cls": 1,
+    "px": 11668
+   },
+   {
+    "t": "Calcàries micrítiques",
+    "cls": 1,
+    "px": 11668
+   },
+   {
+    "t": "Calcàries micrítiques i dolomies. Fàcies Muschelkalk inferior",
+    "cls": 1,
+    "px": 11661
+   },
+   {
+    "t": "Gresos. Formació Gresos d'Areny",
+    "cls": 2,
+    "px": 11636
+   },
+   {
+    "t": "Calcàries amb intercalacions de margues",
+    "cls": 1,
+    "px": 11631
+   },
+   {
+    "t": "Clasts angulosos heteromètrics inclosos en una matriu d'argiles vermelles. Dipòsit de peu de mont",
+    "cls": 2,
+    "px": 11611
+   },
+   {
+    "t": "Calcàries, gresos i margues",
+    "cls": 1,
+    "px": 11557
+   },
+   {
+    "t": "Limolites amb intercalacions de gresos i conglomerats. Formació Molassa de Solsona",
+    "cls": 1,
+    "px": 11555
+   },
+   {
+    "t": "Margues amb intercalacions de calcàries",
+    "cls": 1,
+    "px": 11511
+   },
+   {
+    "t": "Conglomerats, gresos i argiles. Formació Bracons i Rupit",
+    "cls": 2,
+    "px": 11453
+   },
+   {
+    "t": "Gresos i argiles vermelles amb guix",
+    "cls": 1,
+    "px": 11420
+   },
+   {
+    "t": "Graves polimíctiques molt arrodonides amb matriu sorrenca i algun nivell lenticular de sorres i llims. Terrassa fluvial 3 de la Noguera Ribagorçana i afluents, situada entre 40 i 50 m sobre el nivell ",
+    "cls": 2,
+    "px": 11420
+   },
+   {
+    "t": "Gresos i argiles vermelles amb guix",
+    "cls": 1,
+    "px": 11420
+   },
+   {
+    "t": "Lutites, gresos, calcàries i guix fibrós",
+    "cls": 1,
+    "px": 11419
+   },
+   {
+    "t": "Margues amb intercalacions de calcàries",
+    "cls": 1,
+    "px": 11390
+   },
+   {
+    "t": "Lutites, gresos, calcàries i guix fibrós",
+    "cls": 1,
+    "px": 11390
+   },
+   {
+    "t": "Margues amb intercalacions de calcàries",
+    "cls": 1,
+    "px": 11390
+   },
+   {
+    "t": "Margues amb intercalacions de calcàries",
+    "cls": 1,
+    "px": 11390
+   },
+   {
+    "t": "Graves, sorres, llims i argiles. Terrassa fluvial 2 del Segre i afluents, situada a uns 20 metres sobre el nivell del riu",
+    "cls": 2,
+    "px": 11388
+   },
+   {
+    "t": "Clasts angulosos heteromètrics inclosos en una matriu d'argiles vermelles. Dipòsit de peu de mont",
+    "cls": 2,
+    "px": 11367
+   },
+   {
+    "t": "Calcàries i margocalcàries",
+    "cls": 1,
+    "px": 11361
+   },
+   {
+    "t": "Clasts angulosos heteromètrics inclosos en una matriu d'argiles vermelles. Dipòsit de peu de mont",
+    "cls": 2,
+    "px": 11319
+   },
+   {
+    "t": "Graves, sorres, llims i argiles. Terrassa fluvial 2 del Segre i afluents, situada a uns 20 metres sobre el nivell del riu",
+    "cls": 2,
+    "px": 11276
+   },
+   {
+    "t": "Clasts angulosos heteromètrics inclosos en una matriu d'argiles vermelles. Dipòsit de peu de mont",
+    "cls": 2,
+    "px": 11253
+   },
+   {
+    "t": "Clasts angulosos heteromètrics inclosos en una matriu d'argiles vermelles. Dipòsit de peu de mont",
+    "cls": 2,
+    "px": 11240
+   },
+   {
+    "t": "Clasts angulosos heteromètrics inclosos en una matriu d'argiles vermelles. Dipòsit de peu de mont",
+    "cls": 2,
+    "px": 11240
+   },
+   {
+    "t": "Calcàries i dolomies. Formació Orpí",
+    "cls": 1,
+    "px": 11229
+   },
+   {
+    "t": "Argiles, llims, margues i gresos fins",
+    "cls": 1,
+    "px": 11228
+   },
+   {
+    "t": "Pissarres. Formació Vilaller",
+    "cls": 3,
+    "px": 11207
+   },
+   {
+    "t": "Granodiorita biotítica hornblèndica, fàcies rica en biotita",
+    "cls": 3,
+    "px": 11163
+   },
+   {
+    "t": "Graves, sorres, llims i argiles. Terrassa fluvial 2 del Fluvià i afluents, situada entre 10 i 15 metres sobre el nivell del riu",
+    "cls": 2,
+    "px": 11147
+   },
+   {
+    "t": "Graves, sorres i lutites. Terrassa fluvial 2",
+    "cls": 2,
+    "px": 11130
+   },
+   {
+    "t": "Leucogranits",
+    "cls": 3,
+    "px": 11127
+   },
+   {
+    "t": "Còdols, graves amb matriu sorrenca i llims a sostre.Terrassa fluvial 2 de l' Ebre, situada entre 20 i 30 metres sobre el nivell del riu",
+    "cls": 2,
+    "px": 11120
+   },
+   {
+    "t": "Calcàries, gresos i margues",
+    "cls": 1,
+    "px": 11105
+   },
+   {
+    "t": "Graves, sorres, llims i localment blocs. llits actuals de les rieres i dels torrents",
+    "cls": 2,
+    "px": 11105
+   },
+   {
+    "t": "Argiles amb còdols dispersos. Terrassa fluvial 2 del Ter i afluents, situada entre 5 i 10 m sobre el nivell del riu",
+    "cls": 2,
+    "px": 11097
+   },
+   {
+    "t": "Margues i lutites, localment amb turritel·les. Localment és una unitat compressiva. Formació Fígols",
+    "cls": 1,
+    "px": 11068
+   },
+   {
+    "t": "Pissarres pigallades. Roques de la unitat Capg afectades pel metamorfisme de contacte varisc Gresos i pissarres amb nivells de conglomerats, i andesites a la base",
+    "cls": 3,
+    "px": 11064
+   },
+   {
+    "t": "Conglomerats, gresos, lutites roges i roques vulcanoclàstiques",
+    "cls": 2,
+    "px": 11059
+   },
+   {
+    "t": "Graves a la base i cap a sostre llims sorrencs. Terrassa fluvial 2 del Llobregat i afluents, situada a uns 3 m sobre el nivell del riu",
+    "cls": 2,
+    "px": 11038
+   },
+   {
+    "t": "Graves, sorres, còdols i llims amb un baix percentatge de matriu.Terrassa fluvial 0 ",
+    "cls": 2,
+    "px": 11037
+   },
+   {
+    "t": "Graves, sorres, llims i argiles. Terrassa fluvial 2 del Segre i afluents, situada a uns 20 metres sobre el nivell del riu",
+    "cls": 2,
+    "px": 11035
+   },
+   {
+    "t": "Graves, sorres i lutites. Terrassa fluvial 2 del Cinca i afluents, situada entre 20 i 30 m sobre el nivell del riu",
+    "cls": 2,
+    "px": 11035
+   },
+   {
+    "t": "Graves, sorres i lutites. Terrassa fluvial 2 del Cinca i afluents, situada entre 20 i 30 m sobre el nivell del riu",
+    "cls": 2,
+    "px": 11035
+   },
+   {
+    "t": "Granodiorita biotiticohornblèndica",
+    "cls": 3,
+    "px": 10985
+   },
+   {
+    "t": "Margues, lutites i turbidites. Formació Margues de Salàs",
+    "cls": 1,
+    "px": 10954
+   },
+   {
+    "t": "Granodiorita biotiticohornblèndica",
+    "cls": 3,
+    "px": 10889
+   },
+   {
+    "t": "Granodiorita biotiticohornblèndica",
+    "cls": 3,
+    "px": 10857
+   },
+   {
+    "t": "Gresos, microconglomerats, lutites i roques vulcanoclàstiques",
+    "cls": 2,
+    "px": 10847
+   },
+   {
+    "t": "Bretxa dolomítica",
+    "cls": 1,
+    "px": 10841
+   },
+   {
+    "t": "Bretxa dolomítica",
+    "cls": 1,
+    "px": 10814
+   },
+   {
+    "t": "Alternança de gresos i margues amb conglomerats. Tram inferior de la Formació Vallfogona",
+    "cls": 1,
+    "px": 10657
+   },
+   {
+    "t": "Limolites amb intercalacions de gresos i conglomerats. Formació Molassa de Solsona",
+    "cls": 1,
+    "px": 10653
+   },
+   {
+    "t": "Argiles, calcàries, sorres i matèria orgànica. Dipòsit palustre",
+    "cls": 1,
+    "px": 10633
+   },
+   {
+    "t": "Alternança de gresos i lutites",
+    "cls": 2,
+    "px": 10611
+   },
+   {
+    "t": "Calcàries, margues i margocalcàries",
+    "cls": 1,
+    "px": 10594
+   },
+   {
+    "t": "Esquists biotítics. Roques de la unitat EÇOrei afectades per metamorfisme regional varisc Lutites",
+    "cls": 3,
+    "px": 10590
+   },
+   {
+    "t": "Granodiorita biotiticohornblèndica",
+    "cls": 3,
+    "px": 10563
+   },
+   {
+    "t": "Granodiorita biotiticohornblèndica",
+    "cls": 3,
+    "px": 10562
+   },
+   {
+    "t": "Granodiorita biotiticohornblèndica",
+    "cls": 3,
+    "px": 10519
+   },
+   {
+    "t": "Granodiorita biotiticohornblèndica",
+    "cls": 3,
+    "px": 10519
+   },
+   {
+    "t": "Llims. Plana deltaica",
+    "cls": 2,
+    "px": 10504
+   },
+   {
+    "t": "Gresos quarsifeldspàtics, quarsites i lutites",
+    "cls": 3,
+    "px": 10462
+   },
+   {
+    "t": "Graves, sorres i lutites.Ventall al·luvial antic",
+    "cls": 2,
+    "px": 10391
+   },
+   {
+    "t": "Graves, sorres, llims i localment blocs. llits actuals de les rieres i dels torrents",
+    "cls": 2,
+    "px": 10365
+   },
+   {
+    "t": "Calcàries, margues i margocalcàries",
+    "cls": 1,
+    "px": 10350
+   },
+   {
+    "t": "Gresos i pissarres amb nivells de conglomerats, i andesites a la base",
+    "cls": 3,
+    "px": 10337
+   },
+   {
+    "t": "Margues, calcàries grises i lutites",
+    "cls": 1,
+    "px": 10289
+   },
+   {
+    "t": "Conglomerats, gresos i argiles vermelles. Formació Bellmunt",
+    "cls": 1,
+    "px": 10272
+   },
+   {
+    "t": "Conglomerats, gresos i argiles vermelles. Formació Bellmunt",
+    "cls": 1,
+    "px": 10272
+   },
+   {
+    "t": "Pissarres. Formació Vilaller",
+    "cls": 3,
+    "px": 10257
+   },
+   {
+    "t": "Pissarres. Formació Vilaller",
+    "cls": 3,
+    "px": 10246
+   },
+   {
+    "t": "Pissarres. Formació Vilaller",
+    "cls": 3,
+    "px": 10246
+   },
+   {
+    "t": "Graves, sorres i lutites.Ventall al·luvial antic",
+    "cls": 2,
+    "px": 10234
+   },
+   {
+    "t": "Graves, sorres i lutites.Ventall al·luvial antic",
+    "cls": 2,
+    "px": 10234
+   },
+   {
+    "t": "Limolites amb intercalacions de gresos i conglomerats. Formació Molassa de Solsona",
+    "cls": 1,
+    "px": 10218
+   },
+   {
+    "t": "Bretxa dolomítica",
+    "cls": 1,
+    "px": 10195
+   },
+   {
+    "t": "Margues amb intercalacions de calcàries",
+    "cls": 1,
+    "px": 10177
+   },
+   {
+    "t": "Calcàries i margues grises",
+    "cls": 1,
+    "px": 10151
+   },
+   {
+    "t": "Graves, sorres, còdols i llims amb un baix percentatge de matriu.Terrassa fluvial 0 ",
+    "cls": 2,
+    "px": 10043
+   },
+   {
+    "t": "Calcàries, margues i margocalcàries",
+    "cls": 1,
+    "px": 10034
+   },
+   {
+    "t": "Fil·lites i esquists. Roques de la unitat Orp afectades pel metamorfisme regional varisc Pissarres argiloses amb intercalacions de calcàries, gresos i quarsites",
+    "cls": 2,
+    "px": 9976
+   },
+   {
+    "t": "Margues blaves amb nivells fossilífers. Formació Vidrà, i inclou la Formació Margues de la Guixa",
+    "cls": 1,
+    "px": 9970
+   },
+   {
+    "t": "Lutites i gresos. Formació Castigaleu",
+    "cls": 1,
+    "px": 9839
+   },
+   {
+    "t": "Margocalcàries amb ammonits i equinoderms. Formació Margues de Cabó",
+    "cls": 1,
+    "px": 9772
+   },
+   {
+    "t": "Alternança de gresos i lutites",
+    "cls": 2,
+    "px": 9748
+   },
+   {
+    "t": "Margues, calcàries grises i lutites",
+    "cls": 1,
+    "px": 9720
+   },
+   {
+    "t": "Alternances de gresos i lutites vermelles, amb intercalacions de conglomerats",
+    "cls": 2,
+    "px": 9675
+   },
+   {
+    "t": "Alternança de calcàries, lutites i calcàries noduloses",
+    "cls": 1,
+    "px": 9646
+   },
+   {
+    "t": "Lutites marronoses i vermelles i gresos grisos",
+    "cls": 2,
+    "px": 9561
+   },
+   {
+    "t": "Calcàries bioclàstiques, calcarenites, gresos i bioconstruccions. Formació Bona",
+    "cls": 1,
+    "px": 9559
+   },
+   {
+    "t": "Gresos, calcàries i margues grises. Formació Perarrua",
+    "cls": 1,
+    "px": 9539
+   },
+   {
+    "t": "Blocs i sorres. Dipòsit glaciar o till",
+    "cls": 2,
+    "px": 9502
+   },
+   {
+    "t": "Margues i calcàries amb nivells de guixos i lignits. Complex lacustre de Sanaüja",
+    "cls": 1,
+    "px": 9488
+   },
+   {
+    "t": "Conglomerats i gresos grisos. Part superior de la Formació Coubet - Cal Bernat",
+    "cls": 2,
+    "px": 9431
+   },
+   {
+    "t": "Calcàries micrítiques. Formació Penya-Terrades",
+    "cls": 1,
+    "px": 9296
+   },
+   {
+    "t": "Calcàries micrítiques. Formació Penya-Terrades",
+    "cls": 1,
+    "px": 9296
+   },
+   {
+    "t": "Calcàries bioclàstiques, calcarenites, gresos i bioconstruccions. Formació Bona",
+    "cls": 1,
+    "px": 9284
+   },
+   {
+    "t": "Pissarres fosques i algunes intercalacions de calcàries. Formació Fontjanina",
+    "cls": 2,
+    "px": 9271
+   },
+   {
+    "t": "Blocs i sorres. Dipòsit glaciar o till",
+    "cls": 2,
+    "px": 9254
+   },
+   {
+    "t": "Blocs i sorres. Dipòsit glaciar o till",
+    "cls": 2,
+    "px": 9141
+   },
+   {
+    "t": "Pissarres argiloses amb intercalacions de calcàries, gresos i quarsites",
+    "cls": 2,
+    "px": 9134
+   },
+   {
+    "t": "Calcàries i margues grises",
+    "cls": 1,
+    "px": 9118
+   },
+   {
+    "t": "Calcàries i margues grises",
+    "cls": 1,
+    "px": 9091
+   },
+   {
+    "t": "Argiles amb còdols. Glacis d'acumulació",
+    "cls": 2,
+    "px": 9057
+   },
+   {
+    "t": "Lutites vermelles, gresos i conglomerats. Fàcies distals del Sistema Al·luvial mitjà de Berga",
+    "cls": 2,
+    "px": 9046
+   },
+   {
+    "t": "Calcària amb alveolines. Formació Cadí-Àger",
+    "cls": 1,
+    "px": 9033
+   },
+   {
+    "t": "Pissarres argiloses amb intercalacions de calcàries, gresos i quarsites",
+    "cls": 2,
+    "px": 9017
+   },
+   {
+    "t": "Lutites vermelles, gresos i paleosols. Fàcies garumniana. Formació Tremp",
+    "cls": 2,
+    "px": 9001
+   },
+   {
+    "t": "Calcàries micrítiques, calcarenites i lutites. Formació Calcàries de la Posa",
+    "cls": 1,
+    "px": 9001
+   },
+   {
+    "t": "Lutites vermelles, gresos i paleosols. Fàcies garumniana. Formació Tremp",
+    "cls": 2,
+    "px": 9001
+   },
+   {
+    "t": "Calcàries lutítiques, lutites i calcàries massives. Formacions Rueda i Baciver",
+    "cls": 1,
+    "px": 8972
+   },
+   {
+    "t": "Sorres mitjanes i llims. Localment capes de torba.\"Levée\" natural",
+    "cls": 2,
+    "px": 8970
+   },
+   {
+    "t": "Argiles amb còdols. Glacis d'acumulació",
+    "cls": 2,
+    "px": 8967
+   },
+   {
+    "t": "Margues i argiles amb intercalacions de gresos i calcàries gresoses",
+    "cls": 1,
+    "px": 8945
+   },
+   {
+    "t": "Argiles sorrenques amb clasts de quars i feldspats dispersos situats al peu de relleus positius. Dipòsit al·luvial-col·luvial correlacionable amb la terrassa Qt1",
+    "cls": 2,
+    "px": 8932
+   },
+   {
+    "t": "Argiles amb còdols. Glacis d'acumulació",
+    "cls": 2,
+    "px": 8921
+   },
+   {
+    "t": "Conglomerats calcaris, gresos i lutites vermelles",
+    "cls": 1,
+    "px": 8919
+   },
+   {
+    "t": "Dolomies i calcàries. Fàcies Muschelkalk superior",
+    "cls": 1,
+    "px": 8914
+   },
+   {
+    "t": "Dolomies i calcàries. Fàcies Muschelkalk superior",
+    "cls": 1,
+    "px": 8914
+   },
+   {
+    "t": "Dolomies i calcàries. Fàcies Muschelkalk superior",
+    "cls": 1,
+    "px": 8914
+   },
+   {
+    "t": "Dolomies i calcàries. Fàcies Muschelkalk superior",
+    "cls": 1,
+    "px": 8914
+   },
+   {
+    "t": "Dolomies i calcàries. Fàcies Muschelkalk superior",
+    "cls": 1,
+    "px": 8914
+   },
+   {
+    "t": "Dolomies i calcàries. Fàcies Muschelkalk superior",
+    "cls": 1,
+    "px": 8914
+   },
+   {
+    "t": "Dolomies i calcàries. Fàcies Muschelkalk superior",
+    "cls": 1,
+    "px": 8914
+   },
+   {
+    "t": "Dolomies i calcàries. Fàcies Muschelkalk superior",
+    "cls": 1,
+    "px": 8914
+   },
+   {
+    "t": "Dolomies i calcàries. Fàcies Muschelkalk superior",
+    "cls": 1,
+    "px": 8914
+   },
+   {
+    "t": "Argiles amb bretxes a la base, nivell de loess amb nòduls de calitx i crosta de calitx al sostre. Dipòsit de plana al·luvial del \"Tricicle\" del Pla de Barcelona",
+    "cls": 2,
+    "px": 8887
+   },
+   {
+    "t": "Calcàries bioclàstiques, calcarenites, gresos i bioconstruccions. Formació Bona",
+    "cls": 1,
+    "px": 8861
+   },
+   {
+    "t": "Calcàries amb intercalacions dolomítiques",
+    "cls": 1,
+    "px": 8838
+   },
+   {
+    "t": "Marbres. Roques de la unitat Dcrb afectades pel metamorfisme de contacte varisc Calcàries lutítiques, lutites i calcàries massives. Formacions Rueda i Baciver",
+    "cls": 2,
+    "px": 8832
+   },
+   {
+    "t": "Marbres. Roques de la unitat Dcrb afectades pel metamorfisme de contacte varisc Calcàries lutítiques, lutites i calcàries massives. Formacions Rueda i Baciver",
+    "cls": 2,
+    "px": 8823
+   },
+   {
+    "t": "Margues amb intercalacions de gresos i calcàries",
+    "cls": 1,
+    "px": 8804
+   },
+   {
+    "t": "Blocs de litologia variada, sorres i llims. Dipòsit de lliscament mixte",
+    "cls": 2,
+    "px": 8795
+   },
+   {
+    "t": "Guixos i margues. Formació Barbastre",
+    "cls": 1,
+    "px": 8768
+   },
+   {
+    "t": "Guixos i margues. Formació Barbastre",
+    "cls": 1,
+    "px": 8768
+   },
+   {
+    "t": "Guixos i margues. Formació Barbastre",
+    "cls": 1,
+    "px": 8768
+   },
+   {
+    "t": "Blocs, clasts angulosos i llims. Tartera",
+    "cls": 2,
+    "px": 8750
+   },
+   {
+    "t": "Blocs, clasts angulosos i llims. Tartera",
+    "cls": 2,
+    "px": 8750
+   },
+   {
+    "t": "Gresos i conglomerats. Unitat Conglomerats de Graus",
+    "cls": 2,
+    "px": 8737
+   },
+   {
+    "t": "Margues i calcàries margoses. Fàcies Keuper",
+    "cls": 1,
+    "px": 8729
+   },
+   {
+    "t": "Blocs, clasts angulosos i llims. Tartera",
+    "cls": 2,
+    "px": 8720
+   },
+   {
+    "t": "Calcàries bioclàstiques, calcarenites, gresos i bioconstruccions. Formació Bona",
+    "cls": 1,
+    "px": 8715
+   },
+   {
+    "t": "Argiles amb nivells de conglomerats i gresos grisos",
+    "cls": 2,
+    "px": 8692
+   },
+   {
+    "t": "Argiles amb nivells de conglomerats i gresos grisos",
+    "cls": 2,
+    "px": 8692
    }
   ]
  }

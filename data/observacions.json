@@ -67,6 +67,22 @@
      "segur": false
     }
    ]
+  },
+  {
+   "data": "2026-10-18",
+   "municipi": "Quart",
+   "lloc": "Sant Mateu de Montnegre (Gavarres), carena i camins",
+   "comarca": "Gironès",
+   "especies": [],
+   "absents": [
+    {
+     "nom": "Rossinyol",
+     "id": "rossinyol",
+     "segur": true,
+     "nota": "el model donava 96–100"
+    }
+   ],
+   "notes": "Sureda amb pi, carretera i camí forestal, terreny molt sorrenc (sauló). Terra humida. Última pluja forta el 4/10 (97 mm), 15 mm el 8/10 i poca cosa fins al 17/10."
   }
  ]
 }

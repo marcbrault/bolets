@@ -197,8 +197,8 @@ a { color: var(--accent); }
 }
 
 /* Detall del punt tocat (graella de 500 m) */
-.punt { margin: 10px 0 12px; padding: 10px 12px; border-radius: 10px; background: var(--card, #fffdf8); border: 1px solid rgba(31, 42, 34, 0.12); }
-.punt-cap { display: flex; align-items: baseline; gap: 8px; }
-.punt-cap b { font-size: 1.5rem; line-height: 1; }
-.punt-cap span { font-size: 0.82rem; opacity: 0.75; }
-.punt p { margin: 6px 0 0; font-size: 0.85rem; line-height: 1.45; }
+.detall-punt { margin: 10px 0 12px; padding: 10px 12px; border-radius: 10px; background: var(--card, #fffdf8); border: 1px solid rgba(31, 42, 34, 0.12); }
+.detall-punt-cap { display: flex; align-items: baseline; gap: 8px; }
+.detall-punt-cap b { font-size: 1.5rem; line-height: 1; }
+.detall-punt-cap span { font-size: 0.82rem; opacity: 0.75; }
+.detall-punt p { margin: 6px 0 0; font-size: 0.85rem; line-height: 1.45; }

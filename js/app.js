@@ -479,8 +479,8 @@ function blocPunt() {
   const col = color('index', f.valor);
   const ori = f.nord > 25 ? 'obaga' : f.nord < -25 ? 'solell' : 'orientació mixta';
   const host = f.hostes.length ? f.hostes.slice(0, 3).map(h => `${h[1]} % ${ARBRES_NOM[h[0]]}`).join(', ') : `cap hàbitat de l'espècie (${f.bosc} % de bosc)`;
-  return `<div class="punt">
-    <div class="punt-cap"><b style="color:${css([...col.slice(0, 3).map(x => x * 0.8), 1])}">${Math.round(f.valor)}</b>
+  return `<div class="detall-punt">
+    <div class="detall-punt-cap"><b style="color:${css([...col.slice(0, 3).map(x => x * 0.8), 1])}">${Math.round(f.valor)}</b>
       <span>al punt tocat (casella de 500 m)</span></div>
     <p>${Math.round(f.z)} m · pendent ${f.pend}° · ${ori} · ${f.t7.toFixed(1)} °C (corregida per l'altitud)<br>
       Sòl: ${SOL_NOM(f.sol)} · Hàbitat: ${host}</p>

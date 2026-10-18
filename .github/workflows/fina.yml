@@ -1,0 +1,33 @@
+name: Construeix capes fines
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: capes
+  cancel-in-progress: false
+
+jobs:
+  fina:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pillow pyproj geopandas rasterio requests shapely
+      - name: Construeix les capes a 500 m
+        run: python scripts/build-fina.py
+      - name: Desa les dades
+        run: |
+          git config user.name "bolets-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/fina.json data/fina.bin.gz
+          git diff --cached --quiet && exit 0
+          git commit -m "Capes fines (500 m) $(date -u +%F)"
+          git pull --rebase origin main
+          git push

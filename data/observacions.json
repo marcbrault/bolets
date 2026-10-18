@@ -63,7 +63,8 @@
     {
      "nom": "Cep",
      "id": "cep",
-     "nota": "segons l'usuari, a la zona no hi surten ceps"
+     "nota": "l'usuari no hi coneix ceps, però no n'està segur",
+     "segur": false
     }
    ]
   }

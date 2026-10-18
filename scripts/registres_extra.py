@@ -18,6 +18,12 @@ R = json.loads((ARREL / 'data/registres.json').read_text())
 UA = {'User-Agent': 'MapaBoletaire/1.0 (github.com/marcbrault/bolets)'}
 to25831 = Transformer.from_crs(4326, 25831, always_xy=True)
 out = {'generat': time.strftime('%Y-%m-%d')}
+# Incremental: si ja hi ha resultats d'una execució anterior amb els mateixos registres, es conserven
+ANTERIOR = ARREL / 'cache/registres-extra.json'
+if ANTERIOR.exists():
+    _a = json.loads(ANTERIOR.read_text())
+    if all(len(_a.get('terreny', {}).get(sp, [])) == len(L) for sp, L in R['especies'].items()):
+        out.update({k: _a[k] for k in ('esforc_mesos', 'esforc_anys', 'terreny', 'meteo') if k in _a})
 
 
 def log(m, n='notice'):
@@ -42,6 +48,8 @@ def get(url, params, intents=5, timeout=90):
 
 # ---- 1) Esforç de mostreig: tots els fongs a la caixa de Catalunya
 def esforc():
+    if 'esforc_mesos' in out:
+        return log('esforç: ja calculat')
     base = dict(kingdomKey=5, decimalLatitude='40.45,42.9', decimalLongitude='0.1,3.4', hasCoordinate='true',
                 hasGeospatialIssue='false', limit=0)
     m = get('https://api.gbif.org/v1/occurrence/search', dict(base, facet='month', **{'month.facetLimit': 12})).json()
@@ -80,6 +88,8 @@ def terreny_punt(lonlat):
 
 
 def terreny():
+    if 'terreny' in out:
+        return log('terreny: ja calculat')
     tots = [(sp, k, (x[0], x[1])) for sp, L in R['especies'].items() for k, x in enumerate(L)]
     with ThreadPoolExecutor(8) as ex:
         res = list(ex.map(terreny_punt, [t[2] for t in tots]))
@@ -121,6 +131,8 @@ def meteo():
             d = x[2]
             if not d or len(d) != 10 or int(d[:4]) < 1990 or (x[3] or 0) > 5000:
                 continue
+            if out.get('meteo', {}).get(sp) and out['meteo'][sp][k]:
+                continue  # ja el tenim
             q = (round(x[0] * 4) / 4, round(x[1] * 4) / 4)
             grups[q].append((sp, k, date.fromisoformat(d)))
     peticions = []
@@ -128,7 +140,7 @@ def meteo():
         for ini, fi in finestres([r[2] for r in regs]):
             peticions.append((q, ini - timedelta(days=46), fi, [r for r in regs if ini <= r[2] <= fi]))
     peticions.sort(key=lambda p: -len(p[3]))  # primer les que cobreixen més registres
-    M = {sp: [None] * len(L) for sp, L in R['especies'].items()}
+    M = out.get('meteo') or {sp: [None] * len(L) for sp, L in R['especies'].items()}
     pes_total, hora, pes_hora, errors, fetes = 0, time.time(), 0, 0, 0
     log(f'meteo: {len(peticions)} peticions per a {sum(len(p[3]) for p in peticions)} registres')
     for (lon, lat), ini, fi, regs in peticions:
@@ -143,7 +155,7 @@ def meteo():
         try:
             j = get('https://archive-api.open-meteo.com/v1/archive',
                     dict(latitude=lat, longitude=lon, start_date=str(ini), end_date=str(fi), timezone='Europe/Madrid',
-                         daily='precipitation_sum,temperature_2m_mean,temperature_2m_min'), intents=2)
+                         daily='precipitation_sum,temperature_2m_mean,temperature_2m_min', models='era5'), intents=2)
             jj = j.json(); dd = jj['daily']
         except Exception as e:
             errors += 1

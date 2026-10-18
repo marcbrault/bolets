@@ -107,7 +107,9 @@ export function index(sp, M, S, i, d, detall = false) {
   if (S.arbres && sp.arbres) {
     // Hàbitat real (CREAF): fracció de la cel·la coberta pels arbres o prats on surt l'espècie
     hostes = sp.arbres.map(k => [k, S.arbres[k]?.[i] ?? 0]).filter(h => h[1] > 0).sort((a, b) => b[1] - a[1]);
-    const quota = hostes.reduce((a, h) => a + h[1], 0) / 100;
+    const sec = (sp.arbres2 || []).map(k => [k, S.arbres[k]?.[i] ?? 0]).filter(h => h[1] > 0);
+    const quota = (hostes.reduce((a, h) => a + h[1], 0) + 0.5 * sec.reduce((a, h) => a + h[1], 0)) / 100;
+    hostes = hostes.concat(sec.map(h => [h[0], h[1], true])).sort((a, b) => b[1] - a[1]);
     fBosc = 0.12 + 0.88 * Math.pow(Math.min(1, quota / 0.3), 0.6);
   } else {
     fBosc = pesBosc >= 0 ? Math.pow(S.bosc[i], pesBosc) : 1 - Math.abs(pesBosc) * 0.8 * S.bosc[i];
@@ -148,7 +150,7 @@ export function index(sp, M, S, i, d, detall = false) {
       { nom: 'Sense gelades', v: fGel, txt: `mínima ${tmin4.toFixed(1)} °C` },
       { nom: 'Altitud', v: fAlt, txt: `${Math.round(M.elev[i])} m${S.pendent ? ` · pendent ${S.pendent[i]}°` : ''}` },
       hostes
-        ? { nom: 'Hàbitat (CREAF)', v: fBosc, txt: hostes.length ? hostes.slice(0, 3).map(h => `${h[1]} % ${ARBRES_NOM[h[0]]}`).join(', ') : `cap hàbitat seu · ${S.boscPct[i]} % de bosc` }
+        ? { nom: 'Hàbitat (CREAF)', v: fBosc, txt: hostes.length ? hostes.slice(0, 3).map(h => `${h[1]} % ${ARBRES_NOM[h[0]]}${h[2] ? ' (secundari)' : ''}`).join(', ') : `cap hàbitat seu · ${S.boscPct[i]} % de bosc` }
         : { nom: pesBosc < 0 ? 'Espai obert (aprox.)' : 'Bosc (aprox.)', v: fBosc },
       ...(S.obaga ? [{ nom: 'Orientació', v: Math.min(1, fOri), txt: `${S.obaga[i]} % obaga, ${S.solell[i]} % solell · ${t7 > 12 ? 'amb calor, millor obagues' : 'amb fred, millor solells'}` }] : []),
       { nom: 'Substrat', v: fSol, txt: sp.sol ? `${SOL_NOM(S.sol[i])}${S.solGeo ? ' (ICGC)' : ''} · prefereix ${sp.sol.replace('-suau', ' (lleu)')}` : `${SOL_NOM(S.sol[i])} · indiferent` },

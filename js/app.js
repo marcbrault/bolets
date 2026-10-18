@@ -141,7 +141,7 @@ function valorsVista(d) {
     if (estat.vista === 'elev') out[i] = M.elev[i];
     else if (estat.vista === 'sol') out[i] = isNaN(S.sol[i]) ? 0.5 : S.sol[i];
     else if (estat.vista === 'bosc') out[i] = S.boscPct ? S.boscPct[i] / 100 : S.bosc[i];
-    else if (estat.vista === 'habitat') out[i] = S.arbres && estat.sp.arbres ? estat.sp.arbres.reduce((a, k) => a + (S.arbres[k]?.[i] ?? 0), 0) / 100 : S.bosc[i];
+    else if (estat.vista === 'habitat') out[i] = S.arbres && estat.sp.arbres ? (estat.sp.arbres.reduce((a, k) => a + (S.arbres[k]?.[i] ?? 0), 0) + 0.5 * (estat.sp.arbres2 || []).reduce((a, k) => a + (S.arbres[k]?.[i] ?? 0), 0)) / 100 : S.bosc[i];
     else {
       let s = 0, c = 0;
       for (let j = Math.max(0, d - 6); j <= d; j++) { s += estat.vista === 'pluja7' ? M.precip[o + j] : M.tmean[o + j]; c++; }
@@ -180,6 +180,12 @@ async function preparaCapes() {
   map.addSource('contorn', { type: 'geojson', data: { type: 'Feature', geometry: estat.contorn } });
   map.addLayer({ id: 'contorn', type: 'line', source: 'contorn', paint: { 'line-color': token('--ink') || '#1f2a22', 'line-width': 1.4, 'line-opacity': 0.7 } });
 
+  if (!PREVIEW) {
+    // Espais naturals de protecció especial (parcs, paratges, reserves) — servei INSPIRE de la Generalitat
+    map.addSource('enp', { type: 'raster', tileSize: 256, attribution: 'Espais naturals: © Generalitat de Catalunya',
+      tiles: ['https://geoserveis.ide.cat/servei/catalunya/inspire-espais-naturals-proteccio-especial/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=PS.ProtectedSite&STYLES=&CRS=EPSG:3857&BBOX={bbox-epsg-3857}&WIDTH=256&HEIGHT=256&FORMAT=image/png&TRANSPARENT=true'] });
+    map.addLayer({ id: 'enp', type: 'raster', source: 'enp', layout: { visibility: $('#mostra-enp').checked ? 'visible' : 'none' }, paint: { 'raster-opacity': 0.75 } });
+  }
   map.addSource('atles', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
   map.addLayer({ id: 'atles-punt', type: 'circle', source: 'atles', paint: {
     'circle-radius': ['interpolate', ['linear'], ['zoom'], 6, 3, 11, 6], 'circle-color': '#fffdf8',
@@ -452,6 +458,7 @@ $('#play').addEventListener('click', play);
 document.querySelectorAll('#vista button').forEach(b => b.addEventListener('click', () => triaVista(b.dataset.v)));
 $('#opacitat').addEventListener('input', e => { if (map.getLayer('heat')) map.setPaintProperty('heat', 'raster-opacity', +e.target.value); desaPrefs(); });
 $('#mostra-atles').addEventListener('change', pintaAtles);
+$('#mostra-enp').addEventListener('change', e => { if (map.getLayer('enp')) map.setLayoutProperty('enp', 'visibility', e.target.checked ? 'visible' : 'none'); });
 $('#base').addEventListener('change', e => { posaBase(e.target.value); desaPrefs(); });
 $('#resolucio').addEventListener('change', async e => {
   await carregaGraella(+e.target.value); selecciona(-1); await preparaCapes(); pintaAtles(); actualitzaTot(); desaPrefs();

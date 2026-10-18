@@ -256,6 +256,14 @@
    "lat": 41.975,
    "r": 3,
    "font": "Observació de l'usuari: zona volcànica, rossinyols"
+  },
+  {
+   "nom": "Volcà de la Banya del Boc",
+   "tipus": "silici",
+   "lon": 2.6656,
+   "lat": 42.0567,
+   "r": 2.5,
+   "font": "Observació de l'usuari: zona volcànica (basalts, gredes), apagallums; alzinar i roureda"
   }
  ]
 }

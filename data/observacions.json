@@ -36,6 +36,29 @@
     }
    ],
    "notes": "Troballa habitual de l'usuari, sense data concreta. Sòl volcànic."
+  },
+  {
+   "data": null,
+   "municipi": "Sant Martí de Llémena",
+   "comarca": "Gironès",
+   "especies": [
+    {
+     "nom": "Ou de reig",
+     "id": "oudereig",
+     "quantitat": "molt",
+     "nota": "zona habitual molt bona"
+    },
+    {
+     "nom": "Rossinyol",
+     "id": "rossinyol"
+    },
+    {
+     "nom": "Apagallums",
+     "llati": "Macrolepiota procera",
+     "nota": "volcà de la Banya del Boc"
+    }
+   ],
+   "notes": "Zona volcànica, sobretot el volcà de la Banya del Boc (Llorà): sòl volcànic fosc sobre basalts, alzinar i roureda de roure martinenc."
   }
  ]
 }
